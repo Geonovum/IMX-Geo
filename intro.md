@@ -14,11 +14,11 @@ The data sources are
 
 ## Overarching coherent model: the basic idea
 
-We will create a conceptual model and a logical model, both in UML, conformant to MIM 1.1. 
+We will create a conceptual model and a logical model, both in UML, conformant to the Metamodel Informatiemodellering [[mim11]]. 
 
-The conceptual model defines the concepts of our universe of discourse. It identifies the objects and their inherent relationships with other objects. In this conceptual model we will define relationships that should conceptually be there, even though they may not be present in the source datasets which were designed as silos.
+The conceptual model defines the concepts of our universe of discourse. It identifies the objects and their inherent relationships with other objects. In this conceptual model we will define relationships that are conceptually there, even though they may not be present in the source datasets, which were designed as silos.
 
-This sketch of the conceptual model contains object types from BAG, BRK, and DiSGeo: 
+This preliminary, partial sketch of the conceptual model contains object types from BAG, BRK, and DiSGeo: 
 
 ![Overview of the conceptual model](./media/sm2.png)
 
@@ -34,7 +34,7 @@ Based on this conceptual model we will create a complete logical model. On this 
 
 ![logical objecttype including provenance](./media/sm.png)
 
-This is a (Very) simplified view of this inclusion of provenance. 
+This is a (very) simplified view of this inclusion of provenance. 
 
 We are planning to introduce a generic modeling pattern on the MIM level (metamodel) for provenance that can be applied to map orchestrated data to source data. A first version of this was created as part of our first use case, [Adresses](https://geonovum.github.io/WaU-UC1/#EAID_18371C99_5129_4c39_8E20_83CED8FF19B9). 
 
