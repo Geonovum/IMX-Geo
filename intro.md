@@ -32,8 +32,9 @@ We decided to go for the second option. In the case of subclasses, we would 'inh
 
 Based on this conceptual model we will create a complete logical model. On this level we add data-registration concepts like history and provenance. That is, the logical model specifies how orchestrated data is mapped from source data. 
 
-This is a simplified view of this inclusion of provenance: 
 ![logical objecttype including provenance](./media/sm.png)
+
+This is a (Very) simplified view of this inclusion of provenance. 
 
 We are planning to introduce a generic modeling pattern on the MIM level (metamodel) for provenance that can be applied to map orchestrated data to source data. A first version of this was created as part of our first use case, [Adresses](https://geonovum.github.io/WaU-UC1/#EAID_18371C99_5129_4c39_8E20_83CED8FF19B9). 
 
