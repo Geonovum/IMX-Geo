@@ -1,0 +1,240 @@
+/*-------------------------------------------------------------------------------------
+//-- File. . . :  style.css
+//-- Bevat . . :  Template voor de  stylesheet voor respec  
+//--              Gebaseerd op https://github.com/Geonovum/respec/wiki
+//--              Deze file mag worden neergezet in de root-directory van de 
+//--              betreffende standaard, maar ook 1 niveau lager in de map "media"
+//--              gedefinieerde stijlen overschrijven de default stijlen.  
+//-- Door. . . :  Jan van Gelder
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-- Log . . . :  20181009 - JvG - Initiele versie 
+//-----------------------------------------------------------------------------------*/
+
+/*-- Definitie van Image ------------------------------------------------------------*/
+img 
+{
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+/*-- Definite van het Geonovum Logo bovenaan Respec document ------------------------*/
+img#Geonovum
+{
+  width:132px;
+  height: 67px;
+}
+
+a.logo {
+	float: right;
+	display: block;
+}
+
+.logo img {
+	/*height: 67px !important;*/
+	/*float: right;*/
+	/*margin-left: 10px;*/
+	width: 132px !important;
+	position: absolute;
+	top: 20px;
+	display: block;
+}
+
+img#logo_kadaster {
+	float: right;	
+	width: 132px !important;
+	top: 100px
+}
+
+
+/*-- Definite van BlockQuotes (uitgelichte tekstblokken) ----------------------------*/
+blockquote 
+{
+  /* margin-left: 20px !important; */
+  font-family:  'Esteban', serif !important;
+  font-style: italic;
+  border-color: transparent !important;
+  border-style: none !important;
+  background-color: darkgray;
+  color: white;
+}
+
+/*-- Optioneel een symbool voor de blockquote --------------------------------------*/
+blockquote:before 
+{
+  display: block;
+  height: 0;
+  /* content: "|"; */   
+  margin-left: -0.95em;
+  font: italic 400%/1 Esteban, serif;
+  color: grey;
+}
+
+/*-- Definite van tabellen ---------------------------------------------------------*/
+table
+{
+  empty-cells: show;
+  min-width: 90%;
+  max-width: 100% !important;
+  border-color: grey;
+  border-style: solid;
+}
+
+/*-- Definite van de kopregel van een tabel ----------------------------------------*/
+thead
+{
+  background-color: grey;
+  color: white;
+}
+/*-- Definite van de body van een tabel --------------------------------------------*/
+tbody
+{
+  border-color: darkolivegreen;
+  background-color: lightgrey
+}
+
+/*-- Definite van de tabel-rij (deze zorgt voor 2 kleuren in de rijen) -------------*/
+tr:nth-child(even) 
+{
+  background-color:  darkgrey;
+}
+
+/*-- Definite van de tabel-cel (data) ----------------------------------------------*/
+td 
+{
+  vertical-align: top;
+  min-width: 100px;     /* lege kolommen hebben deze minimale breedte */
+}
+
+/*-- Definite van rode tekst -------------------------------------------------------*/
+r
+{
+  color: red;
+}
+
+/*-- Definite van rose tekstblok ---------------------------------------------------*/
+div#remark
+{
+  border-color: darkblue;
+  border-style: solid;
+  background-color:  rosybrown;
+  color: darkblue;
+}
+
+/* addComment */
+
+.submitComment {	
+	position: fixed;
+	right: 50%;
+	width: 150px;
+	margin-left: -75px;
+	bottom: 20px;
+	z-index: 9000;	
+	height: auto;	
+	
+}
+.submitComment a {
+	cursor: pointer;
+}
+
+	
+
+/* trackChanges */
+
+@media screen and (max-width : 906px){
+	.trackChanges {
+		display: none;
+	}		
+}
+
+.trackChanges {	
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 9000;
+	width: auto;
+	height: auto;
+	
+	text-align: right;
+	background: #fff;    
+    color: rgb(120, 120, 120);
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 8px 0 rgb(100 100 100 / 50%);
+	padding: 6px 6px;
+	font-size: 0.9em;
+}
+
+.textTrackChanges {
+	margin-left: 10px;
+	color: blue;
+	height: 24px;
+	vertical-align: middle;
+}
+
+tbody td strong, #leeswijzer p strong { color: green }
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: blue;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px blue;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+	
+	
+
+
