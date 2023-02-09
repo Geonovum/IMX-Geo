@@ -66,4 +66,4 @@ In this model generalisation relationships are used to explain how classes that 
 
 E.g. a new class `Windturbine` which is declared a subclass of BGT `Pand`.
 
-...
+It seems to be doable to script a translation from this model, which is strictly not a correct UML model, to a working OWL ontology + SHACL. The UML model provides a nice visualization, the generated OWL/SHACL would be the real logical model. This would also allow us to use the UML editor as an OWL editor.
