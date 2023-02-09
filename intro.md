@@ -38,3 +38,32 @@ This is a (very) simplified view of this inclusion of provenance.
 
 We are planning to introduce a generic modeling pattern on the MIM level (metamodel) for provenance that can be applied to map orchestrated data to source data. A first version of this was created as part of our first use case, [Adresses](https://geonovum.github.io/WaU-UC1/#EAID_18371C99_5129_4c39_8E20_83CED8FF19B9). 
 
+## Ideas for the logical model
+
+<aside class="note">This section is very much a work in progress.</aside>
+
+**Question**: How do we model, in the **logical information model**, the relationships between object types in source registries? 
+
+Arnoud and Linda each created a first attempt at modeling this. 
+
+Linda's model: 
+
+![logical model with dependencies to source models](./media/lm-lvdb.png)
+
+In this model a WaU product model "SAM" is defined for the use case 'answer all questions' (the diagram is only showing a small part). In it, dependency relationships are used to express that the logical model SAM contains classes, which depend on (more specifically: are derived from) classes in source models. 
+
+So e.g. WaU-SAM Woonplaats is derived from BAG `Woonplaats`. It does not inherit its attributes. And WaU-SAM `Gemeentegebied` is derived from a class with the same name in the source model DisGeo Bestuurlijke gebieden. 
+
+WaU-SAM `Woonplaats` and `Gemeentegebied` also have the modeling pattern for specifying provenance on the data level. 
+
+The special thing here is that WaU-SAM `Woonplaats` and `Gemeentegebied` have an association `binnen`. This is not present in the BAG or DiSGeo Bestuurlijke gebieden, but an addition owned by the WaU-SAM model. 
+
+Arnoud's model: 
+
+![logical model with generalizations to source models](./media/lm-adb.png)
+
+In this model generalisation relationships are used to explain how classes that are needed on the product level are related to classes in source models. 
+
+E.g. a new class `Windturbine` which is declared a subclass of BGT `Pand`.
+
+...
