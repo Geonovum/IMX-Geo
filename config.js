@@ -58,11 +58,11 @@ var respecConfig =
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
   //publishDate: "2022-07-11",  	    // Format is "YYYY-MM-DD"
   //-- Repositorynaam op GitHub -------------------------------------------------------
-  github: "https://github.com/geonovum/WaU-UC1",
+  github: "https://github.com/geonovum/WaU-SAM",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
-  issueBase: "https://github.com/geonovum/WaU-UC1/issues",
+  issueBase: "https://github.com/geonovum/WaU-SAM/issues",
   //-- edDraftURI: de URI van de werkversie van het document
-  edDraftURI: "https://geonovum.github.io/WaU-UC1",
+  edDraftURI: "https://geonovum.github.io/WaU-SAM",
   //-- de namen van de Editor(s) ------------------------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
   
@@ -167,7 +167,7 @@ var respecConfig =
 
   //-- Optionele parameters:
   //emailComments: "mim@geonovum.nl",         // reactie mailadres, alleen bij CV!
-  subtitle: "Semantische samenhang tussen basisregistraties",                         // Subtitel van het document
+  subtitle: "Semantische samenhang tussen geo-basisregistraties",                         // Subtitel van het document
   maxTocLevel: 4,                           // Aantal niveau's ToC, default is 0
   //-- LOGO: Hier kan je een ander logo opgeven indien nodig
   //logos: [{
