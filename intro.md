@@ -17,10 +17,10 @@ The data sources are
 ### User-friendliness
 The SAM information model should be user-friendly, i.e.: 
 - Simplified structures for common use cases, like the `Address` class 
-- Names that correspond with common language (colloquial names)
+- Names that correspond with common language, e.g. `straatnaam` instead of `Openbare ruimte naam`. 
 
 ### Coherence between objects from different source models
-The SAM information model should add useful relationships that exist inherently between objects, which are not currently defined in the source models. 
+The SAM information model should add useful relationships that exist inherently between objects, but are not currently defined in the source models. 
 
 Background: because the source models were originally defined as silos, relationships between objects from different source registries are mostly unavailable right now. We have a requirement to add those relationships that are of value to users (definitely not all). 
 
@@ -43,7 +43,7 @@ The SAM model should therefore be actively maintained and changes in source mode
 
 We will create a conceptual model and a logical model, both in UML. 
 
-The conceptual model will be a valid [[MIM11]] model. It defines the concepts of our universe of discourse. It identifies the objects and their inherent relationships with other objects. In this conceptual model we will define relationships that are conceptually there, even though they may not be present in the source datasets, which were designed as silos.
+The conceptual model will be a valid [[MIM11]] model (MIM level 2). It defines the concepts of our universe of discourse. It identifies the objects and their inherent relationships with other objects. In this conceptual model we will define relationships between objects that are relevant for users, even though they may not be present in the source datasets, which were designed as silos.
 
 This preliminary, partial sketch of the conceptual model contains a few object types from BAG, BRK, and DiSGeo: 
 
@@ -57,7 +57,9 @@ An assumption is that we have access to the (logical) information models for all
 
 We decided to go for the second option, at least in the conceptual model. In the case of subclasses, in the MIM paradigm we would 'inherit' all properties of the superclasses, while we want only a selection of relevant properties. Also, conceptually we are not creating subclasses. What we actually want is to derive data from source data. We will model the dependency of our object types from source object types on the logical level, because there we are considering data. On the conceptual level we are only considering objects. 
 
-Based on this conceptual model we will create a complete logical model. On this level we add data-registration concepts like history and provenance. The logical model also specifies how orchestrated data is related to source data. 
+The conceptual model will be a 'product model' defining the objects in user friendly terms (satisfying requirements <a href="#user-friendliness"></a>, <a href="#coherence-between-objects-from-different-source-models"></a> and <a href="#cherry-picking"></a> ). 
+
+Based on this conceptual model we will create a complete logical model. On this level we add data-registration concepts like history and provenance. The logical model also specifies how orchestrated data is related to source data. This logical model satisfies requirements <a href="#link-with-source-models"></a> and <a href="#maintainability"></a>.
 
 ![logical objecttype including relation to source](./media/sm.png)
 
@@ -73,7 +75,7 @@ We are planning to introduce a generic modeling pattern on the MIM level (metamo
 
 Arnoud and Linda each created a first attempt at modeling this. 
 
-### Linda's model: 
+### Linda's model
 
 ![logical model with dependencies to source models](./media/lm-lvdb.png)
 
@@ -85,7 +87,7 @@ WaU-SAM `Woonplaats` and `Gemeentegebied` also have the modeling pattern for spe
 
 The special thing here is that WaU-SAM `Woonplaats` and `Gemeentegebied` have an association `binnen`. This is not present in the BAG or DiSGeo Bestuurlijke gebieden, but an addition owned by the WaU-SAM model. 
 
-### Arnoud's model: 
+### Arnoud's model
 
 ![logical model with generalizations to source models](./media/lm-adb.png)
 
