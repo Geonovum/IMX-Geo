@@ -24,6 +24,9 @@ The SAM information model should add useful relationships that exist inherently 
 
 Background: because the source models were originally defined as silos, relationships between objects from different source registries are mostly unavailable right now. We have a requirement to add those relationships that are of value to users (definitely not all). 
 
+### Coherence in extra layer
+The added relationships between SAM and source models cannot change the source object types as this goes against maintenance and ownership principles. The additional relationships must be added in a separate semantic layer. 
+
 ### Cherry-picking
 It should be possible to leave out properties in the SAM information model, that are present in the source model but not of interest to the users. 
 
@@ -39,8 +42,8 @@ When changes in source models are published and implemented in data sources, the
 
 The SAM model should therefore be actively maintained and changes in source models should result in notifications to the maintenance body. 
 
-### ...
-TODO: add 2 more as discussed.
+### Machine readability
+The links between objects/properties in the SAM model and objects/properties in source models should be machine readable. This opens up possibilities to automate things for the knowledge graph and the orchestration. 
 
 ## Overarching coherent model: the basic idea
 
