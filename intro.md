@@ -40,8 +40,6 @@ It should be possible to keep the SAM information model in sync / up to date wit
 
 When changes in source models are published and implemented in data sources, the SAM information model should be updated to take those changes into account. 
 
-The SAM model should therefore be actively maintained and changes in source models should result in notifications to the maintenance body. 
-
 ### Machine readability
 The links between objects/properties in the SAM model and objects/properties in source models should be machine readable. This opens up possibilities to automate things for the knowledge graph and the orchestration. 
 
@@ -55,7 +53,7 @@ This preliminary, partial sketch of the conceptual model contains a few object t
 
 ![Overview of the conceptual model](./media/sm2.png)
 
-An assumption is that we have access to the (logical) information models for all source datasets. These are created using modeling language UML. 
+An assumption is that we have access to the information models for all source datasets. These are created using modeling language UML. 
 
 **Question**: How do we model the relationships between object types in source registries? We considered two options:  
 - Create subclasses (UML specialisations) of the source classes and add the relationships between these subclasses. 
@@ -65,17 +63,17 @@ We decided to go for the second option, at least in the conceptual model. In the
 
 The conceptual model will be a 'product model' defining the objects in user friendly terms (satisfying requirements <a href="#user-friendliness"></a>, <a href="#coherence-between-objects-from-different-source-models"></a> and <a href="#cherry-picking"></a> ). 
 
-Based on this conceptual model we will create a complete logical model. On this level we add data-registration concepts like history and provenance. The logical model also specifies how orchestrated data is related to source data. This logical model satisfies requirements <a href="#link-with-source-models"></a> and <a href="#maintainability"></a>.
+Based on this conceptual model we will create a complete logical model. On this level we add data-registration concepts like history and provenance. The logical model also specifies how orchestrated data is related to source data. This logical model satisfies requirements <a href="#link-with-source-models"></a>, <a href="#maintainability"></a> and <a href="#machine-readability"></a>.
 
 ![logical objecttype including relation to source](./media/sm.png)
 
-This is a (very) simplified view modeling the relation to source objects and probably not how we will  actually model it. 
+<aside class="note">This is a (very) simplified view of modeling the relation to source objects and probably not how we will  actually model it. </aside>
 
-We are planning to introduce a generic modeling pattern on the MIM level (metamodel) for provenance that can be applied to describe how orchestrated data was created from source data. A first version of this was created as part of our first use case, [Adresses](https://geonovum.github.io/WaU-UC1/#EAID_18371C99_5129_4c39_8E20_83CED8FF19B9). This 'lineage information' will also be available to users on request.
+We are planning to introduce a generic modeling pattern on the MIM level (metamodel) for provenance that can be applied to describe how orchestrated data was created from source data. A first version of this was created as part of our first use case, [Adresses](https://geonovum.github.io/WaU-UC1/#EAID_18371C99_5129_4c39_8E20_83CED8FF19B9). This provenance or lineage information will also be available to users on request.
+
+This leaves requirement <a href="#coherence-in-extra-layer"></a>, which we haven't figured out how to address yet on either the conceptual or logical level. 
 
 ## Ideas for the logical model
-
-<aside class="note">This section is very much a work in progress.</aside>
 
 **Question**: How do we model, in the **SAM logical information model**, the missing relationships that we want to add between object types in source registries? 
 
