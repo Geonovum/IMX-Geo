@@ -15,26 +15,27 @@ bk:WaU-SAM
    skos:prefLabel "SAM"@nl ;
 .
 
-:adres
-   a skos:Concept ;
-   skos:prefLabel "Adres"@nl ;
-   rdfs:label "Adres" ;
-   dct:created "2023-01-31"^^xsd:date ;
-   dct:modified "2023-02-02"^^xsd:date ;
-   skos:inScheme bk:WaU-SAM ;
-   skos:exactMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Adres> ;
-.
+# :adres
+#    a skos:Concept ;
+#    skos:prefLabel "Adres"@nl ;
+#    rdfs:label "Adres" ;
+#    dct:created "2023-01-31"^^xsd:date ;
+#    dct:modified "2023-02-02"^^xsd:date ;
+#    skos:inScheme bk:WaU-SAM ;
+#    skos:exactMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Adres> ;
+# .
 
-:identificatie
-   a skos:Concept ;
-   skos:prefLabel "identificatie"@nl ;
-   rdfs:label "identificatie" ;
-   skos:inScheme bk:WaU-SAM ; 
-   skos:exactMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Identificatie> ;
-.
+# :identificatie
+#    a skos:Concept ;
+#    skos:prefLabel "identificatie"@nl ;
+#    rdfs:label "identificatie" ;
+#    skos:inScheme bk:WaU-SAM ; 
+#    skos:exactMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Identificatie> ;
+# .
 
 :omschrijving
    a skos:Concept ;
+   skos:definition "De aggregatie van alle adresonderdelen, i.e. straatnaam, huisnummer, huisletter, huisnummertoevoeging, postcode en plaatsnaam."@nl;
    skos:prefLabel "omschrijving"@nl ;
    rdfs:label "omschrijving" ;
    skos:inScheme bk:WaU-SAM ;
@@ -43,6 +44,7 @@ bk:WaU-SAM
 
 :straatnaam
    a skos:Concept ;
+   skos:definition "De benaming van een openbare ruimte van het type weg zoals door het gemeentebestuur aangewezen."
    skos:prefLabel "straatnaam"@nl ;
    rdfs:label "straatnaam" ;
    skos:inScheme bk:WaU-SAM ;
