@@ -15,6 +15,33 @@ bk:WaU-SAM
    skos:prefLabel "SAM"@nl ;
 .
 
+:omschrijving
+   a skos:Concept ;
+   skos:definition "De aggregatie van alle adresonderdelen, i.e. straatnaam, huisnummer, huisletter, huisnummertoevoeging, postcode en plaatsnaam."@nl ;
+   skos:prefLabel "omschrijving"@nl ;
+   rdfs:label "omschrijving" ;
+   skos:inScheme bk:WaU-SAM ;
+   # GEEN MATCH GEVONDEN ;
+.
+
+:straatnaam
+   a skos:Concept ;
+   skos:definition "De benaming van een openbare ruimte van het type weg zoals door het gemeentebestuur aangewezen."@nl ;
+   skos:prefLabel "straatnaam"@nl ;
+   rdfs:label "straatnaam" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:closeMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Naam> ;
+.
+
+:plaatsnaam
+   a skos:Concept ;
+   skos:definition "De benaming van een woonplaats zoals door het gemeentebestuur aangewezen."@nl ;
+   skos:prefLabel "plaatsnaam"@nl ;
+   rdfs:label "plaatsnaam" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:closeMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Naam> ;
+.
+
 # :adres
 #    a skos:Concept ;
 #    skos:prefLabel "Adres"@nl ;
@@ -33,77 +60,47 @@ bk:WaU-SAM
 #    skos:exactMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Identificatie> ;
 # .
 
-:omschrijving
-   a skos:Concept ;
-   skos:definition "De aggregatie van alle adresonderdelen, i.e. straatnaam, huisnummer, huisletter, huisnummertoevoeging, postcode en plaatsnaam."@nl;
-   skos:prefLabel "omschrijving"@nl ;
-   rdfs:label "omschrijving" ;
-   skos:inScheme bk:WaU-SAM ;
-   # NIET GEVONDEN skos:exactMatch <> ;
-.
+# :huisnummer
+#   a skos:Concept ;
+#   skos:prefLabel "huisnummer"@nl ;
+#   rdfs:label "huisnummer" ;
+#   skos:inScheme bk:WaU-SAM ;
+#    skos:exactMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Huisnummer> ;
+# .
 
-:straatnaam
-   a skos:Concept ;
-   skos:definition "De benaming van een openbare ruimte van het type weg zoals door het gemeentebestuur aangewezen."
-   skos:prefLabel "straatnaam"@nl ;
-   rdfs:label "straatnaam" ;
-   skos:inScheme bk:WaU-SAM ;
-   skos:closeMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Naam> ;
-.
+#:huisletter
+#   a skos:Concept ;
+#   skos:prefLabel "huisletter"@nl ;
+#   rdfs:label "huisletter" ;
+#   skos:inScheme bk:WaU-SAM ;
+#   skos:exactMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Huisletter> ;
+#.
+
+# :huisnummertoevoeging
+#   a skos:Concept ;
+#   skos:prefLabel "huisnummertoevoeging"@nl ;
+#   rdfs:label "huisnummertoevoeging" ;
+#   skos:inScheme bk:WaU-SAM ;
+#   skos:exactMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Huisnummertoevoeging> ;
+#.
+
+# :postcode
+#   a skos:Concept ;
+#   skos:prefLabel "postcode"@nl ;
+#   rdfs:label "postcode" ;
+#   skos:inScheme bk:WaU-SAM ;
+#   skos:exactMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Postcode> ;
+#.
+
 
 # Hieronder staan nog de concepten zoals gegenereerd uit het Adres model voor de 1e high 5 in januari 2023.
-
-# Construct: Adres::Adres.huisnummer (attrib) = huisnummer (ATTRIBUUTSOORT)
-<https://begrippen.geostandaarden.nl/sm/nl/page/Adres/huisnummer>
-   a skos:Concept ;
-   skos:prefLabel "huisnummer"@nl ;
-   rdfs:label "huisnummer" ;
-   skos:inScheme wuuc:WaU-UC1 ;
-   skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Adres> ;
-.
-
-# Construct: Adres::Adres.huisletter (attrib) = huisletter (ATTRIBUUTSOORT)
-<https://begrippen.geostandaarden.nl/sm/nl/page/Adres/huisletter>
-   a skos:Concept ;
-   skos:prefLabel "huisletter"@nl ;
-   rdfs:label "huisletter" ;
-   skos:inScheme wuuc:WaU-UC1 ;
-   skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Adres> ;
-.
-
-# Construct: Adres::Adres.huisnummertoevoeging (attrib) = huisnummertoevoeging (ATTRIBUUTSOORT)
-<https://begrippen.geostandaarden.nl/sm/nl/page/Adres/huisnummertoevoeging>
-   a skos:Concept ;
-   skos:prefLabel "huisnummertoevoeging"@nl ;
-   rdfs:label "huisnummertoevoeging" ;
-   skos:inScheme wuuc:WaU-UC1 ;
-   skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Adres> ;
-.
-
-# Construct: Adres::Adres.postcode (attrib) = postcode (ATTRIBUUTSOORT)
-<https://begrippen.geostandaarden.nl/sm/nl/page/Adres/postcode>
-   a skos:Concept ;
-   skos:prefLabel "postcode"@nl ;
-   rdfs:label "postcode" ;
-   skos:inScheme wuuc:WaU-UC1 ;
-   skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Adres> ;
-.
-
-# Construct: Adres::Adres.plaatsnaam (attrib) = naam (ATTRIBUUTSOORT)
-<https://begrippen.geostandaarden.nl/sm/nl/page/Adres/plaatsnaam>
-   a skos:Concept ;
-   skos:prefLabel "plaatsnaam"@nl ;
-   rdfs:label "plaatsnaam" ;
-   skos:inScheme wuuc:WaU-UC1 ;
-   skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Adres> ;
-.
 
 # Construct: Adres::Adres.is hoofdadres (attrib) = isHoofdadres (ATTRIBUUTSOORT)
 <https://begrippen.geostandaarden.nl/sm/nl/page/Adres/is%20hoofdadres>
    a skos:Concept ;
    skos:prefLabel "is hoofdadres"@nl ;
    rdfs:label "is hoofdadres" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Adres> ;
 .
 
@@ -112,7 +109,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "is geregistreerd met"@nl ;
    rdfs:label "is geregistreerd met" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skos:related <https://begrippen.geostandaarden.nl/sm/nl/page/Adres> ;
 .
 
@@ -123,7 +120,7 @@ bk:WaU-SAM
    rdfs:label "Registratiegegevens" ;
    dct:created "2023-01-31"^^xsd:date ;
    dct:modified "2023-02-02"^^xsd:date ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
 .
 
 # Construct: Adres::Registratiegegevens.bestaat uit (assoc) = bestaatUit (RELATIESOORT)
@@ -131,7 +128,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "bestaat uit"@nl ;
    rdfs:label "bestaat uit" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skos:related <https://begrippen.geostandaarden.nl/sm/nl/page/Registratiegegevens> ;
 .
 
@@ -142,7 +139,7 @@ bk:WaU-SAM
    rdfs:label "Orkestratiegegeven" ;
    dct:created "2023-01-31"^^xsd:date ;
    dct:modified "2023-02-02"^^xsd:date ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
 .
 
 # Construct: Adres::Orkestratiegegeven.kenmerk (attrib) = kenmerk (ATTRIBUUTSOORT)
@@ -150,7 +147,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "kenmerk"@nl ;
    rdfs:label "kenmerk" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Orkestratiegegeven> ;
 .
 
@@ -159,7 +156,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "waarde"@nl ;
    rdfs:label "waarde" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Orkestratiegegeven> ;
 .
 
@@ -168,7 +165,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "is afgeleid van"@nl ;
    rdfs:label "is afgeleid van" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skos:related <https://begrippen.geostandaarden.nl/sm/nl/page/Orkestratiegegeven> ;
 .
 
@@ -177,7 +174,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "maakt deel uit van"@nl ;
    rdfs:label "maakt deel uit van" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skos:related <https://begrippen.geostandaarden.nl/sm/nl/page/Orkestratiegegeven> ;
 .
 
@@ -188,7 +185,7 @@ bk:WaU-SAM
    rdfs:label "Brongegeven" ;
    dct:created "2023-01-31"^^xsd:date ;
    dct:modified "2023-02-02"^^xsd:date ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
 .
 
 # Construct: Adres::Brongegeven.kenmerk (attrib) = kennmerk (ATTRIBUUTSOORT)
@@ -196,7 +193,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "kenmerk"@nl ;
    rdfs:label "kenmerk" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Brongegeven> ;
 .
 
@@ -205,7 +202,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "waarde"@nl ;
    rdfs:label "waarde" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Brongegeven> ;
 .
 
@@ -214,7 +211,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "heeft als herkomst"@nl ;
    rdfs:label "heeft als herkomst" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skos:related <https://begrippen.geostandaarden.nl/sm/nl/page/Brongegeven> ;
 .
 
@@ -223,7 +220,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "maakt deel uit van"@nl ;
    rdfs:label "maakt deel uit van" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skos:related <https://begrippen.geostandaarden.nl/sm/nl/page/Brongegeven> ;
 .
 
@@ -234,7 +231,7 @@ bk:WaU-SAM
    rdfs:label "Bronobject" ;
    dct:created "2023-01-31"^^xsd:date ;
    dct:modified "2023-02-02"^^xsd:date ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
 .
 
 # Construct: Adres::Bronobject.type (attrib) = type (ATTRIBUUTSOORT)
@@ -242,7 +239,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "type"@nl ;
    rdfs:label "type" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Bronobject> ;
 .
 
@@ -251,7 +248,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "identificatie"@nl ;
    rdfs:label "identificatie" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Bronobject> ;
 .
 
@@ -262,7 +259,7 @@ bk:WaU-SAM
    rdfs:label "Bronregistratie" ;
    dct:created "2023-01-31"^^xsd:date ;
    dct:modified "2023-02-02"^^xsd:date ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
 .
 
 # Construct: Adres::Bronregistratie.naam (attrib) = naam (ATTRIBUUTSOORT)
@@ -270,7 +267,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "naam"@nl ;
    rdfs:label "naam" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Bronregistratie> ;
 .
 
@@ -281,7 +278,7 @@ bk:WaU-SAM
    rdfs:label "WaardeOrkestratiegegeven" ;
    dct:created "2023-02-02"^^xsd:date ;
    dct:modified "2023-02-02"^^xsd:date ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
 .
 
 # Construct: Adres::WaardeOrkestratiegegeven.tekst (attrib) (DATATYPE)
@@ -289,7 +286,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "tekst"@nl ;
    rdfs:label "tekst" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/WaardeOrkestratiegegeven> ;
 .
 
@@ -298,7 +295,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "nummer"@nl ;
    rdfs:label "nummer" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/WaardeOrkestratiegegeven> ;
 .
 
@@ -307,7 +304,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "indicatie"@nl ;
    rdfs:label "indicatie" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/WaardeOrkestratiegegeven> ;
 .
 
@@ -318,7 +315,7 @@ bk:WaU-SAM
    rdfs:label "WaardeBrongegeven" ;
    dct:created "2023-02-02"^^xsd:date ;
    dct:modified "2023-02-02"^^xsd:date ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
 .
 
 # Construct: Adres::WaardeBrongegeven.identificatie (attrib) (DATATYPE)
@@ -326,7 +323,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "identificatie"@nl ;
    rdfs:label "identificatie" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/WaardeBrongegeven> ;
 .
 
@@ -335,7 +332,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "nummer"@nl ;
    rdfs:label "nummer" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/WaardeBrongegeven> ;
 .
 
@@ -344,7 +341,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "tekst"@nl ;
    rdfs:label "tekst" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/WaardeBrongegeven> ;
 .
 
@@ -355,7 +352,7 @@ bk:WaU-SAM
    rdfs:label "Objectnummering" ;
    dct:created "2023-02-02"^^xsd:date ;
    dct:modified "2023-02-02"^^xsd:date ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
 .
 
 # Construct: Adres::Objectnummering.gemeentecode (attrib) (DATA ELEMENT)
@@ -363,7 +360,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "gemeentecode"@nl ;
    rdfs:label "gemeentecode" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Objectnummering> ;
 .
 
@@ -372,7 +369,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "objecttypecode"@nl ;
    rdfs:label "objecttypecode" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Objectnummering> ;
 .
 
@@ -381,7 +378,7 @@ bk:WaU-SAM
    a skos:Concept ;
    skos:prefLabel "objectvolgnummer"@nl ;
    rdfs:label "objectvolgnummer" ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Objectnummering> ;
 .
 
@@ -393,7 +390,7 @@ bk:WaU-SAM
    skos:notation "Registratie"^^xsd:string ;
    dct:created "2023-01-31"^^xsd:date ;
    dct:modified "2023-02-02"^^xsd:date ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skos:member <https://begrippen.geostandaarden.nl/sm/nl/page/Registratie/BAG> ;
 .
 
@@ -403,7 +400,7 @@ bk:WaU-SAM
    skos:prefLabel "BAG"@nl ;
    rdfs:label "BAG" ;
    skos:notation "BAG"^^xsd:string ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Registratie> ;
 .
 
@@ -415,7 +412,7 @@ bk:WaU-SAM
    skos:notation "Objecttypecode"^^xsd:string ;
    dct:created "2023-02-02"^^xsd:date ;
    dct:modified "2023-02-02"^^xsd:date ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skos:member <https://begrippen.geostandaarden.nl/sm/nl/page/Objecttypecode/01> ;
    skos:member <https://begrippen.geostandaarden.nl/sm/nl/page/Objecttypecode/02> ;
    skos:member <https://begrippen.geostandaarden.nl/sm/nl/page/Objecttypecode/03> ;
@@ -430,7 +427,7 @@ bk:WaU-SAM
    skos:prefLabel "01"@nl ;
    rdfs:label "01" ;
    skos:notation "01"^^xsd:string ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Objecttypecode> ;
 .
 
@@ -440,7 +437,7 @@ bk:WaU-SAM
    skos:prefLabel "02"@nl ;
    rdfs:label "02" ;
    skos:notation "02"^^xsd:string ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Objecttypecode> ;
 .
 
@@ -450,7 +447,7 @@ bk:WaU-SAM
    skos:prefLabel "03"@nl ;
    rdfs:label "03" ;
    skos:notation "03"^^xsd:string ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Objecttypecode> ;
 .
 
@@ -460,7 +457,7 @@ bk:WaU-SAM
    skos:prefLabel "10"@nl ;
    rdfs:label "10" ;
    skos:notation "10"^^xsd:string ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Objecttypecode> ;
 .
 
@@ -470,7 +467,7 @@ bk:WaU-SAM
    skos:prefLabel "20"@nl ;
    rdfs:label "20" ;
    skos:notation "20"^^xsd:string ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Objecttypecode> ;
 .
 
@@ -480,7 +477,7 @@ bk:WaU-SAM
    skos:prefLabel "30"@nl ;
    rdfs:label "30" ;
    skos:notation "30"^^xsd:string ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
    skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Objecttypecode> ;
 .
 
@@ -491,6 +488,6 @@ bk:WaU-SAM
    rdfs:label "AN" ;
    dct:created "2023-02-02"^^xsd:date ;
    dct:modified "2023-02-02"^^xsd:date ;
-   skos:inScheme wuuc:WaU-UC1 ;
+   skos:inScheme bk:WaU-SAM ;
 .
 
