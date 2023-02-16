@@ -91,7 +91,7 @@ var respecConfig =
     },
     {
       name: "Jesse Bakker",
-      company: "Kadaster",
+      company: "Het Kadaster",
       companyURL: "https://www.kadaster.nl"
     }
   ],
@@ -172,7 +172,7 @@ var respecConfig =
 
   //-- Optionele parameters:
   //emailComments: "mim@geonovum.nl",         // reactie mailadres, alleen bij CV!
-  subtitle: "Semantische samenhang tussen geo-basisregistraties",                         // Subtitel van het document
+  //subtitle: "",                         // Subtitel van het document
   maxTocLevel: 4,                           // Aantal niveau's ToC, default is 0
   //-- LOGO: Hier kan je een ander logo opgeven indien nodig
   //logos: [{
