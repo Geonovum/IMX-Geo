@@ -1,4 +1,4 @@
-# Design of the overarching information model
+# Design of the semantic model
 
 We will create a concept scheme ([[MIM11]] level 1) in SKOS; a UML conceptual model (MIM level 2) and a UML logical model (MIM level 3):
 
