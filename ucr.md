@@ -3,14 +3,17 @@
 ## Product model requirements
 
 ### User-friendliness
-The SAM information model should be user-friendly, i.e.: 
+The product model should be user-friendly, i.e.: 
 - Simplified structures for common use cases, like the `Address` class 
 - Names that correspond with common language, e.g. `straatnaam` instead of `Openbare ruimte naam`. 
 
 ### Cherry-picking
-It should be possible to leave out properties in the SAM information model, that are present in the source model but not of interest to the users. 
+It should be possible to leave out properties in a product model, that are present in the source model but not of interest to the users. 
 
 ## Semantic model requirements
+
+### User-friendliness
+The semantic model should be user-friendly as well, i.e. users should be able to use it to find information they want. 
 
 ### Coherence between objects from different source models
 The SAM information model should add useful relationships that exist inherently between objects, but are not currently defined in the source models. 
