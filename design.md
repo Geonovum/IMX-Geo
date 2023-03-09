@@ -106,7 +106,7 @@ The following elements are important to discuss:
 - Generalizations
 - Traces
 
-**Entry point classes** are classes we add in the semantic model. They are not present in a source model, but they may be a subclass of a class in a source model. They always have a MIM Begrip containing the URI of either a concept in a source model, or a concept coined in the context of SAM. 
+**Entry point classes** are classes we add in the semantic model. In the example above, Gebouw is an entry class. Entry classes are not present in a source model, but they may be a subclass of a class in a source model. They always have a MIM Begrip containing the URI of either a concept in a source model, or a concept coined in the context of SAM. 
 
 **Generalization**: use when inheriting and adding properties
 
