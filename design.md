@@ -93,7 +93,7 @@ This is questionable.
 ## Logical model
 The logical model defines the shapes of the data. On this level we add data-registration concepts like history and provenance. The logical model also specifies how orchestrated data is related to source data. It sits between the source models on the one hand and the product models on the other hand. 
 
-This logical model must satisfy all requirements in <a href="#semantic-model-requirements">. I.e we want to be able to add relationships, without changing source models, but retain a link TO source model classes we derive information from; in a machine readable way, but also usable for developers. The maintenance requirement is less important, because the source models do not change often, once standardized. 
+This logical model must satisfy all requirements in <a href="#semantic-model-requirements"></a>. I.e we want to be able to add relationships, without changing source models, but retain a link TO source model classes we derive information from; in a machine readable way, but also usable for developers. The maintenance requirement is less important, because the source models do not change often, once standardized. 
 
 We are planning to introduce a generic modeling pattern on the MIM level (metamodel) for provenance that can be applied to describe how orchestrated data was created from source data. A first version of this was created as part of our first use case, [Adresses](https://geonovum.github.io/WaU-UC1/#EAID_18371C99_5129_4c39_8E20_83CED8FF19B9). This provenance or lineage information will also be available to users on request. The Lineage model is developed separately in the [WaU-LIN repository](https://github.com/geonovum/WaU-LIN).
 
