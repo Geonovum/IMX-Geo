@@ -4,9 +4,19 @@ We will create a concept scheme ([[MIM11]] level 1) in SKOS; a UML conceptual mo
 
 - The SKOS concept scheme describes the concepts that play a role in our universe of discourse. 
 - The conceptual model defines the classes of our universe of discourse.
-- The logical model describes the shapes of the data. 
+- The logical model describes the shapes of the data and how the data is derived from the source registries.
 
 The most important one is the logical model, which sits between the source registry models on the one hand, and on the other hand the product models that define what data is served to the users. 
+
+## How does the model satisfy the requirements
+- <a href="#user-friendliness"></a> - the model introduces classes that correspond to the common point of view of users. Mappings can be used to add user-friendly names for things. These names will also be added in SKOS (MIM level 1).
+- <a href="#cherry-picking"></a> - the model is loosely coupled to the source classes and requires a mapping for each source class.
+- <a href="#aid-data-discovery"></a> - the model shows how classes are related, including cross-registry relationships.
+- <a href="#coherence-between-objects-from-different-source-models"></a> - the model introduces relationships between objects from different sources
+- <a href="#coherence-in-extra-layer"></a> - the model is loosely coupled to the source models using mappings.
+- <a href="#link-with-source-models"></a> - the model does contain links to the source classes to indicate which data is derived from which source class.
+- <a href="#machine-readability"></a> - the model is expressed in SKOS and MIM. MIM can be expressed UML but also in XML and RDF.
+- <a href="#maintainability"></a> - the model is loosely coupled so changes in the source models do not directly impact it, unless changes include the addition or removal of classes. Mappings can be impacted by changes in properties, but the mappings are maintained outside of the model. 
 
 ## Concept scheme
 
