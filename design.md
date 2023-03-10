@@ -2,9 +2,9 @@
 
 We will create a concept scheme ([[MIM11]] level 1) in SKOS; a UML conceptual model (MIM level 2) and a UML logical model (MIM level 3). In very general terms the roles of these models are:
 
-- The SKOS concept scheme describes the concepts that play a role in our universe of discourse. 
-- The conceptual model defines the classes of our universe of discourse.
-- The logical model describes the shapes of the data and how the data is derived from the source registries.
+- The SKOS [concept scheme](#concept-scheme) describes the concepts that play a role in our universe of discourse. 
+- The [conceptual model](#conceptual-model) defines the classes of our universe of discourse.
+- The [logical model](#logical-model) describes the shapes of the data and how the data is derived from the source registries.
 
 The most important one is the logical model, which sits between the source registry models on the one hand, and on the other hand the product models that define what data is served to the users. 
 
@@ -19,6 +19,8 @@ The most important one is the logical model, which sits between the source regis
 - <a href="#maintainability"></a> - the model is loosely coupled so changes in the source models do not directly impact it, unless changes include the addition or removal of classes. Mappings can be impacted by changes in properties, but the mappings are maintained outside of the model. 
 
 ## Concept scheme
+
+The concept scheme is a MIM level 1 model and introduces user-friendly concepts to talk about the universe of discourse. 
 
 Design principles: 
 - The concept scheme is created in SKOS [[skos-reference]]. 
@@ -65,13 +67,13 @@ The concept "bouwjaar" is already defined in the BAG concept scheme and is refer
 <aside class="issue">
 TBD: rewrite this section. 
 
-In this section, we list a set of design principles, and described a few modeling attempts, but these may not hold. We are now first working out, how the semantic model plays its role on the logical level. When we got that figured out, we will return to the conceptual model. We retain the old design principles and modeling attempts for now, they may or may not still be valid. 
+In this section, we list a set of design principles, and describe a first modeling attempt, but these may still change profoundly. We decided to focus on the logical level first, in order to see how it can play a role in the orchestration engine. Once we understand that, and create a first logical model that works, we will return to the conceptual model. We retain the old design principles and modeling attempt for now - they may or may not still be valid. 
 </aside>
 
 Conceptual modeling principles:
 <ol>
    <li>The conceptual model will be a valid UML [[MIM11]] model  on MIM level 2, with the exception that we may define extensions of MIM if we need them.</li>
-   <li>The conceptual model defines the classes of our universe of discourse (see [scope]#introduction). It identifies the object types and their inherent properties, including relationships with other objects. </li>
+   <li>The conceptual model defines the classes of our universe of discourse (see <a href="introduction">scope</a>). It identifies the object types and their inherent properties, including relationships with other objects. </li>
    <li>The conceptual model describes how the classes in our universe of discourse relate to each other. These relationships can cross the boundaries of individual base registries.</li>
    <li>We relate all object types and properties to corresponding SKOS concepts as described in the previous section. </li>
    <li>In this conceptual model we will define relationships between objects if they are relevant for users, even though they may not be present in the source datasets (which were designed as silos).</li>
@@ -91,7 +93,6 @@ An assumption is that we have access to the information models for all source da
 
 We decided to go for the second option, at least in the conceptual model. In the case of subclasses, in the MIM paradigm we would 'inherit' all properties of the superclasses, while we want only a selection of relevant properties. Also, conceptually we are not creating subclasses. What we actually want is to derive data from source data. We will model the dependency of our object types from source object types on the logical level, because there we are considering data. On the conceptual level we are only considering objects. 
 
-
 The conceptual model will be a 'product model' defining the objects in user friendly terms (satisfying requirements <a href="#user-friendliness"></a>, <a href="#coherence-between-objects-from-different-source-models"></a> and <a href="#cherry-picking"></a> ). 
 
 <aside class="issue">
@@ -101,26 +102,23 @@ This is questionable.
 </aside>
 
 ## Logical model
-The logical model defines the shapes of the data. On this level we add data-registration concepts like history and provenance. The logical model also specifies how orchestrated data is related to source data. It sits between the source models on the one hand and the product models on the other hand. 
+The logical model defines the shapes of the data. On this level we add data-registration concepts like history and provenance. The logical model also specifies how orchestrated data is related to source data, at least on the class level. 
 
-This logical model must satisfy all requirements in <a href="#semantic-model-requirements"></a>. I.e we want to be able to add relationships, without changing source models, but retain a link TO source model classes we derive information from; in a machine readable way, but also usable for developers. The maintenance requirement is less important, because the source models do not change often, once standardized. 
+This logical model must satisfy all requirements in <a href="#requirements"></a>. I.e we want to be able to add relationships, without changing source models, but retain a link TO source model classes we derive information from; in a machine readable way, but also usable for developers to discover the available information and how it can be integrated. The maintenance requirement is less important, because the source models do not change often, once standardized. 
 
-We are planning to introduce a generic modeling pattern on the MIM level (metamodel) for provenance that can be applied to describe how orchestrated data was created from source data. A first version of this was created as part of our first use case, [Adresses](https://geonovum.github.io/WaU-UC1/#EAID_18371C99_5129_4c39_8E20_83CED8FF19B9). This provenance or lineage information will also be available to users on request. The Lineage model is developed separately in the [WaU-LIN repository](https://github.com/geonovum/WaU-LIN).
+We are planning to introduce a generic modeling pattern on the MIM level (i.e., in the metamodel) for provenance that can be applied to describe how orchestrated data was created from source data. A first version of this was created as part of our first use case, [Adresses](https://geonovum.github.io/WaU-UC1/#EAID_18371C99_5129_4c39_8E20_83CED8FF19B9). This provenance or lineage information will also be available to users on request. The Lineage model is developed separately in the [WaU-LIN repository](https://github.com/geonovum/WaU-LIN).
 
 This is the current attempt at creating the semantic model on the logical level: 
 
 ![semantic model, logical (MIM level 3)](./media/lm-semanticmodel-overview.png)
 
-The following elements are important to discuss: 
-- Entry point classes
-- Generalizations
-- Traces
+**Cluster classes** are classes we add in the semantic model. In the example above, `Gebouw` and `Perceel` are cluster classes. Cluster classes represent a logical unit of information about a real-world object, in which data from different source models can be integrated. They are not present in a source model, but are related to one or more classes in source models. They always have a MIM `Begrip` metadata field containing the URI of either a concept in a source model, or a concept coined in the context of SAM. 
 
-**Entry point classes** are classes we add in the semantic model. In the example above, Gebouw is an entry class. Entry classes are not present in a source model, but they may be a subclass of a class in a source model. They always have a MIM Begrip containing the URI of either a concept in a source model, or a concept coined in the context of SAM. 
+**Trace links**: Links between cluster classes and source classes are expressed using UML `<<trace>>` relationships. They indicate that the cluster class is *derived* from these source classes - one at minimun, but since we are integrating data from different sources there will often be several trace links originating from one cluster class. Every `<<trace>>` relationship indicates that data is retrieved from a certain source class, and that a mapping is needed to specify how this is done. The mapping is maintained outside of the model. 
 
-**Generalization**: use when inheriting and adding properties
+**Generalization**: In an earlier stage of our thinking, we wanted to use `<<generalization>>` relationships between a cluster class and a source class in cases where the cluster class only has one related source class, and the wanted behaviour is to copy all properties from the source object, and to add one or more properties. 
 
-**Trace links**: retrieving  information from a source. Every `<<trace>>` relationship indicates that a mapping is needed with a source class.
+However, during the second High 5 we discussed this and concluded that these cases would probably be few, and this approach also had the disadvantage of linking the cluster classes more tightly to the source classes. When using generalsation, SAM effectively becomes an extension of the source models, while we want to specify SAM as a separate layer which is only loosely coupled. Therefore, we decided to use only trace relationships. 
 
-
+**Associations**: Whenever we want to introduce a relationship to cross-link two classes from different source models, we add this relationship between the corresponding cluster classes.
 
