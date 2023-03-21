@@ -1,4 +1,4 @@
-# Design of the semantic model
+# Design of IMX-Geo
 
 We will create a concept scheme ([[MIM11]] level 1) in SKOS; a UML conceptual model (MIM level 2) and a UML logical model (MIM level 3). In very general terms the roles of these models are:
 
@@ -83,7 +83,7 @@ Conceptual modeling principles:
 
 This preliminary, partial sketch of the conceptual model contains a few object types from BAG, BRK, and DiSGeo. It is only a sketch of how object types from different base registries could be related.
 
-![Overview of the conceptual model](./media/sm2.png)
+![Overview of the conceptual IMX-Geo model](./media/sm2.png)
 
 An assumption is that we have access to the information models for all source datasets. These are created using modeling language UML. 
 
@@ -108,11 +108,11 @@ This logical model must satisfy all requirements in <a href="#requirements"></a>
 
 We are planning to introduce a generic modeling pattern on the MIM level (i.e., in the metamodel) for provenance that can be applied to describe how orchestrated data was created from source data. A first version of this was created as part of our first use case, [Adresses](https://geonovum.github.io/WaU-UC1/#EAID_18371C99_5129_4c39_8E20_83CED8FF19B9). This provenance or lineage information will also be available to users on request. The Lineage model is developed separately in the [WaU-LIN repository](https://github.com/geonovum/WaU-LIN).
 
-This is the current attempt at creating the semantic model on the logical level: 
+This is the current attempt at creating the cross-domain model on the logical level: 
 
-![semantic model, logical (MIM level 3)](./media/lm-semanticmodel-overview.png)
+![IMX-Geo cross-domain model, logical (MIM level 3)](./media/lm-semanticmodel-overview.png)
 
-**Cluster classes** are classes we add in the semantic model. In the example above, `Gebouw` and `Perceel` are cluster classes. Cluster classes represent a logical unit of information about a real-world object, in which data from different source models can be integrated. They are not present in a source model, but are related to one or more classes in source models. They always have a MIM `Begrip` metadata field containing the URI of either a concept in a source model, or a concept coined in the context of SAM. 
+**Cluster classes** are classes we add in the model. In the example above, `Gebouw` and `Perceel` are cluster classes. Cluster classes represent a logical unit of information about a real-world object, in which data from different source models can be integrated. They are not present in a source model, but are related to one or more classes in source models. They always have a MIM `Begrip` metadata field containing the URI of either a concept in a source model, or a concept coined in the context of SAM. 
 
 **Trace links**: Links between cluster classes and source classes are expressed using UML `<<trace>>` relationships. They indicate that the cluster class is *derived* from these source classes - one at minimun, but since we are integrating data from different sources there will often be several trace links originating from one cluster class. Every `<<trace>>` relationship indicates that data is retrieved from a certain source class, and that a mapping is needed to specify how this is done. The mapping is maintained outside of the model. 
 
