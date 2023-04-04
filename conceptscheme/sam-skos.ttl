@@ -12,7 +12,8 @@
 bk:WaU-SAM
    a skos:ConceptScheme ;
    rdfs:label "SAM" ;
-   skos:prefLabel "SAM"@nl ;
+   rdfs:label "IMX-Geo begrippenkader"@nl ;
+   skos:prefLabel "IMX-Geo begrippenkader"@nl ;
 .
 
 :omschrijving
@@ -21,7 +22,6 @@ bk:WaU-SAM
    skos:prefLabel "omschrijving"@nl ;
    rdfs:label "omschrijving" ;
    skos:inScheme bk:WaU-SAM ;
-   # GEEN MATCH GEVONDEN ;
 .
 
 :straatnaam
@@ -42,153 +42,52 @@ bk:WaU-SAM
    skos:closeMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Naam> ;
 .
 
-# :adres
-#    a skos:Concept ;
-#    skos:prefLabel "Adres"@nl ;
-#    rdfs:label "Adres" ;
-#    dct:created "2023-01-31"^^xsd:date ;
-#    dct:modified "2023-02-02"^^xsd:date ;
-#    skos:inScheme bk:WaU-SAM ;
-#    skos:exactMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Adres> ;
-# .
+:geometrie
+   a skos:Concept ;
+   skos:definition "Een geometrische representatie van een object ."@nl ;
+   skos:prefLabel "geometrie"@nl ;
+   rdfs:label "geometrie" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:closeMatch <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/georeferentie> ;
+   skos:narrowMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Geometrie> ;
+.
 
-# :identificatie
-#    a skos:Concept ;
-#    skos:prefLabel "identificatie"@nl ;
-#    rdfs:label "identificatie" ;
-#    skos:inScheme bk:WaU-SAM ; 
-#    skos:exactMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Identificatie> ;
-# .
+:3d_geometrie
+   a skos:Concept ;
+   skos:definition "Een geometrische representatie van een object in drie dimensies."@nl ;
+   skos:prefLabel "3D-geometrie"@nl ;
+   rdfs:label "3D-geometrie" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:broader :geometrie ;
+.
 
-# :huisnummer
-#   a skos:Concept ;
-#   skos:prefLabel "huisnummer"@nl ;
-#   rdfs:label "huisnummer" ;
-#   skos:inScheme bk:WaU-SAM ;
-#    skos:exactMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Huisnummer> ;
-# .
+:maaiveldgeometrie
+   a skos:Concept ;
+   skos:definition "Een geometrische representatie van de plek waar een fysiek object de ondergrond raakt (i.e. de 'footprint')."@nl ;
+   skos:prefLabel "maaiveldgeometrie"@nl ;
+   rdfs:label "maaiveldgeometrie" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:broader :geometrie ;
+.
 
-# :huisletter
-#   a skos:Concept ;
-#   skos:prefLabel "huisletter"@nl ;
-#   rdfs:label "huisletter" ;
-#   skos:inScheme bk:WaU-SAM ;
-#   skos:exactMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Huisletter> ;
-#.
+:bouwwerktype
+   a skos:Concept ;
+   skos:definition "Het oorspronkelijke gebruiksdoel van een bouwwerk."@nl ;
+   skos:prefLabel "bouwwerktype"@nl ;
+   rdfs:label "bouwwerktype" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:narrowMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Gebruiksdoel> ;
+   skos:narrowMatch <http://definities.geostandaarden.nl/imgeo/id/begrip/Bgt-type_overigBouwwerk> ;
+   skos:narrowMatch <http://definities.geostandaarden.nl/imgeo/id/begrip/Plus-type_overigBouwwerk> ;
+   skos:narrowMatch <http://brt.basisregistraties.overheid.nl/id/begrip/TypeGebouw> ;
+   #skos:narrowMatch <>; BGT typeKunstwerk, typeKunstwerkPlus, typeScheiding, typeScheidingPlus, typeGebouwInstallatie, typeGebouwInstallatiePlus, typeOverbruggingsdeel niet gevonden in IMGeo begrippenkader
+.
 
-# :huisnummertoevoeging
-#   a skos:Concept ;
-#   skos:prefLabel "huisnummertoevoeging"@nl ;
-#   rdfs:label "huisnummertoevoeging" ;
-#   skos:inScheme bk:WaU-SAM ;
-#   skos:exactMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Huisnummertoevoeging> ;
-#.
-
-# :postcode
-#   a skos:Concept ;
-#   skos:prefLabel "postcode"@nl ;
-#   rdfs:label "postcode" ;
-#   skos:inScheme bk:WaU-SAM ;
-#   skos:exactMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Postcode> ;
-#.
-
-# :is_hoofdadres
-#   a skos:Concept ;
-#   skos:prefLabel "is hoofdadres"@nl ;
-#   rdfs:label "is hoofdadres" ;
-#   skos:inScheme bk:WaU-SAM ;
-#   skos:exactMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Hoofdadres> ;
-#.
-
-# :is_geregistreerd_met
-#   a skos:Concept ;
-#   skos:prefLabel "is geregistreerd met"@nl ;
-#   rdfs:label "is geregistreerd met" ;
-#   skos:inScheme bk:WaU-SAM ;
-# .
-
-# :registratiegegevens
-#   a skos:Concept ;
-#   skos:prefLabel "Registratiegegevens"@nl ;
-#   rdfs:label "Registratiegegevens" ;
-#   dct:created "2023-01-31"^^xsd:date ;
-#   dct:modified "2023-02-02"^^xsd:date ;
-#   skos:inScheme bk:WaU-SAM ;
-#   skos:exactMatch http://definities.geostandaarden.nl/nen3610-2022/id/begrip/registratiegegevens> ;
-# .
-
-# :bestaat_uit
-#   a skos:Concept ;
-#   skos:prefLabel "bestaat uit"@nl ;
-#   rdfs:label "bestaat uit" ;
-#   skos:inScheme bk:WaU-SAM ;
-#   skos:related <https://begrippen.geostandaarden.nl/sm/nl/page/Registratiegegevens> ;
-#.
-
-#:orkestratiegegeven
-#   a skos:Concept ;
-#  skos:prefLabel "Orkestratiegegeven"@nl ;
-#   rdfs:label "Orkestratiegegeven" ;
-#   dct:created "2023-01-31"^^xsd:date ;
-#   dct:modified "2023-02-02"^^xsd:date ;
-#   skos:inScheme bk:WaU-SAM ;
-#.
-
-# :kenmerk
-#   a skos:Concept ;
-#   skos:prefLabel "kenmerk"@nl ;
-#   rdfs:label "kenmerk" ;
-#   skos:inScheme bk:WaU-SAM ;
-#   skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Orkestratiegegeven> ;
-#.
-
-# :waarde
-#   a skos:Concept ;
-#   skos:prefLabel "waarde"@nl ;
-#  rdfs:label "waarde" ;
-#   skos:inScheme bk:WaU-SAM ;
-#   skosthes:broaderPartitive <https://begrippen.geostandaarden.nl/sm/nl/page/Orkestratiegegeven> ;
-#.
-
-# :is_afgeleid_van
-#  a skos:Concept ;
-#  skos:prefLabel "is afgeleid van"@nl ;
-#  rdfs:label "is afgeleid van" ;
-#  skos:inScheme bk:WaU-SAM ;
-#  skos:related <https://www.w3.org/TR/prov-o/#wasDerivedFrom> ;
-#.
-
-# :maakt_deel_uit_van
-#  a skos:Concept ;
-#  skos:prefLabel "maakt deel uit van"@nl ;
-#  rdfs:label "maakt deel uit van" ;
-#  skos:inScheme bk:WaU-SAM ;
-#  skos:related <https://begrippen.geostandaarden.nl/sm/nl/page/Orkestratiegegeven> ;
-#.
-
-# :brongegeven
-#  a skos:Concept ;
-#  skos:prefLabel "Brongegeven"@nl ;
-#  rdfs:label "Brongegeven" ;
-#  dct:created "2023-01-31"^^xsd:date ;
-#  dct:modified "2023-02-02"^^xsd:date ;
-#  skos:inScheme bk:WaU-SAM ;
-#.
-
-# heeft_als_herkomst>
-#  a skos:Concept ;
-#  skos:prefLabel "heeft als herkomst"@nl ;
-#  rdfs:label "heeft als herkomst" ;
-#  skos:inScheme bk:WaU-SAM ;
-#  skos:related <https://www.w3.org/TR/prov-o/#wasDerivedFrom> ;
-#.
-
-# :bronobject
-#  a skos:Concept ;
-#  skos:prefLabel "Bronobject"@nl ;
-#  rdfs:label "Bronobject" ;
-#  dct:created "2023-01-31"^^xsd:date ;
-#  dct:modified "2023-02-02"^^xsd:date ;
-#  skos:inScheme bk:WaU-SAM ;
-#  skos:related <https://www.w3.org/TR/prov-o/#Entity> ;
-#.
+:sloopjaar
+   a skos:Concept ;
+   skos:definition "Het jaar dat de sloop van een gebouw is voltooid."@nl ;
+   skos:prefLabel "sloopjaar"@nl ;
+   rdfs:label "sloopjaar" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:relatedMatch <http://bag.basisregistraties.overheid.nl/id/begrip/PandGesloopt> ;
+.
