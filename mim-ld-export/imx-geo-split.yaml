@@ -1,0 +1,62 @@
+title: Split IMX-GEO from other packages in MIM
+version: 0.1
+queries:
+  - title: Get most elements
+    query: >
+      PREFIX mim:  <http://bp4mc2.org/def/mim#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?elem ?p ?o.
+        }
+      }
+      WHERE {
+        GRAPH <urn:input> {
+          ?info a mim:Informatiemodel.
+          ?info mim:naam "IMX-Geo LM".
+          ?info (mim:bevatModelelement|mim:attribuut|mim:type)* ?elem.
+          ?elem ?p ?o
+        }
+      }
+  - title: Add mim:Generalisatie
+    query: >
+      PREFIX mim:  <http://bp4mc2.org/def/mim#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?gen ?p ?o
+        }
+      }
+      WHERE {
+        GRAPH <urn:input> {
+          ?gen ?p ?o.
+          ?gen mim:subtype ?subtype.
+          ?gen mim:supertype ?supertype.
+        }
+        GRAPH <urn:output> {
+          ?subtype a ?t1.
+          ?supertype a ?t2.
+        }
+      }
+  - title: Add mim:Relatiesoort
+    query: >
+      PREFIX mim:  <http://bp4mc2.org/def/mim#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?rel ?p ?o.
+          ?rol ?pr ?or
+        }
+      }
+      WHERE {
+        GRAPH <urn:input> {
+          ?rel ?p ?o.
+          ?rel mim:bron ?bron.
+          ?rel mim:doel ?doel.
+          OPTIONAL {
+            ?rel mim:relatierol ?rol.
+            ?rol ?pr ?or
+          }
+        }
+        GRAPH <urn:output> {
+          ?bron a ?t1.
+          ?doel a ?t2.
+        }
+      }
