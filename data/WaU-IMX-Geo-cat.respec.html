@@ -1,7 +1,7 @@
 
 <!DOCTYPE HTML><section id="cat" class="normative">
    <h2>Gegevensdefinitie</h2>
-   <!--MIMCM-IMX-GeoLM-1.0-0-20230101-20230404-185231 imvertor Nightly-build.3-->
+   <!--MIMCM-IMX-GeoLM-1.0-0-20230101-20230405-074114 imvertor Nightly-build.3-->
    <section id="EAID_459E0A18_B5F3_4978_B450_4ACEC10F4E92">
       <h3>   IMX-Geo logisch model - overzicht</h3>
       <div class="imageinfo overview"><img src="data/Images/EAID_459E0A18_B5F3_4978_B450_4ACEC10F4E92.png" usemap="#imagemap-EAID_459E0A18_B5F3_4978_B450_4ACEC10F4E92" alt="Diagram &#xA;                        &#xA;                     "><map name="imagemap-EAID_459E0A18_B5F3_4978_B450_4ACEC10F4E92"><area shape="rect" alt="Bedrag" coords="1693,1395,1855,1517" href="#graph_EAID_D8B3C789_ADDD_4773_8C26_2953C9969A0F"><area shape="rect" alt="Registratiegegevens" coords="1056,1169,1179,1264" href="#graph_EAID_D3E0350C_8442_4984_9FF7_DF446E88004E"><area shape="rect" alt="Bouwwerk" coords="670,496,950,677" href="#graph_EAID_82AD2BB1_391F_48c8_880D_44FC9992B7B8"><area shape="rect" alt="Adres" coords="670,1169,959,1456" href="#graph_EAID_B4A02DCF_9008_4165_AE58_3A77D4871F62"><area shape="rect" alt="Gemeente" coords="2014,504,2225,667" href="#graph_EAID_51384C3C_47A6_4645_91B3_3FD093E063A7"><area shape="rect" alt="Gemeentegebied" coords="1607,496,1818,677" href="#graph_EAID_5B7DC12C_39A6_498d_B0A9_BBA7AB951FCC"><area shape="rect" alt="Woonplaats" coords="1211,872,1421,1052" href="#graph_EAID_A978F4FE_1C21_4697_8659_7DDBF52332C1"><area shape="rect" alt="Perceel" coords="1156,496,1421,712" href="#graph_EAID_BAB5CD56_6167_4398_BFA6_D461A54AB06C"><area shape="rect" alt="Gebouw" coords="638,801,981,968" href="#graph_EAID_0F958AEE_4395_412a_ACAE_FED367906063"></map><p><b>IMX-Geo logisch model - overzicht</b></p>
@@ -224,20 +224,6 @@
                      Adres
                      [ 1 ]
                      
-                     <a class="link" href="#detail_association_IMXGeoLM_Adres_gebouw">is­Adres­Van: gebouw</a>
-                     
-                     
-                     <a class="link" href="#global_class_IMXGeoLM_Gebouw">Gebouw</a>
-                     
-                     [ 1 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     Adres
-                     [ 1 ]
-                     
                      <a class="link" href="#detail_association_IMXGeoLM_Adres_registratiegegevens">geregistreerd­Met: registratiegegevens</a>
                      
                      
@@ -252,9 +238,9 @@
                      
                      <a class="link" href="#global_class_IMXGeoLM_Gebouw">Gebouw</a>
                      
-                     [ 1 ]
+                     [ 1 .. * ]
                      
-                     <a class="link" href="#detail_association_IMXGeoLM_Gebouw_adres">heeft­Als­Adres: adres</a>
+                     <a class="link" href="#detail_association_IMXGeoLM_Gebouw_heeftAlsAdres">heeft­Als­Adres: heeft­Als­Adres</a>
                      
                      Adres
                      [ 0 .. * ]
@@ -363,28 +349,14 @@
                <tr>
                   <td>
                      Gebouw
-                     [ 1 ]
+                     [ 1 .. * ]
                      
-                     <a class="link" href="#detail_association_IMXGeoLM_Gebouw_adres">heeft­Als­Adres: adres</a>
+                     <a class="link" href="#detail_association_IMXGeoLM_Gebouw_heeftAlsAdres">heeft­Als­Adres: heeft­Als­Adres</a>
                      
                      
                      <a class="link" href="#global_class_IMXGeoLM_Adres">Adres</a>
                      
                      [ 0 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     
-                     <a class="link" href="#global_class_IMXGeoLM_Adres">Adres</a>
-                     
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_IMXGeoLM_Adres_gebouw">is­Adres­Van: gebouw</a>
-                     
-                     Gebouw
-                     [ 1 .. * ]
                      </td>
                   <td></td>
                </tr>
@@ -499,20 +471,6 @@
                      Gemeente
                      [ 1 ]
                      
-                     <a class="link" href="#detail_association_IMXGeoLM_Gemeente_gemeente">bestuurt: gemeente</a>
-                     
-                     
-                     <a class="link" href="#global_class_IMXGeoLM_Gemeentegebied">Gemeentegebied</a>
-                     
-                     [ 1 ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     Gemeente
-                     [ 1 ]
-                     
                      <a class="link" href="#detail_association_IMXGeoLM_Gemeente_registratiegegevens">geregistreerd­Met: registratiegegevens</a>
                      
                      
@@ -529,7 +487,7 @@
                      
                      [ 1 ]
                      
-                     <a class="link" href="#detail_association_IMXGeoLM_Gemeentegebied_gemeente">wordt­Bestuurd­Door: gemeente</a>
+                     <a class="link" href="#detail_association_IMXGeoLM_Gemeentegebied_wordtBestuurdDoorGemeente">wordt­Bestuurd­Door­Gemeente: wordt­Bestuurd­Door­Gemeente</a>
                      
                      Gemeente
                      [ 1 ]
@@ -641,20 +599,6 @@
                      Gemeentegebied
                      [ 1 ]
                      
-                     <a class="link" href="#detail_association_IMXGeoLM_Gemeentegebied_woonplaats">bevat: woonplaats</a>
-                     
-                     
-                     <a class="link" href="#global_class_IMXGeoLM_Woonplaats">Woonplaats</a>
-                     
-                     [ 1 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     Gemeentegebied
-                     [ 1 ]
-                     
                      <a class="link" href="#detail_association_IMXGeoLM_Gemeentegebied_registratiegegevens">geregistreerd­Met: registratiegegevens</a>
                      
                      
@@ -669,25 +613,11 @@
                      Gemeentegebied
                      [ 1 ]
                      
-                     <a class="link" href="#detail_association_IMXGeoLM_Gemeentegebied_gemeente">wordt­Bestuurd­Door: gemeente</a>
+                     <a class="link" href="#detail_association_IMXGeoLM_Gemeentegebied_wordtBestuurdDoorGemeente">wordt­Bestuurd­Door­Gemeente: wordt­Bestuurd­Door­Gemeente</a>
                      
                      
                      <a class="link" href="#global_class_IMXGeoLM_Gemeente">Gemeente</a>
                      
-                     [ 1 ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     
-                     <a class="link" href="#global_class_IMXGeoLM_Gemeente">Gemeente</a>
-                     
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_IMXGeoLM_Gemeente_gemeente">bestuurt: gemeente</a>
-                     
-                     Gemeentegebied
                      [ 1 ]
                      </td>
                   <td></td>
@@ -697,9 +627,9 @@
                      
                      <a class="link" href="#global_class_IMXGeoLM_Woonplaats">Woonplaats</a>
                      
-                     [ 1 ]
+                     [ 1 .. * ]
                      
-                     <a class="link" href="#detail_association_IMXGeoLM_Woonplaats_gemeentegebied">binnen: Gemeentegebied</a>
+                     <a class="link" href="#detail_association_IMXGeoLM_Woonplaats_ligtInGemeentegebied">ligt­In­Gemeentegebied: ligt­In­Gemeentegebied</a>
                      
                      Gemeentegebied
                      [ 1 ]
@@ -872,20 +802,6 @@
                      Bouwwerk
                      [ 1 ]
                      
-                     <a class="link" href="#detail_association_IMXGeoLM_Bouwwerk_perceel">bevindt­Zich­Op­Perceel: perceel</a>
-                     
-                     
-                     <a class="link" href="#global_class_IMXGeoLM_Perceel">Perceel</a>
-                     
-                     [ 1 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     Bouwwerk
-                     [ 1 ]
-                     
                      <a class="link" href="#detail_association_IMXGeoLM_Bouwwerk_registratiegegevens">geregistreerd­Met: registratiegegevens</a>
                      
                      
@@ -900,9 +816,9 @@
                      
                      <a class="link" href="#global_class_IMXGeoLM_Perceel">Perceel</a>
                      
-                     [ 1 ]
+                     [ 1 .. * ]
                      
-                     <a class="link" href="#detail_association_IMXGeoLM_Perceel_bouwwerk">bevat­Bouwwerk: bouwwerk</a>
+                     <a class="link" href="#detail_association_IMXGeoLM_Perceel_bevatBouwwerk">bevat­Bouwwerk: bevat­Bouwwerk</a>
                      
                      Bouwwerk
                      [ 0 .. * ]
@@ -1036,23 +952,9 @@
                <tr>
                   <td>
                      Woonplaats
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_IMXGeoLM_Woonplaats_perceel">bevat: perceel</a>
-                     
-                     
-                     <a class="link" href="#global_class_IMXGeoLM_Perceel">Perceel</a>
-                     
                      [ 1 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     Woonplaats
-                     [ 1 ]
                      
-                     <a class="link" href="#detail_association_IMXGeoLM_Woonplaats_gemeentegebied">binnen: Gemeentegebied</a>
+                     <a class="link" href="#detail_association_IMXGeoLM_Woonplaats_ligtInGemeentegebied">ligt­In­Gemeentegebied: ligt­In­Gemeentegebied</a>
                      
                      
                      <a class="link" href="#global_class_IMXGeoLM_Gemeentegebied">Gemeentegebied</a>
@@ -1064,25 +966,11 @@
                <tr>
                   <td>
                      
-                     <a class="link" href="#global_class_IMXGeoLM_Gemeentegebied">Gemeentegebied</a>
-                     
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_IMXGeoLM_Gemeentegebied_woonplaats">bevat: woonplaats</a>
-                     
-                     Woonplaats
-                     [ 1 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     
                      <a class="link" href="#global_class_IMXGeoLM_Perceel">Perceel</a>
                      
-                     [ 1 ]
+                     [ 1 .. * ]
                      
-                     <a class="link" href="#detail_association_IMXGeoLM_Perceel_woonplaats">binnen: woonplaats</a>
+                     <a class="link" href="#detail_association_IMXGeoLM_Perceel_ligtInWoonplaats">ligt­In­Woonplaats: ligt­In­Woonplaats</a>
                      
                      Woonplaats
                      [ 1 ]
@@ -1218,9 +1106,9 @@
                <tr>
                   <td>
                      Perceel
-                     [ 1 ]
+                     [ 1 .. * ]
                      
-                     <a class="link" href="#detail_association_IMXGeoLM_Perceel_bouwwerk">bevat­Bouwwerk: bouwwerk</a>
+                     <a class="link" href="#detail_association_IMXGeoLM_Perceel_bevatBouwwerk">bevat­Bouwwerk: bevat­Bouwwerk</a>
                      
                      
                      <a class="link" href="#global_class_IMXGeoLM_Bouwwerk">Bouwwerk</a>
@@ -1260,42 +1148,14 @@
                <tr>
                   <td>
                      Perceel
-                     [ 1 ]
+                     [ 1 .. * ]
                      
-                     <a class="link" href="#detail_association_IMXGeoLM_Perceel_woonplaats">binnen: woonplaats</a>
+                     <a class="link" href="#detail_association_IMXGeoLM_Perceel_ligtInWoonplaats">ligt­In­Woonplaats: ligt­In­Woonplaats</a>
                      
                      
                      <a class="link" href="#global_class_IMXGeoLM_Woonplaats">Woonplaats</a>
                      
                      [ 1 ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     
-                     <a class="link" href="#global_class_IMXGeoLM_Bouwwerk">Bouwwerk</a>
-                     
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_IMXGeoLM_Bouwwerk_perceel">bevindt­Zich­Op­Perceel: perceel</a>
-                     
-                     Perceel
-                     [ 1 .. * ]
-                     </td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td>
-                     
-                     <a class="link" href="#global_class_IMXGeoLM_Woonplaats">Woonplaats</a>
-                     
-                     [ 1 ]
-                     
-                     <a class="link" href="#detail_association_IMXGeoLM_Woonplaats_perceel">bevat: perceel</a>
-                     
-                     Perceel
-                     [ 1 .. * ]
                      </td>
                   <td></td>
                </tr>
@@ -1517,14 +1377,6 @@
                <tr>
                   <th>Naam</th>
                   <td>Bedrag</td>
-               </tr>
-               <tr>
-                  <th>Begrip</th>
-                  <td>
-                     
-                     <a href="https://begrippen.geostandaarden.nl/sam/id/begrip/bedrag" target="_blank">https://begrippen.geostandaarden.nl/sam/id/begrip/bedrag</a>
-                     
-                     </td>
                </tr>
             </tbody>
          </table>
@@ -2540,31 +2392,6 @@
                <div class="notoc" id="">
                   <h7>Toelichting  </h7>In de BAG kan een adres een hoofdadres of nevenadres van een Adresseerbaarobject zijn.</div>
                </section>
-            <a class="anchor" id="detail_association_IMXGeoLM_Adres_gebouw"></a><section id="detail_association_IMXGeoLM_Adres_gebouw">
-               <h6>Relatiesoort details  <a href="#global_class_IMXGeoLM_Adres">Adres</a> is­Adres­Van</h6>
-               
-               
-               <table style="width: 100%;">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>is­Adres­Van</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_IMXGeoLM_Gebouw">Gebouw</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1 .. *</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
             <a class="anchor" id="detail_association_IMXGeoLM_Adres_registratiegegevens"></a><section id="detail_association_IMXGeoLM_Adres_registratiegegevens">
                <h6>Relatiesoort details  <a href="#global_class_IMXGeoLM_Adres">Adres</a> geregistreerd­Met</h6>
                
@@ -2813,7 +2640,7 @@
                   </tbody>
                </table>
                </section>
-            <a class="anchor" id="detail_association_IMXGeoLM_Gebouw_adres"></a><section id="detail_association_IMXGeoLM_Gebouw_adres">
+            <a class="anchor" id="detail_association_IMXGeoLM_Gebouw_heeftAlsAdres"></a><section id="detail_association_IMXGeoLM_Gebouw_heeftAlsAdres">
                <h6>Relatiesoort details  <a href="#global_class_IMXGeoLM_Gebouw">Gebouw</a> heeft­Als­Adres</h6>
                
                
@@ -2994,6 +2821,14 @@
                         <td>naam</td>
                      </tr>
                      <tr>
+                        <th>Begrip</th>
+                        <td>
+                           
+                           <a href="http://begrippen.geostandaarden.nl/disgeo/id/begrip/formele_naam" target="_blank">http://begrippen.geostandaarden.nl/disgeo/id/begrip/formele_naam</a>
+                           
+                           </td>
+                     </tr>
+                     <tr>
                         <th>Formaat</th>
                         <td>
                            <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
@@ -3022,31 +2857,6 @@
                      <tr>
                         <th>Indicatie identificerend</th>
                         <td>Nee</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            <a class="anchor" id="detail_association_IMXGeoLM_Gemeente_gemeente"></a><section id="detail_association_IMXGeoLM_Gemeente_gemeente">
-               <h6>Relatiesoort details  <a href="#global_class_IMXGeoLM_Gemeente">Gemeente</a> bestuurt</h6>
-               
-               
-               <table style="width: 100%;">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>bestuurt</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_IMXGeoLM_Gemeentegebied">Gemeentegebied</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1</td>
                      </tr>
                   </tbody>
                </table>
@@ -3232,6 +3042,14 @@
                         <td>geometrie</td>
                      </tr>
                      <tr>
+                        <th>Begrip</th>
+                        <td>
+                           
+                           <a href="https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie" target="_blank">https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie</a>
+                           
+                           </td>
+                     </tr>
+                     <tr>
                         <th>Herkomst</th>
                         <td>
                            IMDis­Geo
@@ -3298,31 +3116,6 @@
                   <h7>Toelichting  </h7>Het gebied dat bestuurt wordt door een openbaar lichaam heeft een geometrische representatie
                   in de vorm van één of meerdere polygonen (tweedimensionale vlakken). </div>
                </section>
-            <a class="anchor" id="detail_association_IMXGeoLM_Gemeentegebied_woonplaats"></a><section id="detail_association_IMXGeoLM_Gemeentegebied_woonplaats">
-               <h6>Relatiesoort details  <a href="#global_class_IMXGeoLM_Gemeentegebied">Gemeentegebied</a> bevat</h6>
-               
-               
-               <table style="width: 100%;">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>bevat</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_IMXGeoLM_Woonplaats">Woonplaats</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1 .. *</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
             <a class="anchor" id="detail_association_IMXGeoLM_Gemeentegebied_registratiegegevens"></a><section id="detail_association_IMXGeoLM_Gemeentegebied_registratiegegevens">
                <h6>Relatiesoort details  <a href="#global_class_IMXGeoLM_Gemeentegebied">Gemeentegebied</a> geregistreerd­Met</h6>
                
@@ -3348,8 +3141,8 @@
                   </tbody>
                </table>
                </section>
-            <a class="anchor" id="detail_association_IMXGeoLM_Gemeentegebied_gemeente"></a><section id="detail_association_IMXGeoLM_Gemeentegebied_gemeente">
-               <h6>Relatiesoort details  <a href="#global_class_IMXGeoLM_Gemeentegebied">Gemeentegebied</a> wordt­Bestuurd­Door</h6>
+            <a class="anchor" id="detail_association_IMXGeoLM_Gemeentegebied_wordtBestuurdDoorGemeente"></a><section id="detail_association_IMXGeoLM_Gemeentegebied_wordtBestuurdDoorGemeente">
+               <h6>Relatiesoort details  <a href="#global_class_IMXGeoLM_Gemeentegebied">Gemeentegebied</a> wordt­Bestuurd­Door­Gemeente</h6>
                
                
                <table style="width: 100%;">
@@ -3358,7 +3151,7 @@
                   <tbody>
                      <tr>
                         <th>Naam</th>
-                        <td>wordt­Bestuurd­Door</td>
+                        <td>wordt­Bestuurd­Door­Gemeente</td>
                      </tr>
                      <tr>
                         <th>Gerelateerd objecttype</th>
@@ -3567,7 +3360,7 @@
                         <th>Begrip</th>
                         <td>
                            
-                           <a href="https://begrippen.geostandaarden.nl/sam/id/begrip/gebouwtype" target="_blank">https://begrippen.geostandaarden.nl/sam/id/begrip/gebouwtype</a>
+                           <a href="https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerktype" target="_blank">https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerktype</a>
                            
                            </td>
                      </tr>
@@ -3600,31 +3393,6 @@
                      <tr>
                         <th>Indicatie identificerend</th>
                         <td>Nee</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            <a class="anchor" id="detail_association_IMXGeoLM_Bouwwerk_perceel"></a><section id="detail_association_IMXGeoLM_Bouwwerk_perceel">
-               <h6>Relatiesoort details  <a href="#global_class_IMXGeoLM_Bouwwerk">Bouwwerk</a> bevindt­Zich­Op­Perceel</h6>
-               
-               
-               <table style="width: 100%;">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>bevindt­Zich­Op­Perceel</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_IMXGeoLM_Perceel">Perceel</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1 .. *</td>
                      </tr>
                   </tbody>
                </table>
@@ -3810,9 +3578,17 @@
                         <td>geometrie</td>
                      </tr>
                      <tr>
+                        <th>Begrip</th>
+                        <td>
+                           
+                           <a href="http://bag.basisregistraties.overheid.nl/id/begrip/Geometrie" target="_blank">http://bag.basisregistraties.overheid.nl/id/begrip/Geometrie</a>
+                           
+                           </td>
+                     </tr>
+                     <tr>
                         <th>Herkomst</th>
                         <td>
-                           IMDis­Geo
+                           BAG
                            </td>
                      </tr>
                      <tr>
@@ -3828,7 +3604,7 @@
                      <tr>
                         <th>Herkomst definitie</th>
                         <td>
-                           EMSO
+                           BAG
                            </td>
                      </tr>
                      <tr>
@@ -3888,6 +3664,14 @@
                         <td>naam</td>
                      </tr>
                      <tr>
+                        <th>Begrip</th>
+                        <td>
+                           
+                           <a href="http://bag.basisregistraties.overheid.nl/id/begrip/Naam" target="_blank">http://bag.basisregistraties.overheid.nl/id/begrip/Naam</a>
+                           
+                           </td>
+                     </tr>
+                     <tr>
                         <th>Formaat</th>
                         <td>
                            <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
@@ -3945,8 +3729,8 @@
                   </tbody>
                </table>
                </section>
-            <a class="anchor" id="detail_association_IMXGeoLM_Woonplaats_perceel"></a><section id="detail_association_IMXGeoLM_Woonplaats_perceel">
-               <h6>Relatiesoort details  <a href="#global_class_IMXGeoLM_Woonplaats">Woonplaats</a> bevat</h6>
+            <a class="anchor" id="detail_association_IMXGeoLM_Woonplaats_ligtInGemeentegebied"></a><section id="detail_association_IMXGeoLM_Woonplaats_ligtInGemeentegebied">
+               <h6>Relatiesoort details  <a href="#global_class_IMXGeoLM_Woonplaats">Woonplaats</a> ligt­In­Gemeentegebied</h6>
                
                
                <table style="width: 100%;">
@@ -3955,32 +3739,7 @@
                   <tbody>
                      <tr>
                         <th>Naam</th>
-                        <td>bevat</td>
-                     </tr>
-                     <tr>
-                        <th>Gerelateerd objecttype</th>
-                        <td>
-                           <a class="link" href="#global_class_IMXGeoLM_Perceel">Perceel</a>
-                           </td>
-                     </tr>
-                     <tr>
-                        <th>Indicatie kardinaliteit</th>
-                        <td>1 .. *</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            <a class="anchor" id="detail_association_IMXGeoLM_Woonplaats_gemeentegebied"></a><section id="detail_association_IMXGeoLM_Woonplaats_gemeentegebied">
-               <h6>Relatiesoort details  <a href="#global_class_IMXGeoLM_Woonplaats">Woonplaats</a> binnen</h6>
-               
-               
-               <table style="width: 100%;">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 70%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Naam</th>
-                        <td>binnen</td>
+                        <td>ligt­In­Gemeentegebied</td>
                      </tr>
                      <tr>
                         <th>Gerelateerd objecttype</th>
@@ -4339,7 +4098,7 @@
                   </tbody>
                </table>
                </section>
-            <a class="anchor" id="detail_association_IMXGeoLM_Perceel_bouwwerk"></a><section id="detail_association_IMXGeoLM_Perceel_bouwwerk">
+            <a class="anchor" id="detail_association_IMXGeoLM_Perceel_bevatBouwwerk"></a><section id="detail_association_IMXGeoLM_Perceel_bevatBouwwerk">
                <h6>Relatiesoort details  <a href="#global_class_IMXGeoLM_Perceel">Perceel</a> bevat­Bouwwerk</h6>
                
                
@@ -4414,8 +4173,8 @@
                   </tbody>
                </table>
                </section>
-            <a class="anchor" id="detail_association_IMXGeoLM_Perceel_woonplaats"></a><section id="detail_association_IMXGeoLM_Perceel_woonplaats">
-               <h6>Relatiesoort details  <a href="#global_class_IMXGeoLM_Perceel">Perceel</a> binnen</h6>
+            <a class="anchor" id="detail_association_IMXGeoLM_Perceel_ligtInWoonplaats"></a><section id="detail_association_IMXGeoLM_Perceel_ligtInWoonplaats">
+               <h6>Relatiesoort details  <a href="#global_class_IMXGeoLM_Perceel">Perceel</a> ligt­In­Woonplaats</h6>
                
                
                <table style="width: 100%;">
@@ -4424,7 +4183,7 @@
                   <tbody>
                      <tr>
                         <th>Naam</th>
-                        <td>binnen</td>
+                        <td>ligt­In­Woonplaats</td>
                      </tr>
                      <tr>
                         <th>Gerelateerd objecttype</th>
