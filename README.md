@@ -1,4 +1,4 @@
-# WaU-SAM
+# WaU-IMX-Geo
 Repository for the development of IMX-Geo: Information Model for Cross-domain Data Queries - Geo-Information. 
 
 (IMX-Geo: Informatiemodel voor cross-domein databevragingen – Geo-informatie)
