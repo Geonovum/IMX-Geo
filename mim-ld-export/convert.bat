@@ -16,7 +16,7 @@ java -jar libs/ea2rdf.jar -ea -0 -e "../ea/imx-geo.eapx" > imx-geo-ea.ttl
 REM  Second step: transform EA model in RDF to MIM in RDF
 java -jar libs/rdf2rdf.jar imx-geo-ea.ttl imx-geo-mim-all.ttl libs/ea2mim.yaml
 
-REM  Third step: get only the NEN3610 Informatimodel from the EA model
+REM  Third step: get only the Informatiemodel of interest from the EA model
 java -jar libs/rdf2rdf.jar imx-geo-mim-all.ttl imx-geo-mim.ttl imx-geo-split.yaml
 
 REM  Fourth step: transform MIM model in RDF to RDFS/OWL/SHACL ontology
@@ -28,5 +28,5 @@ REM java -jar libs/rdf2rdf.jar imx-geo-ont.ttl ../imx-geo-ontologie.ttl imx-geo.
 REM  Sixth step: create diagram from ontology
 REM java -jar libs/rdf2xml.jar ../imx-geo-ontologie.ttl imx-geo-model.graphml libs/rdf2graphml.xsl
 
-REM  Seventh step: create MD file for respec page
+REM  Seventh step: create MD file for respec page (werkt nog niet)
 REM java -jar libs/rdf2xml.jar ../imx-geo-ontologie.ttl ../imx-geo-model.md libs/rdf2md.xsl
