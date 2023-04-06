@@ -1,3 +1,4 @@
 ﻿access_log
 *_log
 mim-ld-export/libs
+*.ldb
