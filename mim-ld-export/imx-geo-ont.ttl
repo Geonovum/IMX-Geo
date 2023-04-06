@@ -19,21 +19,17 @@ mim-item-ns:Waterschapsgebied.domein
         rdfs:comment    "<font color=\"#1e6496\">Het domein waar het object aan toe behoort.</font>" ;
         mim:equivalent  <urn:uuid:60CB15B3-7A19-40c1-99FE-1F5316FF1CB7> ;
         dct:subject     <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/domein> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "domein" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:domein .
 
 mim-item-ns:Gebouw.sloopjaar
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:C93EB248-2F60-4615-98AE-96A0EA7556F9> ;
         dct:subject     <https://begrippen.geostandaarden.nl/sam/id/begrip/sloopjaar> ;
-        sh:datatype     mim-item-ns:Year ;
         sh:maxCount     1 ;
         sh:name         "sloopjaar" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:sloopjaar .
 
 mim-item-ns:Registratiegegevens
@@ -50,11 +46,9 @@ mim-item-ns:Adres.domein
         rdfs:comment    "<font color=\"#1e6496\">Het domein waar het object aan toe behoort.</font>" ;
         mim:equivalent  <urn:uuid:913F015F-6845-46dc-87DF-34B20E664104> ;
         dct:subject     <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/domein> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "domein" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:domein .
 
 mim-item-ns:Waterschapsgebied.geometrie
@@ -112,22 +106,12 @@ mim-item-ns:Huisaansluiting.typeNet
         sh:name         "typeNet" ;
         sh:path         mim-item-ns:typeNet .
 
-mim-item-ns:Decimal  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Datatype> ;
-        rdfs:label      "Decimal" ;
-        mim:equivalent  <urn:uuid:685DCF87-F26E-4f76-960B-F61B2E2FA0BA> .
-
-mim-item-ns:Year  a     <http://www.w3.org/1999/02/22-rdf-syntax-ns#Datatype> ;
-        rdfs:label      "Year" ;
-        mim:equivalent  <urn:uuid:BB2458F8-619E-4be2-BB67-077D726489E2> .
-
 mim-item-ns:Bestemming.verwijzingNaarArtikel
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:4F144394-44A1-495a-87F4-A874188C47F9> ;
-        sh:datatype     mim-item-ns:URI ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "verwijzingNaarArtikel" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:verwijzingNaarArtikel .
 
 mim-item-ns:Bouwwerk.identificatie
@@ -150,11 +134,9 @@ mim-item-ns:Adres.identificatie
         rdfs:comment    "Domein waartoe het object behoort." ;
         mim:equivalent  <urn:uuid:3E284C06-A8BC-48d0-B034-5ACAEB5880DC> ;
         dct:subject     <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "identificatie" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:identificatie .
 
 mim-item-ns:Bouwwerk.domein
@@ -178,11 +160,9 @@ mim-item-ns:Waterschapsgebied.identificatie
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:25534ADC-3DC1-4e68-97CB-DEAEC94F0E1B> ;
         dct:subject     <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "identificatie" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:identificatie .
 
 mim-item-ns:Perceel.domein
@@ -190,23 +170,27 @@ mim-item-ns:Perceel.domein
         rdfs:comment    "<font color=\"#1e6496\">Het domein waar het object aan toe behoort.</font>" ;
         mim:equivalent  <urn:uuid:B71A1533-D3C4-4024-9005-3158B6524B00> ;
         dct:subject     <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/domein> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "domein" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:domein .
 
 mim-item-ns:Gemeente.naam
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:64E8004B-EC61-4535-8760-446481B58BCE> ;
         dct:subject     <http://begrippen.geostandaarden.nl/disgeo/id/begrip/formele_naam> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "naam" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:naam .
+
+mim-item-ns:Perceel.bevatBouwwerk
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid-dst:57DC85C9-A764-4c32-88C7-70FF5A294E4A> , <urn:uuid:57DC85C9-A764-4c32-88C7-70FF5A294E4A> ;
+        sh:class        mim-item-ns:Bouwwerk ;
+        sh:name         "bevatBouwwerk" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         mim-item-ns:bevatBouwwerk .
 
 mim-item-ns:oppervlak
         a               owl:DatatypeProperty ;
@@ -233,11 +217,9 @@ mim-item-ns:Perceel.begrenzing
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:22220B1A-646B-47ae-820A-997A3ECEB7C0> ;
         dct:subject     <http://brk.basisregistraties.overheid.nl/id/begrip/BegrenzingPerceel> ;
-        sh:datatype     mim-item-ns:GM_Surface ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "begrenzing" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:begrenzing .
 
 mim-item-ns:Adres.huisnummertoevoeging
@@ -245,12 +227,10 @@ mim-item-ns:Adres.huisnummertoevoeging
         rdfs:comment    "Een door of namens het gemeentebestuur ten aanzien\r\nvan een adresseerbaar object toegekende nadere\r\ntoevoeging aan een huisnummer of een combinatie van\r\nhuisnummer en huisletter." ;
         mim:equivalent  <urn:uuid:1E36C118-F9C3-4831-9328-3A58C949A3CC> ;
         dct:subject     <http://bag.basisregistraties.overheid.nl/id/begrip/Huisnummertoevoeging> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:maxLength    4 ;
         sh:minLength    1 ;
         sh:name         "huisnummertoevoeging" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:huisnummertoevoeging ;
         sh:pattern      "^[0-9a-zA-Z]{1,4}$" .
 
@@ -258,26 +238,18 @@ mim-item-ns:Gebouw.3dGeometrie
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:FBE84AAB-C48E-41d5-A039-DD1047681A69> ;
         dct:subject     <https://begrippen.geostandaarden.nl/sam/id/begrip/3d_geometrie> ;
-        sh:datatype     mim-item-ns:GM_Solid ;
         sh:maxCount     1 ;
         sh:name         "3dGeometrie" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:3dGeometrie .
-
-mim-item-ns:Integer  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Datatype> ;
-        rdfs:label      "Integer" ;
-        mim:equivalent  <urn:uuid:6117ACBD-3892-4c5a-8241-2570BD334665> .
 
 mim-item-ns:Gemeentegebied.domein
         a               sh:PropertyShape ;
         rdfs:comment    "<font color=\"#1e6496\">Het domein waar het object aan toe behoort.</font>" ;
         mim:equivalent  <urn:uuid:7B70E416-5541-413a-B344-A2D938C52B52> ;
         dct:subject     <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/domein> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "domein" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:domein .
 
 mim-item-ns:Perceel  a    owl:Class , sh:NodeShape ;
@@ -286,12 +258,8 @@ mim-item-ns:Perceel  a    owl:Class , sh:NodeShape ;
         mim:equivalent    <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> ;
         dct:subject       <http://brk.basisregistraties.overheid.nl/id/begrip/Perceel> ;
         skos:notation     "Perceel" ;
-        sh:property       mim-item-ns:Perceel.laatsteKoopsom , mim-item-ns:Perceel.bestemmingsInformatie , mim-item-ns:Perceel.domein , mim-item-ns:Perceel.oppervlak , mim-item-ns:Perceel.begrenzing , mim-item-ns:Perceel.identificatie , mim-item-ns:Perceel.koopjaar ;
+        sh:property       mim-item-ns:Perceel.laatsteKoopsom , mim-item-ns:Perceel.bevatBouwwerk , mim-item-ns:Perceel.bestemmingsInformatie , mim-item-ns:Perceel.domein , mim-item-ns:Perceel.oppervlak , mim-item-ns:Perceel.begrenzing , mim-item-ns:Perceel.identificatie , mim-item-ns:Perceel.koopjaar ;
         sh:targetClass    mim-item-ns:Perceel .
-
-mim-item-ns:URI  a      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Datatype> ;
-        rdfs:label      "URI" ;
-        mim:equivalent  <urn:uuid:61600E07-65A2-459f-8ED8-1EABEB08A3BF> .
 
 mim-item-ns:Adres  a      owl:Class , sh:NodeShape ;
         rdfs:comment      "Een samengesteld adres van gegevens van een Nummeraanduiding, Openbare ruimte en Woonplaats in de Basisregistratie Adressen en Gebouwen (BAG)." ;
@@ -303,23 +271,16 @@ mim-item-ns:Adres  a      owl:Class , sh:NodeShape ;
         sh:property       mim-item-ns:Adres.plaatsnaam , mim-item-ns:Adres.isHoofdadres , mim-item-ns:Adres.postcode , mim-item-ns:Adres.huisletter , mim-item-ns:Adres.identificatie , mim-item-ns:Adres.domein , mim-item-ns:Adres.omschrijving , mim-item-ns:Adres.huisnummer , mim-item-ns:Adres.straatnaam , mim-item-ns:Adres.aansluitschetsGasWaterElektraTelecom , mim-item-ns:Adres.huisnummertoevoeging ;
         sh:targetClass    mim-item-ns:Adres .
 
-mim-item-ns:GM_MultiSurface
-        a               <http://www.w3.org/1999/02/22-rdf-syntax-ns#Datatype> ;
-        rdfs:label      "GM_MultiSurface" ;
-        mim:equivalent  <urn:uuid:28E881FF-2361-44aa-8FF9-08604E438AFE> .
-
 mim-item-ns:Adres.straatnaam
         a               sh:PropertyShape ;
         rdfs:comment    "Een naam die aan een openbare ruimte is toegekend in een daartoe strekkend formeel gemeentelijk besluit." ;
         mim:equivalent  <urn:uuid:A6C3AFFA-D9C6-481c-BF78-4EBC4E35C5BD> ;
         dct:subject     <https://begrippen.geostandaarden.nl/sam/id/begrip/straatnaam> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:maxLength    80 ;
         sh:minCount     1 ;
         sh:minLength    1 ;
         sh:name         "straatnaam" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:straatnaam .
 
 mim-item-ns:maaiveldgeometrie
@@ -339,13 +300,11 @@ mim-item-ns:Adres.plaatsnaam
         rdfs:comment    "De benaming van een door het gemeentebestuur\r\naangewezen woonplaats." ;
         mim:equivalent  <urn:uuid:BD8813B7-3C50-4b42-9952-439A6DF4EE8C> ;
         dct:subject     <https://begrippen.geostandaarden.nl/sam/id/begrip/plaatsnaam> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:maxLength    80 ;
         sh:minCount     1 ;
         sh:minLength    1 ;
         sh:name         "plaatsnaam" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:plaatsnaam .
 
 mim-item-ns:koopjaar  a  owl:DatatypeProperty ;
@@ -362,11 +321,9 @@ mim-item-ns:straatnaam
 mim-item-ns:Huisaansluiting.locatie
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:8BFB6F5C-6E26-43f3-BA2E-429574112326> ;
-        sh:datatype     mim-item-ns:GM_Point ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "locatie" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:locatie .
 
 mim-item-ns:Gemeente.domein
@@ -374,11 +331,9 @@ mim-item-ns:Gemeente.domein
         rdfs:comment    "<font color=\"#1e6496\">Het domein waar het object aan toe behoort.</font>" ;
         mim:equivalent  <urn:uuid:BD6B42D4-B421-4b41-9007-F71119256430> ;
         dct:subject     <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/domein> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "domein" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:domein .
 
 mim-item-ns:kadastraalPerceel
@@ -389,11 +344,9 @@ mim-item-ns:kadastraalPerceel
 mim-item-ns:Huisaansluiting.aansluitschets
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:1183F92E-9902-4577-BB55-B2B749D140C0> ;
-        sh:datatype     mim-item-ns:URI ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "aansluitschets" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:aansluitschets .
 
 mim-item-ns:locatie  a  owl:DatatypeProperty ;
@@ -404,22 +357,18 @@ mim-item-ns:Perceel.identificatie
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:E00778A1-0FF7-4a5a-BFFE-14087D59CC09> ;
         dct:subject     <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "identificatie" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:identificatie .
 
 mim-item-ns:Waterschap.naam
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:398B9F56-6509-47aa-8F06-483BD8CA8B8A> ;
         dct:subject     <http://begrippen.geostandaarden.nl/disgeo/id/begrip/formele_naam> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "naam" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:naam .
 
 mim-item-ns:Waterschapsgebied
@@ -436,11 +385,9 @@ mim-item-ns:Adres.postcode
         rdfs:comment    "De door PostNL vastgestelde code behorende bij een\r\nbepaalde combinatie van een straatnaam en een\r\nhuisnummer." ;
         mim:equivalent  <urn:uuid:E2981994-4346-4e77-ABE0-C9D68D9DBE02> ;
         dct:subject     <http://bag.basisregistraties.overheid.nl/id/begrip/Postcode> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minLength    6 ;
         sh:name         "postcode" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:postcode ;
         sh:pattern      "^[1-9][0-9]{3}[A-Z]{2}$" .
 
@@ -449,11 +396,9 @@ mim-item-ns:Woonplaats.domein
         rdfs:comment    "<font color=\"#1e6496\">Het domein waar het object aan toe behoort.</font>" ;
         mim:equivalent  <urn:uuid:AAA15557-473F-47f2-9AAA-1AF538CC55CD> ;
         dct:subject     <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/domein> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "domein" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:domein .
 
 mim-item-ns:bestemmingsInformatie
@@ -469,11 +414,9 @@ mim-item-ns:aansluitschets
 mim-item-ns:Perceel.koopjaar
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:556E7089-7DFC-4867-BE08-647F6309CF97> ;
-        sh:datatype     mim-item-ns:Year ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "koopjaar" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:koopjaar .
 
 mim-item-ns:identificatie
@@ -482,6 +425,11 @@ mim-item-ns:identificatie
         rdfs:label      "identificatie" ;
         mim:equivalent  <urn:uuid:72818707-BDDD-4b77-9C28-5DE408FC1AC1> , <urn:uuid:25534ADC-3DC1-4e68-97CB-DEAEC94F0E1B> , <urn:uuid:55883A46-4458-41cf-9405-B9CD880B5C7B> , <urn:uuid:D839CF85-2C6C-475f-B26B-824D7D73E09C> , <urn:uuid:E00778A1-0FF7-4a5a-BFFE-14087D59CC09> , <urn:uuid:18D0838E-A665-4e84-9BC3-4D0EF1A86648> , <urn:uuid:329ECB08-813B-442a-AF6E-90E3D022836D> , <urn:uuid:3E284C06-A8BC-48d0-B034-5ACAEB5880DC> ;
         dct:subject     <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> .
+
+mim-item-ns:bevatBouwwerk
+        a               owl:ObjectProperty ;
+        rdfs:label      "bevatBouwwerk" ;
+        mim:equivalent  <urn:uuid-dst:57DC85C9-A764-4c32-88C7-70FF5A294E4A> .
 
 mim-item-ns:Gemeente  a   owl:Class , sh:NodeShape ;
         rdfs:isDefinedBy  mim-model-ns:IMX-Geo-LM ;
@@ -516,6 +464,15 @@ mim-item-ns:Woonplaats.geometrie
         sh:name         "geometrie" ;
         sh:path         mim-item-ns:geometrie .
 
+mim-item-ns:Bouwwerk.bevindtZichOpPerceel
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid-src:57DC85C9-A764-4c32-88C7-70FF5A294E4A> ;
+        sh:class        mim-item-ns:Perceel ;
+        sh:minCount     1 ;
+        sh:name         "bevindtZichOpPerceel" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         mim-item-ns:bevindtZichOpPerceel .
+
 mim-item-ns:opAdres  a  owl:ObjectProperty ;
         rdfs:label      "opAdres" ;
         mim:equivalent  <urn:uuid-src:A1D8CD2A-5279-45a9-B220-D329787C4396> .
@@ -543,11 +500,9 @@ mim-item-ns:Perceel.bestemmingsInformatie
 mim-item-ns:Bestemming.bestemmingsplan
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:74F7259D-8225-439d-886D-59932E05127D> ;
-        sh:datatype     mim-item-ns:URI ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "bestemmingsplan" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:bestemmingsplan .
 
 mim-item-ns:aansluitschetsGasWaterElektraTelecom
@@ -558,20 +513,18 @@ mim-item-ns:aansluitschetsGasWaterElektraTelecom
 mim-item-ns:CharacterString
         a               <http://www.w3.org/1999/02/22-rdf-syntax-ns#Datatype> ;
         rdfs:label      "CharacterString" ;
-        mim:equivalent  <urn:uuid:1B9E5020-B850-43ec-8FCA-ED4846D48D17> , <urn:uuid:2C3F1533-2281-4567-9990-01DCEE6661C8> .
+        mim:equivalent  <urn:uuid:1B9E5020-B850-43ec-8FCA-ED4846D48D17> .
 
 mim-item-ns:Adres.huisnummer
         a               sh:PropertyShape ;
         rdfs:comment    "Een door of namens het gemeentebestuur ten aanzien\r\nvan een adresseerbaar object toegekende nummering." ;
         mim:equivalent  <urn:uuid:8BFD8D1D-4C19-4729-BEBA-5967C703AF8F> ;
         dct:subject     <http://bag.basisregistraties.overheid.nl/id/begrip/Huisnummer> ;
-        sh:datatype     mim-item-ns:Integer ;
         sh:maxCount     1 ;
         sh:maxLength    5 ;
         sh:minCount     1 ;
         sh:minLength    1 ;
         sh:name         "huisnummer" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:huisnummer ;
         sh:pattern      "^[1-9][0-9]{0,4}$" .
 
@@ -580,22 +533,18 @@ mim-item-ns:Waterschap.domein
         rdfs:comment    "<font color=\"#1e6496\">Het domein waar het object aan toe behoort.</font>" ;
         mim:equivalent  <urn:uuid:124F247F-190E-44df-8D35-6B68808440B0> ;
         dct:subject     <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/domein> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "domein" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:domein .
 
 mim-item-ns:Woonplaats.identificatie
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:72818707-BDDD-4b77-9C28-5DE408FC1AC1> ;
         dct:subject     <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "identificatie" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:identificatie .
 
 mim-item-ns:plaatsnaam
@@ -617,11 +566,9 @@ mim-item-ns:Gemeentegebied.identificatie
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:18D0838E-A665-4e84-9BC3-4D0EF1A86648> ;
         dct:subject     <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "identificatie" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:identificatie .
 
 mim-item-ns:bouwjaar  a  owl:DatatypeProperty ;
@@ -634,11 +581,9 @@ mim-item-ns:Adres.huisletter
         rdfs:comment    "Een door of namens het gemeentebestuur ten aanzien\r\nvan een adresseerbaar object toegekende toevoeging\r\naan een huisnummer in de vorm van een alfanumeriek\r\nteken." ;
         mim:equivalent  <urn:uuid:9B09A649-D9B7-4d87-B31A-C0D5EFB5C13B> ;
         dct:subject     <http://bag.basisregistraties.overheid.nl/id/begrip/Huisletter> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minLength    1 ;
         sh:name         "huisletter" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:huisletter ;
         sh:pattern      "^[a-zA-Z]{1}$" .
 
@@ -646,10 +591,8 @@ mim-item-ns:Bouwwerk.maaiveldgeometrie
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:A6AD3DDC-7FF5-4a28-B33F-FD6F6EA8350F> ;
         dct:subject     <https://begrippen.geostandaarden.nl/sam/id/begrip/maaiveldgeometrie> ;
-        sh:datatype     mim-item-ns:GM_MultiSurface ;
         sh:maxCount     1 ;
         sh:name         "maaiveldgeometrie" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:maaiveldgeometrie .
 
 mim-item-ns:bestemmingsplan
@@ -675,10 +618,6 @@ mim-model-ns:IMX-Geo-LM
         mim:equivalent  <urn:uuid:784D5CB1-BB6E-4bed-B4FC-6D4F73B07862> ;
         skos:notation   "IMX-Geo-LM" .
 
-mim-item-ns:Boolean  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Datatype> ;
-        rdfs:label      "Boolean" ;
-        mim:equivalent  <urn:uuid:6D9078A3-14CB-4b1f-85A5-15207CBBBDDA> .
-
 mim-item-ns:huisletter
         a               owl:DatatypeProperty ;
         rdfs:comment    "Een door of namens het gemeentebestuur ten aanzien\r\nvan een adresseerbaar object toegekende toevoeging\r\naan een huisnummer in de vorm van een alfanumeriek\r\nteken." ;
@@ -691,27 +630,18 @@ mim-item-ns:Perceel.oppervlak
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:91DA4388-E53D-442a-A3E2-363AC131B739> ;
         dct:subject     <http://brk.basisregistraties.overheid.nl/id/begrip/KadastraleGrootte> ;
-        sh:datatype     mim-item-ns:Decimal ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "oppervlak" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:oppervlak .
 
 mim-item-ns:Bestemming.geometrie
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E> ;
-        sh:datatype     mim-item-ns:GM_Surface ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "geometrie" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:geometrie .
-
-mim-item-ns:GM_Surface
-        a               <http://www.w3.org/1999/02/22-rdf-syntax-ns#Datatype> ;
-        rdfs:label      "GM_Surface" ;
-        mim:equivalent  <urn:uuid:CCDDE1A3-5915-41e8-986C-F9F9271380A7> .
 
 mim-item-ns:isHoofdadres
         a               owl:DatatypeProperty ;
@@ -725,21 +655,17 @@ mim-item-ns:Adres.isHoofdadres
         rdfs:comment    "Indicatie of het adres een hoofdadres is." ;
         mim:equivalent  <urn:uuid:2B210C8F-989E-4897-8525-7D83C46A4264> ;
         dct:subject     <http://bag.basisregistraties.overheid.nl/id/begrip/Hoofdadres> ;
-        sh:datatype     mim-item-ns:Boolean ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "isHoofdadres" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:isHoofdadres .
 
 mim-item-ns:Bestemming.bestemming
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:0BF48E52-A720-4873-8F8F-366FD6454FF0> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "bestemming" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:bestemming .
 
 mim-item-ns:Huisaansluiting
@@ -756,26 +682,18 @@ mim-item-ns:Adres.omschrijving
         rdfs:comment    "De unieke aanduiding van een nummeraanduiding." ;
         mim:equivalent  <urn:uuid:FAC00B42-B22A-4a07-9646-E350FA1F660D> ;
         dct:subject     <https://begrippen.geostandaarden.nl/sam/id/begrip/omschrijving> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "omschrijving" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:omschrijving .
-
-mim-item-ns:GM_Solid  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Datatype> ;
-        rdfs:label      "GM_Solid" ;
-        mim:equivalent  <urn:uuid:51D80C4B-CC59-497a-B3EF-320CF54F1256> .
 
 mim-item-ns:Gemeente.identificatie
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:D839CF85-2C6C-475f-B26B-824D7D73E09C> ;
         dct:subject     <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "identificatie" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:identificatie .
 
 mim-item-ns:verwijzingNaarArtikel
@@ -795,22 +713,18 @@ mim-item-ns:Waterschap.identificatie
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:329ECB08-813B-442a-AF6E-90E3D022836D> ;
         dct:subject     <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "identificatie" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:identificatie .
 
 mim-item-ns:Woonplaats.naam
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:36EAE576-C263-44dd-9959-5D39E27C4B59> ;
         dct:subject     <http://bag.basisregistraties.overheid.nl/id/begrip/Naam> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "naam" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:naam .
 
 mim-item-ns:Gemeentegebied.geometrie
@@ -822,10 +736,6 @@ mim-item-ns:Gemeentegebied.geometrie
         sh:minCount     1 ;
         sh:name         "geometrie" ;
         sh:path         mim-item-ns:geometrie .
-
-mim-item-ns:GM_Point  a  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Datatype> ;
-        rdfs:label      "GM_Point" ;
-        mim:equivalent  <urn:uuid:CA9CCE00-9C40-4b96-952F-7E7F8C0086F3> .
 
 mim-item-ns:Waterschap
         a                 sh:NodeShape , owl:Class ;
@@ -847,15 +757,8 @@ mim-item-ns:Bouwwerk  a   sh:NodeShape , owl:Class ;
         mim:equivalent    <urn:uuid:82AD2BB1-391F-48c8-880D-44FC9992B7B8> ;
         dct:subject       <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerk> ;
         skos:notation     "Bouwwerk" ;
-        sh:property       mim-item-ns:Bouwwerk.maaiveldgeometrie , mim-item-ns:Bouwwerk.domein , mim-item-ns:Bouwwerk.identificatie , mim-item-ns:Bouwwerk.type ;
+        sh:property       mim-item-ns:Bouwwerk.bevindtZichOpPerceel , mim-item-ns:Bouwwerk.maaiveldgeometrie , mim-item-ns:Bouwwerk.domein , mim-item-ns:Bouwwerk.identificatie , mim-item-ns:Bouwwerk.type ;
         sh:targetClass    mim-item-ns:Bouwwerk .
-
-mim-item-ns:Class1  a     sh:NodeShape , owl:Class ;
-        rdfs:isDefinedBy  mim-model-ns:IMX-Geo-LM ;
-        rdfs:label        "Class1" ;
-        mim:equivalent    <urn:uuid:A21205AF-DCE0-4607-B985-4ECDADA44ADE> ;
-        skos:notation     "Class1" ;
-        sh:targetClass    mim-item-ns:Class1 .
 
 mim-item-ns:Gemeentegebied
         a                 owl:Class , sh:NodeShape ;
@@ -871,11 +774,9 @@ mim-item-ns:Bouwwerk.type
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E> ;
         dct:subject     <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerktype> ;
-        sh:datatype     mim-item-ns:CharacterString ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "type" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:type .
 
 mim-item-ns:huisnummer
@@ -897,11 +798,9 @@ mim-item-ns:Gebouw.bouwjaar
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:98D81D8B-1A1C-4b37-8B8D-39F69688678C> ;
         dct:subject     <http://bag.basisregistraties.overheid.nl/id/begrip/OorspronkelijkBouwjaar> ;
-        sh:datatype     mim-item-ns:Year ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "bouwjaar" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:bouwjaar .
 
 mim-model-ns:IMX-Geo_LM
@@ -910,6 +809,11 @@ mim-model-ns:IMX-Geo_LM
         mim:equivalent  <urn:uuid:0712E167-CD1C-4bb7-9BFA-86AEC40B86A4> ;
         owl:imports     mim-model-ns:IMX-Geo-LM ;
         skos:notation   "IMX-Geo_LM" .
+
+mim-item-ns:bevindtZichOpPerceel
+        a               owl:ObjectProperty ;
+        rdfs:label      "bevindtZichOpPerceel" ;
+        mim:equivalent  <urn:uuid-src:57DC85C9-A764-4c32-88C7-70FF5A294E4A> .
 
 mim-item-ns:begrenzing
         a               owl:DatatypeProperty ;
@@ -921,11 +825,9 @@ mim-item-ns:Gebouw.bovenaanzichtgeometrie
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:2EA9ECE5-8CC8-485e-B0AE-FEE22FA559CF> ;
         dct:subject     <http://bag.basisregistraties.overheid.nl/id/begrip/Geometrie> ;
-        sh:datatype     mim-item-ns:GM_Surface ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "bovenaanzichtgeometrie" ;
-        sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:bovenaanzichtgeometrie .
 
 mim-item-ns:Bestemming
