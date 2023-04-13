@@ -24,6 +24,14 @@ mim-item-ns:Waterschapsgebied.domein
         sh:name         "domein" ;
         sh:path         mim-item-ns:domein .
 
+mim-item-ns:Gebouw.graafgebiedKLICmelding
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid-src:83163756-0E46-40e0-BDF9-4DB4CB0AB217> ;
+        sh:class        mim-item-ns:GraafgebiedKLICmelding ;
+        sh:name         "graafgebiedKLICmelding" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         mim-item-ns:graafgebiedKLICmelding .
+
 mim-item-ns:Gebouw.sloopjaar
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:C93EB248-2F60-4615-98AE-96A0EA7556F9> ;
@@ -40,6 +48,15 @@ mim-item-ns:Registratiegegevens
         dct:subject       <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/registratiegegevens> ;
         skos:notation     "Registratiegegevens" ;
         sh:targetClass    mim-item-ns:Registratiegegevens .
+
+mim-item-ns:Waterschapsgebied.bevatPerceel
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid-src:D4CCE681-225F-42cb-BA72-F30561836AB3> ;
+        sh:class        mim-item-ns:Perceel ;
+        sh:minCount     1 ;
+        sh:name         "bevatPerceel" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         mim-item-ns:bevatPerceel .
 
 mim-item-ns:Adres.domein
         a               sh:PropertyShape ;
@@ -80,13 +97,21 @@ mim-item-ns:postcode  a  owl:DatatypeProperty ;
         dct:subject     <http://bag.basisregistraties.overheid.nl/id/begrip/Postcode> ;
         sh:pattern      "^[1-9][0-9]{3}[A-Z]{2}$" .
 
-mim-item-ns:Adres.aansluitschetsGasWaterElektraTelecom
+mim-item-ns:BestemmingsInformatie.bestemmingsplan
         a               sh:PropertyShape ;
-        mim:equivalent  <urn:uuid-dst:A1D8CD2A-5279-45a9-B220-D329787C4396> , <urn:uuid:A1D8CD2A-5279-45a9-B220-D329787C4396> ;
-        sh:class        mim-item-ns:Huisaansluiting ;
-        sh:name         "aansluitschetsGasWaterElektraTelecom" ;
+        mim:equivalent  <urn:uuid:74F7259D-8225-439d-886D-59932E05127D> ;
+        sh:maxCount     1 ;
+        sh:minCount     1 ;
+        sh:name         "bestemmingsplan" ;
+        sh:path         mim-item-ns:bestemmingsplan .
+
+mim-item-ns:Gebouw.heeftAlsAdres
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid-dst:383AC763-BD2B-499c-AEAE-2362287E08B9> , <urn:uuid:383AC763-BD2B-499c-AEAE-2362287E08B9> ;
+        sh:class        mim-item-ns:Adres ;
+        sh:name         "heeftAlsAdres" ;
         sh:nodeKind     sh:IRI ;
-        sh:path         mim-item-ns:aansluitschetsGasWaterElektraTelecom .
+        sh:path         mim-item-ns:heeftAlsAdres .
 
 mim-item-ns:Woonplaats
         a                 owl:Class , sh:NodeShape ;
@@ -95,24 +120,40 @@ mim-item-ns:Woonplaats
         mim:equivalent    <urn:uuid:A978F4FE-1C21-4697-8659-7DDBF52332C1> ;
         dct:subject       <http://bag.basisregistraties.overheid.nl/id/begrip/Woonplaats> ;
         skos:notation     "Woonplaats" ;
-        sh:property       mim-item-ns:Woonplaats.domein , mim-item-ns:Woonplaats.identificatie , mim-item-ns:Woonplaats.geometrie , mim-item-ns:Woonplaats.naam ;
+        sh:property       mim-item-ns:Woonplaats.identificatie , mim-item-ns:Woonplaats.domein , mim-item-ns:Woonplaats.geometrie , mim-item-ns:Woonplaats.naam ;
         sh:targetClass    mim-item-ns:Woonplaats .
 
-mim-item-ns:Huisaansluiting.typeNet
+mim-item-ns:GraafgebiedKLICmelding.geometrie
         a               sh:PropertyShape ;
-        mim:equivalent  <urn:uuid:3CDB9C26-7990-4876-9D4B-E49752F63B36> ;
+        mim:equivalent  <urn:uuid:C0DD161F-0EE6-4175-AB6B-9747BE3931DF> ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
-        sh:name         "typeNet" ;
-        sh:path         mim-item-ns:typeNet .
+        sh:name         "geometrie" ;
+        sh:path         mim-item-ns:geometrie .
 
-mim-item-ns:Bestemming.verwijzingNaarArtikel
+mim-item-ns:Perceel.ligtInGemeentegebied
         a               sh:PropertyShape ;
-        mim:equivalent  <urn:uuid:4F144394-44A1-495a-87F4-A874188C47F9> ;
+        mim:equivalent  <urn:uuid-dst:8C98BCE8-D5F7-49e6-A130-F84E58C28584> , <urn:uuid:8C98BCE8-D5F7-49e6-A130-F84E58C28584> ;
+        sh:class        mim-item-ns:Gemeentegebied ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
-        sh:name         "verwijzingNaarArtikel" ;
-        sh:path         mim-item-ns:verwijzingNaarArtikel .
+        sh:name         "ligtInGemeentegebied" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         mim-item-ns:ligtInGemeentegebied .
+
+mim-item-ns:registratiegegevens
+        a               owl:ObjectProperty ;
+        rdfs:label      "registratiegegevens" ;
+        mim:equivalent  <urn:uuid-dst:D2CE840C-BF1D-4275-989E-6F3D0974E02C> .
+
+mim-item-ns:GraafgebiedKLICmelding
+        a                 owl:Class , sh:NodeShape ;
+        rdfs:isDefinedBy  mim-model-ns:IMX-Geo-LM ;
+        rdfs:label        "GraafgebiedKLICmelding" ;
+        mim:equivalent    <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> ;
+        skos:notation     "GraafgebiedKLICmelding" ;
+        sh:property       mim-item-ns:GraafgebiedKLICmelding.geometrie , mim-item-ns:GraafgebiedKLICmelding.gebouwBinnenKLICmelding , mim-item-ns:GraafgebiedKLICmelding.adresBinnenKLICmelding ;
+        sh:targetClass    mim-item-ns:GraafgebiedKLICmelding .
 
 mim-item-ns:Bouwwerk.identificatie
         a               sh:PropertyShape ;
@@ -124,10 +165,6 @@ mim-item-ns:Bouwwerk.identificatie
         sh:name         "identificatie" ;
         sh:nodeKind     sh:Literal ;
         sh:path         mim-item-ns:identificatie .
-
-mim-item-ns:typeNet  a  owl:DatatypeProperty ;
-        rdfs:label      "typeNet" ;
-        mim:equivalent  <urn:uuid:3CDB9C26-7990-4876-9D4B-E49752F63B36> .
 
 mim-item-ns:Adres.identificatie
         a               sh:PropertyShape ;
@@ -156,6 +193,16 @@ mim-item-ns:type  a     owl:DatatypeProperty ;
         mim:equivalent  <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E> ;
         dct:subject     <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerktype> .
 
+mim-item-ns:Gemeentegebied.wordtBestuurdDoorGemeente
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid-dst:9CD06689-6C88-4609-B7A0-3C725E4FE6F0> , <urn:uuid:9CD06689-6C88-4609-B7A0-3C725E4FE6F0> ;
+        sh:class        mim-item-ns:Gemeente ;
+        sh:maxCount     1 ;
+        sh:minCount     1 ;
+        sh:name         "wordtBestuurdDoorGemeente" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         mim-item-ns:wordtBestuurdDoorGemeente .
+
 mim-item-ns:Waterschapsgebied.identificatie
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:25534ADC-3DC1-4e68-97CB-DEAEC94F0E1B> ;
@@ -164,6 +211,14 @@ mim-item-ns:Waterschapsgebied.identificatie
         sh:minCount     1 ;
         sh:name         "identificatie" ;
         sh:path         mim-item-ns:identificatie .
+
+mim-item-ns:BestemmingsInformatie.verwijzingNaarArtikel
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid:4F144394-44A1-495a-87F4-A874188C47F9> ;
+        sh:maxCount     1 ;
+        sh:minCount     1 ;
+        sh:name         "verwijzingNaarArtikel" ;
+        sh:path         mim-item-ns:verwijzingNaarArtikel .
 
 mim-item-ns:Perceel.domein
         a               sh:PropertyShape ;
@@ -222,6 +277,20 @@ mim-item-ns:Perceel.begrenzing
         sh:name         "begrenzing" ;
         sh:path         mim-item-ns:begrenzing .
 
+mim-item-ns:ligtInWaterschap
+        a               owl:ObjectProperty ;
+        rdfs:label      "ligtInWaterschap" ;
+        mim:equivalent  <urn:uuid-dst:D4CCE681-225F-42cb-BA72-F30561836AB3> .
+
+mim-item-ns:Gemeentegebied.bevatPerceel
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid-src:8C98BCE8-D5F7-49e6-A130-F84E58C28584> ;
+        sh:class        mim-item-ns:Perceel ;
+        sh:minCount     1 ;
+        sh:name         "bevatPerceel" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         mim-item-ns:bevatPerceel .
+
 mim-item-ns:Adres.huisnummertoevoeging
         a               sh:PropertyShape ;
         rdfs:comment    "Een door of namens het gemeentebestuur ten aanzien\r\nvan een adresseerbaar object toegekende nadere\r\ntoevoeging aan een huisnummer of een combinatie van\r\nhuisnummer en huisletter." ;
@@ -242,6 +311,30 @@ mim-item-ns:Gebouw.3dGeometrie
         sh:name         "3dGeometrie" ;
         sh:path         mim-item-ns:3dGeometrie .
 
+mim-item-ns:Gemeente.bestuurdGebied
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid-src:9CD06689-6C88-4609-B7A0-3C725E4FE6F0> ;
+        sh:class        mim-item-ns:Gemeentegebied ;
+        sh:maxCount     1 ;
+        sh:minCount     1 ;
+        sh:name         "bestuurdGebied" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         mim-item-ns:bestuurdGebied .
+
+mim-item-ns:Adres.isAdresVanGebouw
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid-src:383AC763-BD2B-499c-AEAE-2362287E08B9> ;
+        sh:class        mim-item-ns:Gebouw ;
+        sh:minCount     1 ;
+        sh:name         "isAdresVanGebouw" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         mim-item-ns:isAdresVanGebouw .
+
+mim-item-ns:heeftAlsAdres
+        a               owl:ObjectProperty ;
+        rdfs:label      "heeftAlsAdres" ;
+        mim:equivalent  <urn:uuid-dst:383AC763-BD2B-499c-AEAE-2362287E08B9> .
+
 mim-item-ns:Gemeentegebied.domein
         a               sh:PropertyShape ;
         rdfs:comment    "<font color=\"#1e6496\">Het domein waar het object aan toe behoort.</font>" ;
@@ -258,7 +351,7 @@ mim-item-ns:Perceel  a    owl:Class , sh:NodeShape ;
         mim:equivalent    <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> ;
         dct:subject       <http://brk.basisregistraties.overheid.nl/id/begrip/Perceel> ;
         skos:notation     "Perceel" ;
-        sh:property       mim-item-ns:Perceel.laatsteKoopsom , mim-item-ns:Perceel.bevatBouwwerk , mim-item-ns:Perceel.bestemmingsInformatie , mim-item-ns:Perceel.domein , mim-item-ns:Perceel.oppervlak , mim-item-ns:Perceel.begrenzing , mim-item-ns:Perceel.identificatie , mim-item-ns:Perceel.koopjaar ;
+        sh:property       mim-item-ns:Perceel.laatsteKoopsom , mim-item-ns:Perceel.bevatBouwwerk , mim-item-ns:Perceel.bestemmingsInformatie , mim-item-ns:Perceel.domein , mim-item-ns:Perceel.oppervlak , mim-item-ns:Perceel.begrenzing , mim-item-ns:Perceel.identificatie , mim-item-ns:Perceel.ligtInGemeentegebied , mim-item-ns:Perceel.ligtInWaterschap , mim-item-ns:Perceel.koopjaar ;
         sh:targetClass    mim-item-ns:Perceel .
 
 mim-item-ns:Adres  a      owl:Class , sh:NodeShape ;
@@ -268,8 +361,13 @@ mim-item-ns:Adres  a      owl:Class , sh:NodeShape ;
         mim:equivalent    <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> ;
         dct:subject       <http://bag.basisregistraties.overheid.nl/id/begrip/Adres> ;
         skos:notation     "Adres" ;
-        sh:property       mim-item-ns:Adres.plaatsnaam , mim-item-ns:Adres.isHoofdadres , mim-item-ns:Adres.postcode , mim-item-ns:Adres.huisletter , mim-item-ns:Adres.identificatie , mim-item-ns:Adres.domein , mim-item-ns:Adres.omschrijving , mim-item-ns:Adres.huisnummer , mim-item-ns:Adres.straatnaam , mim-item-ns:Adres.aansluitschetsGasWaterElektraTelecom , mim-item-ns:Adres.huisnummertoevoeging ;
+        sh:property       mim-item-ns:Adres.plaatsnaam , mim-item-ns:Adres.isHoofdadres , mim-item-ns:Adres.postcode , mim-item-ns:Adres.isAdresVanGebouw , mim-item-ns:Adres.huisletter , mim-item-ns:Adres.identificatie , mim-item-ns:Adres.domein , mim-item-ns:Adres.omschrijving , mim-item-ns:Adres.huisnummer , mim-item-ns:Adres.straatnaam , mim-item-ns:Adres.graafgebiedKLICmelding , mim-item-ns:Adres.huisnummertoevoeging ;
         sh:targetClass    mim-item-ns:Adres .
+
+mim-item-ns:wordtBestuurdDoorGemeente
+        a               owl:ObjectProperty ;
+        rdfs:label      "wordtBestuurdDoorGemeente" ;
+        mim:equivalent  <urn:uuid-dst:9CD06689-6C88-4609-B7A0-3C725E4FE6F0> .
 
 mim-item-ns:Adres.straatnaam
         a               sh:PropertyShape ;
@@ -318,13 +416,15 @@ mim-item-ns:straatnaam
         mim:equivalent  <urn:uuid:A6C3AFFA-D9C6-481c-BF78-4EBC4E35C5BD> ;
         dct:subject     <https://begrippen.geostandaarden.nl/sam/id/begrip/straatnaam> .
 
-mim-item-ns:Huisaansluiting.locatie
+mim-item-ns:Bouwwerk.registratiegegevens
         a               sh:PropertyShape ;
-        mim:equivalent  <urn:uuid:8BFB6F5C-6E26-43f3-BA2E-429574112326> ;
+        mim:equivalent  <urn:uuid-dst:D2CE840C-BF1D-4275-989E-6F3D0974E02C> , <urn:uuid:D2CE840C-BF1D-4275-989E-6F3D0974E02C> ;
+        sh:class        mim-item-ns:Registratiegegevens ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
-        sh:name         "locatie" ;
-        sh:path         mim-item-ns:locatie .
+        sh:name         "registratiegegevens" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         mim-item-ns:registratiegegevens .
 
 mim-item-ns:Gemeente.domein
         a               sh:PropertyShape ;
@@ -336,22 +436,20 @@ mim-item-ns:Gemeente.domein
         sh:name         "domein" ;
         sh:path         mim-item-ns:domein .
 
+mim-item-ns:gebouwBinnenKLICmelding
+        a               owl:ObjectProperty ;
+        rdfs:label      "gebouwBinnenKLICmelding" ;
+        mim:equivalent  <urn:uuid-dst:83163756-0E46-40e0-BDF9-4DB4CB0AB217> .
+
+mim-item-ns:ligtInGemeentegebied
+        a               owl:ObjectProperty ;
+        rdfs:label      "ligtInGemeentegebied" ;
+        mim:equivalent  <urn:uuid-dst:8C98BCE8-D5F7-49e6-A130-F84E58C28584> .
+
 mim-item-ns:kadastraalPerceel
         a               owl:ObjectProperty ;
         rdfs:label      "kadastraalPerceel" ;
         mim:equivalent  <urn:uuid-src:083BD47C-F8AE-4956-97AB-009E59EB99D3> .
-
-mim-item-ns:Huisaansluiting.aansluitschets
-        a               sh:PropertyShape ;
-        mim:equivalent  <urn:uuid:1183F92E-9902-4577-BB55-B2B749D140C0> ;
-        sh:maxCount     1 ;
-        sh:minCount     1 ;
-        sh:name         "aansluitschets" ;
-        sh:path         mim-item-ns:aansluitschets .
-
-mim-item-ns:locatie  a  owl:DatatypeProperty ;
-        rdfs:label      "locatie" ;
-        mim:equivalent  <urn:uuid:8BFB6F5C-6E26-43f3-BA2E-429574112326> .
 
 mim-item-ns:Perceel.identificatie
         a               sh:PropertyShape ;
@@ -361,6 +459,14 @@ mim-item-ns:Perceel.identificatie
         sh:minCount     1 ;
         sh:name         "identificatie" ;
         sh:path         mim-item-ns:identificatie .
+
+mim-item-ns:BestemmingsInformatie.bestemming
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid:0BF48E52-A720-4873-8F8F-366FD6454FF0> ;
+        sh:maxCount     1 ;
+        sh:minCount     1 ;
+        sh:name         "bestemming" ;
+        sh:path         mim-item-ns:bestemming .
 
 mim-item-ns:Waterschap.naam
         a               sh:PropertyShape ;
@@ -377,7 +483,7 @@ mim-item-ns:Waterschapsgebied
         rdfs:label        "Waterschapsgebied" ;
         mim:equivalent    <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> ;
         skos:notation     "Waterschapsgebied" ;
-        sh:property       mim-item-ns:Waterschapsgebied.domein , mim-item-ns:Waterschapsgebied.geometrie , mim-item-ns:Waterschapsgebied.identificatie ;
+        sh:property       mim-item-ns:Waterschapsgebied.bevatPerceel , mim-item-ns:Waterschapsgebied.domein , mim-item-ns:Waterschapsgebied.geometrie , mim-item-ns:Waterschapsgebied.wordtBestuurdDoorWaterschap , mim-item-ns:Waterschapsgebied.identificatie ;
         sh:targetClass    mim-item-ns:Waterschapsgebied .
 
 mim-item-ns:Adres.postcode
@@ -406,11 +512,6 @@ mim-item-ns:bestemmingsInformatie
         rdfs:label      "bestemmingsInformatie" ;
         mim:equivalent  <urn:uuid-dst:083BD47C-F8AE-4956-97AB-009E59EB99D3> .
 
-mim-item-ns:aansluitschets
-        a               owl:DatatypeProperty ;
-        rdfs:label      "aansluitschets" ;
-        mim:equivalent  <urn:uuid:1183F92E-9902-4577-BB55-B2B749D140C0> .
-
 mim-item-ns:Perceel.koopjaar
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:556E7089-7DFC-4867-BE08-647F6309CF97> ;
@@ -437,16 +538,18 @@ mim-item-ns:Gemeente  a   owl:Class , sh:NodeShape ;
         mim:equivalent    <urn:uuid:51384C3C-47A6-4645-91B3-3FD093E063A7> ;
         dct:subject       <http://begrippen.geostandaarden.nl/disgeo/id/begrip/gemeente> ;
         skos:notation     "Gemeente" ;
-        sh:property       mim-item-ns:Gemeente.naam , mim-item-ns:Gemeente.domein , mim-item-ns:Gemeente.identificatie ;
+        sh:property       mim-item-ns:Gemeente.naam , mim-item-ns:Gemeente.domein , mim-item-ns:Gemeente.bestuurdGebied , mim-item-ns:Gemeente.identificatie ;
         sh:targetClass    mim-item-ns:Gemeente .
 
-mim-item-ns:Huisaansluiting.opAdres
+mim-item-ns:Perceel.ligtInWaterschap
         a               sh:PropertyShape ;
-        mim:equivalent  <urn:uuid-src:A1D8CD2A-5279-45a9-B220-D329787C4396> ;
-        sh:class        mim-item-ns:Adres ;
-        sh:name         "opAdres" ;
+        mim:equivalent  <urn:uuid-dst:D4CCE681-225F-42cb-BA72-F30561836AB3> , <urn:uuid:D4CCE681-225F-42cb-BA72-F30561836AB3> ;
+        sh:class        mim-item-ns:Waterschapsgebied ;
+        sh:maxCount     1 ;
+        sh:minCount     1 ;
+        sh:name         "ligtInWaterschap" ;
         sh:nodeKind     sh:IRI ;
-        sh:path         mim-item-ns:opAdres .
+        sh:path         mim-item-ns:ligtInWaterschap .
 
 mim-item-ns:sloopjaar
         a               owl:DatatypeProperty ;
@@ -473,10 +576,6 @@ mim-item-ns:Bouwwerk.bevindtZichOpPerceel
         sh:nodeKind     sh:IRI ;
         sh:path         mim-item-ns:bevindtZichOpPerceel .
 
-mim-item-ns:opAdres  a  owl:ObjectProperty ;
-        rdfs:label      "opAdres" ;
-        mim:equivalent  <urn:uuid-src:A1D8CD2A-5279-45a9-B220-D329787C4396> .
-
 mim-item-ns:Perceel.laatsteKoopsom
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:A7B286A0-73FF-4f28-BEE4-91F18FE7417F> ;
@@ -491,24 +590,11 @@ mim-item-ns:Perceel.laatsteKoopsom
 mim-item-ns:Perceel.bestemmingsInformatie
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid-dst:083BD47C-F8AE-4956-97AB-009E59EB99D3> , <urn:uuid:083BD47C-F8AE-4956-97AB-009E59EB99D3> ;
-        sh:class        mim-item-ns:Bestemming ;
+        sh:class        mim-item-ns:BestemmingsInformatie ;
         sh:minCount     1 ;
         sh:name         "bestemmingsInformatie" ;
         sh:nodeKind     sh:IRI ;
         sh:path         mim-item-ns:bestemmingsInformatie .
-
-mim-item-ns:Bestemming.bestemmingsplan
-        a               sh:PropertyShape ;
-        mim:equivalent  <urn:uuid:74F7259D-8225-439d-886D-59932E05127D> ;
-        sh:maxCount     1 ;
-        sh:minCount     1 ;
-        sh:name         "bestemmingsplan" ;
-        sh:path         mim-item-ns:bestemmingsplan .
-
-mim-item-ns:aansluitschetsGasWaterElektraTelecom
-        a               owl:ObjectProperty ;
-        rdfs:label      "aansluitschetsGasWaterElektraTelecom" ;
-        mim:equivalent  <urn:uuid-dst:A1D8CD2A-5279-45a9-B220-D329787C4396> .
 
 mim-item-ns:CharacterString
         a               <http://www.w3.org/1999/02/22-rdf-syntax-ns#Datatype> ;
@@ -538,6 +624,24 @@ mim-item-ns:Waterschap.domein
         sh:name         "domein" ;
         sh:path         mim-item-ns:domein .
 
+mim-item-ns:isAdresVanGebouw
+        a               owl:ObjectProperty ;
+        rdfs:label      "isAdresVanGebouw" ;
+        mim:equivalent  <urn:uuid-src:383AC763-BD2B-499c-AEAE-2362287E08B9> .
+
+mim-item-ns:GraafgebiedKLICmelding.gebouwBinnenKLICmelding
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid-dst:83163756-0E46-40e0-BDF9-4DB4CB0AB217> , <urn:uuid:83163756-0E46-40e0-BDF9-4DB4CB0AB217> ;
+        sh:class        mim-item-ns:Gebouw ;
+        sh:name         "gebouwBinnenKLICmelding" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         mim-item-ns:gebouwBinnenKLICmelding .
+
+mim-item-ns:bevatPerceel
+        a               owl:ObjectProperty ;
+        rdfs:label      "bevatPerceel" ;
+        mim:equivalent  <urn:uuid-src:8C98BCE8-D5F7-49e6-A130-F84E58C28584> , <urn:uuid-src:D4CCE681-225F-42cb-BA72-F30561836AB3> .
+
 mim-item-ns:Woonplaats.identificatie
         a               sh:PropertyShape ;
         mim:equivalent  <urn:uuid:72818707-BDDD-4b77-9C28-5DE408FC1AC1> ;
@@ -553,14 +657,6 @@ mim-item-ns:plaatsnaam
         rdfs:label      "plaatsnaam" ;
         mim:equivalent  <urn:uuid:BD8813B7-3C50-4b42-9952-439A6DF4EE8C> ;
         dct:subject     <https://begrippen.geostandaarden.nl/sam/id/begrip/plaatsnaam> .
-
-mim-item-ns:Bestemming.kadastraalPerceel
-        a               sh:PropertyShape ;
-        mim:equivalent  <urn:uuid-src:083BD47C-F8AE-4956-97AB-009E59EB99D3> ;
-        sh:class        mim-item-ns:Perceel ;
-        sh:name         "kadastraalPerceel" ;
-        sh:nodeKind     sh:IRI ;
-        sh:path         mim-item-ns:kadastraalPerceel .
 
 mim-item-ns:Gemeentegebied.identificatie
         a               sh:PropertyShape ;
@@ -595,6 +691,11 @@ mim-item-ns:Bouwwerk.maaiveldgeometrie
         sh:name         "maaiveldgeometrie" ;
         sh:path         mim-item-ns:maaiveldgeometrie .
 
+mim-item-ns:wordtBestuurdDoorWaterschap
+        a               owl:ObjectProperty ;
+        rdfs:label      "wordtBestuurdDoorWaterschap" ;
+        mim:equivalent  <urn:uuid-dst:8C372C65-D3C5-4c38-AF31-B45204CAD17C> .
+
 mim-item-ns:bestemmingsplan
         a               owl:DatatypeProperty ;
         rdfs:label      "bestemmingsplan" ;
@@ -611,6 +712,14 @@ mim-item-ns:bovenaanzichtgeometrie
         rdfs:label      "bovenaanzichtgeometrie" ;
         mim:equivalent  <urn:uuid:2EA9ECE5-8CC8-485e-B0AE-FEE22FA559CF> ;
         dct:subject     <http://bag.basisregistraties.overheid.nl/id/begrip/Geometrie> .
+
+mim-item-ns:BestemmingsInformatie.kadastraalPerceel
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid-src:083BD47C-F8AE-4956-97AB-009E59EB99D3> ;
+        sh:class        mim-item-ns:Perceel ;
+        sh:name         "kadastraalPerceel" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         mim-item-ns:kadastraalPerceel .
 
 mim-model-ns:IMX-Geo-LM
         a               owl:Ontology ;
@@ -635,20 +744,20 @@ mim-item-ns:Perceel.oppervlak
         sh:name         "oppervlak" ;
         sh:path         mim-item-ns:oppervlak .
 
-mim-item-ns:Bestemming.geometrie
-        a               sh:PropertyShape ;
-        mim:equivalent  <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E> ;
-        sh:maxCount     1 ;
-        sh:minCount     1 ;
-        sh:name         "geometrie" ;
-        sh:path         mim-item-ns:geometrie .
-
 mim-item-ns:isHoofdadres
         a               owl:DatatypeProperty ;
         rdfs:comment    "Indicatie of het adres een hoofdadres is." ;
         rdfs:label      "isHoofdadres" ;
         mim:equivalent  <urn:uuid:2B210C8F-989E-4897-8525-7D83C46A4264> ;
         dct:subject     <http://bag.basisregistraties.overheid.nl/id/begrip/Hoofdadres> .
+
+mim-item-ns:Adres.graafgebiedKLICmelding
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid-src:E95A3722-E5A7-4b78-87BF-BCF799681DA4> ;
+        sh:class        mim-item-ns:GraafgebiedKLICmelding ;
+        sh:name         "graafgebiedKLICmelding" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         mim-item-ns:graafgebiedKLICmelding .
 
 mim-item-ns:Adres.isHoofdadres
         a               sh:PropertyShape ;
@@ -660,22 +769,40 @@ mim-item-ns:Adres.isHoofdadres
         sh:name         "isHoofdadres" ;
         sh:path         mim-item-ns:isHoofdadres .
 
-mim-item-ns:Bestemming.bestemming
+mim-item-ns:graafgebiedKLICmelding
+        a               owl:ObjectProperty ;
+        rdfs:label      "graafgebiedKLICmelding" ;
+        mim:equivalent  <urn:uuid-src:E95A3722-E5A7-4b78-87BF-BCF799681DA4> , <urn:uuid-src:83163756-0E46-40e0-BDF9-4DB4CB0AB217> .
+
+mim-item-ns:Waterschap.bestuurdGebied
         a               sh:PropertyShape ;
-        mim:equivalent  <urn:uuid:0BF48E52-A720-4873-8F8F-366FD6454FF0> ;
+        mim:equivalent  <urn:uuid-src:8C372C65-D3C5-4c38-AF31-B45204CAD17C> ;
+        sh:class        mim-item-ns:Waterschapsgebied ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
-        sh:name         "bestemming" ;
-        sh:path         mim-item-ns:bestemming .
+        sh:name         "bestuurdGebied" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         mim-item-ns:bestuurdGebied .
 
-mim-item-ns:Huisaansluiting
-        a                 owl:Class , sh:NodeShape ;
-        rdfs:isDefinedBy  mim-model-ns:IMX-Geo-LM ;
-        rdfs:label        "Huisaansluiting" ;
-        mim:equivalent    <urn:uuid:349B3EE0-EA12-45be-B6D1-4713D27FF14E> ;
-        skos:notation     "Huisaansluiting" ;
-        sh:property       mim-item-ns:Huisaansluiting.opAdres , mim-item-ns:Huisaansluiting.typeNet , mim-item-ns:Huisaansluiting.locatie , mim-item-ns:Huisaansluiting.aansluitschets ;
-        sh:targetClass    mim-item-ns:Huisaansluiting .
+mim-item-ns:Waterschapsgebied.wordtBestuurdDoorWaterschap
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid-dst:8C372C65-D3C5-4c38-AF31-B45204CAD17C> , <urn:uuid:8C372C65-D3C5-4c38-AF31-B45204CAD17C> ;
+        sh:class        mim-item-ns:Waterschap ;
+        sh:maxCount     1 ;
+        sh:minCount     1 ;
+        sh:name         "wordtBestuurdDoorWaterschap" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         mim-item-ns:wordtBestuurdDoorWaterschap .
+
+mim-item-ns:adresBinnenKLICmelding
+        a               owl:ObjectProperty ;
+        rdfs:label      "adresBinnenKLICmelding" ;
+        mim:equivalent  <urn:uuid-dst:E95A3722-E5A7-4b78-87BF-BCF799681DA4> .
+
+mim-item-ns:bestuurdGebied
+        a               owl:ObjectProperty ;
+        rdfs:label      "bestuurdGebied" ;
+        mim:equivalent  <urn:uuid-src:9CD06689-6C88-4609-B7A0-3C725E4FE6F0> , <urn:uuid-src:8C372C65-D3C5-4c38-AF31-B45204CAD17C> .
 
 mim-item-ns:Adres.omschrijving
         a               sh:PropertyShape ;
@@ -743,8 +870,33 @@ mim-item-ns:Waterschap
         rdfs:label        "Waterschap" ;
         mim:equivalent    <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46> ;
         skos:notation     "Waterschap" ;
-        sh:property       mim-item-ns:Waterschap.naam , mim-item-ns:Waterschap.domein , mim-item-ns:Waterschap.identificatie ;
+        sh:property       mim-item-ns:Waterschap.naam , mim-item-ns:Waterschap.domein , mim-item-ns:Waterschap.bestuurdGebied , mim-item-ns:Waterschap.identificatie ;
         sh:targetClass    mim-item-ns:Waterschap .
+
+mim-item-ns:GraafgebiedKLICmelding.adresBinnenKLICmelding
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid-dst:E95A3722-E5A7-4b78-87BF-BCF799681DA4> , <urn:uuid:E95A3722-E5A7-4b78-87BF-BCF799681DA4> ;
+        sh:class        mim-item-ns:Adres ;
+        sh:name         "adresBinnenKLICmelding" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         mim-item-ns:adresBinnenKLICmelding .
+
+mim-item-ns:BestemmingsInformatie.geometrie
+        a               sh:PropertyShape ;
+        mim:equivalent  <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E> ;
+        sh:maxCount     1 ;
+        sh:minCount     1 ;
+        sh:name         "geometrie" ;
+        sh:path         mim-item-ns:geometrie .
+
+mim-item-ns:BestemmingsInformatie
+        a                 owl:Class , sh:NodeShape ;
+        rdfs:isDefinedBy  mim-model-ns:IMX-Geo-LM ;
+        rdfs:label        "BestemmingsInformatie" ;
+        mim:equivalent    <urn:uuid:97F9443F-326B-4e76-86CD-C515688BBE91> ;
+        skos:notation     "BestemmingsInformatie" ;
+        sh:property       mim-item-ns:BestemmingsInformatie.bestemming , mim-item-ns:BestemmingsInformatie.bestemmingsplan , mim-item-ns:BestemmingsInformatie.geometrie , mim-item-ns:BestemmingsInformatie.verwijzingNaarArtikel , mim-item-ns:BestemmingsInformatie.kadastraalPerceel ;
+        sh:targetClass    mim-item-ns:BestemmingsInformatie .
 
 mim-item-ns:bestemming
         a               owl:DatatypeProperty ;
@@ -757,7 +909,7 @@ mim-item-ns:Bouwwerk  a   sh:NodeShape , owl:Class ;
         mim:equivalent    <urn:uuid:82AD2BB1-391F-48c8-880D-44FC9992B7B8> ;
         dct:subject       <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerk> ;
         skos:notation     "Bouwwerk" ;
-        sh:property       mim-item-ns:Bouwwerk.bevindtZichOpPerceel , mim-item-ns:Bouwwerk.maaiveldgeometrie , mim-item-ns:Bouwwerk.domein , mim-item-ns:Bouwwerk.identificatie , mim-item-ns:Bouwwerk.type ;
+        sh:property       mim-item-ns:Bouwwerk.bevindtZichOpPerceel , mim-item-ns:Bouwwerk.maaiveldgeometrie , mim-item-ns:Bouwwerk.domein , mim-item-ns:Bouwwerk.identificatie , mim-item-ns:Bouwwerk.registratiegegevens , mim-item-ns:Bouwwerk.type ;
         sh:targetClass    mim-item-ns:Bouwwerk .
 
 mim-item-ns:Gemeentegebied
@@ -767,7 +919,7 @@ mim-item-ns:Gemeentegebied
         mim:equivalent    <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC> ;
         dct:subject       <http://begrippen.geostandaarden.nl/disgeo/id/begrip/gemeentegebied> ;
         skos:notation     "Gemeentegebied" ;
-        sh:property       mim-item-ns:Gemeentegebied.identificatie , mim-item-ns:Gemeentegebied.domein , mim-item-ns:Gemeentegebied.geometrie ;
+        sh:property       mim-item-ns:Gemeentegebied.identificatie , mim-item-ns:Gemeentegebied.domein , mim-item-ns:Gemeentegebied.wordtBestuurdDoorGemeente , mim-item-ns:Gemeentegebied.bevatPerceel , mim-item-ns:Gemeentegebied.geometrie ;
         sh:targetClass    mim-item-ns:Gemeentegebied .
 
 mim-item-ns:Bouwwerk.type
@@ -791,7 +943,7 @@ mim-item-ns:geometrie
         a               owl:DatatypeProperty ;
         rdfs:comment    "-- Definitie --\r\nGeometrische representatie van een gebied op land dat door een openbaar lichaam wordt bestuurd." ;
         rdfs:label      "geometrie" ;
-        mim:equivalent  <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E> , <urn:uuid:868E990D-E4E4-4c0a-ADCD-6C20BE0B4187> , <urn:uuid:BA2CE641-DBE5-46ab-875C-4B21477B7933> , <urn:uuid:22B267C4-3D11-4497-A684-ECD0954F1A87> ;
+        mim:equivalent  <urn:uuid:BA2CE641-DBE5-46ab-875C-4B21477B7933> , <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E> , <urn:uuid:868E990D-E4E4-4c0a-ADCD-6C20BE0B4187> , <urn:uuid:C0DD161F-0EE6-4175-AB6B-9747BE3931DF> , <urn:uuid:22B267C4-3D11-4497-A684-ECD0954F1A87> ;
         dct:subject     <http://bag.basisregistraties.overheid.nl/id/begrip/Geometrie> , <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> .
 
 mim-item-ns:Gebouw.bouwjaar
@@ -830,15 +982,6 @@ mim-item-ns:Gebouw.bovenaanzichtgeometrie
         sh:name         "bovenaanzichtgeometrie" ;
         sh:path         mim-item-ns:bovenaanzichtgeometrie .
 
-mim-item-ns:Bestemming
-        a                 owl:Class , sh:NodeShape ;
-        rdfs:isDefinedBy  mim-model-ns:IMX-Geo-LM ;
-        rdfs:label        "Bestemming" ;
-        mim:equivalent    <urn:uuid:97F9443F-326B-4e76-86CD-C515688BBE91> ;
-        skos:notation     "Bestemming" ;
-        sh:property       mim-item-ns:Bestemming.bestemming , mim-item-ns:Bestemming.bestemmingsplan , mim-item-ns:Bestemming.kadastraalPerceel , mim-item-ns:Bestemming.geometrie , mim-item-ns:Bestemming.verwijzingNaarArtikel ;
-        sh:targetClass    mim-item-ns:Bestemming .
-
 mim-item-ns:Gebouw  a     owl:Class , sh:NodeShape ;
         rdfs:isDefinedBy  mim-model-ns:IMX-Geo-LM ;
         rdfs:label        "Gebouw" ;
@@ -846,5 +989,5 @@ mim-item-ns:Gebouw  a     owl:Class , sh:NodeShape ;
         mim:equivalent    <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063> ;
         dct:subject       <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/gebouw> ;
         skos:notation     "Gebouw" ;
-        sh:property       mim-item-ns:Gebouw.sloopjaar , mim-item-ns:Gebouw.3dGeometrie , mim-item-ns:Gebouw.bouwjaar , mim-item-ns:Gebouw.bovenaanzichtgeometrie ;
+        sh:property       mim-item-ns:Gebouw.graafgebiedKLICmelding , mim-item-ns:Gebouw.sloopjaar , mim-item-ns:Gebouw.3dGeometrie , mim-item-ns:Gebouw.heeftAlsAdres , mim-item-ns:Gebouw.bouwjaar , mim-item-ns:Gebouw.bovenaanzichtgeometrie ;
         sh:targetClass    mim-item-ns:Gebouw .

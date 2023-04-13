@@ -173,6 +173,11 @@
         mim:naam               "draadraster" ;
         mim:toelichting        "Default: <memo>\r\n" .
 
+<urn:uuid:9CD06689-6C88-4609-B7A0-3C725E4FE6F0>
+        mim:bron        <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC> ;
+        mim:doel        <urn:uuid:51384C3C-47A6-4645-91B3-3FD093E063A7> ;
+        mim:relatierol  <urn:uuid-dst:9CD06689-6C88-4609-B7A0-3C725E4FE6F0> , <urn:uuid-src:9CD06689-6C88-4609-B7A0-3C725E4FE6F0> .
+
 <urn:uuid:51384C3C-47A6-4645-91B3-3FD093E063A7>
         a                            mim:Objecttype ;
         mim:attribuut                <urn:uuid:D839CF85-2C6C-475f-B26B-824D7D73E09C> , <urn:uuid:BD6B42D4-B421-4b41-9007-F71119256430> , <urn:uuid:64E8004B-EC61-4535-8760-446481B58BCE> ;
@@ -1066,7 +1071,7 @@
 
 <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:329ECB08-813B-442a-AF6E-90E3D022836D> , <urn:uuid:124F247F-190E-44df-8D35-6B68808440B0> , <urn:uuid:398B9F56-6509-47aa-8F06-483BD8CA8B8A> ;
+        mim:attribuut                <urn:uuid:398B9F56-6509-47aa-8F06-483BD8CA8B8A> , <urn:uuid:329ECB08-813B-442a-AF6E-90E3D022836D> , <urn:uuid:124F247F-190E-44df-8D35-6B68808440B0> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Waterschap" .
 
@@ -1564,6 +1569,11 @@
         mim:naam               "kolk" ;
         mim:toelichting        "Default: <memo>\r\n" .
 
+<urn:uuid:83163756-0E46-40e0-BDF9-4DB4CB0AB217>
+        mim:bron        <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> ;
+        mim:doel        <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063> ;
+        mim:relatierol  <urn:uuid-dst:83163756-0E46-40e0-BDF9-4DB4CB0AB217> , <urn:uuid-src:83163756-0E46-40e0-BDF9-4DB4CB0AB217> .
+
 <urn:uuid:7758B10D-C94A-45f9-8C7A-133D2EC0AD87>
         a                            mim:Objecttype ;
         mim:attribuut                <urn:uuid:7BE3732F-61E8-4332-BEB9-488621407A9D> , <urn:uuid:281954C0-53C7-424b-AFEC-C22A72FE98FD> ;
@@ -1728,6 +1738,12 @@
         mim:bevatModelelement        <urn:uuid:F332106D-E081-4731-BA76-1EBA6CA824A2> , <urn:uuid:5DCBE704-FFA4-4ebe-8932-EBF5F86005BA> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "BeheerObjectenLVBAG" .
+
+<urn:uuid-src:D4CCE681-225F-42cb-BA72-F30561836AB3>
+        a                  mim:RelatierolBron ;
+        mim:kardinaliteit  "1..-1" ;
+        mim:naam           "bevatPerceel" ;
+        mim:type           <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> .
 
 <urn:uuid:DE568B7F-7DFB-4129-9380-85B489128B65>
         a                             mim:Attribuutsoort ;
@@ -2107,7 +2123,7 @@
 
 <urn:uuid:A978F4FE-1C21-4697-8659-7DDBF52332C1>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:72818707-BDDD-4b77-9C28-5DE408FC1AC1> , <urn:uuid:AAA15557-473F-47f2-9AAA-1AF538CC55CD> , <urn:uuid:BA2CE641-DBE5-46ab-875C-4B21477B7933> , <urn:uuid:36EAE576-C263-44dd-9959-5D39E27C4B59> ;
+        mim:attribuut                <urn:uuid:AAA15557-473F-47f2-9AAA-1AF538CC55CD> , <urn:uuid:BA2CE641-DBE5-46ab-875C-4B21477B7933> , <urn:uuid:36EAE576-C263-44dd-9959-5D39E27C4B59> , <urn:uuid:72818707-BDDD-4b77-9C28-5DE408FC1AC1> ;
         mim:begrip                   <http://bag.basisregistraties.overheid.nl/id/begrip/Woonplaats> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Woonplaats" .
@@ -2389,7 +2405,7 @@
 
 <urn:uuid:784D5CB1-BB6E-4bed-B4FC-6D4F73B07862>
         a                            mim:Domein ;
-        mim:bevatModelelement        <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> , <urn:uuid:82AD2BB1-391F-48c8-880D-44FC9992B7B8> , <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46> , <urn:uuid:349B3EE0-EA12-45be-B6D1-4713D27FF14E> , <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC> , <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> , <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> , <urn:uuid:5AFE88AF-241C-435b-AF5A-AD7DABDDFDF1> , <urn:uuid:D8B3C789-ADDD-4773-8C26-2953C9969A0F> , <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> , <urn:uuid:51384C3C-47A6-4645-91B3-3FD093E063A7> , <urn:uuid:74873B04-30DE-4ccb-A2D3-50C83D42C722> , <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063> , <urn:uuid:A978F4FE-1C21-4697-8659-7DDBF52332C1> , <urn:uuid:97F9443F-326B-4e76-86CD-C515688BBE91> ;
+        mim:bevatModelelement        <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> , <urn:uuid:82AD2BB1-391F-48c8-880D-44FC9992B7B8> , <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46> , <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC> , <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> , <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> , <urn:uuid:5AFE88AF-241C-435b-AF5A-AD7DABDDFDF1> , <urn:uuid:D8B3C789-ADDD-4773-8C26-2953C9969A0F> , <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> , <urn:uuid:51384C3C-47A6-4645-91B3-3FD093E063A7> , <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063> , <urn:uuid:74873B04-30DE-4ccb-A2D3-50C83D42C722> , <urn:uuid:A978F4FE-1C21-4697-8659-7DDBF52332C1> , <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> , <urn:uuid:97F9443F-326B-4e76-86CD-C515688BBE91> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "IMX-Geo-LM" .
 
@@ -2724,10 +2740,16 @@
 
 <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:7B70E416-5541-413a-B344-A2D938C52B52> , <urn:uuid:22B267C4-3D11-4497-A684-ECD0954F1A87> , <urn:uuid:18D0838E-A665-4e84-9BC3-4D0EF1A86648> ;
+        mim:attribuut                <urn:uuid:7B70E416-5541-413a-B344-A2D938C52B52> , <urn:uuid:18D0838E-A665-4e84-9BC3-4D0EF1A86648> , <urn:uuid:22B267C4-3D11-4497-A684-ECD0954F1A87> ;
         mim:begrip                   <http://begrippen.geostandaarden.nl/disgeo/id/begrip/gemeentegebied> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Gemeentegebied" .
+
+<urn:uuid-src:8C372C65-D3C5-4c38-AF31-B45204CAD17C>
+        a                  mim:RelatierolBron ;
+        mim:kardinaliteit  "1..1" ;
+        mim:naam           "bestuurdGebied" ;
+        mim:type           <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> .
 
 <urn:uuid:F6DA170A-3B9D-4e0b-853B-645B03F97FFF>
         a                             mim:Attribuutsoort ;
@@ -2922,6 +2944,12 @@
         mim:kardinaliteit             "1..1" ;
         mim:naam                      "identificatie BAG Openbare ruimte" .
 
+<urn:uuid-src:8C98BCE8-D5F7-49e6-A130-F84E58C28584>
+        a                  mim:RelatierolBron ;
+        mim:kardinaliteit  "1..-1" ;
+        mim:naam           "bevatPerceel" ;
+        mim:type           <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> .
+
 <urn:uuid:FEEA5EC8-75E4-4381-9B08-FFC1FB6BA603>
         a              mim:Generalisatie ;
         mim:subtype    <urn:uuid:5F74DAB6-FE84-42df-9E9D-1511E48F4311> ;
@@ -3020,7 +3048,7 @@
 
 <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:25534ADC-3DC1-4e68-97CB-DEAEC94F0E1B> , <urn:uuid:60CB15B3-7A19-40c1-99FE-1F5316FF1CB7> , <urn:uuid:868E990D-E4E4-4c0a-ADCD-6C20BE0B4187> ;
+        mim:attribuut                <urn:uuid:60CB15B3-7A19-40c1-99FE-1F5316FF1CB7> , <urn:uuid:868E990D-E4E4-4c0a-ADCD-6C20BE0B4187> , <urn:uuid:25534ADC-3DC1-4e68-97CB-DEAEC94F0E1B> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Waterschapsgebied" .
 
@@ -3267,6 +3295,12 @@
         mim:naam                      "eindRegistratie" ;
         mim:patroon                   "De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur." ;
         mim:toelichting               "Vanaf deze tijdsaanduiding is deze versie van het informatieobject niet meer  actueel in de registratie. Met actueel wordt bedoeld dat er geen nieuwere versie 4 in de registratie is voor dit informatieobject. Aan een lege eindregistratie is ook te zien dat het de actuele versie betreft. Er zijn verschillende datatypen voor de representatie van een tijdsaanduiding: afhankelijk van de gebruikerswensen m.b.t. granulariteit kan o.a. worden gekozen uit typen TM_Instant, Date of DateTime. Voor tijdstipRegistratie zal DateTime in vrijwel alle gevallen de beste keuze zijn. \r\n\r\nWanneer bepaalde gegevens op de tijdlijn geldigheid niet meer geldig zijn, te herkennen aan de eindGeldigheid van een versie, wordt bij het vullen van de eindGeldigheid tegelijkertijd ook altijd de eindRegistratie gevuld zodat het duidelijk is vanaf welk moment op de tijdlijn registratie deze gegevens niet meer actueel zijn. De eindRegistratie geeft dus aan wanneer er geregistreerd is dat deze gegevens niet meer actueel zijn." .
+
+<urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE>
+        a                            mim:Objecttype ;
+        mim:attribuut                <urn:uuid:C0DD161F-0EE6-4175-AB6B-9747BE3931DF> ;
+        mim:indicatieAbstractObject  false ;
+        mim:naam                     "GraafgebiedKLICmelding" .
 
 <urn:uuid:AE821EB9-B7AB-43b6-9BBB-1CC9935E7696>
         a                             mim:Attribuutsoort ;
@@ -3740,6 +3774,12 @@
         mim:definitie                "Alle tijdslijn metagegevens die worden bijgehouden bij een voorkomen van een kenmerk in onderzoek object en die te maken hebben met het historiemodel van de BAG en LVBAG conform de BAG Catalogus 2018 hoofdstuk 9 aangevuld met de historie die alleen in de LVBAG wordt opgebouwd." ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "HistorieInOnderzoekLV" .
+
+<urn:uuid-src:383AC763-BD2B-499c-AEAE-2362287E08B9>
+        a                  mim:RelatierolBron ;
+        mim:kardinaliteit  "1..-1" ;
+        mim:naam           "isAdresVanGebouw" ;
+        mim:type           <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063> .
 
 <urn:uuid:AA7592C4-E4EF-4b4d-97D7-37469C343C49>
         a                      mim:Enumeratiewaarde ;
@@ -4549,6 +4589,12 @@
         mim:subtype    <urn:uuid:A6159626-DB05-46e4-9726-773CA218328D> ;
         mim:supertype  <urn:uuid:1B21E16C-9E4C-4c8d-8CB5-1E35B41243EB> .
 
+<urn:uuid-src:E95A3722-E5A7-4b78-87BF-BCF799681DA4>
+        a                  mim:RelatierolBron ;
+        mim:kardinaliteit  "0..-1" ;
+        mim:naam           "graafgebiedKLICmelding" ;
+        mim:type           <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> .
+
 <urn:uuid:C0A8FE6F-C6C1-4c62-BE88-078A64A6D8A4>
         a                             mim:Attribuutsoort ;
         mim:authentiek                mim:Authentiek ;
@@ -4790,12 +4836,6 @@
         mim:indicatieAbstractObject  false ;
         mim:naam                     "TypeKunstwerkPlus" ;
         mim:waarde                   <urn:uuid:84EB75FC-1DEC-4e72-AC74-41C1ED13260B> , <urn:uuid:42A863CB-75C7-449e-AF2E-2454D222C094> , <urn:uuid:959FA648-5E69-4fda-A1BD-A21C065E9F94> , <urn:uuid:2935EEDD-7FC0-4e5b-918B-D66413E92285> , <urn:uuid:C0E4CDB9-6568-45cc-9551-E3F133E0AF77> , <urn:uuid:5C5A482E-4D8B-47c5-AE7D-4196C30AAAE1> , <urn:uuid:603D1B41-F264-43a4-955C-0D17AC5B4451> , <urn:uuid:6E5C3BA6-3CD8-4f5b-9933-E1C4E32B3D71> , <urn:uuid:881D79AD-BC06-4a3f-916F-0FBCC4A62B80> .
-
-<urn:uuid:3CDB9C26-7990-4876-9D4B-E49752F63B36>
-        a                             mim:Attribuutsoort ;
-        mim:indicatieFormeleHistorie  false ;
-        mim:kardinaliteit             "1..1" ;
-        mim:naam                      "typeNet" .
 
 <urn:uuid:A7B286A0-73FF-4f28-BEE4-91F18FE7417F>
         a                             mim:Attribuutsoort ;
@@ -5147,6 +5187,12 @@
         mim:kardinaliteit             "1..1" ;
         mim:naam                      "identificatie" .
 
+<urn:uuid-dst:D4CCE681-225F-42cb-BA72-F30561836AB3>
+        a                  mim:RelatierolDoel ;
+        mim:kardinaliteit  "1..1" ;
+        mim:naam           "ligtInWaterschap" ;
+        mim:type           <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> .
+
 <urn:uuid:DAE72D52-B091-4593-AC2F-D4CA2A8B8E68>
         a                      mim:Enumeratiewaarde ;
         mim:definitie          "Een zonnepaneel is een paneel dat zonne-energie omzet in elektriciteit." ;
@@ -5384,7 +5430,7 @@
 
 <urn:uuid:82AD2BB1-391F-48c8-880D-44FC9992B7B8>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:A6AD3DDC-7FF5-4a28-B33F-FD6F6EA8350F> , <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E> , <urn:uuid:55883A46-4458-41cf-9405-B9CD880B5C7B> , <urn:uuid:42E76400-F960-4204-9042-9691B6D18D7E> ;
+        mim:attribuut                <urn:uuid:42E76400-F960-4204-9042-9691B6D18D7E> , <urn:uuid:A6AD3DDC-7FF5-4a28-B33F-FD6F6EA8350F> , <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E> , <urn:uuid:55883A46-4458-41cf-9405-B9CD880B5C7B> ;
         mim:begrip                   <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerk> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Bouwwerk" .
@@ -5427,12 +5473,6 @@
         a              mim:Generalisatie ;
         mim:subtype    <urn:uuid:D96EAC61-329F-4291-9AE7-5DE68F980EE6> ;
         mim:supertype  <urn:uuid:9D4099E4-103D-4083-A06A-826727FFA19C> .
-
-<urn:uuid:1183F92E-9902-4577-BB55-B2B749D140C0>
-        a                             mim:Attribuutsoort ;
-        mim:indicatieFormeleHistorie  false ;
-        mim:kardinaliteit             "1..1" ;
-        mim:naam                      "aansluitschets" .
 
 <urn:uuid:B81A9B7A-5C26-4def-9312-0FF3B9C36271>
         a                  mim:Relatiesoort ;
@@ -5878,12 +5918,6 @@
         mim:naam               "bunker" ;
         mim:toelichting        "Default: <memo>\r\n" .
 
-<urn:uuid-src:A1D8CD2A-5279-45a9-B220-D329787C4396>
-        a                  mim:RelatierolBron ;
-        mim:kardinaliteit  "0..-1" ;
-        mim:naam           "opAdres" ;
-        mim:type           <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> .
-
 <urn:uuid:3DC908F3-F502-4715-B470-0AEE0EA78DA2>
         a                      mim:Enumeratiewaarde ;
         mim:definitie          "Puin is afvalmateriaal dat bestaat uit losse brokstukken, grotendeels bestaande uit stenen en beton, van gesloopte of ingestorte gebouwen, viaducten, bruggen en andere objecten." ;
@@ -6137,6 +6171,12 @@
         mim:naam           "brongegeven" ;
         mim:type           <urn:uuid:03BAD6E1-053C-40cd-8051-51719CC4E91B> .
 
+<urn:uuid-dst:8C372C65-D3C5-4c38-AF31-B45204CAD17C>
+        a                  mim:RelatierolDoel ;
+        mim:kardinaliteit  "1..1" ;
+        mim:naam           "wordtBestuurdDoorWaterschap" ;
+        mim:type           <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46> .
+
 <urn:uuid:3A904933-FB3D-4f87-8C6A-A26A2E93D558>
         a                             mim:Attribuutsoort ;
         mim:begrip                    <http://bag.basisregistraties.overheid.nl/id/begrip/Geometrie> ;
@@ -6260,6 +6300,12 @@
         mim:naam               "grind" ;
         mim:toelichting        "Default: <memo>\r\n" .
 
+<urn:uuid-src:9CD06689-6C88-4609-B7A0-3C725E4FE6F0>
+        a                  mim:RelatierolBron ;
+        mim:kardinaliteit  "1..1" ;
+        mim:naam           "bestuurdGebied" ;
+        mim:type           <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC> .
+
 <urn:uuid:06FE1453-6CF2-4f56-B2CD-CD276548608B>
         a                      mim:Enumeratiewaarde ;
         mim:definitie          "Gebaand gedeelte voor het wegverkeer en vliegverkeer te land." ;
@@ -6282,6 +6328,12 @@
         mim:lengte                    "6" ;
         mim:naam                      "postcode" ;
         mim:toelichting               "Een combinatie van 4 cijfers en 2 hoofdletters." .
+
+<urn:uuid-dst:8C98BCE8-D5F7-49e6-A130-F84E58C28584>
+        a                  mim:RelatierolDoel ;
+        mim:kardinaliteit  "1..1" ;
+        mim:naam           "ligtInGemeentegebied" ;
+        mim:type           <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC> .
 
 <urn:uuid:3B9F64B9-0BEB-4573-804F-28E9AD6504B9>
         a                            mim:Gegevensgroeptype ;
@@ -6986,6 +7038,12 @@
         mim:naam                      "op talud" ;
         mim:toelichting               "Default: false (geen talud)" .
 
+<urn:uuid-dst:383AC763-BD2B-499c-AEAE-2362287E08B9>
+        a                  mim:RelatierolDoel ;
+        mim:kardinaliteit  "0..-1" ;
+        mim:naam           "heeftAlsAdres" ;
+        mim:type           <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> .
+
 <urn:uuid:1CF5310F-223C-4800-AFE4-8547D003A478>
         a                  mim:Attribuutsoort ;
         mim:kardinaliteit  "1..1" ;
@@ -7238,6 +7296,12 @@
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Perceel" .
 
+<urn:uuid-dst:D2CE840C-BF1D-4275-989E-6F3D0974E02C>
+        a                  mim:RelatierolDoel ;
+        mim:kardinaliteit  "1..1" ;
+        mim:naam           "registratiegegevens" ;
+        mim:type           <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> .
+
 <urn:uuid:64414575-E34F-47d6-A731-7C9A34F26832>
         a                  mim:Attribuutsoort ;
         mim:definitie      "Identificatie in de BAG registratie van het verblijfsobject met het hoogste huisnummer behorende tot de reeks." ;
@@ -7405,6 +7469,12 @@
         mim:kardinaliteit             "1..1" ;
         mim:naam                      "geometrie" .
 
+<urn:uuid-src:83163756-0E46-40e0-BDF9-4DB4CB0AB217>
+        a                  mim:RelatierolBron ;
+        mim:kardinaliteit  "0..-1" ;
+        mim:naam           "graafgebiedKLICmelding" ;
+        mim:type           <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> .
+
 <urn:uuid:E929B2F9-3712-44ef-99ED-B33D0DD0F2D6>
         a                            mim:PrimitiefDatatype ;
         mim:definitie                "Representatie van <font color=\"#993300\">AbstractGML</font>." ;
@@ -7448,9 +7518,9 @@
 
 <urn:uuid:97F9443F-326B-4e76-86CD-C515688BBE91>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:74F7259D-8225-439d-886D-59932E05127D> , <urn:uuid:4F144394-44A1-495a-87F4-A874188C47F9> , <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E> , <urn:uuid:0BF48E52-A720-4873-8F8F-366FD6454FF0> ;
+        mim:attribuut                <urn:uuid:4F144394-44A1-495a-87F4-A874188C47F9> , <urn:uuid:0BF48E52-A720-4873-8F8F-366FD6454FF0> , <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E> , <urn:uuid:74F7259D-8225-439d-886D-59932E05127D> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Bestemming" .
+        mim:naam                     "BestemmingsInformatie" .
 
 <urn:uuid:FA6301E5-2D0F-4cd1-B09E-AA2BB2B23D20>
         a                            mim:Objecttype ;
@@ -7465,6 +7535,12 @@
         a              mim:Generalisatie ;
         mim:subtype    <urn:uuid:58AFC5DF-8F7B-42fd-BF65-081A53C5DF4E> ;
         mim:supertype  <urn:uuid:CA79D5DA-E6D4-4bc8-8597-5B50A56DAF42> .
+
+<urn:uuid-dst:E95A3722-E5A7-4b78-87BF-BCF799681DA4>
+        a                  mim:RelatierolDoel ;
+        mim:kardinaliteit  "0..-1" ;
+        mim:naam           "adresBinnenKLICmelding" ;
+        mim:type           <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> .
 
 <urn:uuid:0F91F356-8E8B-4841-B456-0427B8F1DBF0>
         a                            mim:Enumeratie ;
@@ -7757,6 +7833,12 @@
         mim:naam                     "FysiekVoorkomenOndersteunendWegdeel" ;
         mim:waarde                   <urn:uuid:CE9812E4-E2A8-4cd8-BC51-3B3ADA64C3BE> , <urn:uuid:8EE2A624-B539-4a8b-82F7-55C4D0F6B045> , <urn:uuid:1AED0EDC-7469-49c1-8D38-C02328058048> , <urn:uuid:C7AA44C5-5767-4e5d-A1ED-005E1A357E86> , <urn:uuid:4E5DBB02-E1A7-4546-B66E-DF21706D13E9> .
 
+<urn:uuid:C0DD161F-0EE6-4175-AB6B-9747BE3931DF>
+        a                             mim:Attribuutsoort ;
+        mim:indicatieFormeleHistorie  false ;
+        mim:kardinaliteit             "1..1" ;
+        mim:naam                      "geometrie" .
+
 <urn:uuid:58DC80DA-C9F1-41de-B2C3-3464B3A86A6E>
         a                      mim:Gegevensgroep ;
         mim:definitie          "De toestand van een kenmerk in onderzoek object in de administratieve werkelijkheid, zoals beschreven met de eigenschappen van dit object waarover gegevens geregistreerd worden, waarbij de gegevens gedurende een bepaalde periode gelijk zijn in de (basis) registratie." ;
@@ -7874,7 +7956,7 @@
 
 <urn:uuid:FC9456B4-8100-4b38-A647-D22A4BB82941>
         a                            mim:Domein ;
-        mim:bevatModelelement        <urn:uuid:42AF55AE-0DE2-4834-A62D-641AF2C990AB> , <urn:uuid:E3465211-4A42-44d1-8772-6B64041E177E> , <urn:uuid:F6BF4AF0-9873-4535-A80B-780CB58A0609> ;
+        mim:bevatModelelement        <urn:uuid:42AF55AE-0DE2-4834-A62D-641AF2C990AB> , <urn:uuid:F6BF4AF0-9873-4535-A80B-780CB58A0609> , <urn:uuid:E3465211-4A42-44d1-8772-6B64041E177E> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "IMX-Geo-CM" .
 
@@ -7915,7 +7997,7 @@
 
 <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:2EA9ECE5-8CC8-485e-B0AE-FEE22FA559CF> , <urn:uuid:FBE84AAB-C48E-41d5-A039-DD1047681A69> , <urn:uuid:98D81D8B-1A1C-4b37-8B8D-39F69688678C> , <urn:uuid:C93EB248-2F60-4615-98AE-96A0EA7556F9> ;
+        mim:attribuut                <urn:uuid:FBE84AAB-C48E-41d5-A039-DD1047681A69> , <urn:uuid:C93EB248-2F60-4615-98AE-96A0EA7556F9> , <urn:uuid:98D81D8B-1A1C-4b37-8B8D-39F69688678C> , <urn:uuid:2EA9ECE5-8CC8-485e-B0AE-FEE22FA559CF> ;
         mim:begrip                   <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/gebouw> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Gebouw" .
@@ -7941,6 +8023,11 @@
         mim:kardinaliteit             "1..1" ;
         mim:naam                      "heeftAlsHerkomst" ;
         mim:relatierol                <urn:uuid-dst:9E3FBEF1-F652-4a0a-9559-6A726B6451AA> .
+
+<urn:uuid:D4CCE681-225F-42cb-BA72-F30561836AB3>
+        mim:bron        <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> ;
+        mim:doel        <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> ;
+        mim:relatierol  <urn:uuid-dst:D4CCE681-225F-42cb-BA72-F30561836AB3> , <urn:uuid-src:D4CCE681-225F-42cb-BA72-F30561836AB3> .
 
 <urn:uuid:AE6EB1BF-E3B0-4b8e-AD19-3F4CE5142242>
         a                            mim:PrimitiefDatatype ;
@@ -8724,12 +8811,6 @@
         mim:naam                      "bgt-type" ;
         mim:type                      <urn:uuid:6C41586F-B0D4-454a-BC5E-D775EE5D8324> .
 
-<urn:uuid-dst:A1D8CD2A-5279-45a9-B220-D329787C4396>
-        a                  mim:RelatierolDoel ;
-        mim:kardinaliteit  "0..-1" ;
-        mim:naam           "aansluitschetsGasWaterElektraTelecom" ;
-        mim:type           <urn:uuid:349B3EE0-EA12-45be-B6D1-4713D27FF14E> .
-
 <urn:uuid:49846657-1662-4ce3-BBB6-97584E87A70A>
         a                             mim:Relatiesoort ;
         mim:authentiek                mim:Authentiek ;
@@ -8831,6 +8912,11 @@
         mim:kardinaliteit             "0..-1" ;
         mim:naam                      "afgeleidVan" ;
         mim:relatierol                <urn:uuid-dst:830C13B2-BF65-4f44-A51A-C264B638884E> .
+
+<urn:uuid:8C372C65-D3C5-4c38-AF31-B45204CAD17C>
+        mim:bron        <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> ;
+        mim:doel        <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46> ;
+        mim:relatierol  <urn:uuid-dst:8C372C65-D3C5-4c38-AF31-B45204CAD17C> , <urn:uuid-src:8C372C65-D3C5-4c38-AF31-B45204CAD17C> .
 
 <urn:uuid:4400EDF9-7B92-428c-8405-586E41A04C88>
         a                      mim:Enumeratiewaarde ;
@@ -8995,6 +9081,11 @@
         mim:naam               "gras- en kruidachtigen" ;
         mim:toelichting        "Default: <memo>\r\n" .
 
+<urn:uuid:8C98BCE8-D5F7-49e6-A130-F84E58C28584>
+        mim:bron        <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> ;
+        mim:doel        <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC> ;
+        mim:relatierol  <urn:uuid-dst:8C98BCE8-D5F7-49e6-A130-F84E58C28584> , <urn:uuid-src:8C98BCE8-D5F7-49e6-A130-F84E58C28584> .
+
 <urn:uuid-dst:FEEB2A45-A9C5-474c-A554-A31B7F1D5030>
         a                  mim:RelatierolDoel ;
         mim:kardinaliteit  "1..1" ;
@@ -9084,6 +9175,12 @@
         mim:kardinaliteit  "1..1" ;
         mim:naam           "gerelateerde openbare ruimte" ;
         mim:type           <urn:uuid:F70275D5-F07D-4ec8-B921-8A6DCA15AC7F> .
+
+<urn:uuid-dst:9CD06689-6C88-4609-B7A0-3C725E4FE6F0>
+        a                  mim:RelatierolDoel ;
+        mim:kardinaliteit  "1..1" ;
+        mim:naam           "wordtBestuurdDoorGemeente" ;
+        mim:type           <urn:uuid:51384C3C-47A6-4645-91B3-3FD093E063A7> .
 
 <urn:uuid:1E3A6A6F-0CB1-40f5-9588-CFA7C54C31D3>
         a                             mim:Attribuutsoort ;
@@ -9457,7 +9554,7 @@
 
 <urn:uuid:D8B3C789-ADDD-4773-8C26-2953C9969A0F>
         a                            mim:GestructureerdDatatype ;
-        mim:dataElement              <urn:uuid:4A49D723-66E3-4eb6-AB1D-27DF12C7B18C> , <urn:uuid:07E65C97-FAFD-4784-92A9-03022E09C267> ;
+        mim:dataElement              <urn:uuid:07E65C97-FAFD-4784-92A9-03022E09C267> , <urn:uuid:4A49D723-66E3-4eb6-AB1D-27DF12C7B18C> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Bedrag" .
 
@@ -9727,6 +9824,11 @@
         mim:herkomstDefinitie  "CROW" ;
         mim:naam               "aquaduct" ;
         mim:toelichting        "Default: <memo>\r\n" .
+
+<urn:uuid:383AC763-BD2B-499c-AEAE-2362287E08B9>
+        mim:bron        <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063> ;
+        mim:doel        <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> ;
+        mim:relatierol  <urn:uuid-dst:383AC763-BD2B-499c-AEAE-2362287E08B9> , <urn:uuid-src:383AC763-BD2B-499c-AEAE-2362287E08B9> .
 
 <urn:uuid:80F9B049-91FE-4978-B5B1-FDCE5AD8F0A9>
         a                            mim:Objecttype ;
@@ -10026,6 +10128,11 @@
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Adres" .
 
+<urn:uuid:D2CE840C-BF1D-4275-989E-6F3D0974E02C>
+        mim:bron        <urn:uuid:82AD2BB1-391F-48c8-880D-44FC9992B7B8> ;
+        mim:doel        <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> ;
+        mim:relatierol  <urn:uuid-dst:D2CE840C-BF1D-4275-989E-6F3D0974E02C> .
+
 <urn:uuid:4289F71B-799B-4bea-B56C-C4C940844766>
         a                             mim:Attribuutsoort ;
         mim:definitie                 "Het type Bronobject in de Bronregistratie." ;
@@ -10312,6 +10419,11 @@
         mim:populatie                "De basisregistratie adressen en gebouwen bevat alle officieel als zodanig vastgestelde woonplaatsen op het Nederlandse grondgebied.\r\n\r\nNieuwe woonplaatsen worden in de basisregistratie adressen en gebouwen opgenomen op basis van daartoe aangewezen brondocumenten waarin het ontstaan van de woonplaats als zodanig is vastgelegd. Daarnaast bevat de basisregistratie adressen en gebouwen alle geconstateerde woonplaatsen in de zin van artikel 2, eerste lid, onderdeel b, van de wet. De gegevens over woonplaatsen blijven in de basisregistratie aanwezig, ook indien de woonplaats als zodanig wordt opgeheven. De basisregistratie bevat in principe geen gegevens over woonplaatsen die voor 1 juli 2009 zijn opgeheven." ;
         mim:toelichting              "Een Woonplaats is een tweedimensionaal virtueel ruimtelijk object.\r\n" .
 
+<urn:uuid:E95A3722-E5A7-4b78-87BF-BCF799681DA4>
+        mim:bron        <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> ;
+        mim:doel        <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> ;
+        mim:relatierol  <urn:uuid-dst:E95A3722-E5A7-4b78-87BF-BCF799681DA4> , <urn:uuid-src:E95A3722-E5A7-4b78-87BF-BCF799681DA4> .
+
 <urn:uuid:5529630A-74A8-426e-A77B-23874590C497>
         a           mim:Enumeratiewaarde ;
         mim:begrip  <http://begrippen.geostandaarden.nl/disgeo/id/begrip/nederlandse_exclusieve_economische_zone> ;
@@ -10366,6 +10478,12 @@
         mim:herkomstDefinitie  "IMGEO 2.0" ;
         mim:naam               "grensmarkering" ;
         mim:toelichting        "Default: <memo>\r\n" .
+
+<urn:uuid-dst:83163756-0E46-40e0-BDF9-4DB4CB0AB217>
+        a                  mim:RelatierolDoel ;
+        mim:kardinaliteit  "0..-1" ;
+        mim:naam           "gebouwBinnenKLICmelding" ;
+        mim:type           <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063> .
 
 <urn:uuid:49CD0270-6C7D-4306-BB36-B50226704491>
         a         mim:Enumeratiewaarde ;
@@ -11688,11 +11806,6 @@
         mim:naam           "registratiegegevens" ;
         mim:type           <urn:uuid:54DBC205-E908-44b9-98CC-AA866F0F9610> .
 
-<urn:uuid:A1D8CD2A-5279-45a9-B220-D329787C4396>
-        mim:bron        <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> ;
-        mim:doel        <urn:uuid:349B3EE0-EA12-45be-B6D1-4713D27FF14E> ;
-        mim:relatierol  <urn:uuid-dst:A1D8CD2A-5279-45a9-B220-D329787C4396> , <urn:uuid-src:A1D8CD2A-5279-45a9-B220-D329787C4396> .
-
 <urn:uuid:F142B7A3-7226-4274-89DB-4BC9924443BB>
         a                            mim:Objecttype ;
         mim:attribuut                <urn:uuid:839212DE-4159-42a6-BCD1-69431932DED2> ;
@@ -11772,12 +11885,6 @@
         mim:naam                      "identificatie" ;
         mim:toelichting               "Elke standplaats waarvan gegevens zijn opgenomen in de BAG wordt uniek aangeduid door middel van een identificatiecode. " ;
         mim:type                      <urn:uuid:45F59FC9-A77D-4ec2-82E7-62135BB950ED> .
-
-<urn:uuid:8BFB6F5C-6E26-43f3-BA2E-429574112326>
-        a                             mim:Attribuutsoort ;
-        mim:indicatieFormeleHistorie  false ;
-        mim:kardinaliteit             "1..1" ;
-        mim:naam                      "locatie" .
 
 <urn:uuid:141FA2EC-DD74-4b93-B047-9C111594E8C3>
         a                            mim:Objecttype ;
@@ -11937,12 +12044,6 @@
         mim:naam                      "objectEindTijd" ;
         mim:patroon                   "De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur." ;
         mim:toelichting               "Er zijn verschillende datatypen voor de representatie van een tijdsaanduiding: afhankelijk van de gebruikerswensen m.b.t. granulariteit kan o.a. worden gekozen uit typen TM_Instant, Date of DateTime." .
-
-<urn:uuid:349B3EE0-EA12-45be-B6D1-4713D27FF14E>
-        a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:3CDB9C26-7990-4876-9D4B-E49752F63B36> , <urn:uuid:1183F92E-9902-4577-BB55-B2B749D140C0> , <urn:uuid:8BFB6F5C-6E26-43f3-BA2E-429574112326> ;
-        mim:indicatieAbstractObject  false ;
-        mim:naam                     "Huisaansluiting" .
 
 <urn:uuid:5264D4C7-E256-4937-AE60-44CE3ADD87E5>
         a                            mim:Keuze ;
