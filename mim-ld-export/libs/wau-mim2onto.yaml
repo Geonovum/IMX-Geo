@@ -1,0 +1,1135 @@
+title: MIM conversie
+version: 0.1
+# prefixes:
+#   owl: http://www.w3.org/2002/07/owl#
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   rdfs: http://www.w3.org/2000/01/rdf-schema#
+#   sh: http://www.w3.org/ns/shacl#
+#   dct: http://purl.org/dc/terms/
+#   mim-item-ns: http://ontology.mim-namespace.org/def/modelname#
+#   mim-model-ns: http://ontology.mim-namespace.org/
+queries:
+  - title: preset baseURI('s)
+    query: >
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      INSERT {
+        GRAPH <urn:uri> {
+          ?im mim-ext:baseURI ?baseURI ;
+              mim-ext:ontologyURI ?ontologyURI ;
+              mim:modelElement ?elem .
+        }
+      }
+      WHERE {
+        # ALLE modelementen krijgen dezelfde URI
+        # ontologie krijgt baseURI voor '#', als die er is.
+        GRAPH <urn:input> {
+          ?im a mim:Informatiemodel ;
+            mim-ext:baseURI ?baseURI .
+          ?package mim:bevatModelelement ?elem .
+
+          BIND(SUBSTR(STR(?baseURI), 1, (STRLEN(?baseURI)-1)) as ?ontologyURI)
+        }
+      }
+  - title: create technical names
+    query: >
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      INSERT {
+        GRAPH <urn:input> {
+          ?item skos:notation ?codefixed
+        }
+      }
+      WHERE {
+        GRAPH <urn:input> {
+          ?item mim:naam ?naam
+          BIND (replace(?naam,"[^a-zA-Z0-9_-]","_") as ?codefixed)
+        }
+      }
+  - title: convert mim:Package (and subclasses of mim:Package)
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      PREFIX dct: <http://purl.org/dc/terms/>
+      INSERT {
+        GRAPH <urn:output> {
+          ?ontology a owl:Ontology.
+          ?ontology rdfs:label ?naam.
+          ?ontology skos:notation ?code.
+          ?ontology rdfs:seeAlso ?package.
+        }
+        #
+        #GRAPH <urn:uri> {
+        #  ?package dct:identifier ?ontology .
+        #}
+        #
+      }
+      WHERE {
+        # SELECT (iri(concat("http://ontology.mim-namespace.org/",?code)) as ?ontology) ?code ?naam ?package
+        SELECT (IRI(CONCAT(?ontologyURI, "/", ?code))) ?code ?naam ?package
+        WHERE {
+          GRAPH <urn:input> {
+            ?package a ?packagetype.
+            ?package mim:naam ?naam.
+            ?package skos:notation ?code.
+            FILTER (?packagetype=mim:Informatiemodel || ?packagetype=mim:Domein)
+          }
+        #
+          GRAPH <urn:uri> {
+            ?im mim-ext:ontologyURI ?ontologyURI .
+          }
+        #
+        }
+      }
+  - title: convert mim:Objecttype
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?class a owl:Class, sh:NodeShape.
+          ?class sh:targetClass ?class.
+          ?class rdfs:label ?naam.
+          ?class skos:notation ?code.
+          ?class rdfs:seeAlso ?objecttype.
+        }
+      }
+      WHERE {
+        SELECT (iri(concat(?baseURI,?code)) as ?class) ?code ?naam ?objecttype
+        WHERE {
+          GRAPH <urn:input> {
+            ?objecttype a mim:Objecttype.
+            ?objecttype mim:naam ?naam.
+            ?objecttype skos:notation ?code.
+          }
+          GRAPH <urn:uri> {
+            ?im mim-ext:baseURI ?baseURI .
+          }
+        }
+      }
+  - title: convert mim:Gegevensgroeptype
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?class a owl:Class, sh:NodeShape.
+          ?class sh:targetClass ?class.
+          ?class rdfs:label ?naam.
+          ?class skos:notation ?code.
+          ?class rdfs:seeAlso ?gegevensgroeptype.
+        }
+      }
+      WHERE {
+        SELECT (iri(concat(?baseURI,?code)) as ?class) ?code ?naam ?gegevensgroeptype
+        WHERE {
+          GRAPH <urn:input> {
+            ?gegevensgroeptype a mim:Gegevensgroeptype.
+            ?gegevensgroeptype mim:naam ?naam.
+            ?gegevensgroeptype skos:notation ?code.
+          }
+          GRAPH <urn:uri> {
+            ?im mim-ext:baseURI ?baseURI .
+          }
+        }
+      }
+  - title: convert mim:Relatieklasse
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?class a owl:Class, sh:NodeShape.
+          ?class sh:targetClass ?class.
+          ?class rdfs:label ?naam.
+          ?class skos:notation ?code.
+          ?class rdfs:seeAlso ?relatieklasse.
+        }
+      }
+      WHERE {
+        SELECT (iri(concat(?baseURI,?code)) as ?class) ?code ?naam ?relatieklasse
+        WHERE {
+          GRAPH <urn:input> {
+            ?relatieklasse a mim:Relatieklasse.
+            ?relatieklasse mim:naam ?naam.
+            ?relatieklasse skos:notation ?code.
+          }
+          GRAPH <urn:uri> {
+            ?im mim-ext:baseURI ?baseURI .
+          }
+        }
+      }
+  - title: convert mim:Attribuutsoort / mim:dataElement
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?property a owl:DatatypeProperty.
+          ?property rdfs:label ?naam.
+          ?property rdfs:seeAlso ?attribuutsoort.
+          ?ownershape sh:property ?predicate.
+          ?predicate a sh:PropertyShape.
+          ?predicate sh:name ?code.
+          ?predicate sh:path ?property.
+          ?predicate rdfs:seeAlso ?attribuutsoort
+        }
+      }
+      WHERE {
+        SELECT  (iri(concat(?baseURI,?code)) as ?property)
+                (iri(concat(?baseURI,?ownercode,".",?code)) as ?predicate)
+                (iri(concat(?baseURI,?ownercode)) as ?ownershape)
+                ?code ?naam ?attribuutsoort
+        WHERE {
+          GRAPH <urn:input> {
+            ?owner a ?mimtype.
+            ?owner ?mimrel ?attribuutsoort.
+            ?owner skos:notation ?ownercode.
+            ?attribuutsoort a ?mimattr.
+            ?attribuutsoort mim:naam ?naam.
+            ?attribuutsoort skos:notation ?code.
+            FILTER ((?mimattr = mim:Attribuutsoort && ?mimrel = mim:attribuut) || (?mimattr = mim:DataElement && ?mimrel = mim:dataElement))
+            FILTER (?mimtype = mim:Objecttype || ?mimtype = mim:Gegevensgroeptype || ?mimtype = mim:Relatieklasse || ?mimtype = mim:GestructureerdDatatype)
+          }
+          GRAPH <urn:uri> {
+            ?im mim-ext:baseURI ?baseURI .
+          }
+        }
+      }
+  - title: convert mim:Relatiesoort
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?property a owl:ObjectProperty.
+          ?property rdfs:label ?naam.
+          ?property rdfs:seeAlso ?relatiesoort.
+          ?owner sh:property ?predicate.
+          ?predicate a sh:PropertyShape.
+          ?predicate sh:name ?code.
+          ?predicate sh:path ?property.
+          ?predicate sh:nodeKind sh:IRI.
+          ?predicate sh:class ?class.
+          ?predicate rdfs:seeAlso ?relatiesoort
+        }
+      }
+      WHERE {
+        SELECT  (iri(concat(?baseURI,?code)) as ?property)
+                (iri(concat(?baseURI,?ownercode,".",?code)) as ?predicate)
+                (iri(concat(?baseURI,?ownercode)) as ?owner)
+                (iri(concat(?baseURI,?classcode)) as ?class)
+                ?code ?naam ?relatiesoort
+        WHERE {
+          GRAPH <urn:input> {
+            ?relatiesoort a mim:Relatiesoort.
+            ?relatiesoort mim:naam ?naam.
+            ?relatiesoort mim:bron ?bron.
+            ?relatiesoort mim:doel ?doel.
+            ?relatiesoort skos:notation ?code.
+            ?bron skos:notation ?ownercode.
+            ?doel skos:notation ?classcode.
+            FILTER NOT EXISTS {
+              ?relatiesoort mim:relatierol ?relatieroldoel.
+              ?relatieroldoel a mim:RelatierolDoel.
+              ?relatieroldoel mim:naam ?relatieroldoelnaam
+            }
+          }
+          GRAPH <urn:uri> {
+            ?im mim-ext:baseURI ?baseURI .
+          }
+        }
+      }
+  - title: convert mim:ExterneKoppeling
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?property a owl:ObjectProperty.
+          ?property rdfs:label ?naam.
+          ?property rdfs:seeAlso ?externekoppeling.
+          ?owner sh:property ?predicate.
+          ?predicate a sh:PropertyShape.
+          ?predicate sh:name ?code.
+          ?predicate sh:path ?property.
+          ?predicate sh:nodeKind sh:IRI.
+          ?predicate sh:class ?class.
+          ?predicate rdfs:seeAlso ?externekoppeling
+        }
+      }
+      WHERE {
+        SELECT  (iri(concat(?baseURI,?code)) as ?property)
+                (iri(concat(?baseURI,?ownercode,".",?code)) as ?predicate)
+                (iri(concat(?baseURI,?ownercode)) as ?owner)
+                (iri(concat(?baseURI,?classcode)) as ?class)
+                ?code ?naam ?externekoppeling
+        WHERE {
+          GRAPH <urn:input> {
+            ?externekoppeling a mim:ExterneKoppeling.
+            ?externekoppeling mim:naam ?naam.
+            ?externekoppeling mim:bron ?bron.
+            ?externekoppeling mim:doel ?doel.
+            ?externekoppeling skos:notation ?code.
+            ?bron skos:notation ?ownercode.
+            ?doel skos:notation ?classcode.
+          }
+          GRAPH <urn:uri> {
+            ?im mim-ext:baseURI ?baseURI .
+          }
+        }
+      }
+  - title: convert mim:PrimitiefDatatype
+    query: >
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?datatype a rdf:Datatype.
+          ?datatype rdfs:label ?naam.
+          ?datatype rdfs:seeAlso ?type.
+        }
+      }
+      WHERE {
+        SELECT (iri(concat(?baseURI,?code)) as ?datatype) ?naam ?type
+        WHERE {
+          GRAPH <urn:input> {
+            ?type a mim:PrimitiefDatatype.
+            ?type mim:naam ?naam.
+            ?type skos:notation ?code.
+          }
+          GRAPH <urn:uri> {
+            ?im mim-ext:baseURI ?baseURI .
+          }
+        }
+      }
+  - title: convert mim:GestructureerdDatatype
+    query: >
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?datatype a owl:Class, sh:NodeShape.
+          ?datatype sh:targetClass ?datatype.
+          ?datatype rdfs:label ?naam.
+          ?datatype skos:notation ?code.
+          ?datatype rdfs:seeAlso ?type.
+        }
+      }
+      WHERE {
+        SELECT (iri(concat(?baseURI,?code)) as ?datatype) ?naam ?type
+        WHERE {
+          GRAPH <urn:input> {
+            ?type a mim:GestructureerdDatatype.
+            ?type mim:naam ?naam.
+            ?type skos:notation ?code.
+          }
+          GRAPH <urn:uri> {
+            ?im mim-ext:baseURI ?baseURI .
+          }
+        }
+      }
+  - title: convert mim:Enumeratie
+    query: >
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?enumeratie a owl:Class, sh:NodeShape.
+          ?enumeratie sh:targetClass ?enumeratie.
+          ?enumeratie rdfs:subClassOf skos:Concept.
+          ?enumeratie rdfs:label ?naam.
+          ?enumeratie skos:notation ?code.
+          ?enumeratie rdfs:seeAlso ?type.
+        }
+      }
+      WHERE {
+        SELECT (iri(concat(?baseURI,?code)) as ?enumeratie) ?naam ?type
+        WHERE {
+          GRAPH <urn:input> {
+            ?type a mim:Enumeratie.
+            ?type mim:naam ?naam.
+            ?type skos:notation ?code.
+          }
+          GRAPH <urn:uri> {
+            ?im mim-ext:baseURI ?baseURI .
+          }
+        }
+      }
+  - title: convert mim:Enumeratiewaarde
+    query: >
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?item a ?type.
+          ?item rdfs:label ?naam.
+          ?item rdfs:seeAlso ?waarde.
+        }
+      }
+      WHERE {
+        SELECT (iri(concat(?baseURI,?enum)) as ?type) (iri(concat(?baseURI,?code)) as ?item) ?naam ?waarde
+        WHERE {
+          GRAPH <urn:input> {
+            ?enumeratie mim:waarde ?waarde.
+            ?enumeratie skos:notation ?enum.
+            ?waarde a mim:Enumeratiewaarde.
+            ?waarde mim:naam ?naam.
+            ?waarde skos:notation ?code.
+          }
+          GRAPH <urn:uri> {
+            ?im mim-ext:baseURI ?baseURI .
+          }
+        }
+      }
+  - title: convert mim:RelatierolBron
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?property a owl:ObjectProperty.
+          ?property rdfs:label ?naam.
+          ?property rdfs:seeAlso ?relatierolbron.
+          ?owner sh:property ?predicate.
+          ?predicate a sh:PropertyShape.
+          ?predicate sh:name ?code.
+          ?predicate sh:path ?property.
+          ?predicate sh:nodeKind sh:IRI.
+          ?predicate sh:class ?class.
+          ?predicate rdfs:seeAlso ?relatierolbron
+        }
+      }
+      WHERE {
+        SELECT  (iri(concat(?baseURI,?code)) as ?property)
+                (iri(concat(?baseURI,?ownercode,".",?code)) as ?predicate)
+                (iri(concat(?baseURI,?ownercode)) as ?owner)
+                (iri(concat(?baseURI,?classcode)) as ?class)
+                ?code ?naam ?relatierolbron
+        WHERE {
+          GRAPH <urn:input> {
+            ?relatierolbron a mim:RelatierolBron.
+            ?relatierolbron mim:naam ?naam.
+            ?relatierolbron skos:notation ?code.
+            ?relatiesoort mim:relatierol ?relatierolbron.
+            ?relatiesoort mim:bron ?bron.
+            ?relatiesoort mim:doel ?doel.
+            ?doel skos:notation ?ownercode.
+            ?bron skos:notation ?classcode.
+          }
+          GRAPH <urn:uri> {
+            ?im mim-ext:baseURI ?baseURI .
+          }
+        }
+      }
+  - title: convert mim:RelatierolDoel
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?property a owl:ObjectProperty.
+          ?property rdfs:label ?naam.
+          ?property rdfs:seeAlso ?relatieroldoel.
+          ?owner sh:property ?predicate.
+          ?predicate a sh:PropertyShape.
+          ?predicate sh:name ?code.
+          ?predicate sh:path ?property.
+          ?predicate sh:nodeKind sh:IRI.
+          ?predicate sh:class ?class.
+          ?predicate rdfs:seeAlso ?relatieroldoel.
+          ?predicate mim:equivalent ?relatiesoort.
+        }
+      }
+      WHERE {
+        SELECT (iri(concat(?baseURI,?code)) as ?property)
+                (iri(concat(?baseURI,?ownercode,".",?code)) as ?predicate)
+                (iri(concat(?baseURI,?ownercode)) as ?owner)
+                (iri(concat(?baseURI,?classcode)) as ?class)
+                ?code ?naam ?relatieroldoel ?relatiesoort
+        WHERE {
+          GRAPH <urn:input> {
+            ?relatieroldoel a mim:RelatierolDoel.
+            ?relatieroldoel mim:naam ?naam.
+            ?relatieroldoel skos:notation ?code.
+            ?relatiesoort mim:relatierol ?relatieroldoel.
+            ?relatiesoort mim:bron ?bron.
+            ?relatiesoort mim:doel ?doel.
+            ?doel skos:notation ?classcode.
+            ?bron skos:notation ?ownercode.
+          }
+          GRAPH <urn:uri> {
+            ?im mim-ext:baseURI ?baseURI .
+          }
+        }
+      }
+  - title: convert mim:RelatierolDoel of mim:Relatieklasse
+    query: >
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?statement rdfs:subClassOf rdf:Statement.
+          ?statement sh:property ?subjectps.
+          ?statement sh:property ?predicateps.
+          ?statement sh:property ?objectps.
+          ?predicateps a sh:PropertyShape.
+          ?predicateps sh:path rdf:predicate.
+          ?predicateps sh:hasValue ?predicate.
+          ?predicateps sh:minCount 1 .
+          ?predicateps sh:maxCount 1 .
+          ?subjectps a sh:PropertyShape.
+          ?subjectps sh:path rdf:subject.
+          ?subjectps sh:nodeKind sh:IRI.
+          ?subjectps sh:class ?subject.
+          ?objectps a sh:PropertyShape.
+          ?objectps sh:path rdf:object.
+          ?objectps sh:nodeKind sh:IRI.
+          ?objectps sh:class ?object.
+        }
+      }
+      WHERE {
+        SELECT  (iri(concat(?baseURI,?code)) as ?statement)
+                (iri(concat(?baseURI,?objectcode)) as ?object)
+                (iri(concat(?baseURI,?subjectcode)) as ?subject)
+                (iri(concat(?baseURI,?predicatecode)) as ?predicate)
+                (iri(concat(?baseURI,?code,".object")) as ?objectps)
+                (iri(concat(?baseURI,?code,".subject")) as ?subjectps)
+                (iri(concat(?baseURI,?code,".predicate")) as ?predicateps)
+                ?code ?naam ?relatieroldoel
+        WHERE {
+          GRAPH <urn:input> {
+            ?relatieroldoel a mim:RelatierolDoel.
+            ?relatieroldoel skos:notation ?predicatecode.
+            ?relatieklasse a mim:Relatieklasse.
+            ?relatieklasse mim:relatierol ?relatieroldoel.
+            ?relatieklasse mim:bron ?bron.
+            ?relatieklasse mim:doel ?doel.
+            ?relatieklasse skos:notation ?code.
+            ?doel skos:notation ?objectcode.
+            ?bron skos:notation ?subjectcode.
+          }
+          GRAPH <urn:uri> {
+            ?im mim-ext:baseURI ?baseURI .
+          }
+        }
+      }
+  - title: convert mim:Gegevensgroep
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?property a owl:ObjectProperty.
+          ?property rdfs:label ?naam.
+          ?property rdfs:seeAlso ?attribuutsoort.
+          ?ownershape sh:property ?predicate.
+          ?predicate a sh:PropertyShape.
+          ?predicate sh:name ?code.
+          ?predicate sh:path ?property.
+          ?predicate sh:nodeKind sh:BlankNode.
+          ?predicate sh:class ?class.
+          ?predicate rdfs:seeAlso ?gegevensgroep
+        }
+      }
+      WHERE {
+        SELECT  (iri(concat(?baseURI,?code)) as ?property)
+                (iri(concat(?baseURI,?ownercode,".",?code)) as ?predicate)
+                (iri(concat(?baseURI,?ownercode)) as ?ownershape)
+                (iri(concat(?baseURI,?typecode)) as ?class)
+                ?code ?naam ?gegevensgroep
+        WHERE {
+          GRAPH <urn:input> {
+            ?owner a mim:Objecttype.
+            ?owner mim:gegevensgroep ?gegevensgroep.
+            ?owner skos:notation ?ownercode.
+            ?gegevensgroep a mim:Gegevensgroep.
+            ?gegevensgroep mim:naam ?naam.
+            ?gegevensgroep mim:gegevensgroeptype ?type.
+            ?gegevensgroep skos:notation ?code.
+            ?type skos:notation ?typecode.
+          }
+          GRAPH <urn:uri> {
+            ?im mim-ext:baseURI ?baseURI .
+          }
+        }
+      }
+  - title: convert mim:Referentielijst
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?class a owl:Class, sh:NodeShape.
+          ?class sh:targetClass ?class.
+          ?class rdfs:label ?naam.
+          ?class skos:notation ?code.
+          ?class rdfs:seeAlso ?referentielijst.
+        }
+      }
+      WHERE {
+        SELECT (iri(concat(?baseURI,?code)) as ?class) ?code ?naam ?referentielijst
+        WHERE {
+          GRAPH <urn:input> {
+            ?referentielijst a mim:Referentielijst.
+            ?referentielijst mim:naam ?naam.
+            ?referentielijst skos:notation ?code.
+          }
+          GRAPH <urn:uri> {
+            ?im mim-ext:baseURI ?baseURI .
+          }
+        }
+      }
+  - title: convert mim:Codelijst
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?class a owl:Class, sh:NodeShape.
+          ?class sh:targetClass ?class.
+          ?class rdfs:label ?naam.
+          ?class skos:notation ?code.
+          ?class rdfs:seeAlso ?codelijst.
+        }
+      }
+      WHERE {
+        SELECT (iri(concat(?baseURI,?code)) as ?class) ?code ?naam ?codelijst
+        WHERE {
+          GRAPH <urn:input> {
+            ?codelijst a mim:Codelijst.
+            ?codelijst mim:naam ?naam.
+            ?codelijst skos:notation ?code.
+          }
+          GRAPH <urn:uri> {
+            ?im mim-ext:baseURI ?baseURI .
+          }
+        }
+      }
+  - title: convert mim:Generalisatie
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?subclass rdfs:subClassOf ?superclass
+        }
+      }
+      WHERE {
+        GRAPH <urn:input> {
+          ?generalisatie a mim:Generalisatie.
+          ?generalisatie mim:subtype ?subtype.
+          ?generalisatie mim:supertype ?supertype.
+        }
+        GRAPH <urn:output> {
+          ?subclass rdfs:seeAlso ?subtype.
+          ?superclass rdfs:seeAlso ?supertype.
+        }
+      }
+  - title: convert mim:begrip
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX dct: <http://purl.org/dc/terms/>
+      INSERT {
+        GRAPH <urn:output> {
+          ?element dct:subject ?begrip
+        }
+      }
+      WHERE {
+        GRAPH <urn:input> {
+          ?item mim:begrip ?begrip
+        }
+        GRAPH <urn:output> {
+          ?element rdfs:seeAlso ?item
+        }
+      }
+  - title: convert mim:definitie
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?element rdfs:comment ?definitie
+        }
+      }
+      WHERE {
+        GRAPH <urn:input> {
+          ?item mim:definitie ?definitie
+        }
+        GRAPH <urn:output> {
+          ?element rdfs:seeAlso ?item
+        }
+      }
+  - title: convert mim:formeelPatroon
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?element sh:pattern ?patroon
+        }
+      }
+      WHERE {
+        GRAPH <urn:input> {
+          ?item mim:formeelPatroon ?patroon
+        }
+        GRAPH <urn:output> {
+          ?element rdfs:seeAlso ?item
+        }
+      }
+  - title: convert mim:type (mim:PrimitiefDatatype)
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?pshape sh:datatype ?datatype.
+          ?pshape sh:nodeKind sh:Literal.
+        }
+      }
+      WHERE {
+        {
+          GRAPH <urn:input> {
+            ?item mim:type ?type.
+            ?type a mim:PrimitiefDatatype.
+            FILTER NOT EXISTS {?type owl:sameAs ?datatype}
+          }
+          GRAPH <urn:output> {
+            ?pshape a sh:PropertyShape.
+            ?pshape rdfs:seeAlso ?item.
+            ?datatype rdfs:seeAlso ?type.
+          }
+        }
+        UNION
+        {
+          GRAPH <urn:input> {
+            ?item mim:type ?type.
+            ?type a mim:PrimitiefDatatype.
+            ?type owl:sameAs ?datatype
+          }
+          GRAPH <urn:output> {
+            ?pshape a sh:PropertyShape.
+            ?pshape rdfs:seeAlso ?item.
+          }
+        }
+      }
+  - title: convert mim:type (mim:GestructureerdDatatype)
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?pshape sh:class ?datatype.
+          ?pshape sh:nodeKind sh:BlankNode.
+        }
+      }
+      WHERE {
+        GRAPH <urn:input> {
+          ?item mim:type ?type.
+          ?type a mim:GestructureerdDatatype.
+        }
+        GRAPH <urn:output> {
+          ?pshape a sh:PropertyShape.
+          ?pshape rdfs:seeAlso ?item.
+          ?datatype rdfs:seeAlso ?type.
+        }
+      }
+  - title: convert mim:type (mim:Enumeratie)
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?pshape sh:class ?enumeratie.
+        }
+      }
+      WHERE {
+        GRAPH <urn:input> {
+          ?item mim:type ?type.
+          ?type a mim:Enumeratie.
+        }
+        GRAPH <urn:output> {
+          ?pshape a sh:PropertyShape.
+          ?pshape rdfs:seeAlso ?item.
+          ?enumeratie rdfs:seeAlso ?type.
+        }
+      }
+  - title: convert mim:type (mim:Referentielijst)
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?pshape sh:class ?refclass
+        }
+      }
+      WHERE {
+        GRAPH <urn:input> {
+          ?item mim:type ?type.
+          ?type a mim:Referentielijst.
+        }
+        GRAPH <urn:output> {
+          ?pshape a sh:PropertyShape.
+          ?pshape rdfs:seeAlso ?item.
+          ?refclass rdfs:seeAlso ?type.
+        }
+      }
+  - title: convert mim:type (mim:Codelijst)
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?pshape sh:class ?refclass
+        }
+      }
+      WHERE {
+        GRAPH <urn:input> {
+          ?item mim:type ?type.
+          ?type a mim:Codelijst.
+        }
+        GRAPH <urn:output> {
+          ?pshape a sh:PropertyShape.
+          ?pshape rdfs:seeAlso ?item.
+          ?refclass rdfs:seeAlso ?type.
+        }
+      }
+  - title: change owl:DatatypeProperty to owl:ObjectProperty for non-primitive datatypes
+    query: >
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      DELETE {
+        GRAPH <urn:output> {
+          ?property a owl:DatatypeProperty
+        }
+      }
+      INSERT {
+        GRAPH <urn:output> {
+          ?property a owl:ObjectProperty
+        }
+      }
+      WHERE {
+        GRAPH <urn:output> {
+          ?pshape a sh:PropertyShape.
+          ?pshape sh:class ?class.
+          ?pshape sh:path ?property.
+        }
+      }
+  - title: convert mim:lengte (minimum)
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?pshape sh:minLength ?minlength.
+        }
+      }
+      WHERE {
+        {
+          SELECT ?pshape (strdt(strbefore(concat(?lengte,".."),".."), xsd:integer) as ?minlength)
+          WHERE {
+            GRAPH <urn:input> {
+              ?element mim:lengte ?lengte
+            }
+            GRAPH <urn:output> {
+              ?pshape a sh:PropertyShape.
+              ?pshape rdfs:seeAlso ?element
+            }
+          }
+        }
+        FILTER (?minlength>0)
+      }
+  - title: convert mim:lengte (maximum)
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?pshape sh:maxLength ?maxlength .
+        }
+      }
+      WHERE {
+        {
+          SELECT ?pshape ?maxlength
+          WHERE {
+            GRAPH <urn:input> {
+              ?element mim:lengte ?lengte
+            }
+            GRAPH <urn:output> {
+              ?pshape a sh:PropertyShape.
+              ?pshape rdfs:seeAlso ?element
+            }
+            BIND(
+            IF(
+              CONTAINS(?lengte, ".."),
+              strdt(strafter(?lengte,".."), xsd:integer), 
+              strdt(?lengte, xsd:integer)
+            ) as ?maxLength )
+          }
+        }
+        FILTER (?maxlength>0)
+      }
+  - title: convert mim:kardinaliteit (minimum)
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?pshape sh:minCount ?mincount.
+        }
+      }
+      WHERE {
+        {
+          SELECT ?pshape (strdt(strbefore(concat(?kardinaliteit,".."),".."), xsd:integer) as ?mincount)
+          WHERE {
+            GRAPH <urn:input> {
+              ?element mim:kardinaliteit ?kardinaliteit
+            }
+            GRAPH <urn:output> {
+              ?pshape a sh:PropertyShape.
+              ?pshape rdfs:seeAlso ?element
+            }
+          }
+        }
+        FILTER (?mincount>0)
+      }
+  - title: convert mim:kardinaliteit (maximum)
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+      INSERT {
+        GRAPH <urn:output> {
+      		?pshape sh:maxCount ?maxcount.
+        }
+      }
+      WHERE {
+        {
+          SELECT ?pshape (strdt(replace(strafter(if(regex(?kardinaliteit,"\\.\\."),?kardinaliteit,concat(?kardinaliteit,"..",?kardinaliteit)),".."),"\\*","-1"), xsd:integer) as ?maxcount)
+          WHERE {
+            GRAPH <urn:input> {
+              ?element mim:kardinaliteit ?kardinaliteit
+            }
+            GRAPH <urn:output> {
+              {
+                ?pshape a sh:PropertyShape.
+                ?pshape rdfs:seeAlso ?element
+              }
+              UNION
+              {
+                ?pshape a sh:PropertyShape.
+                ?pshape rdfs:seeAlso ?relatiesoort.
+                ?relatiesoort mim:relatierol ?element
+              }
+            }
+          }
+        }
+        FILTER (?maxcount>0)
+      }
+  - title: convert mim:bevatModelelement for mim:Packages
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?ontology owl:imports ?import
+        }
+      }
+      WHERE {
+        GRAPH <urn:input> {
+          ?parent mim:bevatModelelement ?item.
+        }
+        GRAPH <urn:output> {
+          ?ontology a owl:Ontology.
+          ?import a owl:Ontology.
+          ?ontology rdfs:seeAlso ?parent.
+          ?import rdfs:seeAlso ?item.
+        }
+      }
+  - title: convert mim:bevatModelelement for other modelelements
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?element rdfs:isDefinedBy ?ontology
+        }
+      }
+      WHERE {
+        GRAPH <urn:input> {
+          ?parent mim:bevatModelelement ?item.
+        }
+        GRAPH <urn:output> {
+          ?ontology a owl:Ontology.
+          ?ontology rdfs:seeAlso ?parent.
+          ?element rdfs:seeAlso ?item.
+          ?element a ?elementtype
+          FILTER (?elementtype=owl:Class || ?elementtype=owl:DatatypeProperty || ?elementtype=owl:ObjectProperty)
+        }
+      }
+  - title: remove rdfs:seeAlso / Add mim:equivalent
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+      DELETE {
+        GRAPH <urn:output> {
+          ?s rdfs:seeAlso ?o
+        }
+      }
+      INSERT {
+        GRAPH <urn:output> {
+          ?s mim:equivalent ?o
+        }
+      }
+      WHERE {
+        GRAPH <urn:output> {
+          ?s rdfs:seeAlso ?o
+        }
+      }
+  - title: remove self-referencing sh:targetClass
+    query: >
+      PREFIX sh: <http://www.w3.org/ns/shacl#>
+      DELETE {
+        GRAPH <urn:output> {
+          ?s sh:targetClass ?s
+        }
+      }
+      WHERE {
+        GRAPH <urn:output> {
+          ?s sh:targetClass ?s
+        }
+      }
+  # - title: replace mim datatypes with xsd
+  #   query: >
+  #     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  #     PREFIX mim: <http://bp4mc2.org/def/mim#>
+  #     PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
+  #     DELETE {
+  #       GRAPH <urn:output> {
+  #         ?pshape sh:datatype ?mim-datatype
+  #       }
+  #     }
+  #     INSERT {
+  #       GRAPH <urn:output> {
+  #         ?pshape sh:datatype ?xsd-datatype
+  #       }
+  #     }
+  #     WHERE {
+  #       GRAPH <urn:output> {
+  #         ?pshape sh:datatype ?mim-datatype . FILTER (CONTAINS.)
+  #       }
+  #     }
