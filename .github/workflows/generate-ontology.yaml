@@ -1,0 +1,33 @@
+name: Generate ontology
+
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch:
+
+jobs:
+  execute-script:
+    name: execute-script
+    runs-on: ubuntu-20.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Create temporary folder
+        run: mkdir -p mim-ld-export/libs
+      - name: Import libraries script
+        run: ./mim-ld-export/import-libs.sh
+        shell: bash
+      - name: Run convert script
+        run: ./mim-ld-export/convert.sh
+        shell: bash
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: temp-resources
+          path: mim-ld-export/temp/*
+      - name: Commit pipeline output
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: Convert EAP model
+          add: mim-ld-export/model/*

@@ -1,3 +1,4 @@
 ﻿access_log
 *_log
-mim-ld-export/libs
+mim-ld-export/libs/*.jar
+mim-ld-export/libs/*.xsl
