@@ -107,7 +107,7 @@
 
 <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:98D81D8B-1A1C-4b37-8B8D-39F69688678C> , <urn:uuid:FBE84AAB-C48E-41d5-A039-DD1047681A69> , <urn:uuid:C93EB248-2F60-4615-98AE-96A0EA7556F9> , <urn:uuid:2EA9ECE5-8CC8-485e-B0AE-FEE22FA559CF> ;
+        mim:attribuut                <urn:uuid:FBE84AAB-C48E-41d5-A039-DD1047681A69> , <urn:uuid:2EA9ECE5-8CC8-485e-B0AE-FEE22FA559CF> , <urn:uuid:C93EB248-2F60-4615-98AE-96A0EA7556F9> , <urn:uuid:98D81D8B-1A1C-4b37-8B8D-39F69688678C> ;
         mim:begrip                   <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/gebouw> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Gebouw" ;
@@ -132,7 +132,7 @@
 
 <urn:uuid:A978F4FE-1C21-4697-8659-7DDBF52332C1>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:BA2CE641-DBE5-46ab-875C-4B21477B7933> , <urn:uuid:AAA15557-473F-47f2-9AAA-1AF538CC55CD> , <urn:uuid:36EAE576-C263-44dd-9959-5D39E27C4B59> , <urn:uuid:72818707-BDDD-4b77-9C28-5DE408FC1AC1> ;
+        mim:attribuut                <urn:uuid:72818707-BDDD-4b77-9C28-5DE408FC1AC1> , <urn:uuid:BA2CE641-DBE5-46ab-875C-4B21477B7933> , <urn:uuid:AAA15557-473F-47f2-9AAA-1AF538CC55CD> , <urn:uuid:36EAE576-C263-44dd-9959-5D39E27C4B59> ;
         mim:begrip                   <http://bag.basisregistraties.overheid.nl/id/begrip/Woonplaats> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Woonplaats" ;
@@ -141,7 +141,7 @@
 
 <urn:uuid:784D5CB1-BB6E-4bed-B4FC-6D4F73B07862>
         a                            mim:Domein ;
-        mim:bevatModelelement        <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> , <urn:uuid:82AD2BB1-391F-48c8-880D-44FC9992B7B8> , <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46> , <urn:uuid:2768747A-60FB-4354-9B86-C5033019BB4E> , <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC> , <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> , <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> , <urn:uuid:5AFE88AF-241C-435b-AF5A-AD7DABDDFDF1> , <urn:uuid:7EE15C80-3CFE-4d3b-8DE0-1A44B06D82DE> , <urn:uuid:D8B3C789-ADDD-4773-8C26-2953C9969A0F> , <urn:uuid:3B7951F6-BB7D-4164-9C00-97DA13C183C6> , <urn:uuid:E241183B-700D-435b-A781-6609E0521908> , <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> , <urn:uuid:74873B04-30DE-4ccb-A2D3-50C83D42C722> , <urn:uuid:51384C3C-47A6-4645-91B3-3FD093E063A7> , <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063> , <urn:uuid:0A359344-0191-4a87-9AFC-FF96F3D7865B> , <urn:uuid:1BD2F5E4-8799-4350-9743-316FD521FD89> , <urn:uuid:A978F4FE-1C21-4697-8659-7DDBF52332C1> , <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> , <urn:uuid:0B0E8C4B-BD74-4f1b-B69E-A26BB7335628> , <urn:uuid:97F9443F-326B-4e76-86CD-C515688BBE91> , <urn:uuid:BD13FC79-9CBC-48d2-9C74-3B8E3CC94C23> , <urn:uuid:4772A73C-6693-4d5e-97C3-45CD5F85474A> ;
+        mim:bevatModelelement        <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> , <urn:uuid:82AD2BB1-391F-48c8-880D-44FC9992B7B8> , <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46> , <urn:uuid:2768747A-60FB-4354-9B86-C5033019BB4E> , <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC> , <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> , <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> , <urn:uuid:5AFE88AF-241C-435b-AF5A-AD7DABDDFDF1> , <urn:uuid:7EE15C80-3CFE-4d3b-8DE0-1A44B06D82DE> , <urn:uuid:D8B3C789-ADDD-4773-8C26-2953C9969A0F> , <urn:uuid:3B7951F6-BB7D-4164-9C00-97DA13C183C6> , <urn:uuid:E241183B-700D-435b-A781-6609E0521908> , <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> , <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063> , <urn:uuid:51384C3C-47A6-4645-91B3-3FD093E063A7> , <urn:uuid:0A359344-0191-4a87-9AFC-FF96F3D7865B> , <urn:uuid:74873B04-30DE-4ccb-A2D3-50C83D42C722> , <urn:uuid:1BD2F5E4-8799-4350-9743-316FD521FD89> , <urn:uuid:A978F4FE-1C21-4697-8659-7DDBF52332C1> , <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> , <urn:uuid:0B0E8C4B-BD74-4f1b-B69E-A26BB7335628> , <urn:uuid:97F9443F-326B-4e76-86CD-C515688BBE91> , <urn:uuid:BD13FC79-9CBC-48d2-9C74-3B8E3CC94C23> , <urn:uuid:4772A73C-6693-4d5e-97C3-45CD5F85474A> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "IMX-Geo-LM" ;
         <https://wau.ldproxy.net/def/mim-ext#baseURI>
@@ -161,7 +161,7 @@
 
 <urn:uuid:82AD2BB1-391F-48c8-880D-44FC9992B7B8>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:A6AD3DDC-7FF5-4a28-B33F-FD6F6EA8350F> , <urn:uuid:42E76400-F960-4204-9042-9691B6D18D7E> , <urn:uuid:55883A46-4458-41cf-9405-B9CD880B5C7B> , <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E> ;
+        mim:attribuut                <urn:uuid:55883A46-4458-41cf-9405-B9CD880B5C7B> , <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E> , <urn:uuid:A6AD3DDC-7FF5-4a28-B33F-FD6F6EA8350F> , <urn:uuid:42E76400-F960-4204-9042-9691B6D18D7E> ;
         mim:begrip                   <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerk> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Bouwwerk" ;
@@ -285,10 +285,10 @@
 
 <urn:uuid:2768747A-60FB-4354-9B86-C5033019BB4E>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:7F2BC6C4-158D-46c9-A28B-BDD621BC7F11> , <urn:uuid:A8A8D9F5-4E10-4395-AFA1-15CB8CCB8BD7> , <urn:uuid:82C930D0-0C36-4948-A677-13FCE3C45E96> , <urn:uuid:7C4EFEA4-B024-42dd-A730-E0583C2E4D66> ;
+        mim:attribuut                <urn:uuid:7C4EFEA4-B024-42dd-A730-E0583C2E4D66> , <urn:uuid:82C930D0-0C36-4948-A677-13FCE3C45E96> , <urn:uuid:7F2BC6C4-158D-46c9-A28B-BDD621BC7F11> , <urn:uuid:A8A8D9F5-4E10-4395-AFA1-15CB8CCB8BD7> ;
         mim:begrip                   <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/registratieve_ruimte> ;
         mim:indicatieAbstractObject  true ;
-        mim:naam                     "Registratieve ruimte" ;
+        mim:naam                     "RegistratieveRuimte" ;
         <https://wau.ldproxy.net/def/mim-ext#baseURI>
                 "http://modellen.geostandaarden.nl/def/imx-geo#" .
 
@@ -894,7 +894,7 @@
 
 <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:7B70E416-5541-413a-B344-A2D938C52B52> , <urn:uuid:18D0838E-A665-4e84-9BC3-4D0EF1A86648> , <urn:uuid:22B267C4-3D11-4497-A684-ECD0954F1A87> ;
+        mim:attribuut                <urn:uuid:18D0838E-A665-4e84-9BC3-4D0EF1A86648> , <urn:uuid:22B267C4-3D11-4497-A684-ECD0954F1A87> , <urn:uuid:7B70E416-5541-413a-B344-A2D938C52B52> ;
         mim:begrip                   <http://begrippen.geostandaarden.nl/disgeo/id/begrip/gemeentegebied> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Gemeentegebied" ;
@@ -991,7 +991,7 @@
 
 <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:11C3FECB-13A4-4b26-9C33-822B844A2116> , <urn:uuid:C0DD161F-0EE6-4175-AB6B-9747BE3931DF> ;
+        mim:attribuut                <urn:uuid:C0DD161F-0EE6-4175-AB6B-9747BE3931DF> , <urn:uuid:11C3FECB-13A4-4b26-9C33-822B844A2116> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "GraafgebiedKLICmelding" ;
         <https://wau.ldproxy.net/def/mim-ext#baseURI>
@@ -1121,7 +1121,7 @@
 
 <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:60CB15B3-7A19-40c1-99FE-1F5316FF1CB7> , <urn:uuid:25534ADC-3DC1-4e68-97CB-DEAEC94F0E1B> , <urn:uuid:868E990D-E4E4-4c0a-ADCD-6C20BE0B4187> ;
+        mim:attribuut                <urn:uuid:868E990D-E4E4-4c0a-ADCD-6C20BE0B4187> , <urn:uuid:60CB15B3-7A19-40c1-99FE-1F5316FF1CB7> , <urn:uuid:25534ADC-3DC1-4e68-97CB-DEAEC94F0E1B> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Waterschapsgebied" ;
         <https://wau.ldproxy.net/def/mim-ext#baseURI>
@@ -1168,7 +1168,7 @@
 
 <urn:uuid:97F9443F-326B-4e76-86CD-C515688BBE91>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E> , <urn:uuid:4F144394-44A1-495a-87F4-A874188C47F9> , <urn:uuid:0BF48E52-A720-4873-8F8F-366FD6454FF0> , <urn:uuid:D77A7A32-723B-4d75-B039-EEB6A288C69A> , <urn:uuid:74F7259D-8225-439d-886D-59932E05127D> ;
+        mim:attribuut                <urn:uuid:74F7259D-8225-439d-886D-59932E05127D> , <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E> , <urn:uuid:4F144394-44A1-495a-87F4-A874188C47F9> , <urn:uuid:D77A7A32-723B-4d75-B039-EEB6A288C69A> , <urn:uuid:0BF48E52-A720-4873-8F8F-366FD6454FF0> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Bestemming" ;
         <https://wau.ldproxy.net/def/mim-ext#baseURI>
