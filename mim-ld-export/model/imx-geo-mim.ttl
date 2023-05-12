@@ -24,18 +24,14 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "oppervlak" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "oppervlak" .
 
 <urn:uuid:74F7259D-8225-439d-886D-59932E05127D>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "bestemmingsplan" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "bestemmingsplan" .
 
 <urn:uuid-src:BE7A076B-4D83-4f61-9EFD-7761A71FBBC7>
         a                  mim:RelatierolBron ;
@@ -49,9 +45,7 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "begrenzing" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "begrenzing" .
 
 <urn:uuid:11C3FECB-13A4-4b26-9C33-822B844A2116>
         a                               mim:Attribuutsoort ;
@@ -64,9 +58,7 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "domein" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "domein" .
 
 <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E>
         a                               mim:Attribuutsoort ;
@@ -74,18 +66,14 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "type" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "type" .
 
 <urn:uuid:B97EB80D-05B0-4d24-A5A2-62A55BF0F550>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
-        mim:naam                        "functie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "functie" .
 
 <urn:uuid:55883A46-4458-41cf-9405-B9CD880B5C7B>
         a                               mim:Attribuutsoort ;
@@ -96,8 +84,8 @@
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
         mim:type                        <urn:uuid:1B9E5020-B850-43ec-8FCA-ED4846D48D17> ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
 <urn:uuid-src:383AC763-BD2B-499c-AEAE-2362287E08B9>
         a                  mim:RelatierolBron ;
@@ -113,12 +101,10 @@
 
 <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:C93EB248-2F60-4615-98AE-96A0EA7556F9> , <urn:uuid:E18F1AE5-832F-4528-86A1-C7368FDB1D0E> , <urn:uuid:2EA9ECE5-8CC8-485e-B0AE-FEE22FA559CF> , <urn:uuid:98D81D8B-1A1C-4b37-8B8D-39F69688678C> , <urn:uuid:FBE84AAB-C48E-41d5-A039-DD1047681A69> ;
+        mim:attribuut                <urn:uuid:C93EB248-2F60-4615-98AE-96A0EA7556F9> , <urn:uuid:98D81D8B-1A1C-4b37-8B8D-39F69688678C> , <urn:uuid:FBE84AAB-C48E-41d5-A039-DD1047681A69> , <urn:uuid:2EA9ECE5-8CC8-485e-B0AE-FEE22FA559CF> , <urn:uuid:E18F1AE5-832F-4528-86A1-C7368FDB1D0E> ;
         mim:begrip                   <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/gebouw> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Gebouw" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Gebouw" .
 
 <urn:uuid:9C499815-9120-4bd6-A11B-CACE1EE761D9>
         a              mim:Generalisatie ;
@@ -130,9 +116,7 @@
         mim:definitie                "Lijn-, punt- of vlakgeometrie." ;
         mim:herkomst                 "BGT" ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "LijnOfPuntOfVlak" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "LijnOfPuntOfVlak" .
 
 <urn:uuid:2EA9ECE5-8CC8-485e-B0AE-FEE22FA559CF>
         a                               mim:Attribuutsoort ;
@@ -141,25 +125,19 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "bovenaanzichtgeometrie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "bovenaanzichtgeometrie" .
 
 <urn:uuid:A978F4FE-1C21-4697-8659-7DDBF52332C1>
         a                            mim:Objecttype ;
         mim:begrip                   <http://bag.basisregistraties.overheid.nl/id/begrip/Woonplaats> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Woonplaats" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Woonplaats" .
 
 <urn:uuid:784D5CB1-BB6E-4bed-B4FC-6D4F73B07862>
         a                            mim:Domein ;
         mim:bevatModelelement        <urn:uuid:8D5F87B5-9FE8-473a-83A6-D45E245E9839> , <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> , <urn:uuid:82AD2BB1-391F-48c8-880D-44FC9992B7B8> , <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46> , <urn:uuid:2768747A-60FB-4354-9B86-C5033019BB4E> , <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC> , <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> , <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> , <urn:uuid:5AFE88AF-241C-435b-AF5A-AD7DABDDFDF1> , <urn:uuid:7EE15C80-3CFE-4d3b-8DE0-1A44B06D82DE> , <urn:uuid:D8B3C789-ADDD-4773-8C26-2953C9969A0F> , <urn:uuid:3B7951F6-BB7D-4164-9C00-97DA13C183C6> , <urn:uuid:E241183B-700D-435b-A781-6609E0521908> , <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> , <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063> , <urn:uuid:51384C3C-47A6-4645-91B3-3FD093E063A7> , <urn:uuid:74873B04-30DE-4ccb-A2D3-50C83D42C722> , <urn:uuid:0A359344-0191-4a87-9AFC-FF96F3D7865B> , <urn:uuid:1BD2F5E4-8799-4350-9743-316FD521FD89> , <urn:uuid:A978F4FE-1C21-4697-8659-7DDBF52332C1> , <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> , <urn:uuid:473F2A9B-DE27-4b38-B177-88B6DF218A80> , <urn:uuid:0B0E8C4B-BD74-4f1b-B69E-A26BB7335628> , <urn:uuid:97F9443F-326B-4e76-86CD-C515688BBE91> , <urn:uuid:6D43B547-1E00-49c4-B774-5331D18FB8AF> , <urn:uuid:BD13FC79-9CBC-48d2-9C74-3B8E3CC94C23> , <urn:uuid:4772A73C-6693-4d5e-97C3-45CD5F85474A> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "IMX-Geo-LM" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "IMX-Geo-LM" .
 
 <urn:uuid-dst:83163756-0E46-40e0-BDF9-4DB4CB0AB217>
         a                  mim:RelatierolDoel ;
@@ -175,12 +153,10 @@
 
 <urn:uuid:82AD2BB1-391F-48c8-880D-44FC9992B7B8>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:117268DB-54F0-4fea-895B-508F594711B4> , <urn:uuid:55883A46-4458-41cf-9405-B9CD880B5C7B> , <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E> , <urn:uuid:A6AD3DDC-7FF5-4a28-B33F-FD6F6EA8350F> , <urn:uuid:42E76400-F960-4204-9042-9691B6D18D7E> ;
+        mim:attribuut                <urn:uuid:42E76400-F960-4204-9042-9691B6D18D7E> , <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E> , <urn:uuid:55883A46-4458-41cf-9405-B9CD880B5C7B> , <urn:uuid:117268DB-54F0-4fea-895B-508F594711B4> , <urn:uuid:A6AD3DDC-7FF5-4a28-B33F-FD6F6EA8350F> ;
         mim:begrip                   <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerk> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Bouwwerk" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Bouwwerk" .
 
 <urn:uuid:D65FD6BF-B3F2-44e8-891C-4D1F66E1F49F>
         mim:bron        <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> ;
@@ -195,14 +171,12 @@
 
 <urn:uuid:1BD2F5E4-8799-4350-9743-316FD521FD89>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:87DCDC00-0B17-4554-BDAD-EB256311EC9F> , <urn:uuid:9F1244E4-A613-4efd-914A-F569431C7287> , <urn:uuid:EFFD166D-F465-474c-BE67-3D93D410CA5D> ;
+        mim:attribuut                <urn:uuid:9F1244E4-A613-4efd-914A-F569431C7287> , <urn:uuid:87DCDC00-0B17-4554-BDAD-EB256311EC9F> , <urn:uuid:EFFD166D-F465-474c-BE67-3D93D410CA5D> ;
         mim:begrip                   <http://opendata.stelselcatalogus.nl/id/clusterbegrip/Ondergrond> ;
         mim:definitie                "Ondergrond is alles wat zich onder het aardoppervlak bevindt, zowel hetgeen van nature aanwezig als door de mens aangelegd." ;
         mim:herkomstDefinitie        "Stelselcatalogus" ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Ondergrond" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Ondergrond" .
 
 <urn:uuid:42C06999-DADA-47b5-82BB-BA89097C99F9>
         a              mim:Generalisatie ;
@@ -223,17 +197,15 @@
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
         mim:toelichting                 "Elke nummeraanduiding waarvan gegevens zijn opgenomen in de basisregistratie adressen en gebouwen, wordt uniek aangeduid door middel van een identificatiecode." ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
 <urn:uuid:597D7E79-9FA9-4c1a-9807-EA07588219C0>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
-        mim:naam                        "realiseertInfiltratie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "realiseertInfiltratie" .
 
 <urn:uuid:64E8004B-EC61-4535-8760-446481B58BCE>
         a                               mim:Attribuutsoort ;
@@ -241,9 +213,7 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "naam" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "naam" .
 
 <urn:uuid-dst:483BAF41-267E-478c-977C-41D8F4ED4161>
         a                  mim:RelatierolDoel ;
@@ -267,9 +237,7 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
-        mim:naam                        "fysiekVoorkomen" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "fysiekVoorkomen" .
 
 <urn:uuid:A7B286A0-73FF-4f28-BEE4-91F18FE7417F>
         a                               mim:Attribuutsoort ;
@@ -278,18 +246,14 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "laatsteKoopsom" ;
-        mim:type                        <urn:uuid:D8B3C789-ADDD-4773-8C26-2953C9969A0F> ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:type                        <urn:uuid:D8B3C789-ADDD-4773-8C26-2953C9969A0F> .
 
 <urn:uuid:2768747A-60FB-4354-9B86-C5033019BB4E>
         a                            mim:Objecttype ;
         mim:attribuut                <urn:uuid:7F2BC6C4-158D-46c9-A28B-BDD621BC7F11> , <urn:uuid:A8A8D9F5-4E10-4395-AFA1-15CB8CCB8BD7> , <urn:uuid:7C4EFEA4-B024-42dd-A730-E0583C2E4D66> , <urn:uuid:82C930D0-0C36-4948-A677-13FCE3C45E96> ;
         mim:begrip                   <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/registratieve_ruimte> ;
         mim:indicatieAbstractObject  true ;
-        mim:naam                     "RegistratieveRuimte" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "RegistratieveRuimte" .
 
 <urn:uuid-src:8E26718D-A14E-4095-B1C3-DF82570F9148>
         a                  mim:RelatierolBron ;
@@ -314,8 +278,8 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
 <urn:uuid-dst:B7450122-7A17-4442-9788-004645CD8606>
         a                  mim:RelatierolDoel ;
@@ -353,8 +317,8 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "naam" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://www.w3.org/2000/01/rdf-schema#label" .
 
 <urn:uuid:2B6AA600-743D-4471-864E-025ADF8544DB>
         a                               mim:Attribuutsoort ;
@@ -362,8 +326,8 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
 <urn:uuid:86A7851A-0792-47c3-8157-05775BC00D6D>
         a                               mim:Attribuutsoort ;
@@ -376,8 +340,8 @@
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
         mim:type                        <urn:uuid:1B9E5020-B850-43ec-8FCA-ED4846D48D17> ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
 <urn:uuid:083BD47C-F8AE-4956-97AB-009E59EB99D3>
         mim:bron        <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> ;
@@ -398,9 +362,7 @@
 <urn:uuid:1B9E5020-B850-43ec-8FCA-ED4846D48D17>
         a                            mim:PrimitiefDatatype ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "CharacterString" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "CharacterString" .
 
 <urn:uuid:51FB1AD6-4693-419f-8C15-E4C89984F6E3>
         a                               mim:Attribuutsoort ;
@@ -410,9 +372,7 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..1" ;
-        mim:naam                        "maaiveldgeometrie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "maaiveldgeometrie" .
 
 <urn:uuid:B17F6974-FC6B-4da8-984C-A44BC42E7095>
         mim:bron        <urn:uuid:BD13FC79-9CBC-48d2-9C74-3B8E3CC94C23> ;
@@ -435,9 +395,7 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..1" ;
-        mim:naam                        "sloopjaar" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "sloopjaar" .
 
 <urn:uuid:E00778A1-0FF7-4a5a-BFFE-14087D59CC09>
         a                               mim:Attribuutsoort ;
@@ -449,8 +407,8 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
 <urn:uuid:0712E167-CD1C-4bb7-9BFA-86AEC40B86A4>
         a                            mim:Informatiemodel ;
@@ -470,9 +428,7 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..1" ;
-        mim:naam                        "geometrie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "geometrie" .
 
 <urn:uuid:87DCDC00-0B17-4554-BDAD-EB256311EC9F>
         a                               mim:Attribuutsoort ;
@@ -485,8 +441,8 @@
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
         mim:type                        <urn:uuid:1B9E5020-B850-43ec-8FCA-ED4846D48D17> ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
 <urn:uuid-src:9CD06689-6C88-4609-B7A0-3C725E4FE6F0>
         a                  mim:RelatierolBron ;
@@ -503,9 +459,7 @@
         a                            mim:Objecttype ;
         mim:attribuut                <urn:uuid:1424216F-CD23-41e3-A8F5-C020401B6AEE> , <urn:uuid:FC40A8E3-90EB-482d-8500-03FA6C655F05> , <urn:uuid:ED87DAF8-E51C-4e8d-AF11-ECAEF2D909D6> , <urn:uuid:E0A46403-5DB0-4e88-8D6D-93189ED76587> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Landschapselement" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Landschapselement" .
 
 <urn:uuid:EFFD166D-F465-474c-BE67-3D93D410CA5D>
         a                               mim:Attribuutsoort ;
@@ -513,8 +467,8 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
 <urn:uuid:FAC00B42-B22A-4a07-9646-E350FA1F660D>
         a                               mim:Attribuutsoort ;
@@ -528,9 +482,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "omschrijving" ;
-        mim:toelichting                 "Elke nummeraanduiding waarvan gegevens zijn opgenomen in de basisregistratie adressen en gebouwen, wordt uniek aangeduid door middel van een identificatiecode." ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:toelichting                 "Elke nummeraanduiding waarvan gegevens zijn opgenomen in de basisregistratie adressen en gebouwen, wordt uniek aangeduid door middel van een identificatiecode." .
 
 <urn:uuid:8757D3CF-781F-4812-9BF4-26864369B534>
         a              mim:Generalisatie ;
@@ -556,9 +508,7 @@
         mim:kardinaliteit               "1..1" ;
         mim:lengte                      "1..80" ;
         mim:naam                        "plaatsnaam" ;
-        mim:toelichting                 "Het maximale aantal te gebruiken tekens voor een benaming is\r\ntachtig. Het verdient aanbeveling te streven naar korte\r\nbenamingen." ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:toelichting                 "Het maximale aantal te gebruiken tekens voor een benaming is\r\ntachtig. Het verdient aanbeveling te streven naar korte\r\nbenamingen." .
 
 <urn:uuid:3874222A-144B-4ff5-B57E-4BBBD12DD2BE>
         a              mim:Generalisatie ;
@@ -569,9 +519,7 @@
         a                            mim:Objecttype ;
         mim:begrip                   <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/registratiegegevens> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Registratiegegevens" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Registratiegegevens" .
 
 <urn:uuid:8E26718D-A14E-4095-B1C3-DF82570F9148>
         mim:bron        <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> ;
@@ -592,9 +540,7 @@
         mim:kardinaliteit               "1..1" ;
         mim:lengte                      "1..5" ;
         mim:naam                        "huisnummer" ;
-        mim:patroon                     "Alle natuurlijke getallen tussen 1 en 99999." ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:patroon                     "Alle natuurlijke getallen tussen 1 en 99999." .
 
 <urn:uuid-dst:0E6FDDF8-6872-4d21-B8B1-B9B9FB301C14>
         a                  mim:RelatierolDoel ;
@@ -632,8 +578,8 @@
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
         mim:toelichting                 "Elke nummeraanduiding waarvan gegevens zijn opgenomen in de basisregistratie adressen en gebouwen, wordt uniek aangeduid door middel van een identificatiecode." ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
 <urn:uuid-dst:57DC85C9-A764-4c32-88C7-70FF5A294E4A>
         a                  mim:RelatierolDoel ;
@@ -655,9 +601,7 @@
         mim:kardinaliteit               "0..1" ;
         mim:lengte                      "1" ;
         mim:naam                        "huisletter" ;
-        mim:patroon                     " een  letter uit het alfabet in hoofdletter (A-Z) of kleine letter (a-z)" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:patroon                     " een  letter uit het alfabet in hoofdletter (A-Z) of kleine letter (a-z)" .
 
 <urn:uuid:83163756-0E46-40e0-BDF9-4DB4CB0AB217>
         mim:bron        <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> ;
@@ -682,8 +626,8 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
 <urn:uuid:BD13FC79-9CBC-48d2-9C74-3B8E3CC94C23>
         a                            mim:Objecttype ;
@@ -692,16 +636,12 @@
         mim:definitie                "\t\r\nTerrein is een begrensd stuk grond." ;
         mim:herkomstDefinitie        "Stelselcatalogus" ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Terrein" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Terrein" .
 
 <urn:uuid:3B7951F6-BB7D-4164-9C00-97DA13C183C6>
         a                            mim:Objecttype ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Grondwaterstand" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Grondwaterstand" .
 
 <urn:uuid:A6AD3DDC-7FF5-4a28-B33F-FD6F6EA8350F>
         a                               mim:Attribuutsoort ;
@@ -711,9 +651,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..1" ;
         mim:naam                        "maaiveldgeometrie" ;
-        mim:type                        <urn:uuid:8D5F87B5-9FE8-473a-83A6-D45E245E9839> ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:type                        <urn:uuid:8D5F87B5-9FE8-473a-83A6-D45E245E9839> .
 
 <urn:uuid:80E03254-CA49-44aa-B4C4-53B19047B008>
         mim:bron        <urn:uuid:1BD2F5E4-8799-4350-9743-316FD521FD89> ;
@@ -725,17 +663,13 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "geometrie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "geometrie" .
 
 <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46>
         a                            mim:Objecttype ;
         mim:attribuut                <urn:uuid:60931BD1-8E2C-4433-B44F-628F9F49B03B> , <urn:uuid:FDAD10A8-5F97-4565-83A4-8E8DC2AC793C> , <urn:uuid:398B9F56-6509-47aa-8F06-483BD8CA8B8A> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Waterschap" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Waterschap" .
 
 <urn:uuid:398B9F56-6509-47aa-8F06-483BD8CA8B8A>
         a                               mim:Attribuutsoort ;
@@ -743,9 +677,7 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "naam" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "naam" .
 
 <urn:uuid:CDD5BC64-7338-4e7e-A3A3-394CF3221F8B>
         a              mim:Generalisatie ;
@@ -764,9 +696,7 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "status" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "status" .
 
 <urn:uuid:A6C3AFFA-D9C6-481c-BF78-4EBC4E35C5BD>
         a                               mim:Attribuutsoort ;
@@ -781,9 +711,7 @@
         mim:kardinaliteit               "1..1" ;
         mim:lengte                      "1..80" ;
         mim:naam                        "straatnaam" ;
-        mim:toelichting                 "Het verdient aanbeveling te streven naar korte benamingen." ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:toelichting                 "Het verdient aanbeveling te streven naar korte benamingen." .
 
 <urn:uuid:E0A46403-5DB0-4e88-8D6D-93189ED76587>
         a                               mim:Attribuutsoort ;
@@ -792,9 +720,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "geometrie" ;
-        mim:type                        <urn:uuid:6D43B547-1E00-49c4-B774-5331D18FB8AF> ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:type                        <urn:uuid:6D43B547-1E00-49c4-B774-5331D18FB8AF> .
 
 <urn:uuid-src:0E6FDDF8-6872-4d21-B8B1-B9B9FB301C14>
         a                  mim:RelatierolBron ;
@@ -807,17 +733,13 @@
         mim:attribuut                <urn:uuid:0897F8EE-4B9D-42a2-9F27-4D3251AC904F> , <urn:uuid:5F5F1D43-6647-4f77-8930-2682D739EE45> , <urn:uuid:3401CDB4-1C0C-4262-949F-DC612FCF7E03> , <urn:uuid:AC16A25D-2513-415e-AE17-3E5DB4EB9445> , <urn:uuid:2B6AA600-743D-4471-864E-025ADF8544DB> , <urn:uuid:597D7E79-9FA9-4c1a-9807-EA07588219C0> ;
         mim:begrip                   <http://opendata.stelselcatalogus.nl/id/clusterbegrip/Water> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Water" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Water" .
 
 <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC>
         a                            mim:Objecttype ;
         mim:begrip                   <http://begrippen.geostandaarden.nl/disgeo/id/begrip/gemeentegebied> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Gemeentegebied" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Gemeentegebied" .
 
 <urn:uuid:C22FAEFC-71B4-41c6-815E-18295DB5F31D>
         a                               mim:Attribuutsoort ;
@@ -826,9 +748,7 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..-1" ;
-        mim:naam                        "functie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "functie" .
 
 <urn:uuid:B7450122-7A17-4442-9788-004645CD8606>
         mim:bron        <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46> ;
@@ -858,17 +778,15 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
 <urn:uuid:556E7089-7DFC-4867-BE08-647F6309CF97>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "koopjaar" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "koopjaar" .
 
 <urn:uuid:9CD06689-6C88-4609-B7A0-3C725E4FE6F0>
         mim:bron        <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC> ;
@@ -882,9 +800,7 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..1" ;
-        mim:naam                        "3dGeometrie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "3dGeometrie" .
 
 <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62>
         a                            mim:Objecttype ;
@@ -892,18 +808,14 @@
         mim:begrip                   <http://bag.basisregistraties.overheid.nl/id/begrip/Adres> ;
         mim:definitie                "Een samengesteld adres van gegevens van een Nummeraanduiding, Openbare ruimte en Woonplaats in de Basisregistratie Adressen en Gebouwen (BAG)." ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Adres" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Adres" .
 
 <urn:uuid:8D5F87B5-9FE8-473a-83A6-D45E245E9839>
         a                            mim:Keuze ;
         mim:definitie                "Multipunt-, multivlak-, lijn-, of vlakgeometrie." ;
         mim:herkomst                 "BGT" ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "MultipuntOfMultivlakOfLijnOfVlak" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "MultipuntOfMultivlakOfLijnOfVlak" .
 
 <urn:uuid:5AFE88AF-241C-435b-AF5A-AD7DABDDFDF1>
         a                            mim:Keuze ;
@@ -912,17 +824,13 @@
         mim:herkomstDefinitie        "IMDiSGeo" ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "VlakOfMultivlak" ;
-        mim:toelichting              "Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:toelichting              "Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." .
 
 <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE>
         a                            mim:Objecttype ;
         mim:attribuut                <urn:uuid:11C3FECB-13A4-4b26-9C33-822B844A2116> , <urn:uuid:C0DD161F-0EE6-4175-AB6B-9747BE3931DF> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "GraafgebiedKLICmelding" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "GraafgebiedKLICmelding" .
 
 <urn:uuid:DB3D38F1-5091-4e82-B8DD-65445FCA7A04>
         mim:bron        <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> ;
@@ -934,18 +842,14 @@
         mim:attribuut                <urn:uuid:472E08B9-E1F3-4840-84CF-09E63DE97880> ;
         mim:begrip                   <http://definities.geostandaarden.nl/imgeo/id/begrip/Wijk> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Wijk" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Wijk" .
 
 <urn:uuid:5F5F1D43-6647-4f77-8930-2682D739EE45>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
-        mim:naam                        "type" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "type" .
 
 <urn:uuid:299B2989-434F-416e-BCBC-B3643FF740E3>
         a                               mim:Attribuutsoort ;
@@ -953,8 +857,8 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
 <urn:uuid:0897F8EE-4B9D-42a2-9F27-4D3251AC904F>
         a                               mim:Attribuutsoort ;
@@ -963,9 +867,7 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "geometrie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "geometrie" .
 
 <urn:uuid:FDAD10A8-5F97-4565-83A4-8E8DC2AC793C>
         a                               mim:Attribuutsoort ;
@@ -977,17 +879,15 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
 <urn:uuid:1424216F-CD23-41e3-A8F5-C020401B6AEE>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
-        mim:naam                        "type" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "type" .
 
 <urn:uuid:B71A1533-D3C4-4024-9005-3158B6524B00>
         a                               mim:Attribuutsoort ;
@@ -1001,34 +901,28 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
 <urn:uuid:D8B3C789-ADDD-4773-8C26-2953C9969A0F>
         a                            mim:GestructureerdDatatype ;
         mim:dataElement              <urn:uuid:07E65C97-FAFD-4784-92A9-03022E09C267> , <urn:uuid:4A49D723-66E3-4eb6-AB1D-27DF12C7B18C> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Bedrag" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Bedrag" .
 
 <urn:uuid:4772A73C-6693-4d5e-97C3-45CD5F85474A>
         a                            mim:Objecttype ;
         mim:attribuut                <urn:uuid:5E0E071C-2488-49d1-BE0E-94E402C1A30C> ;
         mim:begrip                   <http://definities.geostandaarden.nl/imgeo/id/begrip/Buurt> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Buurt" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Buurt" .
 
 <urn:uuid:E241183B-700D-435b-A781-6609E0521908>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:C08A4B06-5E51-40ed-87B6-AAF8E3A955DC> , <urn:uuid:61E196DD-5B64-45fd-B424-C2FACB7D3277> , <urn:uuid:86A7851A-0792-47c3-8157-05775BC00D6D> , <urn:uuid:959C4BEF-DE81-4a26-8F20-E78CF5C8E6BE> , <urn:uuid:B97EB80D-05B0-4d24-A5A2-62A55BF0F550> ;
+        mim:attribuut                <urn:uuid:B97EB80D-05B0-4d24-A5A2-62A55BF0F550> , <urn:uuid:86A7851A-0792-47c3-8157-05775BC00D6D> , <urn:uuid:C08A4B06-5E51-40ed-87B6-AAF8E3A955DC> , <urn:uuid:61E196DD-5B64-45fd-B424-C2FACB7D3277> , <urn:uuid:959C4BEF-DE81-4a26-8F20-E78CF5C8E6BE> ;
         mim:begrip                   <http://opendata.stelselcatalogus.nl/id/clusterbegrip/Weg> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Weg" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Weg" .
 
 <urn:uuid:60931BD1-8E2C-4433-B44F-628F9F49B03B>
         a                               mim:Attribuutsoort ;
@@ -1042,8 +936,8 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
 <urn:uuid-dst:D65FD6BF-B3F2-44e8-891C-4D1F66E1F49F>
         a                  mim:RelatierolDoel ;
@@ -1056,16 +950,12 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "verwijzingNaarArtikel" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "verwijzingNaarArtikel" .
 
 <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD>
         a                            mim:Objecttype ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Waterschapsgebied" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Waterschapsgebied" .
 
 <urn:uuid:98D81D8B-1A1C-4b37-8B8D-39F69688678C>
         a                               mim:Attribuutsoort ;
@@ -1073,18 +963,14 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "bouwjaar" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "bouwjaar" .
 
 <urn:uuid:5E0E071C-2488-49d1-BE0E-94E402C1A30C>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "buurtcode" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "buurtcode" .
 
 <urn:uuid:42E76400-F960-4204-9042-9691B6D18D7E>
         a                               mim:Attribuutsoort ;
@@ -1097,8 +983,8 @@
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
         mim:type                        <urn:uuid:1B9E5020-B850-43ec-8FCA-ED4846D48D17> ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
 <urn:uuid-dst:07D5EF63-33F4-4acc-8FA6-6237BF2BB254>
         a                  mim:RelatierolDoel ;
@@ -1110,54 +996,42 @@
         a                            mim:Objecttype ;
         mim:attribuut                <urn:uuid:0BF48E52-A720-4873-8F8F-366FD6454FF0> , <urn:uuid:4F144394-44A1-495a-87F4-A874188C47F9> , <urn:uuid:D77A7A32-723B-4d75-B039-EEB6A288C69A> , <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E> , <urn:uuid:74F7259D-8225-439d-886D-59932E05127D> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Bestemming" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Bestemming" .
 
 <urn:uuid:61E196DD-5B64-45fd-B424-C2FACB7D3277>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "geometrie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "geometrie" .
 
 <urn:uuid:3401CDB4-1C0C-4262-949F-DC612FCF7E03>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "functie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "functie" .
 
 <urn:uuid:472E08B9-E1F3-4840-84CF-09E63DE97880>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "wijkcode" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "wijkcode" .
 
 <urn:uuid:E18F1AE5-832F-4528-86A1-C7368FDB1D0E>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..-1" ;
-        mim:naam                        "gebruiksdoel" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "gebruiksdoel" .
 
 <urn:uuid:51384C3C-47A6-4645-91B3-3FD093E063A7>
         a                            mim:Objecttype ;
         mim:attribuut                <urn:uuid:25534ADC-3DC1-4e68-97CB-DEAEC94F0E1B> , <urn:uuid:64E8004B-EC61-4535-8760-446481B58BCE> , <urn:uuid:60CB15B3-7A19-40c1-99FE-1F5316FF1CB7> ;
         mim:begrip                   <http://begrippen.geostandaarden.nl/disgeo/id/begrip/gemeente> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Gemeente" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Gemeente" .
 
 <urn:uuid-dst:8C372C65-D3C5-4c38-AF31-B45204CAD17C>
         a                  mim:RelatierolDoel ;
@@ -1176,9 +1050,7 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "geometrie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "geometrie" .
 
 <urn:uuid:30EE2929-CB32-4be5-8DA3-C7E0E5109501>
         a                               mim:Attribuutsoort ;
@@ -1191,8 +1063,8 @@
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
         mim:type                        <urn:uuid:1B9E5020-B850-43ec-8FCA-ED4846D48D17> ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
 <urn:uuid:C08A4B06-5E51-40ed-87B6-AAF8E3A955DC>
         a                               mim:Attribuutsoort ;
@@ -1200,8 +1072,8 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
 <urn:uuid:0E6FDDF8-6872-4d21-B8B1-B9B9FB301C14>
         mim:bron        <urn:uuid:BD13FC79-9CBC-48d2-9C74-3B8E3CC94C23> ;
@@ -1213,9 +1085,7 @@
         mim:attribuut                <urn:uuid:B71A1533-D3C4-4024-9005-3158B6524B00> , <urn:uuid:A7B286A0-73FF-4f28-BEE4-91F18FE7417F> , <urn:uuid:22220B1A-646B-47ae-820A-997A3ECEB7C0> , <urn:uuid:E00778A1-0FF7-4a5a-BFFE-14087D59CC09> , <urn:uuid:91DA4388-E53D-442a-A3E2-363AC131B739> , <urn:uuid:556E7089-7DFC-4867-BE08-647F6309CF97> ;
         mim:begrip                   <http://brk.basisregistraties.overheid.nl/id/begrip/Perceel> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Perceel" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Perceel" .
 
 <urn:uuid-dst:083BD47C-F8AE-4956-97AB-009E59EB99D3>
         a                  mim:RelatierolDoel ;
@@ -1244,9 +1114,7 @@
         mim:naam               "geometrie" ;
         mim:patroon            "De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur." ;
         mim:toelichting        "Het gebied dat bestuurt wordt door een openbaar lichaam heeft een geometrische representatie in de vorm van één of meerdere polygonen (tweedimensionale vlakken). " ;
-        mim:type               <urn:uuid:5AFE88AF-241C-435b-AF5A-AD7DABDDFDF1> ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:type               <urn:uuid:5AFE88AF-241C-435b-AF5A-AD7DABDDFDF1> .
 
 <urn:uuid-dst:BE7A076B-4D83-4f61-9EFD-7761A71FBBC7>
         a                  mim:RelatierolDoel ;
@@ -1257,9 +1125,7 @@
 <urn:uuid:0B0E8C4B-BD74-4f1b-B69E-A26BB7335628>
         a                            mim:Objecttype ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "Bodemsamenstelling" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "Bodemsamenstelling" .
 
 <urn:uuid-src:07D5EF63-33F4-4acc-8FA6-6237BF2BB254>
         a                  mim:RelatierolBron ;
@@ -1277,16 +1143,14 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
 <urn:uuid:74873B04-30DE-4ccb-A2D3-50C83D42C722>
         a                            mim:Objecttype ;
         mim:begrip                   <http://begrippen.geostandaarden.nl/disgeo/id/begrip/bestuurlijk_gebied> ;
         mim:indicatieAbstractObject  false ;
-        mim:naam                     "BestuurlijkGebied" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                     "BestuurlijkGebied" .
 
 <urn:uuid:1E36C118-F9C3-4831-9328-3A58C949A3CC>
         a                               mim:Attribuutsoort ;
@@ -1302,9 +1166,7 @@
         mim:kardinaliteit               "0..1" ;
         mim:lengte                      "1..4" ;
         mim:naam                        "huisnummertoevoeging" ;
-        mim:patroon                     "Een huisnummertoevoeging bestaat uit maximaal 4 alfanumerieke tekens bestaande uit een combinatie van de letters  en cijfers a - z , A - Z , 0 – 9" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:patroon                     "Een huisnummertoevoeging bestaat uit maximaal 4 alfanumerieke tekens bestaande uit een combinatie van de letters  en cijfers a - z , A - Z , 0 – 9" .
 
 <urn:uuid-dst:B17F6974-FC6B-4da8-984C-A44BC42E7095>
         a                  mim:RelatierolDoel ;
@@ -1324,8 +1186,8 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
 <urn:uuid:C345AB18-9480-46fc-A44E-D528FD4687D5>
         a                               mim:Attribuutsoort ;
@@ -1334,9 +1196,7 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
-        mim:naam                        "fysiekvoorkomen" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "fysiekvoorkomen" .
 
 <urn:uuid-src:8C372C65-D3C5-4c38-AF31-B45204CAD17C>
         a                  mim:RelatierolBron ;
@@ -1358,9 +1218,7 @@
         mim:kardinaliteit               "0..1" ;
         mim:lengte                      "6" ;
         mim:naam                        "postcode" ;
-        mim:toelichting                 "Een combinatie van 4 cijfers en 2 hoofdletters." ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:toelichting                 "Een combinatie van 4 cijfers en 2 hoofdletters." .
 
 <urn:uuid-src:E95A3722-E5A7-4b78-87BF-BCF799681DA4>
         a                  mim:RelatierolBron ;
@@ -1378,17 +1236,15 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
 <urn:uuid:0BF48E52-A720-4873-8F8F-366FD6454FF0>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "bestemming" ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:naam                        "bestemming" .
 
 <urn:uuid-dst:32DE7AAA-07F5-4f28-8A5E-D2544EA64F91>
         a                  mim:RelatierolDoel ;
@@ -1407,8 +1263,8 @@
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
         mim:type                        <urn:uuid:1B9E5020-B850-43ec-8FCA-ED4846D48D17> ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
 <urn:uuid:ED87DAF8-E51C-4e8d-AF11-ECAEF2D909D6>
         a                               mim:Attribuutsoort ;
@@ -1421,8 +1277,8 @@
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
         mim:type                        <urn:uuid:1B9E5020-B850-43ec-8FCA-ED4846D48D17> ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        <https://wau.ldproxy.net/def/mim-ext#uri>
+                "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
 <urn:uuid:2B210C8F-989E-4897-8525-7D83C46A4264>
         a                               mim:Attribuutsoort ;
@@ -1432,6 +1288,4 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "isHoofdadres" ;
-        mim:toelichting                 "In de BAG kan een adres een hoofdadres of nevenadres van een Adresseerbaarobject zijn." ;
-        <https://wau.ldproxy.net/def/mim-ext#baseURI>
-                "http://modellen.geostandaarden.nl/def/imx-geo#" .
+        mim:toelichting                 "In de BAG kan een adres een hoofdadres of nevenadres van een Adresseerbaarobject zijn." .
