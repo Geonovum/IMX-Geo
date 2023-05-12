@@ -222,7 +222,7 @@ queries:
             ?im mim-ext:baseURI ?baseURI .
           }           
           BIND(IRI(COALESCE(?attribuutsoortURI, concat(?baseURI,?code))) as ?property)
-          BIND(IRI(COALESCE(?ownerURI, concat(?baseURI,?code))) as ?ownershape)
+          BIND(IRI(COALESCE(?ownerURI, concat(?baseURI,?ownercode))) as ?ownershape)
           BIND(IRI(CONCAT(COALESCE(?ownerURI, concat(?baseURI,?ownercode)),".",?code)) as ?propertyShape)
           #Can result in minting new URI's in external domains. 
         }
@@ -250,7 +250,7 @@ queries:
         }
       }
       WHERE {
-        SELECT  ?property ?predicate ?owner ?class ?code ?naam ?relatiesoort
+        SELECT  ?property ?propertyShape ?owner ?class ?code ?naam ?relatiesoort
         WHERE {
           GRAPH <urn:input> {
             ?relatiesoort a mim:Relatiesoort.
