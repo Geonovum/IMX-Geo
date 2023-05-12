@@ -882,18 +882,28 @@ queries:
       PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
       INSERT {
         GRAPH <urn:output> {
-          ?package mim-ext:baseURI ?baseURI
+          ?package mim-ext:baseURI ?baseURI .
+          ?element mim-ext:uri ?uri .
         }
       }
       WHERE {
-        GRAPH <urn:input> {
-          ?tv ea:element ?eapackage ;
-            ea:property "baseURI" ;
-            ea:value ?baseURI .
+        {
+          GRAPH <urn:input> {
+            ?tv ea:element ?eapackage ;
+              ea:property "baseURI" ;
+              ea:value ?baseURI .
+              
+            ?eapackage ea:type "Package" .
+            ?package rdfs:seeAlso ?eapackage .
+          }
+        } UNION {
+          GRAPH <urn:input> {
+            ?tv ea:element ?eaElement ;
+              ea:property "uri" ;
+              ea:value ?uri .
             
-          ?eapackage ea:type "Package" .
-          
-          ?package rdfs:seeAlso ?eaobject .
+            ?element rdfs:seeAlso ?eaElement .
+          }
         }
       }
   - title: add mim:definitie

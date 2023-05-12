@@ -80,11 +80,9 @@ queries:
             ?package skos:notation ?code.
             FILTER (?packagetype=mim:Informatiemodel || ?packagetype=mim:Domein)
           }
-        #
           GRAPH <urn:uri> {
             ?im mim-ext:ontologyURI ?ontologyURI .
           }
-        #
         }
       }
   - title: convert mim:Objecttype
@@ -97,24 +95,26 @@ queries:
       PREFIX sh: <http://www.w3.org/ns/shacl#>
       INSERT {
         GRAPH <urn:output> {
-          ?class a owl:Class, sh:NodeShape.
-          ?class sh:targetClass ?class.
-          ?class rdfs:label ?naam.
-          ?class skos:notation ?code.
-          ?class rdfs:seeAlso ?objecttype.
+          ?subject a owl:Class, sh:NodeShape.
+          ?subject sh:targetClass ?class.
+          ?subject rdfs:label ?naam.
+          ?subject skos:notation ?code.
+          ?subject rdfs:seeAlso ?objecttype.
         }
       }
       WHERE {
-        SELECT (iri(concat(?baseURI,?code)) as ?class) ?code ?naam ?objecttype
+        SELECT ?subject ?code ?naam ?objecttype
         WHERE {
           GRAPH <urn:input> {
             ?objecttype a mim:Objecttype.
             ?objecttype mim:naam ?naam.
             ?objecttype skos:notation ?code.
+            OPTIONAL { ?objecttype mim-ext:uri ?uri }
           }
           GRAPH <urn:uri> {
             ?im mim-ext:baseURI ?baseURI .
           }
+          BIND(IRI(COALESCE(?uri, concat(?baseURI,?code))) as ?subject)
         }
       }
   - title: convert mim:Gegevensgroeptype
@@ -127,24 +127,26 @@ queries:
       PREFIX sh: <http://www.w3.org/ns/shacl#>
       INSERT {
         GRAPH <urn:output> {
-          ?class a owl:Class, sh:NodeShape.
-          ?class sh:targetClass ?class.
-          ?class rdfs:label ?naam.
-          ?class skos:notation ?code.
-          ?class rdfs:seeAlso ?gegevensgroeptype.
+          ?subject a owl:Class, sh:NodeShape.
+          ?subject sh:targetClass ?class.
+          ?subject rdfs:label ?naam.
+          ?subject skos:notation ?code.
+          ?subject rdfs:seeAlso ?gegevensgroeptype.
         }
       }
       WHERE {
-        SELECT (iri(concat(?baseURI,?code)) as ?class) ?code ?naam ?gegevensgroeptype
+        SELECT ?subject ?code ?naam ?gegevensgroeptype
         WHERE {
           GRAPH <urn:input> {
             ?gegevensgroeptype a mim:Gegevensgroeptype.
             ?gegevensgroeptype mim:naam ?naam.
             ?gegevensgroeptype skos:notation ?code.
+            OPTIONAL { ?gegevensgroeptype mim-ext:uri ?uri }
           }
           GRAPH <urn:uri> {
             ?im mim-ext:baseURI ?baseURI .
           }
+          BIND(IRI(COALESCE(?uri, concat(?baseURI,?code))) as ?subject)
         }
       }
   - title: convert mim:Relatieklasse
@@ -157,24 +159,26 @@ queries:
       PREFIX sh: <http://www.w3.org/ns/shacl#>
       INSERT {
         GRAPH <urn:output> {
-          ?class a owl:Class, sh:NodeShape.
-          ?class sh:targetClass ?class.
-          ?class rdfs:label ?naam.
-          ?class skos:notation ?code.
-          ?class rdfs:seeAlso ?relatieklasse.
+          ?subject a owl:Class, sh:NodeShape.
+          ?subject sh:targetClass ?class.
+          ?subject rdfs:label ?naam.
+          ?subject skos:notation ?code.
+          ?subject rdfs:seeAlso ?relatieklasse.
         }
       }
       WHERE {
-        SELECT (iri(concat(?baseURI,?code)) as ?class) ?code ?naam ?relatieklasse
+        SELECT ?subject ?code ?naam ?relatieklasse
         WHERE {
           GRAPH <urn:input> {
             ?relatieklasse a mim:Relatieklasse.
             ?relatieklasse mim:naam ?naam.
             ?relatieklasse skos:notation ?code.
+            OPTIONAL { ?relatieklasse mim-ext:uri ?uri }
           }
           GRAPH <urn:uri> {
             ?im mim-ext:baseURI ?baseURI .
           }
+          BIND(IRI(COALESCE(?uri, concat(?baseURI,?code))) as ?subject)
         }
       }
   - title: convert mim:Attribuutsoort / mim:dataElement
@@ -190,18 +194,15 @@ queries:
           ?property a owl:DatatypeProperty.
           ?property rdfs:label ?naam.
           ?property rdfs:seeAlso ?attribuutsoort.
-          ?ownershape sh:property ?predicate.
-          ?predicate a sh:PropertyShape.
-          ?predicate sh:name ?code.
-          ?predicate sh:path ?property.
-          ?predicate rdfs:seeAlso ?attribuutsoort
+          ?ownershape sh:property ?propertyShape.
+          ?propertyShape a sh:PropertyShape.
+          ?propertyShape sh:name ?code.
+          ?propertyShape sh:path ?property.
+          ?propertyShape rdfs:seeAlso ?attribuutsoort
         }
       }
       WHERE {
-        SELECT  (iri(concat(?baseURI,?code)) as ?property)
-                (iri(concat(?baseURI,?ownercode,".",?code)) as ?predicate)
-                (iri(concat(?baseURI,?ownercode)) as ?ownershape)
-                ?code ?naam ?attribuutsoort
+        SELECT ?property ?ownershape ?propertyShape ?code ?naam ?attribuutsoort
         WHERE {
           GRAPH <urn:input> {
             ?owner a ?mimtype.
@@ -210,12 +211,20 @@ queries:
             ?attribuutsoort a ?mimattr.
             ?attribuutsoort mim:naam ?naam.
             ?attribuutsoort skos:notation ?code.
+
+            OPTIONAL { ?owner mim-ext:uri ?ownerURI }
+            OPTIONAL { ?attribuutsoort mim-ext:uri ?attribuutsoortURI }
+
             FILTER ((?mimattr = mim:Attribuutsoort && ?mimrel = mim:attribuut) || (?mimattr = mim:DataElement && ?mimrel = mim:dataElement))
             FILTER (?mimtype = mim:Objecttype || ?mimtype = mim:Gegevensgroeptype || ?mimtype = mim:Relatieklasse || ?mimtype = mim:GestructureerdDatatype)
           }
           GRAPH <urn:uri> {
             ?im mim-ext:baseURI ?baseURI .
-          }
+          }           
+          BIND(IRI(COALESCE(?attribuutsoortURI, concat(?baseURI,?code))) as ?property)
+          BIND(IRI(COALESCE(?ownerURI, concat(?baseURI,?code))) as ?ownershape)
+          BIND(IRI(CONCAT(COALESCE(?ownerURI, concat(?baseURI,?ownercode)),".",?code)) as ?propertyShape)
+          #Can result in minting new URI's in external domains. 
         }
       }
   - title: convert mim:Relatiesoort
@@ -231,21 +240,17 @@ queries:
           ?property a owl:ObjectProperty.
           ?property rdfs:label ?naam.
           ?property rdfs:seeAlso ?relatiesoort.
-          ?owner sh:property ?predicate.
-          ?predicate a sh:PropertyShape.
-          ?predicate sh:name ?code.
-          ?predicate sh:path ?property.
-          ?predicate sh:nodeKind sh:IRI.
-          ?predicate sh:class ?class.
-          ?predicate rdfs:seeAlso ?relatiesoort
+          ?owner sh:property ?propertyShape.
+          ?propertyShape a sh:PropertyShape.
+          ?propertyShape sh:name ?code.
+          ?propertyShape sh:path ?property.
+          ?propertyShape sh:nodeKind sh:IRI.
+          ?propertyShape sh:class ?class.
+          ?propertyShape rdfs:seeAlso ?relatiesoort
         }
       }
       WHERE {
-        SELECT  (iri(concat(?baseURI,?code)) as ?property)
-                (iri(concat(?baseURI,?ownercode,".",?code)) as ?predicate)
-                (iri(concat(?baseURI,?ownercode)) as ?owner)
-                (iri(concat(?baseURI,?classcode)) as ?class)
-                ?code ?naam ?relatiesoort
+        SELECT  ?property ?predicate ?owner ?class ?code ?naam ?relatiesoort
         WHERE {
           GRAPH <urn:input> {
             ?relatiesoort a mim:Relatiesoort.
@@ -255,6 +260,11 @@ queries:
             ?relatiesoort skos:notation ?code.
             ?bron skos:notation ?ownercode.
             ?doel skos:notation ?classcode.
+
+            OPTIONAL { ?relatiesoort mim-ext:uri ?relatiesoortURI }
+            OPTIONAL { ?bron mim-ext:uri ?ownerURI }
+            OPTIONAL { ?doel mim-ext:uri ?classURI }
+
             FILTER NOT EXISTS {
               ?relatiesoort mim:relatierol ?relatieroldoel.
               ?relatieroldoel a mim:RelatierolDoel.
@@ -264,6 +274,11 @@ queries:
           GRAPH <urn:uri> {
             ?im mim-ext:baseURI ?baseURI .
           }
+          BIND(IRI(COALESCE(?attribuutsoortURI, concat(?baseURI,?code))) as ?property)
+          BIND(IRI(COALESCE(?ownerURI, concat(?baseURI,?ownercode))) as ?owner)
+          BIND(IRI(CONCAT(COALESCE(?ownerURI, concat(?baseURI,?ownercode)),".",?code)) as ?propertyShape)
+          BIND(IRI(COALESCE(?classURI, concat(?baseURI,?classcode))) as ?class)
+          #Can result in minting new URI's in external domains. 
         }
       }
   - title: convert mim:ExterneKoppeling
@@ -279,21 +294,17 @@ queries:
           ?property a owl:ObjectProperty.
           ?property rdfs:label ?naam.
           ?property rdfs:seeAlso ?externekoppeling.
-          ?owner sh:property ?predicate.
-          ?predicate a sh:PropertyShape.
-          ?predicate sh:name ?code.
-          ?predicate sh:path ?property.
-          ?predicate sh:nodeKind sh:IRI.
-          ?predicate sh:class ?class.
-          ?predicate rdfs:seeAlso ?externekoppeling
+          ?owner sh:property ?propertyShape.
+          ?propertyShape a sh:PropertyShape.
+          ?propertyShape sh:name ?code.
+          ?propertyShape sh:path ?property.
+          ?propertyShape sh:nodeKind sh:IRI.
+          ?propertyShape sh:class ?class.
+          ?propertyShape rdfs:seeAlso ?externekoppeling
         }
       }
       WHERE {
-        SELECT  (iri(concat(?baseURI,?code)) as ?property)
-                (iri(concat(?baseURI,?ownercode,".",?code)) as ?predicate)
-                (iri(concat(?baseURI,?ownercode)) as ?owner)
-                (iri(concat(?baseURI,?classcode)) as ?class)
-                ?code ?naam ?externekoppeling
+        SELECT ?property ?propertyShape ?owner ?class ?code ?naam ?externekoppeling
         WHERE {
           GRAPH <urn:input> {
             ?externekoppeling a mim:ExterneKoppeling.
@@ -303,10 +314,19 @@ queries:
             ?externekoppeling skos:notation ?code.
             ?bron skos:notation ?ownercode.
             ?doel skos:notation ?classcode.
+            
+            OPTIONAL { ?externekoppeling mim-ext:uri ?externekoppelingURI }
+            OPTIONAL { ?bron mim-ext:uri ?ownerURI }
+            OPTIONAL { ?doel mim-ext:uri ?classURI }
           }
           GRAPH <urn:uri> {
             ?im mim-ext:baseURI ?baseURI .
           }
+          BIND(IRI(COALESCE(?externekoppelingURI, concat(?baseURI,?code))) as ?property)
+          BIND(IRI(COALESCE(?ownerURI, concat(?baseURI,?ownercode))) as ?owner)
+          BIND(IRI(CONCAT(COALESCE(?ownerURI, concat(?baseURI,?ownercode)),".",?code)) as ?propertyShape)
+          BIND(IRI(COALESCE(?classURI, concat(?baseURI,?classcode))) as ?class)
+          #Can result in minting new URI's in external domains. 
         }
       }
   - title: convert mim:PrimitiefDatatype
@@ -320,22 +340,24 @@ queries:
       PREFIX sh: <http://www.w3.org/ns/shacl#>
       INSERT {
         GRAPH <urn:output> {
-          ?datatype a rdf:Datatype.
-          ?datatype rdfs:label ?naam.
-          ?datatype rdfs:seeAlso ?type.
+          ?subject a rdf:Datatype.
+          ?subject rdfs:label ?naam.
+          ?subject rdfs:seeAlso ?type.
         }
       }
       WHERE {
-        SELECT (iri(concat(?baseURI,?code)) as ?datatype) ?naam ?type
+        SELECT ?subject ?naam ?type
         WHERE {
           GRAPH <urn:input> {
             ?type a mim:PrimitiefDatatype.
             ?type mim:naam ?naam.
             ?type skos:notation ?code.
+            OPTIONAL { ?type mim-ext:uri ?uri }
           }
           GRAPH <urn:uri> {
             ?im mim-ext:baseURI ?baseURI .
           }
+          BIND(IRI(COALESCE(?uri, concat(?baseURI,?code))) as ?subject)
         }
       }
   - title: convert mim:GestructureerdDatatype
@@ -349,24 +371,26 @@ queries:
       PREFIX sh: <http://www.w3.org/ns/shacl#>
       INSERT {
         GRAPH <urn:output> {
-          ?datatype a owl:Class, sh:NodeShape.
-          ?datatype sh:targetClass ?datatype.
-          ?datatype rdfs:label ?naam.
-          ?datatype skos:notation ?code.
-          ?datatype rdfs:seeAlso ?type.
+          ?subject a owl:Class, sh:NodeShape.
+          ?subject sh:targetClass ?datatype.
+          ?subject rdfs:label ?naam.
+          ?subject skos:notation ?code.
+          ?subject rdfs:seeAlso ?type.
         }
       }
       WHERE {
-        SELECT (iri(concat(?baseURI,?code)) as ?datatype) ?naam ?type
+        SELECT ?subject ?naam ?type
         WHERE {
           GRAPH <urn:input> {
             ?type a mim:GestructureerdDatatype.
             ?type mim:naam ?naam.
             ?type skos:notation ?code.
+            OPTIONAL { ?type mim-ext:uri ?uri }
           }
           GRAPH <urn:uri> {
             ?im mim-ext:baseURI ?baseURI .
           }
+          BIND(IRI(COALESCE(?uri, concat(?baseURI,?code))) as ?subject)
         }
       }
   - title: convert mim:Enumeratie
@@ -380,25 +404,27 @@ queries:
       PREFIX sh: <http://www.w3.org/ns/shacl#>
       INSERT {
         GRAPH <urn:output> {
-          ?enumeratie a owl:Class, sh:NodeShape.
-          ?enumeratie sh:targetClass ?enumeratie.
-          ?enumeratie rdfs:subClassOf skos:Concept.
-          ?enumeratie rdfs:label ?naam.
-          ?enumeratie skos:notation ?code.
-          ?enumeratie rdfs:seeAlso ?type.
+          ?subject a owl:Class, sh:NodeShape.
+          ?subject sh:targetClass ?enumeratie.
+          ?subject rdfs:subClassOf skos:Concept.
+          ?subject rdfs:label ?naam.
+          ?subject skos:notation ?code.
+          ?subject rdfs:seeAlso ?type.
         }
       }
       WHERE {
-        SELECT (iri(concat(?baseURI,?code)) as ?enumeratie) ?naam ?type
+        SELECT ?subject ?naam ?type
         WHERE {
           GRAPH <urn:input> {
             ?type a mim:Enumeratie.
             ?type mim:naam ?naam.
             ?type skos:notation ?code.
+            OPTIONAL { ?type mim-ext:uri ?uri }
           }
           GRAPH <urn:uri> {
             ?im mim-ext:baseURI ?baseURI .
           }
+          BIND(IRI(COALESCE(?uri, concat(?baseURI,?code))) as ?subject)
         }
       }
   - title: convert mim:Enumeratiewaarde
@@ -418,7 +444,7 @@ queries:
         }
       }
       WHERE {
-        SELECT (iri(concat(?baseURI,?enum)) as ?type) (iri(concat(?baseURI,?code)) as ?item) ?naam ?waarde
+        SELECT ?type ?item ?naam ?waarde
         WHERE {
           GRAPH <urn:input> {
             ?enumeratie mim:waarde ?waarde.
@@ -426,10 +452,15 @@ queries:
             ?waarde a mim:Enumeratiewaarde.
             ?waarde mim:naam ?naam.
             ?waarde skos:notation ?code.
+
+            OPTIONAL { ?enumeratie mim-ext:uri ?typeURI }
+            OPTIONAL { ?waarde mim-ext:uri ?waardeURI }
           }
           GRAPH <urn:uri> {
             ?im mim-ext:baseURI ?baseURI .
           }
+          BIND(IRI(COALESCE(?typeURI, concat(?baseURI,?enum))) as ?type)
+          BIND(IRI(COALESCE(?waardeURI, concat(?baseURI,?code))) as ?item)
         }
       }
   - title: convert mim:RelatierolBron
@@ -445,21 +476,17 @@ queries:
           ?property a owl:ObjectProperty.
           ?property rdfs:label ?naam.
           ?property rdfs:seeAlso ?relatierolbron.
-          ?owner sh:property ?predicate.
-          ?predicate a sh:PropertyShape.
-          ?predicate sh:name ?code.
-          ?predicate sh:path ?property.
-          ?predicate sh:nodeKind sh:IRI.
-          ?predicate sh:class ?class.
-          ?predicate rdfs:seeAlso ?relatierolbron
+          ?owner sh:property ?propertyShape.
+          ?propertyShape a sh:PropertyShape.
+          ?propertyShape sh:name ?code.
+          ?propertyShape sh:path ?property.
+          ?propertyShape sh:nodeKind sh:IRI.
+          ?propertyShape sh:class ?class.
+          ?propertyShape rdfs:seeAlso ?relatierolbron
         }
       }
       WHERE {
-        SELECT  (iri(concat(?baseURI,?code)) as ?property)
-                (iri(concat(?baseURI,?ownercode,".",?code)) as ?predicate)
-                (iri(concat(?baseURI,?ownercode)) as ?owner)
-                (iri(concat(?baseURI,?classcode)) as ?class)
-                ?code ?naam ?relatierolbron
+        SELECT  ?property ?propertyShape ?owner ?class ?code ?naam ?relatierolbron
         WHERE {
           GRAPH <urn:input> {
             ?relatierolbron a mim:RelatierolBron.
@@ -470,10 +497,19 @@ queries:
             ?relatiesoort mim:doel ?doel.
             ?doel skos:notation ?ownercode.
             ?bron skos:notation ?classcode.
+            
+            OPTIONAL { ?relatierolbron mim-ext:uri ?relatierolbronURI }
+            OPTIONAL { ?doel mim-ext:uri ?ownerURI }
+            OPTIONAL { ?bron mim-ext:uri ?classURI }
           }
           GRAPH <urn:uri> {
             ?im mim-ext:baseURI ?baseURI .
           }
+          BIND(IRI(COALESCE(?relatierolbronURI, concat(?baseURI,?code))) as ?property)
+          BIND(IRI(COALESCE(?ownerURI, concat(?baseURI,?ownercode))) as ?owner)
+          BIND(IRI(CONCAT(COALESCE(?ownerURI, concat(?baseURI,?ownercode)),".",?code)) as ?propertyShape)
+          BIND(IRI(COALESCE(?classURI, concat(?baseURI,?classcode))) as ?class)
+          #Can result in minting new URI's in external domains. 
         }
       }
   - title: convert mim:RelatierolDoel
@@ -489,22 +525,18 @@ queries:
           ?property a owl:ObjectProperty.
           ?property rdfs:label ?naam.
           ?property rdfs:seeAlso ?relatieroldoel.
-          ?owner sh:property ?predicate.
-          ?predicate a sh:PropertyShape.
-          ?predicate sh:name ?code.
-          ?predicate sh:path ?property.
-          ?predicate sh:nodeKind sh:IRI.
-          ?predicate sh:class ?class.
-          ?predicate rdfs:seeAlso ?relatieroldoel.
-          ?predicate mim:equivalent ?relatiesoort.
+          ?owner sh:property ?propertyShape.
+          ?propertyShape a sh:PropertyShape.
+          ?propertyShape sh:name ?code.
+          ?propertyShape sh:path ?property.
+          ?propertyShape sh:nodeKind sh:IRI.
+          ?propertyShape sh:class ?class.
+          ?propertyShape rdfs:seeAlso ?relatieroldoel.
+          ?propertyShape mim:equivalent ?relatiesoort.
         }
       }
       WHERE {
-        SELECT (iri(concat(?baseURI,?code)) as ?property)
-                (iri(concat(?baseURI,?ownercode,".",?code)) as ?predicate)
-                (iri(concat(?baseURI,?ownercode)) as ?owner)
-                (iri(concat(?baseURI,?classcode)) as ?class)
-                ?code ?naam ?relatieroldoel ?relatiesoort
+        SELECT ?property ?propertyShape ?owner ?class ?code ?naam ?relatieroldoel ?relatiesoort
         WHERE {
           GRAPH <urn:input> {
             ?relatieroldoel a mim:RelatierolDoel.
@@ -515,10 +547,19 @@ queries:
             ?relatiesoort mim:doel ?doel.
             ?doel skos:notation ?classcode.
             ?bron skos:notation ?ownercode.
+            
+            OPTIONAL { ?relatieroldoel mim-ext:uri ?relatieroldoelURI }
+            OPTIONAL { ?bron mim-ext:uri ?ownerURI }
+            OPTIONAL { ?doel mim-ext:uri ?classURI }
           }
           GRAPH <urn:uri> {
             ?im mim-ext:baseURI ?baseURI .
           }
+          BIND(IRI(COALESCE(?relatierolbronURI, concat(?baseURI,?code))) as ?property)
+          BIND(IRI(COALESCE(?ownerURI, concat(?baseURI,?ownercode))) as ?owner)
+          BIND(IRI(CONCAT(COALESCE(?ownerURI, concat(?baseURI,?ownercode)),".",?code)) as ?propertyShape)
+          BIND(IRI(COALESCE(?classURI, concat(?baseURI,?classcode))) as ?class)
+          #Can result in minting new URI's in external domains. 
         }
       }
   - title: convert mim:RelatierolDoel of mim:Relatieklasse
@@ -552,14 +593,7 @@ queries:
         }
       }
       WHERE {
-        SELECT  (iri(concat(?baseURI,?code)) as ?statement)
-                (iri(concat(?baseURI,?objectcode)) as ?object)
-                (iri(concat(?baseURI,?subjectcode)) as ?subject)
-                (iri(concat(?baseURI,?predicatecode)) as ?predicate)
-                (iri(concat(?baseURI,?code,".object")) as ?objectps)
-                (iri(concat(?baseURI,?code,".subject")) as ?subjectps)
-                (iri(concat(?baseURI,?code,".predicate")) as ?predicateps)
-                ?code ?naam ?relatieroldoel
+        SELECT  ?statement ?object ?subject ?predicate ?objectps ?subjectps ?predicateps ?code ?naam ?relatieroldoel
         WHERE {
           GRAPH <urn:input> {
             ?relatieroldoel a mim:RelatierolDoel.
@@ -571,10 +605,23 @@ queries:
             ?relatieklasse skos:notation ?code.
             ?doel skos:notation ?objectcode.
             ?bron skos:notation ?subjectcode.
+            
+            OPTIONAL { ?relatieklasse mim-ext:uri ?statementURI }
+            OPTIONAL { ?bron mim-ext:uri ?subjectURI }
+            OPTIONAL { ?relatieroldoel mim-ext:uri ?predicateURI }
+            OPTIONAL { ?doel mim-ext:uri ?objectURI }
           }
           GRAPH <urn:uri> {
             ?im mim-ext:baseURI ?baseURI .
           }
+          BIND(IRI(COALESCE(?statementURI, concat(?baseURI,?code))) as ?statement)
+          BIND(IRI(COALESCE(?objectURI, concat(?baseURI,?objectcode))) as ?object)
+          BIND(IRI(COALESCE(?subjectURI, concat(?baseURI,?subjectcode))) as ?subject)
+          BIND(IRI(COALESCE(?predicateURI, concat(?baseURI,?predicatecode))) as ?predicate)
+          BIND(IRI(CONCAT(COALESCE(?statementURI, concat(?baseURI,?code)), ".object")) as ?objectps)
+          BIND(IRI(CONCAT(COALESCE(?statementURI, concat(?baseURI,?code)), ".subject")) as ?subjectps)
+          BIND(IRI(CONCAT(COALESCE(?statementURI, concat(?baseURI,?code)), ".predicate")) as ?predicateps)
+          #Can result in minting new URI's in external domains. 
         }
       }
   - title: convert mim:Gegevensgroep
@@ -590,21 +637,17 @@ queries:
           ?property a owl:ObjectProperty.
           ?property rdfs:label ?naam.
           ?property rdfs:seeAlso ?attribuutsoort.
-          ?ownershape sh:property ?predicate.
-          ?predicate a sh:PropertyShape.
-          ?predicate sh:name ?code.
-          ?predicate sh:path ?property.
-          ?predicate sh:nodeKind sh:BlankNode.
-          ?predicate sh:class ?class.
-          ?predicate rdfs:seeAlso ?gegevensgroep
+          ?ownershape sh:property ?propertyShape.
+          ?propertyShape a sh:PropertyShape.
+          ?propertyShape sh:name ?code.
+          ?propertyShape sh:path ?property.
+          ?propertyShape sh:nodeKind sh:BlankNode.
+          ?propertyShape sh:class ?class.
+          ?propertyShape rdfs:seeAlso ?gegevensgroep
         }
       }
       WHERE {
-        SELECT  (iri(concat(?baseURI,?code)) as ?property)
-                (iri(concat(?baseURI,?ownercode,".",?code)) as ?predicate)
-                (iri(concat(?baseURI,?ownercode)) as ?ownershape)
-                (iri(concat(?baseURI,?typecode)) as ?class)
-                ?code ?naam ?gegevensgroep
+        SELECT   ?property ?propertyShape ?ownershape ?class ?code ?naam ?gegevensgroep
         WHERE {
           GRAPH <urn:input> {
             ?owner a mim:Objecttype.
@@ -615,10 +658,19 @@ queries:
             ?gegevensgroep mim:gegevensgroeptype ?type.
             ?gegevensgroep skos:notation ?code.
             ?type skos:notation ?typecode.
+            
+            OPTIONAL { ?owner mim-ext:uri ?ownerURI }
+            OPTIONAL { ?gegevensgroep mim-ext:uri ?gegevensgroepURI }
+            OPTIONAL { ?type mim-ext:uri ?typeURI }
           }
           GRAPH <urn:uri> {
             ?im mim-ext:baseURI ?baseURI .
           }
+          BIND(IRI(COALESCE(?gegevensgroepURI, concat(?baseURI,?code))) as ?property)
+          BIND(IRI(CONCAT(COALESCE(?ownerURI, concat(?baseURI,?ownercode)), ?code)) as ?propertyShape)
+          BIND(IRI(COALESCE(?ownerURI, concat(?baseURI,?ownercode))) as ?ownershape)
+          BIND(IRI(COALESCE(?typeURI, concat(?baseURI,?typecode))) as ?class)
+          #Can result in minting new URI's in external domains. 
         }
       }
   - title: convert mim:Referentielijst
@@ -631,24 +683,27 @@ queries:
       PREFIX sh: <http://www.w3.org/ns/shacl#>
       INSERT {
         GRAPH <urn:output> {
-          ?class a owl:Class, sh:NodeShape.
-          ?class sh:targetClass ?class.
-          ?class rdfs:label ?naam.
-          ?class skos:notation ?code.
-          ?class rdfs:seeAlso ?referentielijst.
+          ?subject a owl:Class, sh:NodeShape.
+          ?subject sh:targetClass ?subject.
+          ?subject rdfs:label ?naam.
+          ?subject skos:notation ?code.
+          ?subject rdfs:seeAlso ?referentielijst.
         }
       }
       WHERE {
-        SELECT (iri(concat(?baseURI,?code)) as ?class) ?code ?naam ?referentielijst
+        SELECT  ?subject ?code ?naam ?referentielijst
         WHERE {
           GRAPH <urn:input> {
             ?referentielijst a mim:Referentielijst.
             ?referentielijst mim:naam ?naam.
             ?referentielijst skos:notation ?code.
+            
+            OPTIONAL { ?referentielijst mim-ext:uri ?uri }
           }
           GRAPH <urn:uri> {
             ?im mim-ext:baseURI ?baseURI .
           }
+          BIND(IRI(COALESCE(?uri, concat(?baseURI,?code))) as ?subject)
         }
       }
   - title: convert mim:Codelijst
@@ -661,24 +716,27 @@ queries:
       PREFIX sh: <http://www.w3.org/ns/shacl#>
       INSERT {
         GRAPH <urn:output> {
-          ?class a owl:Class, sh:NodeShape.
-          ?class sh:targetClass ?class.
-          ?class rdfs:label ?naam.
-          ?class skos:notation ?code.
-          ?class rdfs:seeAlso ?codelijst.
+          ?subject a owl:Class, sh:NodeShape.
+          ?subject sh:targetClass ?subject.
+          ?subject rdfs:label ?naam.
+          ?subject skos:notation ?code.
+          ?subject rdfs:seeAlso ?codelijst.
         }
       }
       WHERE {
-        SELECT (iri(concat(?baseURI,?code)) as ?class) ?code ?naam ?codelijst
+        SELECT ?subject ?code ?naam ?codelijst
         WHERE {
           GRAPH <urn:input> {
             ?codelijst a mim:Codelijst.
             ?codelijst mim:naam ?naam.
             ?codelijst skos:notation ?code.
+            
+            OPTIONAL { ?codelijst mim-ext:uri ?uri }
           }
           GRAPH <urn:uri> {
             ?im mim-ext:baseURI ?baseURI .
           }
+          BIND(IRI(COALESCE(?uri, concat(?baseURI,?code))) as ?subject)
         }
       }
   - title: convert mim:Generalisatie
