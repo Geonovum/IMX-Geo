@@ -96,7 +96,7 @@ queries:
       INSERT {
         GRAPH <urn:output> {
           ?subject a owl:Class, sh:NodeShape.
-          ?subject sh:targetClass ?class.
+          ?subject sh:targetClass ?subject.
           ?subject rdfs:label ?naam.
           ?subject skos:notation ?code.
           ?subject rdfs:seeAlso ?objecttype.
@@ -128,7 +128,7 @@ queries:
       INSERT {
         GRAPH <urn:output> {
           ?subject a owl:Class, sh:NodeShape.
-          ?subject sh:targetClass ?class.
+          ?subject sh:targetClass ?subject.
           ?subject rdfs:label ?naam.
           ?subject skos:notation ?code.
           ?subject rdfs:seeAlso ?gegevensgroeptype.
@@ -160,7 +160,7 @@ queries:
       INSERT {
         GRAPH <urn:output> {
           ?subject a owl:Class, sh:NodeShape.
-          ?subject sh:targetClass ?class.
+          ?subject sh:targetClass ?subject.
           ?subject rdfs:label ?naam.
           ?subject skos:notation ?code.
           ?subject rdfs:seeAlso ?relatieklasse.
@@ -1158,36 +1158,41 @@ queries:
           ?s rdfs:seeAlso ?o
         }
       }
-  - title: remove self-referencing sh:targetClass
+  - title: replace mim datatypes with xsd
     query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
       PREFIX sh: <http://www.w3.org/ns/shacl#>
+      PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
       DELETE {
         GRAPH <urn:output> {
-          ?s sh:targetClass ?s
+          ?pshape sh:datatype ?mimType .
+          ?mimType ?p ?o
+        }
+      }
+      INSERT {
+        GRAPH <urn:output> {
+          ?pshape sh:datatype ?xsdType .
         }
       }
       WHERE {
+        VALUES (?name ?xsdType) {
+          ("CharacterString" xsd:string )
+          ("Integer" xsd:integer )
+          ("Real" xsd:float )
+          ("Decimal" xsd:decimal )
+          ("Boolean" xsd:boolean )
+          ("Date" xsd:date )
+          ("DateTime" xsd:dateTime )
+          ("Year" xsd:gYear )
+          ("Day" xsd:gDay )
+          ("Month" xsd:gMonth )
+          ("URI" xsd:anyURI )
+        }
         GRAPH <urn:output> {
-          ?s sh:targetClass ?s
+          ?pshape sh:datatype ?mimType .
+          ?mimType ?p ?o . 
+          ?mimType rdfs:label ?name .
         }
       }
-  # - title: replace mim datatypes with xsd
-  #   query: >
-  #     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-  #     PREFIX mim: <http://bp4mc2.org/def/mim#>
-  #     PREFIX mim-ext: <https://wau.ldproxy.net/def/mim-ext#>
-  #     DELETE {
-  #       GRAPH <urn:output> {
-  #         ?pshape sh:datatype ?mim-datatype
-  #       }
-  #     }
-  #     INSERT {
-  #       GRAPH <urn:output> {
-  #         ?pshape sh:datatype ?xsd-datatype
-  #       }
-  #     }
-  #     WHERE {
-  #       GRAPH <urn:output> {
-  #         ?pshape sh:datatype ?mim-datatype . FILTER (CONTAINS.)
-  #       }
-  #     }

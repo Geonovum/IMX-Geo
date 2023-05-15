@@ -41,6 +41,40 @@ queries:
           ?dt ea:stereotype "interface"
         }
       }
+  - title: Fix string referentie naar datatype
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX ea: <http://www.sparxsystems.eu/def/ea#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      INSERT {
+        GRAPH <urn:input> {
+          ?property ea:classifier ?typeAlsObject .
+          ?typeAlsObject a ea:Object ;
+            ea:type "Class";
+            rdfs:label ?typeAlsString ;
+            ea:guid ?typeAlsString ;
+            ea:stereotype "Primitief datatype" .
+        }
+        GRAPH <urn:output> {
+          ?datatype a mim:PrimitiefDatatype.
+          ?datatype mim:naam ?typeAlsString .
+        }
+        GRAPH <urn:input> {
+          ?datatype rdfs:seeAlso ?typeAlsObject
+        }
+      }
+      WHERE {
+        GRAPH <urn:input> {
+          SELECT (IRI(CONCAT("urn:datatype:", ?typeAlsString)) as ?typeAlsObject)
+                 (iri(concat('urn:object:',?typeAlsString)) as ?datatype) 
+                 ?property ?typeAlsString
+          WHERE {
+            ?property ea:type ?typeAlsString ; 
+              ea:stereotype "Attribuutsoort" .
+            FILTER NOT EXISTS { ?property ea:classifier ?classifier }
+          }
+        }
+      }
   - title: get Informatiemodellen
     query: >
       PREFIX mim: <http://bp4mc2.org/def/mim#>
