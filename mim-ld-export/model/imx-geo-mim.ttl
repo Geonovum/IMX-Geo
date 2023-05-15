@@ -24,14 +24,16 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "oppervlak" .
+        mim:naam                        "oppervlak" ;
+        mim:type                        <urn:object:Decimal> .
 
 <urn:uuid:74F7259D-8225-439d-886D-59932E05127D>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "bestemmingsplan" .
+        mim:naam                        "bestemmingsplan" ;
+        mim:type                        <urn:object:URI> .
 
 <urn:uuid-src:BE7A076B-4D83-4f61-9EFD-7761A71FBBC7>
         a                  mim:RelatierolBron ;
@@ -45,7 +47,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "begrenzing" .
+        mim:naam                        "begrenzing" ;
+        mim:type                        <urn:object:GM_Surface> .
 
 <urn:uuid:11C3FECB-13A4-4b26-9C33-822B844A2116>
         a                               mim:Attribuutsoort ;
@@ -58,7 +61,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "domein" .
+        mim:naam                        "domein" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E>
         a                               mim:Attribuutsoort ;
@@ -66,14 +70,16 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "type" .
+        mim:naam                        "type" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid:B97EB80D-05B0-4d24-A5A2-62A55BF0F550>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
-        mim:naam                        "functie" .
+        mim:naam                        "functie" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid:55883A46-4458-41cf-9405-B9CD880B5C7B>
         a                               mim:Attribuutsoort ;
@@ -125,7 +131,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "bovenaanzichtgeometrie" .
+        mim:naam                        "bovenaanzichtgeometrie" ;
+        mim:type                        <urn:object:GM_Surface> .
 
 <urn:uuid:A978F4FE-1C21-4697-8659-7DDBF52332C1>
         a                            mim:Objecttype ;
@@ -158,16 +165,16 @@
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Bouwwerk" .
 
-<urn:uuid:D65FD6BF-B3F2-44e8-891C-4D1F66E1F49F>
-        mim:bron        <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> ;
-        mim:doel        <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> ;
-        mim:relatierol  <urn:uuid-dst:D65FD6BF-B3F2-44e8-891C-4D1F66E1F49F> .
-
 <urn:uuid-dst:80E03254-CA49-44aa-B4C4-53B19047B008>
         a                  mim:RelatierolDoel ;
         mim:kardinaliteit  "1..1" ;
         mim:naam           "registratiegegevens" ;
         mim:type           <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> .
+
+<urn:uuid:D65FD6BF-B3F2-44e8-891C-4D1F66E1F49F>
+        mim:bron        <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> ;
+        mim:doel        <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> ;
+        mim:relatierol  <urn:uuid-dst:D65FD6BF-B3F2-44e8-891C-4D1F66E1F49F> .
 
 <urn:uuid:1BD2F5E4-8799-4350-9743-316FD521FD89>
         a                            mim:Objecttype ;
@@ -197,6 +204,7 @@
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
         mim:toelichting                 "Elke nummeraanduiding waarvan gegevens zijn opgenomen in de basisregistratie adressen en gebouwen, wordt uniek aangeduid door middel van een identificatiecode." ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
@@ -205,7 +213,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
-        mim:naam                        "realiseertInfiltratie" .
+        mim:naam                        "realiseertInfiltratie" ;
+        mim:type                        <urn:object:Boolean> .
 
 <urn:uuid:64E8004B-EC61-4535-8760-446481B58BCE>
         a                               mim:Attribuutsoort ;
@@ -213,7 +222,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "naam" .
+        mim:naam                        "naam" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid-dst:483BAF41-267E-478c-977C-41D8F4ED4161>
         a                  mim:RelatierolDoel ;
@@ -237,7 +247,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
-        mim:naam                        "fysiekVoorkomen" .
+        mim:naam                        "fysiekVoorkomen" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid:A7B286A0-73FF-4f28-BEE4-91F18FE7417F>
         a                               mim:Attribuutsoort ;
@@ -278,6 +289,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
@@ -317,6 +329,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "naam" ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://www.w3.org/2000/01/rdf-schema#label" .
 
@@ -326,6 +339,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
@@ -364,6 +378,10 @@
         mim:indicatieAbstractObject  false ;
         mim:naam                     "CharacterString" .
 
+<urn:object:GM_Curve>
+        a         mim:PrimitiefDatatype ;
+        mim:naam  "GM_Curve" .
+
 <urn:uuid:51FB1AD6-4693-419f-8C15-E4C89984F6E3>
         a                               mim:Attribuutsoort ;
         mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/maaiveldgeometrie> ;
@@ -372,7 +390,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..1" ;
-        mim:naam                        "maaiveldgeometrie" .
+        mim:naam                        "maaiveldgeometrie" ;
+        mim:type                        <urn:object:GM_MultiSurface> .
 
 <urn:uuid:B17F6974-FC6B-4da8-984C-A44BC42E7095>
         mim:bron        <urn:uuid:BD13FC79-9CBC-48d2-9C74-3B8E3CC94C23> ;
@@ -395,7 +414,12 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..1" ;
-        mim:naam                        "sloopjaar" .
+        mim:naam                        "sloopjaar" ;
+        mim:type                        <urn:object:Year> .
+
+<urn:object:GM_Object>
+        a         mim:PrimitiefDatatype ;
+        mim:naam  "GM_Object" .
 
 <urn:uuid:E00778A1-0FF7-4a5a-BFFE-14087D59CC09>
         a                               mim:Attribuutsoort ;
@@ -407,6 +431,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
@@ -428,7 +453,11 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..1" ;
-        mim:naam                        "geometrie" .
+        mim:naam                        "geometrie" ;
+        mim:type                        <urn:object:GM_Object> .
+
+<urn:object:Decimal>  a  mim:PrimitiefDatatype ;
+        mim:naam  "Decimal" .
 
 <urn:uuid:87DCDC00-0B17-4554-BDAD-EB256311EC9F>
         a                               mim:Attribuutsoort ;
@@ -467,6 +496,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
@@ -482,7 +512,11 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "omschrijving" ;
-        mim:toelichting                 "Elke nummeraanduiding waarvan gegevens zijn opgenomen in de basisregistratie adressen en gebouwen, wordt uniek aangeduid door middel van een identificatiecode." .
+        mim:toelichting                 "Elke nummeraanduiding waarvan gegevens zijn opgenomen in de basisregistratie adressen en gebouwen, wordt uniek aangeduid door middel van een identificatiecode." ;
+        mim:type                        <urn:object:CharacterString> .
+
+<urn:object:Boolean>  a  mim:PrimitiefDatatype ;
+        mim:naam  "Boolean" .
 
 <urn:uuid:8757D3CF-781F-4812-9BF4-26864369B534>
         a              mim:Generalisatie ;
@@ -508,7 +542,12 @@
         mim:kardinaliteit               "1..1" ;
         mim:lengte                      "1..80" ;
         mim:naam                        "plaatsnaam" ;
-        mim:toelichting                 "Het maximale aantal te gebruiken tekens voor een benaming is\r\ntachtig. Het verdient aanbeveling te streven naar korte\r\nbenamingen." .
+        mim:toelichting                 "Het maximale aantal te gebruiken tekens voor een benaming is\r\ntachtig. Het verdient aanbeveling te streven naar korte\r\nbenamingen." ;
+        mim:type                        <urn:object:CharacterString> .
+
+<urn:object:GM_Surface>
+        a         mim:PrimitiefDatatype ;
+        mim:naam  "GM_Surface" .
 
 <urn:uuid:3874222A-144B-4ff5-B57E-4BBBD12DD2BE>
         a              mim:Generalisatie ;
@@ -540,7 +579,8 @@
         mim:kardinaliteit               "1..1" ;
         mim:lengte                      "1..5" ;
         mim:naam                        "huisnummer" ;
-        mim:patroon                     "Alle natuurlijke getallen tussen 1 en 99999." .
+        mim:patroon                     "Alle natuurlijke getallen tussen 1 en 99999." ;
+        mim:type                        <urn:object:Integer> .
 
 <urn:uuid-dst:0E6FDDF8-6872-4d21-B8B1-B9B9FB301C14>
         a                  mim:RelatierolDoel ;
@@ -552,6 +592,10 @@
         a              mim:Generalisatie ;
         mim:subtype    <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC> ;
         mim:supertype  <urn:uuid:74873B04-30DE-4ccb-A2D3-50C83D42C722> .
+
+<urn:object:GM_Solid>
+        a         mim:PrimitiefDatatype ;
+        mim:naam  "GM_Solid" .
 
 <urn:uuid:61154353-5D26-44c5-93D8-C75A7CFEF418>
         a              mim:Generalisatie ;
@@ -578,6 +622,7 @@
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
         mim:toelichting                 "Elke nummeraanduiding waarvan gegevens zijn opgenomen in de basisregistratie adressen en gebouwen, wordt uniek aangeduid door middel van een identificatiecode." ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
@@ -601,7 +646,8 @@
         mim:kardinaliteit               "0..1" ;
         mim:lengte                      "1" ;
         mim:naam                        "huisletter" ;
-        mim:patroon                     " een  letter uit het alfabet in hoofdletter (A-Z) of kleine letter (a-z)" .
+        mim:patroon                     " een  letter uit het alfabet in hoofdletter (A-Z) of kleine letter (a-z)" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid:83163756-0E46-40e0-BDF9-4DB4CB0AB217>
         mim:bron        <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> ;
@@ -626,6 +672,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
@@ -643,6 +690,10 @@
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Grondwaterstand" .
 
+<urn:object:CharacterString>
+        a         mim:PrimitiefDatatype ;
+        mim:naam  "CharacterString" .
+
 <urn:uuid:A6AD3DDC-7FF5-4a28-B33F-FD6F6EA8350F>
         a                               mim:Attribuutsoort ;
         mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/maaiveldgeometrie> ;
@@ -652,6 +703,10 @@
         mim:kardinaliteit               "0..1" ;
         mim:naam                        "maaiveldgeometrie" ;
         mim:type                        <urn:uuid:8D5F87B5-9FE8-473a-83A6-D45E245E9839> .
+
+<urn:object:GM_MultiSurface>
+        a         mim:PrimitiefDatatype ;
+        mim:naam  "GM_MultiSurface" .
 
 <urn:uuid:80E03254-CA49-44aa-B4C4-53B19047B008>
         mim:bron        <urn:uuid:1BD2F5E4-8799-4350-9743-316FD521FD89> ;
@@ -663,7 +718,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "geometrie" .
+        mim:naam                        "geometrie" ;
+        mim:type                        <urn:object:GM_Surface> .
 
 <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46>
         a                            mim:Objecttype ;
@@ -677,7 +733,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "naam" .
+        mim:naam                        "naam" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid:CDD5BC64-7338-4e7e-A3A3-394CF3221F8B>
         a              mim:Generalisatie ;
@@ -696,7 +753,11 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "status" .
+        mim:naam                        "status" ;
+        mim:type                        <urn:object:CharacterString> .
+
+<urn:object:Integer>  a  mim:PrimitiefDatatype ;
+        mim:naam  "Integer" .
 
 <urn:uuid:A6C3AFFA-D9C6-481c-BF78-4EBC4E35C5BD>
         a                               mim:Attribuutsoort ;
@@ -711,7 +772,8 @@
         mim:kardinaliteit               "1..1" ;
         mim:lengte                      "1..80" ;
         mim:naam                        "straatnaam" ;
-        mim:toelichting                 "Het verdient aanbeveling te streven naar korte benamingen." .
+        mim:toelichting                 "Het verdient aanbeveling te streven naar korte benamingen." ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid:E0A46403-5DB0-4e88-8D6D-93189ED76587>
         a                               mim:Attribuutsoort ;
@@ -748,7 +810,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..-1" ;
-        mim:naam                        "functie" .
+        mim:naam                        "functie" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid:B7450122-7A17-4442-9788-004645CD8606>
         mim:bron        <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46> ;
@@ -778,6 +841,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
@@ -786,7 +850,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "koopjaar" .
+        mim:naam                        "koopjaar" ;
+        mim:type                        <urn:object:Year> .
 
 <urn:uuid:9CD06689-6C88-4609-B7A0-3C725E4FE6F0>
         mim:bron        <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC> ;
@@ -800,7 +865,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..1" ;
-        mim:naam                        "3dGeometrie" .
+        mim:naam                        "3dGeometrie" ;
+        mim:type                        <urn:object:GM_Solid> .
 
 <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62>
         a                            mim:Objecttype ;
@@ -849,7 +915,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
-        mim:naam                        "type" .
+        mim:naam                        "type" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid:299B2989-434F-416e-BCBC-B3643FF740E3>
         a                               mim:Attribuutsoort ;
@@ -857,6 +924,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
@@ -867,7 +935,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "geometrie" .
+        mim:naam                        "geometrie" ;
+        mim:type                        <urn:object:GM_Surface> .
 
 <urn:uuid:FDAD10A8-5F97-4565-83A4-8E8DC2AC793C>
         a                               mim:Attribuutsoort ;
@@ -879,6 +948,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
@@ -887,7 +957,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
-        mim:naam                        "type" .
+        mim:naam                        "type" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid:B71A1533-D3C4-4024-9005-3158B6524B00>
         a                               mim:Attribuutsoort ;
@@ -901,6 +972,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
@@ -936,6 +1008,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "domein" ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
@@ -950,7 +1023,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "verwijzingNaarArtikel" .
+        mim:naam                        "verwijzingNaarArtikel" ;
+        mim:type                        <urn:object:URI> .
 
 <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD>
         a                            mim:Objecttype ;
@@ -963,14 +1037,16 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "bouwjaar" .
+        mim:naam                        "bouwjaar" ;
+        mim:type                        <urn:object:Year> .
 
 <urn:uuid:5E0E071C-2488-49d1-BE0E-94E402C1A30C>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "buurtcode" .
+        mim:naam                        "buurtcode" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid:42E76400-F960-4204-9042-9691B6D18D7E>
         a                               mim:Attribuutsoort ;
@@ -1003,28 +1079,32 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "geometrie" .
+        mim:naam                        "geometrie" ;
+        mim:type                        <urn:object:GM_Curve> .
 
 <urn:uuid:3401CDB4-1C0C-4262-949F-DC612FCF7E03>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "functie" .
+        mim:naam                        "functie" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid:472E08B9-E1F3-4840-84CF-09E63DE97880>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "wijkcode" .
+        mim:naam                        "wijkcode" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid:E18F1AE5-832F-4528-86A1-C7368FDB1D0E>
         a                               mim:Attribuutsoort ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..-1" ;
-        mim:naam                        "gebruiksdoel" .
+        mim:naam                        "gebruiksdoel" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid:51384C3C-47A6-4645-91B3-3FD093E063A7>
         a                            mim:Objecttype ;
@@ -1050,7 +1130,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "geometrie" .
+        mim:naam                        "geometrie" ;
+        mim:type                        <urn:object:GM_Surface> .
 
 <urn:uuid:30EE2929-CB32-4be5-8DA3-C7E0E5109501>
         a                               mim:Attribuutsoort ;
@@ -1072,6 +1153,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
@@ -1086,6 +1168,9 @@
         mim:begrip                   <http://brk.basisregistraties.overheid.nl/id/begrip/Perceel> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Perceel" .
+
+<urn:object:URI>  a  mim:PrimitiefDatatype ;
+        mim:naam  "URI" .
 
 <urn:uuid-dst:083BD47C-F8AE-4956-97AB-009E59EB99D3>
         a                  mim:RelatierolDoel ;
@@ -1143,6 +1228,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
@@ -1166,7 +1252,8 @@
         mim:kardinaliteit               "0..1" ;
         mim:lengte                      "1..4" ;
         mim:naam                        "huisnummertoevoeging" ;
-        mim:patroon                     "Een huisnummertoevoeging bestaat uit maximaal 4 alfanumerieke tekens bestaande uit een combinatie van de letters  en cijfers a - z , A - Z , 0 – 9" .
+        mim:patroon                     "Een huisnummertoevoeging bestaat uit maximaal 4 alfanumerieke tekens bestaande uit een combinatie van de letters  en cijfers a - z , A - Z , 0 – 9" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid-dst:B17F6974-FC6B-4da8-984C-A44BC42E7095>
         a                  mim:RelatierolDoel ;
@@ -1186,8 +1273,12 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
+
+<urn:object:Year>  a  mim:PrimitiefDatatype ;
+        mim:naam  "Year" .
 
 <urn:uuid:C345AB18-9480-46fc-A44E-D528FD4687D5>
         a                               mim:Attribuutsoort ;
@@ -1196,7 +1287,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
-        mim:naam                        "fysiekvoorkomen" .
+        mim:naam                        "fysiekvoorkomen" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid-src:8C372C65-D3C5-4c38-AF31-B45204CAD17C>
         a                  mim:RelatierolBron ;
@@ -1218,7 +1310,8 @@
         mim:kardinaliteit               "0..1" ;
         mim:lengte                      "6" ;
         mim:naam                        "postcode" ;
-        mim:toelichting                 "Een combinatie van 4 cijfers en 2 hoofdletters." .
+        mim:toelichting                 "Een combinatie van 4 cijfers en 2 hoofdletters." ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid-src:E95A3722-E5A7-4b78-87BF-BCF799681DA4>
         a                  mim:RelatierolBron ;
@@ -1236,6 +1329,7 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "identificatie" ;
+        mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
 
@@ -1244,7 +1338,8 @@
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
-        mim:naam                        "bestemming" .
+        mim:naam                        "bestemming" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid-dst:32DE7AAA-07F5-4f28-8A5E-D2544EA64F91>
         a                  mim:RelatierolDoel ;
@@ -1288,4 +1383,5 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "isHoofdadres" ;
-        mim:toelichting                 "In de BAG kan een adres een hoofdadres of nevenadres van een Adresseerbaarobject zijn." .
+        mim:toelichting                 "In de BAG kan een adres een hoofdadres of nevenadres van een Adresseerbaarobject zijn." ;
+        mim:type                        <urn:object:Boolean> .
