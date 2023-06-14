@@ -91,3 +91,34 @@ bk:WaU-SAM
    skos:inScheme bk:WaU-SAM ;
    skos:relatedMatch <http://bag.basisregistraties.overheid.nl/id/begrip/PandGesloopt> ;
 .
+
+:landschapselement
+   a skos:Concept ;
+   skos:definition "Een identificeerbaar kenmerk in het landschap, dat bijdraagt aan de diversiteit en herkenbaarheid van een gebied."@nl ;
+   skos:prefLabel "Landschapselement"@nl ;
+   rdfs:label "Landschapselement" ;
+   skos:inScheme bk:WaU-SAM ;
+.   
+
+:bestemming
+   a skos:Concept ;
+   skos:definition "Een geplande functie van een gebied."@nl ;
+   skos:prefLabel "Bestemming"@nl ;
+   rdfs:label "Bestemming" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:relatedMatch <http://definities.geostandaarden.nl/imro/id/begrip/Enkelbestemming> ;
+   skos:relatedMatch <http://definities.geostandaarden.nl/imro/id/begrip/Dubbelbestemming> ; 
+.   
+
+:beperking
+   a skos:Concept ;
+   skos:definition "Begrenzing van wat er op een bepaalde locatie toegestaan is." ;
+   skos:prefLabel "Beperking"@nl ; 
+   rdfs:label "Beperking" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:narrowMatch <http://brk.basisregistraties.overheid.nl/id/begrip/Beperkt_recht> ;
+   skos:narrowMatch <http://definities.geostandaarden.nl/imro/id/begrip/Bouwaanduiding> ;
+   skos:narrowMatch <http://definities.geostandaarden.nl/imro/id/begrip/Gebiedsaanduiding> ;
+   skos:narrowMatch <http://definities.geostandaarden.nl/imro/id/begrip/Functieaanduiding> ;
+   skos:narrowMatch <http://definities.geostandaarden.nl/imro/id/begrip/Maatvoering> ;
+.
