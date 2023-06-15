@@ -5,6 +5,8 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#Buurt.buurtcode>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:5E0E071C-2488-49d1-BE0E-94E402C1A30C> ;
+        <http://purl.org/dc/terms/subject>
+                <http://definities.geostandaarden.nl/imgeo/id/begrip/Buurtcode> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#string> ;
         <http://www.w3.org/ns/shacl#maxCount>
@@ -27,6 +29,8 @@
         a               <http://www.w3.org/ns/shacl#NodeShape> , <http://www.w3.org/2002/07/owl#Class> ;
         rdfs:label      "Bestemming" ;
         mim:equivalent  <urn:uuid:97F9443F-326B-4e76-86CD-C515688BBE91> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/bestemming> ;
         <http://www.w3.org/2004/02/skos/core#notation>
                 "Bestemming" ;
         <http://www.w3.org/ns/shacl#property>
@@ -44,14 +48,16 @@
         <http://www.w3.org/2004/02/skos/core#notation>
                 "Adres" ;
         <http://www.w3.org/ns/shacl#property>
-                <http://modellen.geostandaarden.nl/def/imx-geo#Adres.ligtAanWeg> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.isAdresVanGebouw> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.huisletter> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.plaatsnaam> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.omschrijving> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.domein> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.identificatie> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.straatnaam> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.graafgebiedKLICmelding> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.huisnummertoevoeging> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.isHoofdadres> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.huisnummer> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.postcode> ;
+                <http://modellen.geostandaarden.nl/def/imx-geo#Adres.ligtAanWeg> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.isAdresVanGebouw> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.huisletter> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.plaatsnaam> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.omschrijving> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.domein> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.identificatie> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.straatnaam> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.huisnummertoevoeging> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.isHoofdadres> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.huisnummer> , <http://modellen.geostandaarden.nl/def/imx-geo#Adres.postcode> ;
         <http://www.w3.org/ns/shacl#targetClass>
                 <http://modellen.geostandaarden.nl/def/imx-geo#Adres> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#fysiekVoorkomen>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
         rdfs:label      "fysiekVoorkomen" ;
-        mim:equivalent  <urn:uuid:959C4BEF-DE81-4a26-8F20-E78CF5C8E6BE> .
+        mim:equivalent  <urn:uuid:959C4BEF-DE81-4a26-8F20-E78CF5C8E6BE> ;
+        <http://purl.org/dc/terms/subject>
+                <http://definities.geostandaarden.nl/imgeo/id/begrip/Plus-fysiekvoorkomenwegdeel> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Weg>
         a               <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/ns/shacl#NodeShape> ;
@@ -62,13 +68,15 @@
         <http://www.w3.org/2004/02/skos/core#notation>
                 "Weg" ;
         <http://www.w3.org/ns/shacl#property>
-                <http://modellen.geostandaarden.nl/def/imx-geo#Weg.functie> , <http://modellen.geostandaarden.nl/def/imx-geo#Weg.identificatie> , <http://modellen.geostandaarden.nl/def/imx-geo#Weg.heeftAanliggendAdres> , <http://modellen.geostandaarden.nl/def/imx-geo#Weg.fysiekVoorkomen> , <http://modellen.geostandaarden.nl/def/imx-geo#Weg.domein> , <http://modellen.geostandaarden.nl/def/imx-geo#Weg.heeftAlsOndergrond> , <http://modellen.geostandaarden.nl/def/imx-geo#Weg.geometrie> ;
+                <http://modellen.geostandaarden.nl/def/imx-geo#Weg.functie> , <http://modellen.geostandaarden.nl/def/imx-geo#Weg.identificatie> , <http://modellen.geostandaarden.nl/def/imx-geo#Weg.heeftAanliggendAdres> , <http://modellen.geostandaarden.nl/def/imx-geo#Weg.fysiekVoorkomen> , <http://modellen.geostandaarden.nl/def/imx-geo#Weg.ligtInBebouwdeKom> , <http://modellen.geostandaarden.nl/def/imx-geo#Weg.naam> , <http://modellen.geostandaarden.nl/def/imx-geo#Weg.domein> , <http://modellen.geostandaarden.nl/def/imx-geo#Weg.registratiegegevens> , <http://modellen.geostandaarden.nl/def/imx-geo#Weg.heeftAlsOndergrond> , <http://modellen.geostandaarden.nl/def/imx-geo#Weg.geometrie> ;
         <http://www.w3.org/ns/shacl#targetClass>
                 <http://modellen.geostandaarden.nl/def/imx-geo#Weg> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement.identificatie>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:FC40A8E3-90EB-482d-8500-03FA6C655F05> ;
+        <http://purl.org/dc/terms/subject>
+                <https://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#string> ;
         <http://www.w3.org/ns/shacl#maxCount>
@@ -104,7 +112,16 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#koopjaar>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
         rdfs:label      "koopjaar" ;
-        mim:equivalent  <urn:uuid:556E7089-7DFC-4867-BE08-647F6309CF97> .
+        mim:equivalent  <urn:uuid:556E7089-7DFC-4867-BE08-647F6309CF97> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/koopjaar> .
+
+<http://modellen.geostandaarden.nl/def/imx-geo#ligtInBebouwdeKom>
+        a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        rdfs:label      "ligtInBebouwdeKom" ;
+        mim:equivalent  <urn:uuid:E7B7B489-4040-4e28-B10E-D0F6A7BAED77> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/ligt_in_bebouwde_kom> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#BestuurlijkGebied>
         a                <http://www.w3.org/ns/shacl#NodeShape> , <http://www.w3.org/2002/07/owl#Class> ;
@@ -140,6 +157,32 @@
         a               <http://www.w3.org/2002/07/owl#ObjectProperty> ;
         rdfs:label      "ligtOnderTerrein" ;
         mim:equivalent  <urn:uuid-src:0E6FDDF8-6872-4d21-B8B1-B9B9FB301C14> .
+
+<http://modellen.geostandaarden.nl/def/imx-geo#Spoorweg>
+        a                <http://www.w3.org/ns/shacl#NodeShape> , <http://www.w3.org/2002/07/owl#Class> ;
+        rdfs:label       "Spoorweg" ;
+        rdfs:subClassOf  <http://modellen.geostandaarden.nl/def/imx-geo#Weg> ;
+        mim:equivalent   <urn:uuid:91DC882D-7DC1-4e31-9ED9-F60E699EAE7D> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/spoorweg> ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "Spoorweg" ;
+        <http://www.w3.org/ns/shacl#targetClass>
+                <http://modellen.geostandaarden.nl/def/imx-geo#Spoorweg> .
+
+<http://modellen.geostandaarden.nl/def/imx-geo#Beperking.isBeperkingOpPerceel>
+        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
+        mim:equivalent  <urn:uuid-src:6342FB41-5A00-42b8-94C9-AB53B9FCE81C> ;
+        <http://www.w3.org/ns/shacl#class>
+                <http://modellen.geostandaarden.nl/def/imx-geo#Perceel> ;
+        <http://www.w3.org/ns/shacl#minCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#name>
+                "isBeperkingOpPerceel" ;
+        <http://www.w3.org/ns/shacl#nodeKind>
+                <http://www.w3.org/ns/shacl#IRI> ;
+        <http://www.w3.org/ns/shacl#path>
+                <http://modellen.geostandaarden.nl/def/imx-geo#isBeperkingOpPerceel> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Terrein.bevatLandschapselement>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -201,11 +244,15 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#realiseertInfiltratie>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
         rdfs:label      "realiseertInfiltratie" ;
-        mim:equivalent  <urn:uuid:597D7E79-9FA9-4c1a-9807-EA07588219C0> .
+        mim:equivalent  <urn:uuid:597D7E79-9FA9-4c1a-9807-EA07588219C0> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/heeft_infiltratiefunctie> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Weg.fysiekVoorkomen>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:959C4BEF-DE81-4a26-8F20-E78CF5C8E6BE> ;
+        <http://purl.org/dc/terms/subject>
+                <http://definities.geostandaarden.nl/imgeo/id/begrip/Plus-fysiekvoorkomenwegdeel> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#string> ;
         <http://www.w3.org/ns/shacl#minCount>
@@ -250,6 +297,8 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#Weg.geometrie>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:61E196DD-5B64-45fd-B424-C2FACB7D3277> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://modellen.geostandaarden.nl/def/imx-geo#GM_Curve> ;
         <http://www.w3.org/ns/shacl#maxCount>
@@ -331,13 +380,29 @@
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/imx-geo#sloopjaar> .
 
+<http://modellen.geostandaarden.nl/def/imx-geo#Perceel.registratiegegevens>
+        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
+        mim:equivalent  <urn:uuid-dst:6EA658E5-B692-421a-8DB3-BE333F811BCC> , <urn:uuid:6EA658E5-B692-421a-8DB3-BE333F811BCC> ;
+        <http://www.w3.org/ns/shacl#class>
+                <http://modellen.geostandaarden.nl/def/imx-geo#Registratiegegevens> ;
+        <http://www.w3.org/ns/shacl#maxCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#minCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#name>
+                "registratiegegevens" ;
+        <http://www.w3.org/ns/shacl#nodeKind>
+                <http://www.w3.org/ns/shacl#IRI> ;
+        <http://www.w3.org/ns/shacl#path>
+                <http://modellen.geostandaarden.nl/def/imx-geo#registratiegegevens> .
+
 <http://modellen.geostandaarden.nl/def/imx-geo#geometrie>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
         rdfs:comment    "-- Definitie --\r\nGeometrische representatie van een gebied op land dat door een openbaar lichaam wordt bestuurd." , "Geometrie op maaiveldniveau." , "2D of 3D geometrie van ondergrondinformatie." ;
         rdfs:label      "geometrie" ;
-        mim:equivalent  <urn:uuid:7F2BC6C4-158D-46c9-A28B-BDD621BC7F11> , <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E> , <urn:uuid:61E196DD-5B64-45fd-B424-C2FACB7D3277> , <urn:uuid:9F1244E4-A613-4efd-914A-F569431C7287> , <urn:uuid:E0A46403-5DB0-4e88-8D6D-93189ED76587> , <urn:uuid:0897F8EE-4B9D-42a2-9F27-4D3251AC904F> , <urn:uuid:C0DD161F-0EE6-4175-AB6B-9747BE3931DF> ;
+        mim:equivalent  <urn:uuid:7F2BC6C4-158D-46c9-A28B-BDD621BC7F11> , <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E> , <urn:uuid:DE302A46-989C-4b54-A52A-4E69E6D6F152> , <urn:uuid:61E196DD-5B64-45fd-B424-C2FACB7D3277> , <urn:uuid:9F1244E4-A613-4efd-914A-F569431C7287> , <urn:uuid:E0A46403-5DB0-4e88-8D6D-93189ED76587> , <urn:uuid:0897F8EE-4B9D-42a2-9F27-4D3251AC904F> ;
         <http://purl.org/dc/terms/subject>
-                <http://bag.basisregistraties.overheid.nl/id/begrip/Geometrie> , <https://begrippen.geostandaarden.nl/sam/id/begrip/maaiveldgeometrie> .
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Water.functie>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -358,6 +423,8 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement.type>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:1424216F-CD23-41e3-A8F5-C020401B6AEE> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/type> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#string> ;
         <http://www.w3.org/ns/shacl#minCount>
@@ -381,9 +448,29 @@
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/imx-geo#heeftAanliggendAdres> .
 
+<http://modellen.geostandaarden.nl/def/imx-geo#Weg.ligtInBebouwdeKom>
+        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
+        mim:equivalent  <urn:uuid:E7B7B489-4040-4e28-B10E-D0F6A7BAED77> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/ligt_in_bebouwde_kom> ;
+        <http://www.w3.org/ns/shacl#datatype>
+                <http://www.w3.org/2001/XMLSchema#boolean> ;
+        <http://www.w3.org/ns/shacl#maxCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#minCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#name>
+                "ligtInBebouwdeKom" ;
+        <http://www.w3.org/ns/shacl#nodeKind>
+                <http://www.w3.org/ns/shacl#Literal> ;
+        <http://www.w3.org/ns/shacl#path>
+                <http://modellen.geostandaarden.nl/def/imx-geo#ligtInBebouwdeKom> .
+
 <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.koopjaar>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:556E7089-7DFC-4867-BE08-647F6309CF97> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/koopjaar> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#gYear> ;
         <http://www.w3.org/ns/shacl#maxCount>
@@ -405,6 +492,8 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#Bestemming.bestemmingsplan>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:74F7259D-8225-439d-886D-59932E05127D> ;
+        <http://purl.org/dc/terms/subject>
+                <http://definities.geostandaarden.nl/imro/id/begrip/Plangebied> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#anyURI> ;
         <http://www.w3.org/ns/shacl#maxCount>
@@ -421,12 +510,16 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#wijkcode>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
         rdfs:label      "wijkcode" ;
-        mim:equivalent  <urn:uuid:472E08B9-E1F3-4840-84CF-09E63DE97880> .
+        mim:equivalent  <urn:uuid:472E08B9-E1F3-4840-84CF-09E63DE97880> ;
+        <http://purl.org/dc/terms/subject>
+                <http://definities.geostandaarden.nl/imgeo/id/begrip/Wijkcode> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#bestemming>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
         rdfs:label      "bestemming" ;
-        mim:equivalent  <urn:uuid:0BF48E52-A720-4873-8F8F-366FD6454FF0> .
+        mim:equivalent  <urn:uuid:0BF48E52-A720-4873-8F8F-366FD6454FF0> ;
+        <http://purl.org/dc/terms/subject>
+                <http://definities.geostandaarden.nl/imro/id/begrip/Naam> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Waterschapsgebied.wordtBestuurdDoorWaterschap>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -504,12 +597,7 @@
         rdfs:label      "identificatie" ;
         mim:equivalent  <urn:uuid:299B2989-434F-416e-BCBC-B3643FF740E3> , <urn:uuid:3E284C06-A8BC-48d0-B034-5ACAEB5880DC> , <urn:uuid:2B6AA600-743D-4471-864E-025ADF8544DB> , <urn:uuid:FDAD10A8-5F97-4565-83A4-8E8DC2AC793C> , <urn:uuid:EFFD166D-F465-474c-BE67-3D93D410CA5D> , <urn:uuid:C08A4B06-5E51-40ed-87B6-AAF8E3A955DC> , <urn:uuid:82C930D0-0C36-4948-A677-13FCE3C45E96> , <urn:uuid:25534ADC-3DC1-4e68-97CB-DEAEC94F0E1B> , <urn:uuid:E00778A1-0FF7-4a5a-BFFE-14087D59CC09> , <urn:uuid:FC40A8E3-90EB-482d-8500-03FA6C655F05> , <urn:uuid:55883A46-4458-41cf-9405-B9CD880B5C7B> ;
         <http://purl.org/dc/terms/subject>
-                <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> .
-
-<http://modellen.geostandaarden.nl/def/imx-geo#gebouwBinnenKLICmelding>
-        a               <http://www.w3.org/2002/07/owl#ObjectProperty> ;
-        rdfs:label      "gebouwBinnenKLICmelding" ;
-        mim:equivalent  <urn:uuid-dst:83163756-0E46-40e0-BDF9-4DB4CB0AB217> .
+                <https://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> , <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Ondergrond.ligtOnderTerrein>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -526,6 +614,8 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#Terrein.identificatie>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:299B2989-434F-416e-BCBC-B3643FF740E3> ;
+        <http://purl.org/dc/terms/subject>
+                <https://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#string> ;
         <http://www.w3.org/ns/shacl#maxCount>
@@ -560,6 +650,8 @@
         rdfs:label       "Bodemsamenstelling" ;
         rdfs:subClassOf  <http://modellen.geostandaarden.nl/def/imx-geo#Ondergrond> ;
         mim:equivalent   <urn:uuid:0B0E8C4B-BD74-4f1b-B69E-A26BB7335628> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/bodemsamenstelling> ;
         <http://www.w3.org/2004/02/skos/core#notation>
                 "Bodemsamenstelling" ;
         <http://www.w3.org/ns/shacl#targetClass>
@@ -568,23 +660,9 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#buurtcode>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
         rdfs:label      "buurtcode" ;
-        mim:equivalent  <urn:uuid:5E0E071C-2488-49d1-BE0E-94E402C1A30C> .
-
-<http://modellen.geostandaarden.nl/def/imx-geo#Waterschapsgebied.registratiegegevens>
-        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
-        mim:equivalent  <urn:uuid-dst:D65FD6BF-B3F2-44e8-891C-4D1F66E1F49F> , <urn:uuid:D65FD6BF-B3F2-44e8-891C-4D1F66E1F49F> ;
-        <http://www.w3.org/ns/shacl#class>
-                <http://modellen.geostandaarden.nl/def/imx-geo#Registratiegegevens> ;
-        <http://www.w3.org/ns/shacl#maxCount>
-                1 ;
-        <http://www.w3.org/ns/shacl#minCount>
-                1 ;
-        <http://www.w3.org/ns/shacl#name>
-                "registratiegegevens" ;
-        <http://www.w3.org/ns/shacl#nodeKind>
-                <http://www.w3.org/ns/shacl#IRI> ;
-        <http://www.w3.org/ns/shacl#path>
-                <http://modellen.geostandaarden.nl/def/imx-geo#registratiegegevens> .
+        mim:equivalent  <urn:uuid:5E0E071C-2488-49d1-BE0E-94E402C1A30C> ;
+        <http://purl.org/dc/terms/subject>
+                <http://definities.geostandaarden.nl/imgeo/id/begrip/Buurtcode> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.ligtInRegistratieveRuimte>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -599,6 +677,11 @@
                 <http://www.w3.org/ns/shacl#IRI> ;
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/imx-geo#ligtInRegistratieveRuimte> .
+
+<http://modellen.geostandaarden.nl/def/imx-geo#heeftBeperking>
+        a               <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+        rdfs:label      "heeftBeperking" ;
+        mim:equivalent  <urn:uuid-dst:6342FB41-5A00-42b8-94C9-AB53B9FCE81C> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#fysiekvoorkomen>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
@@ -672,7 +755,7 @@
         <http://www.w3.org/2004/02/skos/core#notation>
                 "Perceel" ;
         <http://www.w3.org/ns/shacl#property>
-                <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.domein> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.ligtInRegistratieveRuimte> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.identificatie> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.begrenzing> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.koopjaar> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.bevatBouwwerk> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.heeftBestemming> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.oppervlak> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.laatsteKoopsom> ;
+                <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.domein> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.ligtInRegistratieveRuimte> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.heeftBeperking> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.registratiegegevens> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.identificatie> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.begrenzing> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.koopjaar> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.bevatBouwwerk> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.heeftBestemming> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.oppervlak> , <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.laatsteKoopsom> ;
         <http://www.w3.org/ns/shacl#targetClass>
                 <http://modellen.geostandaarden.nl/def/imx-geo#Perceel> .
 
@@ -709,6 +792,8 @@
         a               <http://www.w3.org/ns/shacl#NodeShape> , <http://www.w3.org/2002/07/owl#Class> ;
         rdfs:label      "Waterschap" ;
         mim:equivalent  <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46> ;
+        <http://purl.org/dc/terms/subject>
+                <http://begrippen.geostandaarden.nl/disgeo/id/begrip/waterschap> ;
         <http://www.w3.org/2004/02/skos/core#notation>
                 "Waterschap" ;
         <http://www.w3.org/ns/shacl#property>
@@ -731,16 +816,20 @@
         rdfs:label       "Waterschapsgebied" ;
         rdfs:subClassOf  <http://modellen.geostandaarden.nl/def/imx-geo#BestuurlijkGebied> ;
         mim:equivalent   <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> ;
+        <http://purl.org/dc/terms/subject>
+                <http://begrippen.geostandaarden.nl/disgeo/id/begrip/waterschapsgebied> ;
         <http://www.w3.org/2004/02/skos/core#notation>
                 "Waterschapsgebied" ;
         <http://www.w3.org/ns/shacl#property>
-                <http://modellen.geostandaarden.nl/def/imx-geo#Waterschapsgebied.registratiegegevens> , <http://modellen.geostandaarden.nl/def/imx-geo#Waterschapsgebied.wordtBestuurdDoorWaterschap> ;
+                <http://modellen.geostandaarden.nl/def/imx-geo#Waterschapsgebied.wordtBestuurdDoorWaterschap> ;
         <http://www.w3.org/ns/shacl#targetClass>
                 <http://modellen.geostandaarden.nl/def/imx-geo#Waterschapsgebied> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Bestemming.bestemming>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:0BF48E52-A720-4873-8F8F-366FD6454FF0> ;
+        <http://purl.org/dc/terms/subject>
+                <http://definities.geostandaarden.nl/imro/id/begrip/Naam> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#string> ;
         <http://www.w3.org/ns/shacl#maxCount>
@@ -804,18 +893,6 @@
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/imx-geo#ligtAanWeg> .
 
-<http://modellen.geostandaarden.nl/def/imx-geo#Adres.graafgebiedKLICmelding>
-        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
-        mim:equivalent  <urn:uuid-src:E95A3722-E5A7-4b78-87BF-BCF799681DA4> ;
-        <http://www.w3.org/ns/shacl#class>
-                <http://modellen.geostandaarden.nl/def/imx-geo#GraafgebiedKLICmelding> ;
-        <http://www.w3.org/ns/shacl#name>
-                "graafgebiedKLICmelding" ;
-        <http://www.w3.org/ns/shacl#nodeKind>
-                <http://www.w3.org/ns/shacl#IRI> ;
-        <http://www.w3.org/ns/shacl#path>
-                <http://modellen.geostandaarden.nl/def/imx-geo#graafgebiedKLICmelding> .
-
 <http://modellen.geostandaarden.nl/def/imx-geo#Adres.postcode>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         rdfs:comment    "De door PostNL vastgestelde code behorende bij een\r\nbepaalde combinatie van een straatnaam en een\r\nhuisnummer." ;
@@ -854,11 +931,6 @@
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/imx-geo#maaiveldgeometrie> .
 
-<http://modellen.geostandaarden.nl/def/imx-geo#isBestemmingOpPerceel>
-        a               <http://www.w3.org/2002/07/owl#ObjectProperty> ;
-        rdfs:label      "isBestemmingOpPerceel" ;
-        mim:equivalent  <urn:uuid-src:083BD47C-F8AE-4956-97AB-009E59EB99D3> .
-
 <http://modellen.geostandaarden.nl/def/imx-geo#Adres.isAdresVanGebouw>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid-src:383AC763-BD2B-499c-AEAE-2362287E08B9> ;
@@ -873,9 +945,16 @@
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/imx-geo#isAdresVanGebouw> .
 
+<http://modellen.geostandaarden.nl/def/imx-geo#isBestemmingOpPerceel>
+        a               <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+        rdfs:label      "isBestemmingOpPerceel" ;
+        mim:equivalent  <urn:uuid-src:083BD47C-F8AE-4956-97AB-009E59EB99D3> .
+
 <http://modellen.geostandaarden.nl/def/imx-geo#Water.realiseertInfiltratie>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:597D7E79-9FA9-4c1a-9807-EA07588219C0> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/heeft_infiltratiefunctie> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#boolean> ;
         <http://www.w3.org/ns/shacl#minCount>
@@ -938,9 +1017,9 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#type>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
         rdfs:label      "type" ;
-        mim:equivalent  <urn:uuid:1424216F-CD23-41e3-A8F5-C020401B6AEE> , <urn:uuid:5F5F1D43-6647-4f77-8930-2682D739EE45> , <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E> ;
+        mim:equivalent  <urn:uuid:1424216F-CD23-41e3-A8F5-C020401B6AEE> , <urn:uuid:5F5F1D43-6647-4f77-8930-2682D739EE45> , <urn:uuid:807705A0-8B54-41f6-8F22-2EE792D2B6FD> , <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E> ;
         <http://purl.org/dc/terms/subject>
-                <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerktype> .
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerktype> , <https://begrippen.geostandaarden.nl/sam/id/begrip/type> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Woonplaats>
         a                <http://www.w3.org/ns/shacl#NodeShape> , <http://www.w3.org/2002/07/owl#Class> ;
@@ -954,9 +1033,29 @@
         <http://www.w3.org/ns/shacl#targetClass>
                 <http://modellen.geostandaarden.nl/def/imx-geo#Woonplaats> .
 
+<http://modellen.geostandaarden.nl/def/imx-geo#Beperking.grondslag>
+        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
+        mim:equivalent  <urn:uuid:B3B6D06A-58E7-4666-8B01-9FB3A7E33706> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/grondslag> ;
+        <http://www.w3.org/ns/shacl#datatype>
+                <http://www.w3.org/2001/XMLSchema#string> ;
+        <http://www.w3.org/ns/shacl#maxCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#minCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#name>
+                "grondslag" ;
+        <http://www.w3.org/ns/shacl#nodeKind>
+                <http://www.w3.org/ns/shacl#Literal> ;
+        <http://www.w3.org/ns/shacl#path>
+                <http://modellen.geostandaarden.nl/def/imx-geo#grondslag> .
+
 <http://modellen.geostandaarden.nl/def/imx-geo#Bestemming.verwijzingNaarArtikel>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:4F144394-44A1-495a-87F4-A874188C47F9> ;
+        <http://purl.org/dc/terms/subject>
+                <http://definities.geostandaarden.nl/imro/id/begrip/VerwijzingNaarTekstInfo> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#anyURI> ;
         <http://www.w3.org/ns/shacl#maxCount>
@@ -973,6 +1072,8 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#Wijk.wijkcode>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:472E08B9-E1F3-4840-84CF-09E63DE97880> ;
+        <http://purl.org/dc/terms/subject>
+                <http://definities.geostandaarden.nl/imgeo/id/begrip/Wijkcode> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#string> ;
         <http://www.w3.org/ns/shacl#maxCount>
@@ -996,7 +1097,7 @@
         <http://www.w3.org/2004/02/skos/core#notation>
                 "Gebouw" ;
         <http://www.w3.org/ns/shacl#property>
-                <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.bovenaanzichtgeometrie> , <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.gebruiksdoel> , <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.graafgebiedKLICmelding> , <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.3dGeometrie> , <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.heeftAlsAdres> , <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.bouwjaar> , <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.sloopjaar> ;
+                <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.bovenaanzichtgeometrie> , <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.gebruiksdoel> , <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.3dGeometrie> , <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.heeftAlsAdres> , <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.bouwjaar> , <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.sloopjaar> ;
         <http://www.w3.org/ns/shacl#targetClass>
                 <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw> .
 
@@ -1031,7 +1132,19 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#GM_Solid>
         a               <http://www.w3.org/1999/02/22-rdf-syntax-ns#Datatype> ;
         rdfs:label      "GM_Solid" ;
-        mim:equivalent  <urn:object:GM_Solid> .
+        mim:equivalent  <urn:uuid:7394A8FC-7B9F-4d9f-9F0E-686D6B3D7535> .
+
+<http://modellen.geostandaarden.nl/def/imx-geo#Provincie>
+        a                <http://www.w3.org/ns/shacl#NodeShape> , <http://www.w3.org/2002/07/owl#Class> ;
+        rdfs:label       "Provincie" ;
+        rdfs:subClassOf  <http://modellen.geostandaarden.nl/def/imx-geo#BestuurlijkGebied> ;
+        mim:equivalent   <urn:uuid:BC25B6B6-CC54-4d45-BB88-0354F46EC786> ;
+        <http://purl.org/dc/terms/subject>
+                <http://begrippen.geostandaarden.nl/disgeo/id/begrip/provincie> ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "Provincie" ;
+        <http://www.w3.org/ns/shacl#targetClass>
+                <http://modellen.geostandaarden.nl/def/imx-geo#Provincie> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Grondwaterstand>
         a                <http://www.w3.org/ns/shacl#NodeShape> , <http://www.w3.org/2002/07/owl#Class> ;
@@ -1072,11 +1185,15 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#verwijzingNaarArtikel>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
         rdfs:label      "verwijzingNaarArtikel" ;
-        mim:equivalent  <urn:uuid:4F144394-44A1-495a-87F4-A874188C47F9> .
+        mim:equivalent  <urn:uuid:4F144394-44A1-495a-87F4-A874188C47F9> ;
+        <http://purl.org/dc/terms/subject>
+                <http://definities.geostandaarden.nl/imro/id/begrip/VerwijzingNaarTekstInfo> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Water.identificatie>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:2B6AA600-743D-4471-864E-025ADF8544DB> ;
+        <http://purl.org/dc/terms/subject>
+                <https://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#string> ;
         <http://www.w3.org/ns/shacl#maxCount>
@@ -1094,7 +1211,7 @@
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:0897F8EE-4B9D-42a2-9F27-4D3251AC904F> ;
         <http://purl.org/dc/terms/subject>
-                <http://bag.basisregistraties.overheid.nl/id/begrip/Geometrie> ;
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://modellen.geostandaarden.nl/def/imx-geo#GM_Surface> ;
         <http://www.w3.org/ns/shacl#maxCount>
@@ -1111,7 +1228,9 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#gebruiksdoel>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
         rdfs:label      "gebruiksdoel" ;
-        mim:equivalent  <urn:uuid:E18F1AE5-832F-4528-86A1-C7368FDB1D0E> .
+        mim:equivalent  <urn:uuid:E18F1AE5-832F-4528-86A1-C7368FDB1D0E> ;
+        <http://purl.org/dc/terms/subject>
+                <http://bag.basisregistraties.overheid.nl/id/begrip/Gebruiksdoel> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#wordtBestuurdDoorWaterschap>
         a               <http://www.w3.org/2002/07/owl#ObjectProperty> ;
@@ -1175,6 +1294,8 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#Water.type>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:5F5F1D43-6647-4f77-8930-2682D739EE45> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/type> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#string> ;
         <http://www.w3.org/ns/shacl#minCount>
@@ -1194,9 +1315,23 @@
         <http://purl.org/dc/terms/subject>
                 <https://begrippen.geostandaarden.nl/sam/id/begrip/plaatsnaam> .
 
+<http://modellen.geostandaarden.nl/def/imx-geo#Veiligheidsregio>
+        a                <http://www.w3.org/ns/shacl#NodeShape> , <http://www.w3.org/2002/07/owl#Class> ;
+        rdfs:label       "Veiligheidsregio" ;
+        rdfs:subClassOf  <http://modellen.geostandaarden.nl/def/imx-geo#BestuurlijkGebied> ;
+        mim:equivalent   <urn:uuid:64202A31-A263-4671-959B-76B816C1B86A> ;
+        <http://purl.org/dc/terms/subject>
+                <http://begrippen.geostandaarden.nl/disgeo/id/begrip/veiligheidsregio> ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "Veiligheidsregio" ;
+        <http://www.w3.org/ns/shacl#targetClass>
+                <http://modellen.geostandaarden.nl/def/imx-geo#Veiligheidsregio> .
+
 <http://modellen.geostandaarden.nl/def/imx-geo#Bestemming.geometrie>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://modellen.geostandaarden.nl/def/imx-geo#GM_Surface> ;
         <http://www.w3.org/ns/shacl#maxCount>
@@ -1222,26 +1357,12 @@
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/imx-geo#heeftAlsNabijWater> .
 
-<http://modellen.geostandaarden.nl/def/imx-geo#GraafgebiedKLICmelding.registratiegegevens>
-        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
-        mim:equivalent  <urn:uuid-dst:E1BC9D17-EE29-45e1-A533-73F3CF381F54> , <urn:uuid:E1BC9D17-EE29-45e1-A533-73F3CF381F54> ;
-        <http://www.w3.org/ns/shacl#class>
-                <http://modellen.geostandaarden.nl/def/imx-geo#Registratiegegevens> ;
-        <http://www.w3.org/ns/shacl#maxCount>
-                1 ;
-        <http://www.w3.org/ns/shacl#minCount>
-                1 ;
-        <http://www.w3.org/ns/shacl#name>
-                "registratiegegevens" ;
-        <http://www.w3.org/ns/shacl#nodeKind>
-                <http://www.w3.org/ns/shacl#IRI> ;
-        <http://www.w3.org/ns/shacl#path>
-                <http://modellen.geostandaarden.nl/def/imx-geo#registratiegegevens> .
-
 <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement.geometrie>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         rdfs:comment    "Geometrie op maaiveldniveau." ;
         mim:equivalent  <urn:uuid:E0A46403-5DB0-4e88-8D6D-93189ED76587> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         <http://www.w3.org/ns/shacl#maxCount>
                 1 ;
         <http://www.w3.org/ns/shacl#minCount>
@@ -1250,11 +1371,6 @@
                 "geometrie" ;
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/imx-geo#geometrie> .
-
-<http://modellen.geostandaarden.nl/def/imx-geo#adresBinnenKLICmelding>
-        a               <http://www.w3.org/2002/07/owl#ObjectProperty> ;
-        rdfs:label      "adresBinnenKLICmelding" ;
-        mim:equivalent  <urn:uuid-dst:E95A3722-E5A7-4b78-87BF-BCF799681DA4> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Weg.heeftAlsOndergrond>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -1274,6 +1390,11 @@
         a               <http://www.w3.org/2002/07/owl#ObjectProperty> ;
         rdfs:label      "ligtInRegistratieveRuimte" ;
         mim:equivalent  <urn:uuid-dst:8E26718D-A14E-4095-B1C3-DF82570F9148> .
+
+<http://modellen.geostandaarden.nl/def/imx-geo#isBeperkingOpPerceel>
+        a               <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+        rdfs:label      "isBeperkingOpPerceel" ;
+        mim:equivalent  <urn:uuid-src:6342FB41-5A00-42b8-94C9-AB53B9FCE81C> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.laatsteKoopsom>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -1319,7 +1440,9 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#bestemmingsplan>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
         rdfs:label      "bestemmingsplan" ;
-        mim:equivalent  <urn:uuid:74F7259D-8225-439d-886D-59932E05127D> .
+        mim:equivalent  <urn:uuid:74F7259D-8225-439d-886D-59932E05127D> ;
+        <http://purl.org/dc/terms/subject>
+                <http://definities.geostandaarden.nl/imro/id/begrip/Plangebied> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#heeftAlsOndergrond>
         a               <http://www.w3.org/2002/07/owl#ObjectProperty> ;
@@ -1383,7 +1506,7 @@
         rdfs:comment    "-- Definitie --\r\nGeometrische representatie van een gebied op land dat door een openbaar lichaam wordt bestuurd." ;
         mim:equivalent  <urn:uuid:7F2BC6C4-158D-46c9-A28B-BDD621BC7F11> ;
         <http://purl.org/dc/terms/subject>
-                <http://bag.basisregistraties.overheid.nl/id/begrip/Geometrie> ;
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         <http://www.w3.org/ns/shacl#maxCount>
                 1 ;
         <http://www.w3.org/ns/shacl#minCount>
@@ -1392,6 +1515,22 @@
                 "geometrie" ;
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/imx-geo#geometrie> .
+
+<http://modellen.geostandaarden.nl/def/imx-geo#Weg.registratiegegevens>
+        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
+        mim:equivalent  <urn:uuid-dst:67CE832E-7A8D-491c-8D6B-46BD8ECA4454> , <urn:uuid:67CE832E-7A8D-491c-8D6B-46BD8ECA4454> ;
+        <http://www.w3.org/ns/shacl#class>
+                <http://modellen.geostandaarden.nl/def/imx-geo#Registratiegegevens> ;
+        <http://www.w3.org/ns/shacl#maxCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#minCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#name>
+                "registratiegegevens" ;
+        <http://www.w3.org/ns/shacl#nodeKind>
+                <http://www.w3.org/ns/shacl#IRI> ;
+        <http://www.w3.org/ns/shacl#path>
+                <http://modellen.geostandaarden.nl/def/imx-geo#registratiegegevens> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#RegistratieveRuimte.domein>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -1411,6 +1550,24 @@
                 <http://www.w3.org/ns/shacl#Literal> ;
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/nen3610-2022#domein> .
+
+<http://modellen.geostandaarden.nl/def/imx-geo#Beperking.geometrie>
+        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
+        mim:equivalent  <urn:uuid:DE302A46-989C-4b54-A52A-4E69E6D6F152> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
+        <http://www.w3.org/ns/shacl#datatype>
+                <http://modellen.geostandaarden.nl/def/imx-geo#GM_Surface> ;
+        <http://www.w3.org/ns/shacl#maxCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#minCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#name>
+                "geometrie" ;
+        <http://www.w3.org/ns/shacl#nodeKind>
+                <http://www.w3.org/ns/shacl#Literal> ;
+        <http://www.w3.org/ns/shacl#path>
+                <http://modellen.geostandaarden.nl/def/imx-geo#geometrie> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#ligtOnderWeg>
         a               <http://www.w3.org/2002/07/owl#ObjectProperty> ;
@@ -1435,9 +1592,29 @@
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie> .
 
+<http://modellen.geostandaarden.nl/def/imx-geo#Weg.naam>
+        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
+        mim:equivalent  <urn:uuid:CF4F3C43-7621-4685-9ECC-B7B96CFF6FF6> ;
+        <http://purl.org/dc/terms/subject>
+                <http://bag.basisregistraties.overheid.nl/id/begrip/Naam> ;
+        <http://www.w3.org/ns/shacl#datatype>
+                <http://www.w3.org/2001/XMLSchema#string> ;
+        <http://www.w3.org/ns/shacl#maxCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#minCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#name>
+                "naam" ;
+        <http://www.w3.org/ns/shacl#nodeKind>
+                <http://www.w3.org/ns/shacl#Literal> ;
+        <http://www.w3.org/ns/shacl#path>
+                <http://modellen.geostandaarden.nl/def/imx-geo#naam> .
+
 <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.gebruiksdoel>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:E18F1AE5-832F-4528-86A1-C7368FDB1D0E> ;
+        <http://purl.org/dc/terms/subject>
+                <http://bag.basisregistraties.overheid.nl/id/begrip/Gebruiksdoel> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#string> ;
         <http://www.w3.org/ns/shacl#name>
@@ -1458,6 +1635,8 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#Weg.functie>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:B97EB80D-05B0-4d24-A5A2-62A55BF0F550> ;
+        <http://purl.org/dc/terms/subject>
+                <http://definities.geostandaarden.nl/imgeo/id/begrip/Plus-functiewegdeel> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#string> ;
         <http://www.w3.org/ns/shacl#minCount>
@@ -1486,7 +1665,7 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#registratiegegevens>
         a               <http://www.w3.org/2002/07/owl#ObjectProperty> ;
         rdfs:label      "registratiegegevens" ;
-        mim:equivalent  <urn:uuid-dst:B7450122-7A17-4442-9788-004645CD8606> , <urn:uuid-dst:061A2468-AD6F-414a-9593-0694507E5F36> , <urn:uuid-dst:D65FD6BF-B3F2-44e8-891C-4D1F66E1F49F> , <urn:uuid-dst:483BAF41-267E-478c-977C-41D8F4ED4161> , <urn:uuid-dst:E1BC9D17-EE29-45e1-A533-73F3CF381F54> , <urn:uuid-dst:80E03254-CA49-44aa-B4C4-53B19047B008> , <urn:uuid-dst:D2CE840C-BF1D-4275-989E-6F3D0974E02C> .
+        mim:equivalent  <urn:uuid-dst:4A246BC6-BB5C-436f-ADDE-129A932B2CC2> , <urn:uuid-dst:483BAF41-267E-478c-977C-41D8F4ED4161> , <urn:uuid-dst:ACAD26BB-65FC-469a-A35C-243BB2E944D1> , <urn:uuid-dst:80E03254-CA49-44aa-B4C4-53B19047B008> , <urn:uuid-dst:6EA658E5-B692-421a-8DB3-BE333F811BCC> , <urn:uuid-dst:061A2468-AD6F-414a-9593-0694507E5F36> , <urn:uuid-dst:D2CE840C-BF1D-4275-989E-6F3D0974E02C> , <urn:uuid-dst:67CE832E-7A8D-491c-8D6B-46BD8ECA4454> , <urn:uuid-dst:2DA7BFB2-A5AC-4e13-B5DD-090B46AAB07E> , <urn:uuid-dst:1CC1B5BA-26CB-4d1f-A1B8-A77143F896E7> , <urn:uuid-dst:B7450122-7A17-4442-9788-004645CD8606> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Terrein.fysiekvoorkomen>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -1507,9 +1686,8 @@
 
 <http://modellen.geostandaarden.nl/def/imx-geo#domein>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
-        rdfs:comment    "<font color=\"#1e6496\">Het domein waar het object aan toe behoort.</font>" ;
         rdfs:label      "domein" ;
-        mim:equivalent  <urn:uuid:11C3FECB-13A4-4b26-9C33-822B844A2116> ;
+        mim:equivalent  <urn:uuid:833C1ADA-3549-42ac-B66A-C97E63A54C7D> ;
         <http://purl.org/dc/terms/subject>
                 <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/domein> .
 
@@ -1518,7 +1696,7 @@
         rdfs:comment    "2D of 3D geometrie van ondergrondinformatie." ;
         mim:equivalent  <urn:uuid:9F1244E4-A613-4efd-914A-F569431C7287> ;
         <http://purl.org/dc/terms/subject>
-                <https://begrippen.geostandaarden.nl/sam/id/begrip/maaiveldgeometrie> ;
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://modellen.geostandaarden.nl/def/imx-geo#GM_Object> ;
         <http://www.w3.org/ns/shacl#maxCount>
@@ -1529,18 +1707,6 @@
                 <http://www.w3.org/ns/shacl#Literal> ;
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/imx-geo#geometrie> .
-
-<http://modellen.geostandaarden.nl/def/imx-geo#GraafgebiedKLICmelding.adresBinnenKLICmelding>
-        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
-        mim:equivalent  <urn:uuid-dst:E95A3722-E5A7-4b78-87BF-BCF799681DA4> , <urn:uuid:E95A3722-E5A7-4b78-87BF-BCF799681DA4> ;
-        <http://www.w3.org/ns/shacl#class>
-                <http://modellen.geostandaarden.nl/def/imx-geo#Adres> ;
-        <http://www.w3.org/ns/shacl#name>
-                "adresBinnenKLICmelding" ;
-        <http://www.w3.org/ns/shacl#nodeKind>
-                <http://www.w3.org/ns/shacl#IRI> ;
-        <http://www.w3.org/ns/shacl#path>
-                <http://modellen.geostandaarden.nl/def/imx-geo#adresBinnenKLICmelding> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.identificatie>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -1617,6 +1783,8 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#Weg.identificatie>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:C08A4B06-5E51-40ed-87B6-AAF8E3A955DC> ;
+        <http://purl.org/dc/terms/subject>
+                <https://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#string> ;
         <http://www.w3.org/ns/shacl#maxCount>
@@ -1688,6 +1856,22 @@
         <http://www.w3.org/ns/shacl#targetClass>
                 <http://modellen.geostandaarden.nl/def/imx-geo#Wijk> .
 
+<http://modellen.geostandaarden.nl/def/imx-geo#Beperking.registratiegegevens>
+        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
+        mim:equivalent  <urn:uuid-dst:ACAD26BB-65FC-469a-A35C-243BB2E944D1> , <urn:uuid:ACAD26BB-65FC-469a-A35C-243BB2E944D1> ;
+        <http://www.w3.org/ns/shacl#class>
+                <http://modellen.geostandaarden.nl/def/imx-geo#Registratiegegevens> ;
+        <http://www.w3.org/ns/shacl#maxCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#minCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#name>
+                "registratiegegevens" ;
+        <http://www.w3.org/ns/shacl#nodeKind>
+                <http://www.w3.org/ns/shacl#IRI> ;
+        <http://www.w3.org/ns/shacl#path>
+                <http://modellen.geostandaarden.nl/def/imx-geo#registratiegegevens> .
+
 <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.bouwjaar>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:98D81D8B-1A1C-4b37-8B8D-39F69688678C> ;
@@ -1756,7 +1940,7 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#GM_Object>
         a               <http://www.w3.org/1999/02/22-rdf-syntax-ns#Datatype> ;
         rdfs:label      "GM_Object" ;
-        mim:equivalent  <urn:object:GM_Object> .
+        mim:equivalent  <urn:uuid:5B2BB0ED-E360-4b51-8032-D9A645E2200D> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Adres.huisnummertoevoeging>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -1779,6 +1963,24 @@
         <http://www.w3.org/ns/shacl#pattern>
                 "^[0-9a-zA-Z]{1,4}$" .
 
+<http://modellen.geostandaarden.nl/def/imx-geo#Beperking.identificatie>
+        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
+        mim:equivalent  <urn:uuid:CF8EC51D-B46B-42ac-9CFB-F9F37067B0D3> ;
+        <http://purl.org/dc/terms/subject>
+                <https://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
+        <http://www.w3.org/ns/shacl#datatype>
+                <http://www.w3.org/2001/XMLSchema#string> ;
+        <http://www.w3.org/ns/shacl#maxCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#minCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#name>
+                "identificatie" ;
+        <http://www.w3.org/ns/shacl#nodeKind>
+                <http://www.w3.org/ns/shacl#Literal> ;
+        <http://www.w3.org/ns/shacl#path>
+                <http://modellen.geostandaarden.nl/def/imx-geo#identificatie> .
+
 <http://modellen.geostandaarden.nl/def/imx-geo#Bouwwerk.registratiegegevens>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid-dst:D2CE840C-BF1D-4275-989E-6F3D0974E02C> , <urn:uuid:D2CE840C-BF1D-4275-989E-6F3D0974E02C> ;
@@ -1800,7 +2002,7 @@
         rdfs:comment    "Functie of gebruik van een terrein." ;
         mim:equivalent  <urn:uuid:C22FAEFC-71B4-41c6-815E-18295DB5F31D> ;
         <http://purl.org/dc/terms/subject>
-                <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerktype> ;
+                <http://definities.geostandaarden.nl/imgeo/id/begrip/Bgt-type_functioneelGebied> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#string> ;
         <http://www.w3.org/ns/shacl#name>
@@ -1825,6 +2027,8 @@
 <http://modellen.geostandaarden.nl/def/imx-geo#Ondergrond.identificatie>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:EFFD166D-F465-474c-BE67-3D93D410CA5D> ;
+        <http://purl.org/dc/terms/subject>
+                <https://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#string> ;
         <http://www.w3.org/ns/shacl#maxCount>
@@ -1878,6 +2082,24 @@
         <http://www.w3.org/ns/shacl#targetClass>
                 <http://modellen.geostandaarden.nl/def/imx-geo#Gemeentegebied> .
 
+<http://modellen.geostandaarden.nl/def/imx-geo#Beperking.domein>
+        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
+        mim:equivalent  <urn:uuid:833C1ADA-3549-42ac-B66A-C97E63A54C7D> ;
+        <http://purl.org/dc/terms/subject>
+                <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/domein> ;
+        <http://www.w3.org/ns/shacl#datatype>
+                <http://www.w3.org/2001/XMLSchema#string> ;
+        <http://www.w3.org/ns/shacl#maxCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#minCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#name>
+                "domein" ;
+        <http://www.w3.org/ns/shacl#nodeKind>
+                <http://www.w3.org/ns/shacl#Literal> ;
+        <http://www.w3.org/ns/shacl#path>
+                <http://modellen.geostandaarden.nl/def/imx-geo#domein> .
+
 <http://modellen.geostandaarden.nl/def/imx-geo#Waterschap.domein>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         rdfs:comment    "<font color=\"#1e6496\">Het domein waar het object aan toe behoort.</font>" ;
@@ -1906,7 +2128,7 @@
         <http://www.w3.org/2004/02/skos/core#notation>
                 "Water" ;
         <http://www.w3.org/ns/shacl#property>
-                <http://modellen.geostandaarden.nl/def/imx-geo#Water.identificatie> , <http://modellen.geostandaarden.nl/def/imx-geo#Water.realiseertInfiltratie> , <http://modellen.geostandaarden.nl/def/imx-geo#Water.functie> , <http://modellen.geostandaarden.nl/def/imx-geo#Water.heeftAlsNabijTerrein> , <http://modellen.geostandaarden.nl/def/imx-geo#Water.type> , <http://modellen.geostandaarden.nl/def/imx-geo#Water.geometrie> , <http://modellen.geostandaarden.nl/def/imx-geo#Water.domein> ;
+                <http://modellen.geostandaarden.nl/def/imx-geo#Water.registratiegegevens> , <http://modellen.geostandaarden.nl/def/imx-geo#Water.identificatie> , <http://modellen.geostandaarden.nl/def/imx-geo#Water.realiseertInfiltratie> , <http://modellen.geostandaarden.nl/def/imx-geo#Water.functie> , <http://modellen.geostandaarden.nl/def/imx-geo#Water.heeftAlsNabijTerrein> , <http://modellen.geostandaarden.nl/def/imx-geo#Water.type> , <http://modellen.geostandaarden.nl/def/imx-geo#Water.geometrie> , <http://modellen.geostandaarden.nl/def/imx-geo#Water.domein> ;
         <http://www.w3.org/ns/shacl#targetClass>
                 <http://modellen.geostandaarden.nl/def/imx-geo#Water> .
 
@@ -1929,16 +2151,17 @@
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/nen3610-2022#domein> .
 
-<http://modellen.geostandaarden.nl/def/imx-geo#GraafgebiedKLICmelding>
-        a               <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/ns/shacl#NodeShape> ;
-        rdfs:label      "GraafgebiedKLICmelding" ;
-        mim:equivalent  <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> ;
-        <http://www.w3.org/2004/02/skos/core#notation>
-                "GraafgebiedKLICmelding" ;
-        <http://www.w3.org/ns/shacl#property>
-                <http://modellen.geostandaarden.nl/def/imx-geo#GraafgebiedKLICmelding.registratiegegevens> , <http://modellen.geostandaarden.nl/def/imx-geo#GraafgebiedKLICmelding.geometrie> , <http://modellen.geostandaarden.nl/def/imx-geo#GraafgebiedKLICmelding.domein> , <http://modellen.geostandaarden.nl/def/imx-geo#GraafgebiedKLICmelding.adresBinnenKLICmelding> , <http://modellen.geostandaarden.nl/def/imx-geo#GraafgebiedKLICmelding.gebouwBinnenKLICmelding> ;
-        <http://www.w3.org/ns/shacl#targetClass>
-                <http://modellen.geostandaarden.nl/def/imx-geo#GraafgebiedKLICmelding> .
+<http://modellen.geostandaarden.nl/def/imx-geo#Perceel.heeftBeperking>
+        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
+        mim:equivalent  <urn:uuid-dst:6342FB41-5A00-42b8-94C9-AB53B9FCE81C> , <urn:uuid:6342FB41-5A00-42b8-94C9-AB53B9FCE81C> ;
+        <http://www.w3.org/ns/shacl#class>
+                <http://modellen.geostandaarden.nl/def/imx-geo#Beperking> ;
+        <http://www.w3.org/ns/shacl#name>
+                "heeftBeperking" ;
+        <http://www.w3.org/ns/shacl#nodeKind>
+                <http://www.w3.org/ns/shacl#IRI> ;
+        <http://www.w3.org/ns/shacl#path>
+                <http://modellen.geostandaarden.nl/def/imx-geo#heeftBeperking> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Adres.isHoofdadres>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -1997,25 +2220,6 @@
         rdfs:label      "bevatPerceel" ;
         mim:equivalent  <urn:uuid-src:8E26718D-A14E-4095-B1C3-DF82570F9148> .
 
-<http://modellen.geostandaarden.nl/def/imx-geo#GraafgebiedKLICmelding.domein>
-        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
-        rdfs:comment    "<font color=\"#1e6496\">Het domein waar het object aan toe behoort.</font>" ;
-        mim:equivalent  <urn:uuid:11C3FECB-13A4-4b26-9C33-822B844A2116> ;
-        <http://purl.org/dc/terms/subject>
-                <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/domein> ;
-        <http://www.w3.org/ns/shacl#datatype>
-                <http://www.w3.org/2001/XMLSchema#string> ;
-        <http://www.w3.org/ns/shacl#maxCount>
-                1 ;
-        <http://www.w3.org/ns/shacl#minCount>
-                1 ;
-        <http://www.w3.org/ns/shacl#name>
-                "domein" ;
-        <http://www.w3.org/ns/shacl#nodeKind>
-                <http://www.w3.org/ns/shacl#Literal> ;
-        <http://www.w3.org/ns/shacl#path>
-                <http://modellen.geostandaarden.nl/def/imx-geo#domein> .
-
 <http://modellen.geostandaarden.nl/def/imx-geo#Perceel.oppervlak>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid:91DA4388-E53D-442a-A3E2-363AC131B739> ;
@@ -2033,18 +2237,6 @@
                 <http://www.w3.org/ns/shacl#Literal> ;
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/imx-geo#oppervlak> .
-
-<http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.graafgebiedKLICmelding>
-        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
-        mim:equivalent  <urn:uuid-src:83163756-0E46-40e0-BDF9-4DB4CB0AB217> ;
-        <http://www.w3.org/ns/shacl#class>
-                <http://modellen.geostandaarden.nl/def/imx-geo#GraafgebiedKLICmelding> ;
-        <http://www.w3.org/ns/shacl#name>
-                "graafgebiedKLICmelding" ;
-        <http://www.w3.org/ns/shacl#nodeKind>
-                <http://www.w3.org/ns/shacl#IRI> ;
-        <http://www.w3.org/ns/shacl#path>
-                <http://modellen.geostandaarden.nl/def/imx-geo#graafgebiedKLICmelding> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw.bovenaanzichtgeometrie>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -2070,19 +2262,7 @@
         rdfs:label      "functie" ;
         mim:equivalent  <urn:uuid:C22FAEFC-71B4-41c6-815E-18295DB5F31D> , <urn:uuid:B97EB80D-05B0-4d24-A5A2-62A55BF0F550> , <urn:uuid:3401CDB4-1C0C-4262-949F-DC612FCF7E03> ;
         <http://purl.org/dc/terms/subject>
-                <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerktype> .
-
-<http://modellen.geostandaarden.nl/def/imx-geo#GraafgebiedKLICmelding.gebouwBinnenKLICmelding>
-        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
-        mim:equivalent  <urn:uuid-dst:83163756-0E46-40e0-BDF9-4DB4CB0AB217> , <urn:uuid:83163756-0E46-40e0-BDF9-4DB4CB0AB217> ;
-        <http://www.w3.org/ns/shacl#class>
-                <http://modellen.geostandaarden.nl/def/imx-geo#Gebouw> ;
-        <http://www.w3.org/ns/shacl#name>
-                "gebouwBinnenKLICmelding" ;
-        <http://www.w3.org/ns/shacl#nodeKind>
-                <http://www.w3.org/ns/shacl#IRI> ;
-        <http://www.w3.org/ns/shacl#path>
-                <http://modellen.geostandaarden.nl/def/imx-geo#gebouwBinnenKLICmelding> .
+                <http://definities.geostandaarden.nl/imgeo/id/begrip/Bgt-type_functioneelGebied> , <http://definities.geostandaarden.nl/imgeo/id/begrip/Plus-functiewegdeel> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Bouwwerk.maaiveldgeometrie>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -2149,21 +2329,12 @@
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/imx-geo#bestuurdGebied> .
 
-<http://modellen.geostandaarden.nl/def/imx-geo#GraafgebiedKLICmelding.geometrie>
-        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
-        mim:equivalent  <urn:uuid:C0DD161F-0EE6-4175-AB6B-9747BE3931DF> ;
-        <http://www.w3.org/ns/shacl#datatype>
-                <http://modellen.geostandaarden.nl/def/imx-geo#GM_Surface> ;
-        <http://www.w3.org/ns/shacl#maxCount>
-                1 ;
-        <http://www.w3.org/ns/shacl#minCount>
-                1 ;
-        <http://www.w3.org/ns/shacl#name>
-                "geometrie" ;
-        <http://www.w3.org/ns/shacl#nodeKind>
-                <http://www.w3.org/ns/shacl#Literal> ;
-        <http://www.w3.org/ns/shacl#path>
-                <http://modellen.geostandaarden.nl/def/imx-geo#geometrie> .
+<http://modellen.geostandaarden.nl/def/imx-geo#identificatie>
+        a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        rdfs:label      "identificatie" ;
+        mim:equivalent  <urn:uuid:CF8EC51D-B46B-42ac-9CFB-F9F37067B0D3> ;
+        <http://purl.org/dc/terms/subject>
+                <https://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#omschrijving>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
@@ -2192,23 +2363,39 @@
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/nen3610-2022#domein> .
 
+<http://modellen.geostandaarden.nl/def/imx-geo#Beperking>
+        a               <http://www.w3.org/2002/07/owl#Class> , <http://www.w3.org/ns/shacl#NodeShape> ;
+        rdfs:comment    "Beperking in het gebruik van een perceel met als grondslag de Wet ruimtelijke ordening (Wro) of Wet kenbaarheid publiekrechtelijke beperkingen (Wkpb)." ;
+        rdfs:label      "Beperking" ;
+        mim:equivalent  <urn:uuid:39AB4DF3-CC3E-4177-B53D-A46435B9BBCA> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/beperking> ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "Beperking" ;
+        <http://www.w3.org/ns/shacl#property>
+                <http://modellen.geostandaarden.nl/def/imx-geo#Beperking.geometrie> , <http://modellen.geostandaarden.nl/def/imx-geo#Beperking.domein> , <http://modellen.geostandaarden.nl/def/imx-geo#Beperking.isBeperkingOpPerceel> , <http://modellen.geostandaarden.nl/def/imx-geo#Beperking.grondslag> , <http://modellen.geostandaarden.nl/def/imx-geo#Beperking.identificatie> , <http://modellen.geostandaarden.nl/def/imx-geo#Beperking.registratiegegevens> , <http://modellen.geostandaarden.nl/def/imx-geo#Beperking.type> ;
+        <http://www.w3.org/ns/shacl#targetClass>
+                <http://modellen.geostandaarden.nl/def/imx-geo#Beperking> .
+
 <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement>
         a               <http://www.w3.org/ns/shacl#NodeShape> , <http://www.w3.org/2002/07/owl#Class> ;
         rdfs:label      "Landschapselement" ;
         mim:equivalent  <urn:uuid:473F2A9B-DE27-4b38-B177-88B6DF218A80> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/landschapselement> ;
         <http://www.w3.org/2004/02/skos/core#notation>
                 "Landschapselement" ;
         <http://www.w3.org/ns/shacl#property>
-                <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement.identificatie> , <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement.type> , <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement.domein> , <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement.geometrie> , <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement.ligtOpTerrein> ;
+                <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement.registratiegegevens> , <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement.identificatie> , <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement.type> , <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement.domein> , <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement.geometrie> , <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement.ligtOpTerrein> ;
         <http://www.w3.org/ns/shacl#targetClass>
                 <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#naam>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
         rdfs:label      "naam" ;
-        mim:equivalent  <urn:uuid:398B9F56-6509-47aa-8F06-483BD8CA8B8A> , <urn:uuid:64E8004B-EC61-4535-8760-446481B58BCE> ;
+        mim:equivalent  <urn:uuid:CF4F3C43-7621-4685-9ECC-B7B96CFF6FF6> , <urn:uuid:398B9F56-6509-47aa-8F06-483BD8CA8B8A> , <urn:uuid:64E8004B-EC61-4535-8760-446481B58BCE> ;
         <http://purl.org/dc/terms/subject>
-                <http://begrippen.geostandaarden.nl/disgeo/id/begrip/formele_naam> .
+                <http://bag.basisregistraties.overheid.nl/id/begrip/Naam> , <http://begrippen.geostandaarden.nl/disgeo/id/begrip/formele_naam> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Gemeente>
         a               <http://www.w3.org/ns/shacl#NodeShape> , <http://www.w3.org/2002/07/owl#Class> ;
@@ -2231,17 +2418,35 @@
         <http://purl.org/dc/terms/subject>
                 <https://begrippen.geostandaarden.nl/sam/id/begrip/straatnaam> .
 
-<http://modellen.geostandaarden.nl/def/imx-geo#graafgebiedKLICmelding>
-        a               <http://www.w3.org/2002/07/owl#ObjectProperty> ;
-        rdfs:label      "graafgebiedKLICmelding" ;
-        mim:equivalent  <urn:uuid-src:83163756-0E46-40e0-BDF9-4DB4CB0AB217> , <urn:uuid-src:E95A3722-E5A7-4b78-87BF-BCF799681DA4> .
-
 <http://modellen.geostandaarden.nl/def/imx-geo#bovenaanzichtgeometrie>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
         rdfs:label      "bovenaanzichtgeometrie" ;
         mim:equivalent  <urn:uuid:2EA9ECE5-8CC8-485e-B0AE-FEE22FA559CF> ;
         <http://purl.org/dc/terms/subject>
                 <http://bag.basisregistraties.overheid.nl/id/begrip/Geometrie> .
+
+<http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement.registratiegegevens>
+        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
+        mim:equivalent  <urn:uuid-dst:4A246BC6-BB5C-436f-ADDE-129A932B2CC2> , <urn:uuid:4A246BC6-BB5C-436f-ADDE-129A932B2CC2> ;
+        <http://www.w3.org/ns/shacl#class>
+                <http://modellen.geostandaarden.nl/def/imx-geo#Registratiegegevens> ;
+        <http://www.w3.org/ns/shacl#maxCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#minCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#name>
+                "registratiegegevens" ;
+        <http://www.w3.org/ns/shacl#nodeKind>
+                <http://www.w3.org/ns/shacl#IRI> ;
+        <http://www.w3.org/ns/shacl#path>
+                <http://modellen.geostandaarden.nl/def/imx-geo#registratiegegevens> .
+
+<http://modellen.geostandaarden.nl/def/imx-geo#grondslag>
+        a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+        rdfs:label      "grondslag" ;
+        mim:equivalent  <urn:uuid:B3B6D06A-58E7-4666-8B01-9FB3A7E33706> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/grondslag> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#oppervlak>
         a               <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
@@ -2269,7 +2474,7 @@
         rdfs:comment    "Domein waartoe het object behoort." ;
         mim:equivalent  <urn:uuid:3E284C06-A8BC-48d0-B034-5ACAEB5880DC> ;
         <http://purl.org/dc/terms/subject>
-                <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
+                <https://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> , <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
         <http://www.w3.org/ns/shacl#datatype>
                 <http://www.w3.org/2001/XMLSchema#string> ;
         <http://www.w3.org/ns/shacl#maxCount>
@@ -2282,6 +2487,22 @@
                 <http://www.w3.org/ns/shacl#Literal> ;
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie> .
+
+<http://modellen.geostandaarden.nl/def/imx-geo#Water.registratiegegevens>
+        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
+        mim:equivalent  <urn:uuid-dst:2DA7BFB2-A5AC-4e13-B5DD-090B46AAB07E> , <urn:uuid:2DA7BFB2-A5AC-4e13-B5DD-090B46AAB07E> ;
+        <http://www.w3.org/ns/shacl#class>
+                <http://modellen.geostandaarden.nl/def/imx-geo#Registratiegegevens> ;
+        <http://www.w3.org/ns/shacl#maxCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#minCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#name>
+                "registratiegegevens" ;
+        <http://www.w3.org/ns/shacl#nodeKind>
+                <http://www.w3.org/ns/shacl#IRI> ;
+        <http://www.w3.org/ns/shacl#path>
+                <http://modellen.geostandaarden.nl/def/imx-geo#registratiegegevens> .
 
 <http://modellen.geostandaarden.nl/def/imx-geo#Terrein.bevatBouwwerk>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -2331,6 +2552,40 @@ rdfs:label  a           <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
         <http://www.w3.org/ns/shacl#path>
                 <http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie> .
 
+<http://modellen.geostandaarden.nl/def/imx-geo#RegistratieveRuimte.registratiegegevens>
+        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
+        mim:equivalent  <urn:uuid-dst:1CC1B5BA-26CB-4d1f-A1B8-A77143F896E7> , <urn:uuid:1CC1B5BA-26CB-4d1f-A1B8-A77143F896E7> ;
+        <http://www.w3.org/ns/shacl#class>
+                <http://modellen.geostandaarden.nl/def/imx-geo#Registratiegegevens> ;
+        <http://www.w3.org/ns/shacl#maxCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#minCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#name>
+                "registratiegegevens" ;
+        <http://www.w3.org/ns/shacl#nodeKind>
+                <http://www.w3.org/ns/shacl#IRI> ;
+        <http://www.w3.org/ns/shacl#path>
+                <http://modellen.geostandaarden.nl/def/imx-geo#registratiegegevens> .
+
+<http://modellen.geostandaarden.nl/def/imx-geo#Beperking.type>
+        a               <http://www.w3.org/ns/shacl#PropertyShape> ;
+        mim:equivalent  <urn:uuid:807705A0-8B54-41f6-8F22-2EE792D2B6FD> ;
+        <http://purl.org/dc/terms/subject>
+                <https://begrippen.geostandaarden.nl/sam/id/begrip/type> ;
+        <http://www.w3.org/ns/shacl#datatype>
+                <http://www.w3.org/2001/XMLSchema#string> ;
+        <http://www.w3.org/ns/shacl#maxCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#minCount>
+                1 ;
+        <http://www.w3.org/ns/shacl#name>
+                "type" ;
+        <http://www.w3.org/ns/shacl#nodeKind>
+                <http://www.w3.org/ns/shacl#Literal> ;
+        <http://www.w3.org/ns/shacl#path>
+                <http://modellen.geostandaarden.nl/def/imx-geo#type> .
+
 <http://modellen.geostandaarden.nl/def/imx-geo#Landschapselement.ligtOpTerrein>
         a               <http://www.w3.org/ns/shacl#PropertyShape> ;
         mim:equivalent  <urn:uuid-src:BE7A076B-4D83-4f61-9EFD-7761A71FBBC7> ;
@@ -2356,6 +2611,6 @@ rdfs:label  a           <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
         <http://www.w3.org/2004/02/skos/core#notation>
                 "RegistratieveRuimte" ;
         <http://www.w3.org/ns/shacl#property>
-                <http://modellen.geostandaarden.nl/def/imx-geo#RegistratieveRuimte.bevatPerceel> , <http://modellen.geostandaarden.nl/def/imx-geo#RegistratieveRuimte.identificatie> , <http://modellen.geostandaarden.nl/def/imx-geo#RegistratieveRuimte.domein> , <http://modellen.geostandaarden.nl/def/imx-geo#RegistratieveRuimte.geometrie> , <http://modellen.geostandaarden.nl/def/imx-geo#RegistratieveRuimte.naam> ;
+                <http://modellen.geostandaarden.nl/def/imx-geo#RegistratieveRuimte.bevatPerceel> , <http://modellen.geostandaarden.nl/def/imx-geo#RegistratieveRuimte.registratiegegevens> , <http://modellen.geostandaarden.nl/def/imx-geo#RegistratieveRuimte.identificatie> , <http://modellen.geostandaarden.nl/def/imx-geo#RegistratieveRuimte.domein> , <http://modellen.geostandaarden.nl/def/imx-geo#RegistratieveRuimte.geometrie> , <http://modellen.geostandaarden.nl/def/imx-geo#RegistratieveRuimte.naam> ;
         <http://www.w3.org/ns/shacl#targetClass>
                 <http://modellen.geostandaarden.nl/def/imx-geo#RegistratieveRuimte> .

@@ -29,6 +29,7 @@
 
 <urn:uuid:74F7259D-8225-439d-886D-59932E05127D>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <http://definities.geostandaarden.nl/imro/id/begrip/Plangebied> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -50,20 +51,6 @@
         mim:naam                        "begrenzing" ;
         mim:type                        <urn:object:GM_Surface> .
 
-<urn:uuid:11C3FECB-13A4-4b26-9C33-822B844A2116>
-        a                               mim:Attribuutsoort ;
-        mim:authentiek                  mim:Authentiek ;
-        mim:begrip                      <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/domein> ;
-        mim:definitie                   "<font color=\"#1e6496\">Het domein waar het object aan toe behoort.</font>" ;
-        mim:herkomst                    "NEN3610" ;
-        mim:herkomstDefinitie           "NEN3610" ;
-        mim:identificerend              true ;
-        mim:indicatieFormeleHistorie    false ;
-        mim:indicatieMaterieleHistorie  false ;
-        mim:kardinaliteit               "1..1" ;
-        mim:naam                        "domein" ;
-        mim:type                        <urn:object:CharacterString> .
-
 <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E>
         a                               mim:Attribuutsoort ;
         mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerktype> ;
@@ -75,6 +62,7 @@
 
 <urn:uuid:B97EB80D-05B0-4d24-A5A2-62A55BF0F550>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <http://definities.geostandaarden.nl/imgeo/id/begrip/Plus-functiewegdeel> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
@@ -107,7 +95,7 @@
 
 <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:C93EB248-2F60-4615-98AE-96A0EA7556F9> , <urn:uuid:98D81D8B-1A1C-4b37-8B8D-39F69688678C> , <urn:uuid:FBE84AAB-C48E-41d5-A039-DD1047681A69> , <urn:uuid:2EA9ECE5-8CC8-485e-B0AE-FEE22FA559CF> , <urn:uuid:E18F1AE5-832F-4528-86A1-C7368FDB1D0E> ;
+        mim:attribuut                <urn:uuid:E18F1AE5-832F-4528-86A1-C7368FDB1D0E> , <urn:uuid:98D81D8B-1A1C-4b37-8B8D-39F69688678C> , <urn:uuid:FBE84AAB-C48E-41d5-A039-DD1047681A69> , <urn:uuid:2EA9ECE5-8CC8-485e-B0AE-FEE22FA559CF> , <urn:uuid:C93EB248-2F60-4615-98AE-96A0EA7556F9> ;
         mim:begrip                   <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/gebouw> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Gebouw" .
@@ -142,15 +130,14 @@
 
 <urn:uuid:784D5CB1-BB6E-4bed-B4FC-6D4F73B07862>
         a                            mim:Domein ;
-        mim:bevatModelelement        <urn:uuid:8D5F87B5-9FE8-473a-83A6-D45E245E9839> , <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> , <urn:uuid:82AD2BB1-391F-48c8-880D-44FC9992B7B8> , <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46> , <urn:uuid:2768747A-60FB-4354-9B86-C5033019BB4E> , <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC> , <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> , <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> , <urn:uuid:5AFE88AF-241C-435b-AF5A-AD7DABDDFDF1> , <urn:uuid:7EE15C80-3CFE-4d3b-8DE0-1A44B06D82DE> , <urn:uuid:D8B3C789-ADDD-4773-8C26-2953C9969A0F> , <urn:uuid:3B7951F6-BB7D-4164-9C00-97DA13C183C6> , <urn:uuid:E241183B-700D-435b-A781-6609E0521908> , <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> , <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063> , <urn:uuid:51384C3C-47A6-4645-91B3-3FD093E063A7> , <urn:uuid:74873B04-30DE-4ccb-A2D3-50C83D42C722> , <urn:uuid:0A359344-0191-4a87-9AFC-FF96F3D7865B> , <urn:uuid:1BD2F5E4-8799-4350-9743-316FD521FD89> , <urn:uuid:A978F4FE-1C21-4697-8659-7DDBF52332C1> , <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> , <urn:uuid:473F2A9B-DE27-4b38-B177-88B6DF218A80> , <urn:uuid:0B0E8C4B-BD74-4f1b-B69E-A26BB7335628> , <urn:uuid:97F9443F-326B-4e76-86CD-C515688BBE91> , <urn:uuid:6D43B547-1E00-49c4-B774-5331D18FB8AF> , <urn:uuid:BD13FC79-9CBC-48d2-9C74-3B8E3CC94C23> , <urn:uuid:4772A73C-6693-4d5e-97C3-45CD5F85474A> ;
+        mim:bevatModelelement        <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> , <urn:uuid:82AD2BB1-391F-48c8-880D-44FC9992B7B8> , <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46> , <urn:uuid:2768747A-60FB-4354-9B86-C5033019BB4E> , <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC> , <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> , <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> , <urn:uuid:7EE15C80-3CFE-4d3b-8DE0-1A44B06D82DE> , <urn:uuid:3B7951F6-BB7D-4164-9C00-97DA13C183C6> , <urn:uuid:E241183B-700D-435b-A781-6609E0521908> , <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> , <urn:uuid:64202A31-A263-4671-959B-76B816C1B86A> , <urn:uuid:0A359344-0191-4a87-9AFC-FF96F3D7865B> , <urn:uuid:51384C3C-47A6-4645-91B3-3FD093E063A7> , <urn:uuid:74873B04-30DE-4ccb-A2D3-50C83D42C722> , <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063> , <urn:uuid:1BD2F5E4-8799-4350-9743-316FD521FD89> , <urn:uuid:A978F4FE-1C21-4697-8659-7DDBF52332C1> , <urn:uuid:0B0E8C4B-BD74-4f1b-B69E-A26BB7335628> , <urn:uuid:473F2A9B-DE27-4b38-B177-88B6DF218A80> , <urn:uuid:39AB4DF3-CC3E-4177-B53D-A46435B9BBCA> , <urn:uuid:BC25B6B6-CC54-4d45-BB88-0354F46EC786> , <urn:uuid:91DC882D-7DC1-4e31-9ED9-F60E699EAE7D> , <urn:uuid:97F9443F-326B-4e76-86CD-C515688BBE91> , <urn:uuid:BD13FC79-9CBC-48d2-9C74-3B8E3CC94C23> , <urn:uuid:4772A73C-6693-4d5e-97C3-45CD5F85474A> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "IMX-Geo-LM" .
 
-<urn:uuid-dst:83163756-0E46-40e0-BDF9-4DB4CB0AB217>
-        a                  mim:RelatierolDoel ;
-        mim:kardinaliteit  "0..-1" ;
-        mim:naam           "gebouwBinnenKLICmelding" ;
-        mim:type           <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063> .
+<urn:uuid:2F5BE586-D464-4a18-AB32-EFC7B5B0C99E>
+        a              mim:Generalisatie ;
+        mim:subtype    <urn:uuid:91DC882D-7DC1-4e31-9ED9-F60E699EAE7D> ;
+        mim:supertype  <urn:uuid:E241183B-700D-435b-A781-6609E0521908> .
 
 <urn:uuid-src:32DE7AAA-07F5-4f28-8A5E-D2544EA64F91>
         a                  mim:RelatierolBron ;
@@ -160,10 +147,16 @@
 
 <urn:uuid:82AD2BB1-391F-48c8-880D-44FC9992B7B8>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:42E76400-F960-4204-9042-9691B6D18D7E> , <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E> , <urn:uuid:55883A46-4458-41cf-9405-B9CD880B5C7B> , <urn:uuid:117268DB-54F0-4fea-895B-508F594711B4> , <urn:uuid:A6AD3DDC-7FF5-4a28-B33F-FD6F6EA8350F> ;
+        mim:attribuut                <urn:uuid:A6AD3DDC-7FF5-4a28-B33F-FD6F6EA8350F> , <urn:uuid:42E76400-F960-4204-9042-9691B6D18D7E> , <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E> , <urn:uuid:117268DB-54F0-4fea-895B-508F594711B4> , <urn:uuid:55883A46-4458-41cf-9405-B9CD880B5C7B> ;
         mim:begrip                   <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerk> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Bouwwerk" .
+
+<urn:uuid-src:6342FB41-5A00-42b8-94C9-AB53B9FCE81C>
+        a                  mim:RelatierolBron ;
+        mim:kardinaliteit  "1..-1" ;
+        mim:naam           "isBeperkingOpPerceel" ;
+        mim:type           <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> .
 
 <urn:uuid-dst:80E03254-CA49-44aa-B4C4-53B19047B008>
         a                  mim:RelatierolDoel ;
@@ -171,14 +164,9 @@
         mim:naam           "registratiegegevens" ;
         mim:type           <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> .
 
-<urn:uuid:D65FD6BF-B3F2-44e8-891C-4D1F66E1F49F>
-        mim:bron        <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> ;
-        mim:doel        <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> ;
-        mim:relatierol  <urn:uuid-dst:D65FD6BF-B3F2-44e8-891C-4D1F66E1F49F> .
-
 <urn:uuid:1BD2F5E4-8799-4350-9743-316FD521FD89>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:9F1244E4-A613-4efd-914A-F569431C7287> , <urn:uuid:87DCDC00-0B17-4554-BDAD-EB256311EC9F> , <urn:uuid:EFFD166D-F465-474c-BE67-3D93D410CA5D> ;
+        mim:attribuut                <urn:uuid:87DCDC00-0B17-4554-BDAD-EB256311EC9F> , <urn:uuid:EFFD166D-F465-474c-BE67-3D93D410CA5D> , <urn:uuid:9F1244E4-A613-4efd-914A-F569431C7287> ;
         mim:begrip                   <http://opendata.stelselcatalogus.nl/id/clusterbegrip/Ondergrond> ;
         mim:definitie                "Ondergrond is alles wat zich onder het aardoppervlak bevindt, zowel hetgeen van nature aanwezig als door de mens aangelegd." ;
         mim:herkomstDefinitie        "Stelselcatalogus" ;
@@ -210,6 +198,7 @@
 
 <urn:uuid:597D7E79-9FA9-4c1a-9807-EA07588219C0>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/heeft_infiltratiefunctie> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
@@ -231,19 +220,20 @@
         mim:naam           "registratiegegevens" ;
         mim:type           <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> .
 
-<urn:uuid:07D5EF63-33F4-4acc-8FA6-6237BF2BB254>
-        mim:bron        <urn:uuid:BD13FC79-9CBC-48d2-9C74-3B8E3CC94C23> ;
-        mim:doel        <urn:uuid:7EE15C80-3CFE-4d3b-8DE0-1A44B06D82DE> ;
-        mim:relatierol  <urn:uuid-src:07D5EF63-33F4-4acc-8FA6-6237BF2BB254> , <urn:uuid-dst:07D5EF63-33F4-4acc-8FA6-6237BF2BB254> .
-
-<urn:uuid-dst:E1BC9D17-EE29-45e1-A533-73F3CF381F54>
+<urn:uuid-dst:4A246BC6-BB5C-436f-ADDE-129A932B2CC2>
         a                  mim:RelatierolDoel ;
         mim:kardinaliteit  "1..1" ;
         mim:naam           "registratiegegevens" ;
         mim:type           <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> .
 
+<urn:uuid:07D5EF63-33F4-4acc-8FA6-6237BF2BB254>
+        mim:bron        <urn:uuid:BD13FC79-9CBC-48d2-9C74-3B8E3CC94C23> ;
+        mim:doel        <urn:uuid:7EE15C80-3CFE-4d3b-8DE0-1A44B06D82DE> ;
+        mim:relatierol  <urn:uuid-src:07D5EF63-33F4-4acc-8FA6-6237BF2BB254> , <urn:uuid-dst:07D5EF63-33F4-4acc-8FA6-6237BF2BB254> .
+
 <urn:uuid:959C4BEF-DE81-4a26-8F20-E78CF5C8E6BE>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <http://definities.geostandaarden.nl/imgeo/id/begrip/Plus-fysiekvoorkomenwegdeel> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
@@ -261,7 +251,7 @@
 
 <urn:uuid:2768747A-60FB-4354-9B86-C5033019BB4E>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:7F2BC6C4-158D-46c9-A28B-BDD621BC7F11> , <urn:uuid:A8A8D9F5-4E10-4395-AFA1-15CB8CCB8BD7> , <urn:uuid:7C4EFEA4-B024-42dd-A730-E0583C2E4D66> , <urn:uuid:82C930D0-0C36-4948-A677-13FCE3C45E96> ;
+        mim:attribuut                <urn:uuid:A8A8D9F5-4E10-4395-AFA1-15CB8CCB8BD7> , <urn:uuid:82C930D0-0C36-4948-A677-13FCE3C45E96> , <urn:uuid:7C4EFEA4-B024-42dd-A730-E0583C2E4D66> , <urn:uuid:7F2BC6C4-158D-46c9-A28B-BDD621BC7F11> ;
         mim:begrip                   <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/registratieve_ruimte> ;
         mim:indicatieAbstractObject  true ;
         mim:naam                     "RegistratieveRuimte" .
@@ -276,6 +266,11 @@
         mim:bron        <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD> ;
         mim:doel        <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46> ;
         mim:relatierol  <urn:uuid-src:8C372C65-D3C5-4c38-AF31-B45204CAD17C> , <urn:uuid-dst:8C372C65-D3C5-4c38-AF31-B45204CAD17C> .
+
+<urn:uuid:7394A8FC-7B9F-4d9f-9F0E-686D6B3D7535>
+        a                            mim:PrimitiefDatatype ;
+        mim:indicatieAbstractObject  false ;
+        mim:naam                     "GM_Solid" .
 
 <urn:uuid:D77A7A32-723B-4d75-B039-EEB6A288C69A>
         a                               mim:Attribuutsoort ;
@@ -299,10 +294,15 @@
         mim:naam           "registratiegegevens" ;
         mim:type           <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> .
 
-<urn:uuid:E95A3722-E5A7-4b78-87BF-BCF799681DA4>
-        mim:bron        <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> ;
-        mim:doel        <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> ;
-        mim:relatierol  <urn:uuid-src:E95A3722-E5A7-4b78-87BF-BCF799681DA4> , <urn:uuid-dst:E95A3722-E5A7-4b78-87BF-BCF799681DA4> .
+<urn:uuid:833C1ADA-3549-42ac-B66A-C97E63A54C7D>
+        a                               mim:Attribuutsoort ;
+        mim:begrip                      <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/domein> ;
+        mim:identificerend              true ;
+        mim:indicatieFormeleHistorie    false ;
+        mim:indicatieMaterieleHistorie  false ;
+        mim:kardinaliteit               "1..1" ;
+        mim:naam                        "domein" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:uuid-dst:061A2468-AD6F-414a-9593-0694507E5F36>
         a                  mim:RelatierolDoel ;
@@ -310,11 +310,21 @@
         mim:naam           "registratiegegevens" ;
         mim:type           <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> .
 
-<urn:uuid-src:83163756-0E46-40e0-BDF9-4DB4CB0AB217>
-        a                  mim:RelatierolBron ;
-        mim:kardinaliteit  "0..-1" ;
-        mim:naam           "graafgebiedKLICmelding" ;
-        mim:type           <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> .
+<urn:uuid:67CE832E-7A8D-491c-8D6B-46BD8ECA4454>
+        mim:bron        <urn:uuid:E241183B-700D-435b-A781-6609E0521908> ;
+        mim:doel        <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> ;
+        mim:relatierol  <urn:uuid-dst:67CE832E-7A8D-491c-8D6B-46BD8ECA4454> .
+
+<urn:uuid:6EA658E5-B692-421a-8DB3-BE333F811BCC>
+        mim:bron        <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> ;
+        mim:doel        <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> ;
+        mim:relatierol  <urn:uuid-dst:6EA658E5-B692-421a-8DB3-BE333F811BCC> .
+
+<urn:uuid:64202A31-A263-4671-959B-76B816C1B86A>
+        a                            mim:Objecttype ;
+        mim:begrip                   <http://begrippen.geostandaarden.nl/disgeo/id/begrip/veiligheidsregio> ;
+        mim:indicatieAbstractObject  false ;
+        mim:naam                     "Veiligheidsregio" .
 
 <urn:uuid-dst:9CD06689-6C88-4609-B7A0-3C725E4FE6F0>
         a                  mim:RelatierolDoel ;
@@ -333,8 +343,23 @@
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://www.w3.org/2000/01/rdf-schema#label" .
 
+<urn:uuid-dst:1CC1B5BA-26CB-4d1f-A1B8-A77143F896E7>
+        a                  mim:RelatierolDoel ;
+        mim:kardinaliteit  "1..1" ;
+        mim:naam           "registratiegegevens" ;
+        mim:type           <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> .
+
+<urn:uuid:39AB4DF3-CC3E-4177-B53D-A46435B9BBCA>
+        a                            mim:Objecttype ;
+        mim:attribuut                <urn:uuid:DE302A46-989C-4b54-A52A-4E69E6D6F152> , <urn:uuid:807705A0-8B54-41f6-8F22-2EE792D2B6FD> , <urn:uuid:CF8EC51D-B46B-42ac-9CFB-F9F37067B0D3> , <urn:uuid:833C1ADA-3549-42ac-B66A-C97E63A54C7D> , <urn:uuid:B3B6D06A-58E7-4666-8B01-9FB3A7E33706> ;
+        mim:begrip                   <https://begrippen.geostandaarden.nl/sam/id/begrip/beperking> ;
+        mim:definitie                "Beperking in het gebruik van een perceel met als grondslag de Wet ruimtelijke ordening (Wro) of Wet kenbaarheid publiekrechtelijke beperkingen (Wkpb)." ;
+        mim:indicatieAbstractObject  false ;
+        mim:naam                     "Beperking" .
+
 <urn:uuid:2B6AA600-743D-4471-864E-025ADF8544DB>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -398,15 +423,29 @@
         mim:doel        <urn:uuid:82AD2BB1-391F-48c8-880D-44FC9992B7B8> ;
         mim:relatierol  <urn:uuid-src:B17F6974-FC6B-4da8-984C-A44BC42E7095> , <urn:uuid-dst:B17F6974-FC6B-4da8-984C-A44BC42E7095> .
 
+<urn:uuid:383AC763-BD2B-499c-AEAE-2362287E08B9>
+        mim:bron        <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063> ;
+        mim:doel        <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> ;
+        mim:relatierol  <urn:uuid-src:383AC763-BD2B-499c-AEAE-2362287E08B9> , <urn:uuid-dst:383AC763-BD2B-499c-AEAE-2362287E08B9> .
+
+<urn:uuid:807705A0-8B54-41f6-8F22-2EE792D2B6FD>
+        a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/type> ;
+        mim:indicatieFormeleHistorie    false ;
+        mim:indicatieMaterieleHistorie  false ;
+        mim:kardinaliteit               "1..1" ;
+        mim:naam                        "type" ;
+        mim:type                        <urn:object:CharacterString> .
+
 <urn:uuid:5BEAC899-911C-430e-B55A-F63913D8C0E2>
         a              mim:Generalisatie ;
         mim:subtype    <urn:uuid:0B0E8C4B-BD74-4f1b-B69E-A26BB7335628> ;
         mim:supertype  <urn:uuid:1BD2F5E4-8799-4350-9743-316FD521FD89> .
 
-<urn:uuid:383AC763-BD2B-499c-AEAE-2362287E08B9>
-        mim:bron        <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063> ;
-        mim:doel        <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> ;
-        mim:relatierol  <urn:uuid-src:383AC763-BD2B-499c-AEAE-2362287E08B9> , <urn:uuid-dst:383AC763-BD2B-499c-AEAE-2362287E08B9> .
+<urn:uuid:82C7834C-1851-4a5a-9C12-993E19408D4B>
+        a              mim:Generalisatie ;
+        mim:subtype    <urn:uuid:BC25B6B6-CC54-4d45-BB88-0354F46EC786> ;
+        mim:supertype  <urn:uuid:74873B04-30DE-4ccb-A2D3-50C83D42C722> .
 
 <urn:uuid:C93EB248-2F60-4615-98AE-96A0EA7556F9>
         a                               mim:Attribuutsoort ;
@@ -416,10 +455,6 @@
         mim:kardinaliteit               "0..1" ;
         mim:naam                        "sloopjaar" ;
         mim:type                        <urn:object:Year> .
-
-<urn:object:GM_Object>
-        a         mim:PrimitiefDatatype ;
-        mim:naam  "GM_Object" .
 
 <urn:uuid:E00778A1-0FF7-4a5a-BFFE-14087D59CC09>
         a                               mim:Attribuutsoort ;
@@ -438,7 +473,7 @@
 <urn:uuid:0712E167-CD1C-4bb7-9BFA-86AEC40B86A4>
         a                            mim:Informatiemodel ;
         mim:alias                    "/Geonovum/WaU-imx-geo" ;
-        mim:bevatModelelement        <urn:uuid:784D5CB1-BB6E-4bed-B4FC-6D4F73B07862> ;
+        mim:bevatModelelement        <urn:uuid:CCBCD849-6B7B-4192-8D79-075D548F69EA> , <urn:uuid:784D5CB1-BB6E-4bed-B4FC-6D4F73B07862> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "IMX-Geo LM" ;
         mim:relatiemodelleringstype  mim:RelatierolLeidend ;
@@ -447,14 +482,14 @@
 
 <urn:uuid:9F1244E4-A613-4efd-914A-F569431C7287>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/maaiveldgeometrie> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         mim:definitie                   "2D of 3D geometrie van ondergrondinformatie." ;
         mim:herkomst                    "BGT" ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..1" ;
         mim:naam                        "geometrie" ;
-        mim:type                        <urn:object:GM_Object> .
+        mim:type                        <urn:uuid:5B2BB0ED-E360-4b51-8032-D9A645E2200D> .
 
 <urn:object:Decimal>  a  mim:PrimitiefDatatype ;
         mim:naam  "Decimal" .
@@ -486,12 +521,14 @@
 
 <urn:uuid:473F2A9B-DE27-4b38-B177-88B6DF218A80>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:1424216F-CD23-41e3-A8F5-C020401B6AEE> , <urn:uuid:FC40A8E3-90EB-482d-8500-03FA6C655F05> , <urn:uuid:ED87DAF8-E51C-4e8d-AF11-ECAEF2D909D6> , <urn:uuid:E0A46403-5DB0-4e88-8D6D-93189ED76587> ;
+        mim:attribuut                <urn:uuid:ED87DAF8-E51C-4e8d-AF11-ECAEF2D909D6> , <urn:uuid:FC40A8E3-90EB-482d-8500-03FA6C655F05> , <urn:uuid:E0A46403-5DB0-4e88-8D6D-93189ED76587> , <urn:uuid:1424216F-CD23-41e3-A8F5-C020401B6AEE> ;
+        mim:begrip                   <https://begrippen.geostandaarden.nl/sam/id/begrip/landschapselement> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Landschapselement" .
 
 <urn:uuid:EFFD166D-F465-474c-BE67-3D93D410CA5D>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -514,6 +551,11 @@
         mim:naam                        "omschrijving" ;
         mim:toelichting                 "Elke nummeraanduiding waarvan gegevens zijn opgenomen in de basisregistratie adressen en gebouwen, wordt uniek aangeduid door middel van een identificatiecode." ;
         mim:type                        <urn:object:CharacterString> .
+
+<urn:uuid:6342FB41-5A00-42b8-94C9-AB53B9FCE81C>
+        mim:bron        <urn:uuid:BAB5CD56-6167-4398-BFA6-D461A54AB06C> ;
+        mim:doel        <urn:uuid:39AB4DF3-CC3E-4177-B53D-A46435B9BBCA> ;
+        mim:relatierol  <urn:uuid-src:6342FB41-5A00-42b8-94C9-AB53B9FCE81C> , <urn:uuid-dst:6342FB41-5A00-42b8-94C9-AB53B9FCE81C> .
 
 <urn:object:Boolean>  a  mim:PrimitiefDatatype ;
         mim:naam  "Boolean" .
@@ -544,6 +586,12 @@
         mim:naam                        "plaatsnaam" ;
         mim:toelichting                 "Het maximale aantal te gebruiken tekens voor een benaming is\r\ntachtig. Het verdient aanbeveling te streven naar korte\r\nbenamingen." ;
         mim:type                        <urn:object:CharacterString> .
+
+<urn:uuid:91DC882D-7DC1-4e31-9ED9-F60E699EAE7D>
+        a                            mim:Objecttype ;
+        mim:begrip                   <https://begrippen.geostandaarden.nl/sam/id/begrip/spoorweg> ;
+        mim:indicatieAbstractObject  false ;
+        mim:naam                     "Spoorweg" .
 
 <urn:object:GM_Surface>
         a         mim:PrimitiefDatatype ;
@@ -593,10 +641,6 @@
         mim:subtype    <urn:uuid:5B7DC12C-39A6-498d-B0A9-BBA7AB951FCC> ;
         mim:supertype  <urn:uuid:74873B04-30DE-4ccb-A2D3-50C83D42C722> .
 
-<urn:object:GM_Solid>
-        a         mim:PrimitiefDatatype ;
-        mim:naam  "GM_Solid" .
-
 <urn:uuid:61154353-5D26-44c5-93D8-C75A7CFEF418>
         a              mim:Generalisatie ;
         mim:subtype    <urn:uuid:A978F4FE-1C21-4697-8659-7DDBF52332C1> ;
@@ -611,7 +655,7 @@
 <urn:uuid:3E284C06-A8BC-48d0-B034-5ACAEB5880DC>
         a                               mim:Attribuutsoort ;
         mim:authentiek                  mim:Authentiek ;
-        mim:begrip                      <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
+        mim:begrip                      <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> , <https://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
         mim:datumOpname                 "Oktober 2002" ;
         mim:definitie                   "Domein waartoe het object behoort." ;
         mim:herkomst                    "BAG" ;
@@ -649,11 +693,6 @@
         mim:patroon                     " een  letter uit het alfabet in hoofdletter (A-Z) of kleine letter (a-z)" ;
         mim:type                        <urn:object:CharacterString> .
 
-<urn:uuid:83163756-0E46-40e0-BDF9-4DB4CB0AB217>
-        mim:bron        <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> ;
-        mim:doel        <urn:uuid:0F958AEE-4395-412a-ACAE-FED367906063> ;
-        mim:relatierol  <urn:uuid-src:83163756-0E46-40e0-BDF9-4DB4CB0AB217> , <urn:uuid-dst:83163756-0E46-40e0-BDF9-4DB4CB0AB217> .
-
 <urn:uuid-src:B17F6974-FC6B-4da8-984C-A44BC42E7095>
         a                  mim:RelatierolBron ;
         mim:kardinaliteit  "1..-1" ;
@@ -687,8 +726,18 @@
 
 <urn:uuid:3B7951F6-BB7D-4164-9C00-97DA13C183C6>
         a                            mim:Objecttype ;
+        mim:begripsterm              "http://definities.geostandaarden.nl/id/begrippenkader/GLD/Tijdmeetwaardepaar/waterstand " ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Grondwaterstand" .
+
+<urn:uuid:B3B6D06A-58E7-4666-8B01-9FB3A7E33706>
+        a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/grondslag> ;
+        mim:indicatieFormeleHistorie    false ;
+        mim:indicatieMaterieleHistorie  false ;
+        mim:kardinaliteit               "1..1" ;
+        mim:naam                        "grondslag" ;
+        mim:type                        <urn:object:CharacterString> .
 
 <urn:object:CharacterString>
         a         mim:PrimitiefDatatype ;
@@ -708,6 +757,12 @@
         a         mim:PrimitiefDatatype ;
         mim:naam  "GM_MultiSurface" .
 
+<urn:uuid-dst:ACAD26BB-65FC-469a-A35C-243BB2E944D1>
+        a                  mim:RelatierolDoel ;
+        mim:kardinaliteit  "1..1" ;
+        mim:naam           "registratiegegevens" ;
+        mim:type           <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> .
+
 <urn:uuid:80E03254-CA49-44aa-B4C4-53B19047B008>
         mim:bron        <urn:uuid:1BD2F5E4-8799-4350-9743-316FD521FD89> ;
         mim:doel        <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> ;
@@ -715,6 +770,7 @@
 
 <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -723,7 +779,8 @@
 
 <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:60931BD1-8E2C-4433-B44F-628F9F49B03B> , <urn:uuid:FDAD10A8-5F97-4565-83A4-8E8DC2AC793C> , <urn:uuid:398B9F56-6509-47aa-8F06-483BD8CA8B8A> ;
+        mim:attribuut                <urn:uuid:398B9F56-6509-47aa-8F06-483BD8CA8B8A> , <urn:uuid:60931BD1-8E2C-4433-B44F-628F9F49B03B> , <urn:uuid:FDAD10A8-5F97-4565-83A4-8E8DC2AC793C> ;
+        mim:begrip                   <http://begrippen.geostandaarden.nl/disgeo/id/begrip/waterschap> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Waterschap" .
 
@@ -736,15 +793,31 @@
         mim:naam                        "naam" ;
         mim:type                        <urn:object:CharacterString> .
 
+<urn:uuid:CF8EC51D-B46B-42ac-9CFB-F9F37067B0D3>
+        a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
+        mim:identificerend              true ;
+        mim:indicatieFormeleHistorie    false ;
+        mim:indicatieMaterieleHistorie  false ;
+        mim:kardinaliteit               "1..1" ;
+        mim:naam                        "identificatie" ;
+        mim:type                        <urn:object:CharacterString> .
+
 <urn:uuid:CDD5BC64-7338-4e7e-A3A3-394CF3221F8B>
         a              mim:Generalisatie ;
         mim:subtype    <urn:uuid:74873B04-30DE-4ccb-A2D3-50C83D42C722> ;
         mim:supertype  <urn:uuid:2768747A-60FB-4354-9B86-C5033019BB4E> .
 
-<urn:uuid:E1BC9D17-EE29-45e1-A533-73F3CF381F54>
-        mim:bron        <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> ;
+<urn:uuid:4A246BC6-BB5C-436f-ADDE-129A932B2CC2>
+        mim:bron        <urn:uuid:473F2A9B-DE27-4b38-B177-88B6DF218A80> ;
         mim:doel        <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> ;
-        mim:relatierol  <urn:uuid-dst:E1BC9D17-EE29-45e1-A533-73F3CF381F54> .
+        mim:relatierol  <urn:uuid-dst:4A246BC6-BB5C-436f-ADDE-129A932B2CC2> .
+
+<urn:uuid-dst:2DA7BFB2-A5AC-4e13-B5DD-090B46AAB07E>
+        a                  mim:RelatierolDoel ;
+        mim:kardinaliteit  "1..1" ;
+        mim:naam           "registratiegegevens" ;
+        mim:type           <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> .
 
 <urn:uuid:117268DB-54F0-4fea-895B-508F594711B4>
         a                               mim:Attribuutsoort ;
@@ -758,6 +831,11 @@
 
 <urn:object:Integer>  a  mim:PrimitiefDatatype ;
         mim:naam  "Integer" .
+
+<urn:uuid:5B2BB0ED-E360-4b51-8032-D9A645E2200D>
+        a                            mim:PrimitiefDatatype ;
+        mim:indicatieAbstractObject  false ;
+        mim:naam                     "GM_Object" .
 
 <urn:uuid:A6C3AFFA-D9C6-481c-BF78-4EBC4E35C5BD>
         a                               mim:Attribuutsoort ;
@@ -777,6 +855,7 @@
 
 <urn:uuid:E0A46403-5DB0-4e88-8D6D-93189ED76587>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         mim:definitie                   "Geometrie op maaiveldniveau." ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
@@ -805,7 +884,7 @@
 
 <urn:uuid:C22FAEFC-71B4-41c6-815E-18295DB5F31D>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerktype> ;
+        mim:begrip                      <http://definities.geostandaarden.nl/imgeo/id/begrip/Bgt-type_functioneelGebied> ;
         mim:definitie                   "Functie of gebruik van een terrein." ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
@@ -847,6 +926,7 @@
 
 <urn:uuid:556E7089-7DFC-4867-BE08-647F6309CF97>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/koopjaar> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -866,7 +946,12 @@
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..1" ;
         mim:naam                        "3dGeometrie" ;
-        mim:type                        <urn:object:GM_Solid> .
+        mim:type                        <urn:uuid:7394A8FC-7B9F-4d9f-9F0E-686D6B3D7535> .
+
+<urn:uuid:1CC1B5BA-26CB-4d1f-A1B8-A77143F896E7>
+        mim:bron        <urn:uuid:2768747A-60FB-4354-9B86-C5033019BB4E> ;
+        mim:doel        <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> ;
+        mim:relatierol  <urn:uuid-dst:1CC1B5BA-26CB-4d1f-A1B8-A77143F896E7> .
 
 <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62>
         a                            mim:Objecttype ;
@@ -892,11 +977,19 @@
         mim:naam                     "VlakOfMultivlak" ;
         mim:toelichting              "Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding." .
 
-<urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE>
-        a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:11C3FECB-13A4-4b26-9C33-822B844A2116> , <urn:uuid:C0DD161F-0EE6-4175-AB6B-9747BE3931DF> ;
-        mim:indicatieAbstractObject  false ;
-        mim:naam                     "GraafgebiedKLICmelding" .
+<urn:uuid:CF4F3C43-7621-4685-9ECC-B7B96CFF6FF6>
+        a                               mim:Attribuutsoort ;
+        mim:begrip                      <http://bag.basisregistraties.overheid.nl/id/begrip/Naam> ;
+        mim:indicatieFormeleHistorie    false ;
+        mim:indicatieMaterieleHistorie  false ;
+        mim:kardinaliteit               "1..1" ;
+        mim:naam                        "naam" ;
+        mim:type                        <urn:object:CharacterString> .
+
+<urn:uuid:35EACA3D-BBC3-4f09-90D3-B70C9C529746>
+        a              mim:Generalisatie ;
+        mim:subtype    <urn:uuid:64202A31-A263-4671-959B-76B816C1B86A> ;
+        mim:supertype  <urn:uuid:74873B04-30DE-4ccb-A2D3-50C83D42C722> .
 
 <urn:uuid:DB3D38F1-5091-4e82-B8DD-65445FCA7A04>
         mim:bron        <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> ;
@@ -912,6 +1005,7 @@
 
 <urn:uuid:5F5F1D43-6647-4f77-8930-2682D739EE45>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/type> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
@@ -920,6 +1014,7 @@
 
 <urn:uuid:299B2989-434F-416e-BCBC-B3643FF740E3>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -930,7 +1025,7 @@
 
 <urn:uuid:0897F8EE-4B9D-42a2-9F27-4D3251AC904F>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <http://bag.basisregistraties.overheid.nl/id/begrip/Geometrie> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         mim:herkomst                    "BAG" ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
@@ -954,6 +1049,7 @@
 
 <urn:uuid:1424216F-CD23-41e3-A8F5-C020401B6AEE>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/type> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
@@ -991,7 +1087,7 @@
 
 <urn:uuid:E241183B-700D-435b-A781-6609E0521908>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:B97EB80D-05B0-4d24-A5A2-62A55BF0F550> , <urn:uuid:86A7851A-0792-47c3-8157-05775BC00D6D> , <urn:uuid:C08A4B06-5E51-40ed-87B6-AAF8E3A955DC> , <urn:uuid:61E196DD-5B64-45fd-B424-C2FACB7D3277> , <urn:uuid:959C4BEF-DE81-4a26-8F20-E78CF5C8E6BE> ;
+        mim:attribuut                <urn:uuid:C08A4B06-5E51-40ed-87B6-AAF8E3A955DC> , <urn:uuid:61E196DD-5B64-45fd-B424-C2FACB7D3277> , <urn:uuid:86A7851A-0792-47c3-8157-05775BC00D6D> , <urn:uuid:959C4BEF-DE81-4a26-8F20-E78CF5C8E6BE> , <urn:uuid:B97EB80D-05B0-4d24-A5A2-62A55BF0F550> , <urn:uuid:E7B7B489-4040-4e28-B10E-D0F6A7BAED77> , <urn:uuid:CF4F3C43-7621-4685-9ECC-B7B96CFF6FF6> ;
         mim:begrip                   <http://opendata.stelselcatalogus.nl/id/clusterbegrip/Weg> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Weg" .
@@ -1012,14 +1108,9 @@
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
-<urn:uuid-dst:D65FD6BF-B3F2-44e8-891C-4D1F66E1F49F>
-        a                  mim:RelatierolDoel ;
-        mim:kardinaliteit  "1..1" ;
-        mim:naam           "registratiegegevens" ;
-        mim:type           <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> .
-
 <urn:uuid:4F144394-44A1-495a-87F4-A874188C47F9>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <http://definities.geostandaarden.nl/imro/id/begrip/VerwijzingNaarTekstInfo> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -1028,6 +1119,7 @@
 
 <urn:uuid:FC49BE68-F456-464d-87E6-F1E4D508A0AD>
         a                            mim:Objecttype ;
+        mim:begrip                   <http://begrippen.geostandaarden.nl/disgeo/id/begrip/waterschapsgebied> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Waterschapsgebied" .
 
@@ -1042,6 +1134,7 @@
 
 <urn:uuid:5E0E071C-2488-49d1-BE0E-94E402C1A30C>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <http://definities.geostandaarden.nl/imgeo/id/begrip/Buurtcode> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -1070,12 +1163,14 @@
 
 <urn:uuid:97F9443F-326B-4e76-86CD-C515688BBE91>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:0BF48E52-A720-4873-8F8F-366FD6454FF0> , <urn:uuid:4F144394-44A1-495a-87F4-A874188C47F9> , <urn:uuid:D77A7A32-723B-4d75-B039-EEB6A288C69A> , <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E> , <urn:uuid:74F7259D-8225-439d-886D-59932E05127D> ;
+        mim:attribuut                <urn:uuid:4F144394-44A1-495a-87F4-A874188C47F9> , <urn:uuid:D77A7A32-723B-4d75-B039-EEB6A288C69A> , <urn:uuid:74F7259D-8225-439d-886D-59932E05127D> , <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E> , <urn:uuid:0BF48E52-A720-4873-8F8F-366FD6454FF0> ;
+        mim:begrip                   <https://begrippen.geostandaarden.nl/sam/id/begrip/bestemming> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Bestemming" .
 
 <urn:uuid:61E196DD-5B64-45fd-B424-C2FACB7D3277>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -1092,6 +1187,7 @@
 
 <urn:uuid:472E08B9-E1F3-4840-84CF-09E63DE97880>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <http://definities.geostandaarden.nl/imgeo/id/begrip/Wijkcode> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -1100,6 +1196,7 @@
 
 <urn:uuid:E18F1AE5-832F-4528-86A1-C7368FDB1D0E>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <http://bag.basisregistraties.overheid.nl/id/begrip/Gebruiksdoel> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..-1" ;
@@ -1108,7 +1205,7 @@
 
 <urn:uuid:51384C3C-47A6-4645-91B3-3FD093E063A7>
         a                            mim:Objecttype ;
-        mim:attribuut                <urn:uuid:25534ADC-3DC1-4e68-97CB-DEAEC94F0E1B> , <urn:uuid:64E8004B-EC61-4535-8760-446481B58BCE> , <urn:uuid:60CB15B3-7A19-40c1-99FE-1F5316FF1CB7> ;
+        mim:attribuut                <urn:uuid:60CB15B3-7A19-40c1-99FE-1F5316FF1CB7> , <urn:uuid:25534ADC-3DC1-4e68-97CB-DEAEC94F0E1B> , <urn:uuid:64E8004B-EC61-4535-8760-446481B58BCE> ;
         mim:begrip                   <http://begrippen.geostandaarden.nl/disgeo/id/begrip/gemeente> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Gemeente" .
@@ -1119,19 +1216,23 @@
         mim:naam           "wordtBestuurdDoorWaterschap" ;
         mim:type           <urn:uuid:39EA51B8-E979-4c25-91D7-5F3C22C8BA46> .
 
-<urn:uuid-dst:E95A3722-E5A7-4b78-87BF-BCF799681DA4>
-        a                  mim:RelatierolDoel ;
-        mim:kardinaliteit  "0..-1" ;
-        mim:naam           "adresBinnenKLICmelding" ;
-        mim:type           <urn:uuid:B4A02DCF-9008-4165-AE58-3A77D4871F62> .
+<urn:uuid:BC25B6B6-CC54-4d45-BB88-0354F46EC786>
+        a                            mim:Objecttype ;
+        mim:begrip                   <http://begrippen.geostandaarden.nl/disgeo/id/begrip/provincie> ;
+        mim:indicatieAbstractObject  false ;
+        mim:naam                     "Provincie" .
 
-<urn:uuid:C0DD161F-0EE6-4175-AB6B-9747BE3931DF>
-        a                               mim:Attribuutsoort ;
-        mim:indicatieFormeleHistorie    false ;
-        mim:indicatieMaterieleHistorie  false ;
-        mim:kardinaliteit               "1..1" ;
-        mim:naam                        "geometrie" ;
-        mim:type                        <urn:object:GM_Surface> .
+<urn:uuid-dst:67CE832E-7A8D-491c-8D6B-46BD8ECA4454>
+        a                  mim:RelatierolDoel ;
+        mim:kardinaliteit  "1..1" ;
+        mim:naam           "registratiegegevens" ;
+        mim:type           <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> .
+
+<urn:uuid-dst:6EA658E5-B692-421a-8DB3-BE333F811BCC>
+        a                  mim:RelatierolDoel ;
+        mim:kardinaliteit  "1..1" ;
+        mim:naam           "registratiegegevens" ;
+        mim:type           <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> .
 
 <urn:uuid:30EE2929-CB32-4be5-8DA3-C7E0E5109501>
         a                               mim:Attribuutsoort ;
@@ -1147,8 +1248,18 @@
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
 
+<urn:uuid:DE302A46-989C-4b54-A52A-4E69E6D6F152>
+        a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
+        mim:indicatieFormeleHistorie    false ;
+        mim:indicatieMaterieleHistorie  false ;
+        mim:kardinaliteit               "1..1" ;
+        mim:naam                        "geometrie" ;
+        mim:type                        <urn:object:GM_Surface> .
+
 <urn:uuid:C08A4B06-5E51-40ed-87B6-AAF8E3A955DC>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -1190,7 +1301,7 @@
 
 <urn:uuid:7F2BC6C4-158D-46c9-A28B-BDD621BC7F11>
         a                      mim:Attribuutsoort ;
-        mim:begrip             <http://bag.basisregistraties.overheid.nl/id/begrip/Geometrie> ;
+        mim:begrip             <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         mim:datumOpname        "31-05-2022" ;
         mim:definitie          "-- Definitie --\r\nGeometrische representatie van een gebied op land dat door een openbaar lichaam wordt bestuurd." ;
         mim:herkomst           "BAG" ;
@@ -1209,6 +1320,7 @@
 
 <urn:uuid:0B0E8C4B-BD74-4f1b-B69E-A26BB7335628>
         a                            mim:Objecttype ;
+        mim:begrip                   <https://begrippen.geostandaarden.nl/sam/id/begrip/bodemsamenstelling> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Bodemsamenstelling" .
 
@@ -1231,6 +1343,15 @@
         mim:type                        <urn:object:CharacterString> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#identificatie" .
+
+<urn:uuid:E7B7B489-4040-4e28-B10E-D0F6A7BAED77>
+        a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/ligt_in_bebouwde_kom> ;
+        mim:indicatieFormeleHistorie    false ;
+        mim:indicatieMaterieleHistorie  false ;
+        mim:kardinaliteit               "1..1" ;
+        mim:naam                        "ligtInBebouwdeKom" ;
+        mim:type                        <urn:object:Boolean> .
 
 <urn:uuid:74873B04-30DE-4ccb-A2D3-50C83D42C722>
         a                            mim:Objecttype ;
@@ -1255,6 +1376,11 @@
         mim:patroon                     "Een huisnummertoevoeging bestaat uit maximaal 4 alfanumerieke tekens bestaande uit een combinatie van de letters  en cijfers a - z , A - Z , 0 – 9" ;
         mim:type                        <urn:object:CharacterString> .
 
+<urn:uuid:ACAD26BB-65FC-469a-A35C-243BB2E944D1>
+        mim:bron        <urn:uuid:39AB4DF3-CC3E-4177-B53D-A46435B9BBCA> ;
+        mim:doel        <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> ;
+        mim:relatierol  <urn:uuid-dst:ACAD26BB-65FC-469a-A35C-243BB2E944D1> .
+
 <urn:uuid-dst:B17F6974-FC6B-4da8-984C-A44BC42E7095>
         a                  mim:RelatierolDoel ;
         mim:kardinaliteit  "0..-1" ;
@@ -1269,6 +1395,7 @@
 
 <urn:uuid:FC40A8E3-90EB-482d-8500-03FA6C655F05>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <https://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -1313,12 +1440,6 @@
         mim:toelichting                 "Een combinatie van 4 cijfers en 2 hoofdletters." ;
         mim:type                        <urn:object:CharacterString> .
 
-<urn:uuid-src:E95A3722-E5A7-4b78-87BF-BCF799681DA4>
-        a                  mim:RelatierolBron ;
-        mim:kardinaliteit  "0..-1" ;
-        mim:naam           "graafgebiedKLICmelding" ;
-        mim:type           <urn:uuid:949D5188-48B1-44b5-BC54-99862FC045BE> .
-
 <urn:uuid:82C930D0-0C36-4948-A677-13FCE3C45E96>
         a                               mim:Attribuutsoort ;
         mim:begrip                      <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/identificatie> ;
@@ -1335,11 +1456,17 @@
 
 <urn:uuid:0BF48E52-A720-4873-8F8F-366FD6454FF0>
         a                               mim:Attribuutsoort ;
+        mim:begrip                      <http://definities.geostandaarden.nl/imro/id/begrip/Naam> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
         mim:naam                        "bestemming" ;
         mim:type                        <urn:object:CharacterString> .
+
+<urn:uuid:2DA7BFB2-A5AC-4e13-B5DD-090B46AAB07E>
+        mim:bron        <urn:uuid:7EE15C80-3CFE-4d3b-8DE0-1A44B06D82DE> ;
+        mim:doel        <urn:uuid:D3E0350C-8442-4984-9FF7-DF446E88004E> ;
+        mim:relatierol  <urn:uuid-dst:2DA7BFB2-A5AC-4e13-B5DD-090B46AAB07E> .
 
 <urn:uuid-dst:32DE7AAA-07F5-4f28-8A5E-D2544EA64F91>
         a                  mim:RelatierolDoel ;
@@ -1360,6 +1487,12 @@
         mim:type                        <urn:uuid:1B9E5020-B850-43ec-8FCA-ED4846D48D17> ;
         <https://wau.ldproxy.net/def/mim-ext#uri>
                 "http://modellen.geostandaarden.nl/def/nen3610-2022#domein" .
+
+<urn:uuid:CCBCD849-6B7B-4192-8D79-075D548F69EA>
+        a                            mim:Domein ;
+        mim:bevatModelelement        <urn:uuid:5B2BB0ED-E360-4b51-8032-D9A645E2200D> , <urn:uuid:7394A8FC-7B9F-4d9f-9F0E-686D6B3D7535> ;
+        mim:indicatieAbstractObject  false ;
+        mim:naam                     "extraDatatypen" .
 
 <urn:uuid:ED87DAF8-E51C-4e8d-AF11-ECAEF2D909D6>
         a                               mim:Attribuutsoort ;
@@ -1385,3 +1518,9 @@
         mim:naam                        "isHoofdadres" ;
         mim:toelichting                 "In de BAG kan een adres een hoofdadres of nevenadres van een Adresseerbaarobject zijn." ;
         mim:type                        <urn:object:Boolean> .
+
+<urn:uuid-dst:6342FB41-5A00-42b8-94C9-AB53B9FCE81C>
+        a                  mim:RelatierolDoel ;
+        mim:kardinaliteit  "0..-1" ;
+        mim:naam           "heeftBeperking" ;
+        mim:type           <urn:uuid:39AB4DF3-CC3E-4177-B53D-A46435B9BBCA> .
