@@ -175,20 +175,10 @@ bk:WaU-SAM
    dct:source <https://developer.kadaster.nl/schemas/brk-levering-2-0/Documentatie/20220112/20211119%20BRK%20Levering%202.0.9/uml/index.htm> ;
 .   
 
-
-:xxx
+:type
    a skos:Concept ;
-   skos:definition "xxx"@nl ;
-   skos:prefLabel "xxx"@nl ;
-   rdfs:label "xxx" ;
-   skos:inScheme bk:WaU-SAM ;
-.   
-
-
-:xxx
-   a skos:Concept ;
-   skos:definition "xxx"@nl ;
-   skos:prefLabel "xxx"@nl ;
-   rdfs:label "xxx" ;
+   skos:definition "Nadere classificatie van een ding."@nl ;
+   skos:prefLabel "type"@nl ;
+   rdfs:label "type" ;
    skos:inScheme bk:WaU-SAM ;
 .   
