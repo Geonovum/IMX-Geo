@@ -112,7 +112,7 @@ bk:WaU-SAM
 
 :beperking
    a skos:Concept ;
-   skos:definition "Begrenzing van wat er op een bepaalde locatie toegestaan is." ;
+   skos:definition "Beperking rustend op het perceel met als grondslag de publiekrechtelijke beperkingen van de Wet kenbaarheid publiekerechtelijke beperkingen (Wkpb) onroerende zaken." ;
    skos:prefLabel "Beperking"@nl ; 
    rdfs:label "Beperking" ;
    skos:inScheme bk:WaU-SAM ;
@@ -122,3 +122,73 @@ bk:WaU-SAM
    skos:narrowMatch <http://definities.geostandaarden.nl/imro/id/begrip/Functieaanduiding> ;
    skos:narrowMatch <http://definities.geostandaarden.nl/imro/id/begrip/Maatvoering> ;
 .
+
+:grondslag
+   a skos:Concept ;
+   skos:definition "De grondslag is een verwijzing naar de wet waar de publiekrechtelijke beperking op gebaseerd is."@nl ;
+   skos:prefLabel "Grondslag"@nl ;
+   rdfs:label "Grondslag" ;
+   skos:inScheme bk:WaU-SAM ;
+.   
+
+:bodemsamenstelling
+   a skos:Concept ;
+   skos:definition "Materiaal waaruit een bodem is gevormd."@nl ;
+   skos:prefLabel "Bodemsamenstelling"@nl ;
+   rdfs:label "Bodemsamenstelling" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:closeMatch <http://definities.geostandaarden.nl/id/begrippenkader/BHR-P/Bodemclassificatie/bodemklasse> ;
+.   
+
+:graafgebied
+   a skos:Concept ;
+   skos:definition "De weergave door een grondroerder van het gebied, waarbinnen de graaflocatie zich bevindt."@nl ;
+   skos:prefLabel "Graafgebied"@nl ;
+   rdfs:label "Graafgebied" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:closeMatch <http://definities.geostandaarden.nl/imkl/id/begrip/Graafpolygoon_IMKL> ;
+.
+
+:heeft_infiltratiefunctie
+   a skos:Concept ;
+   skos:definition "Indien true/ja: het waterobject heeft als functie het in de bodem brengen van water met het oog op latere onttrekking."@nl ;
+   skos:prefLabel "heeft infiltratiefunctie"@nl ;
+   rdfs:label "heeft infiltratiefunctie" ;
+   skos:inScheme bk:WaU-SAM ;
+   dct:source <https://docs.geostandaarden.nl/bro/guf/#inleiding-grondwatergebruik> ;
+.   
+
+:ligt_in_bebouwde_kom
+   a skos:Concept ;
+   skos:definition ""@nl ;
+   skos:prefLabel "ligt in bebouwde kom"@nl ;
+   rdfs:label "ligt in bebouwde kom" ;
+   skos:inScheme bk:WaU-SAM ;
+.   
+
+:koopjaar
+   a skos:Concept ;
+   skos:definition "Het jaar waarin het belangrijkste recht van het kadastraal object is verkregen."@nl ;
+   skos:prefLabel "Koopjaar"@nl ;
+   rdfs:label "Koopjaar" ;
+   skos:inScheme bk:WaU-SAM ;
+   dct:source <https://developer.kadaster.nl/schemas/brk-levering-2-0/Documentatie/20220112/20211119%20BRK%20Levering%202.0.9/uml/index.htm> ;
+.   
+
+
+:xxx
+   a skos:Concept ;
+   skos:definition "xxx"@nl ;
+   skos:prefLabel "xxx"@nl ;
+   rdfs:label "xxx" ;
+   skos:inScheme bk:WaU-SAM ;
+.   
+
+
+:xxx
+   a skos:Concept ;
+   skos:definition "xxx"@nl ;
+   skos:prefLabel "xxx"@nl ;
+   rdfs:label "xxx" ;
+   skos:inScheme bk:WaU-SAM ;
+.   
