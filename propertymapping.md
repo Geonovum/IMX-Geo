@@ -1,4 +1,6 @@
-# Spatial relationships
+# Mapping properties to external standardized properties
+
+## Spatial relationships
 
 The IMX-Geo model introduces several spatial relationships between object types. We want to model these according to the Simple Features topological relationships (also included in NEN 3610 and GeoSPARQL), so we have to consider for each of these relationships, which topological relationship is the correct one. 
 
@@ -21,5 +23,27 @@ The IMX-Geo currently has these spatial relationships:
 - `heeftBestemming`: Perceel objects that `contain` or have `overlap` with Bestemming objects. 
 - `heeftBeperking`: Probably not a spatial relationship. Todo check.
 - RegistratieveRuimte `bevat`: Registratieve ruimte objects (subclasses) that `contain` Perceel objects.
-- All relationships from GraafgebiedKLICmelding: `contains`. 
 - `ligtAan`: Adres objects that `touch` a Weg object? I am not sure this is what is meant.
+
+## Property mapping
+This section lists the properties contained in IMX-Geo that are mapped to external, standardized properties. This mapping is present in the IMX-Geo model. A tagged value `uri` is used for this. 
+
+Generic mapping of properties that occur in different classes: 
+- **geometrie**: `geosparql:hasGeometry`
+- **identificatie**: `nen3610:identificatie`
+- **domein**: `nen3610:domein`
+- **ligtOp/ligtIn/binnen** `geosparql:sfWithin` or `geosparql:sfIntersects` (see previous section)
+- **bevat**: `geosparql:sfContains` or `geosparql:sfIntersects`
+- **naam**: `rdfs:label`
+
+Specific mapping of properties of certain classes:
+- Terrein **bevat** Landschapselement: `geosparql:sfContains`
+- Terrein **bevatBouwwerk** Bouwwerk: `geosparql:Intersects`
+- Bestemming: verwijzingNaarArtikel: `dct:source`
+- Perceel **heeftBestemming** Bestemming: assuming this will be implemented as a spatial relationship, `geosparql:Intersects`
+- Perceel **bevatBouwwerk** Bouwwerk: `geosparql:Intersects`
+- **RegistratieveRuimte** bevat Perceel: `geosparql:sfContains`
+- Perceel **oppervlak**: `geosparql:hasMetricArea` (geosparql 1.1)
+- Perceel **koopjaar**: `owl-time:year`
+
+Other properties besides those mentioned above are not mapped to external standardized properties. 
