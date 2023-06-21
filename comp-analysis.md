@@ -60,3 +60,30 @@ The Cluster concept **Locatie** is too generic to use in IMX-Geo; everything has
 IMX-Geo has quite a few concepts that don't match a Cluster concept. Several of these classes are a bit more specific than the Cluster concepts are, so it makes sense the are missing from the Cluster concepts in the Stelselcatalogus. Others, like **Bestemming**, are not in scope for the stelselcatalogus, because the data for these things is not in a base registry. 
 
 For **Bestuurlijk gebied** it could be argued that it should be a Cluster concept - or its superclass in NEN 3610, **[Registratieve ruimte](http://definities.geostandaarden.nl/nen3610-2022/id/begrip/registratieve_ruimte)**. **Gemeentegebied** and **Waterschapsgebied** would fall under this as well. **Gemeente** and **Waterschap** are subclasses of **[Openbaar Lichaam](http://begrippen.geostandaarden.nl/disgeo/id/begrip/openbaar_lichaam)** (introduced in DisGeo but also in TOOI); this could also be a Cluster concept as there is government data about these governmental organisations.
+
+## Analysis of KKG and other use cases
+
+We looked at Kadaster Knowledge Graph (KKG) use cases that were assembled in earlier projects, as well as questions about datasets posed by users at the Geoforum. Approximately 50% of these use cases was covered by IMX-Geo (at analysis time, during the fourth high5 in May 2023). 
+
+Some highlights of this analysis:
+- Many questions used neighbourhoods (wijken/buurten)
+- A number of use cases needed data which is within scope of IMX-Geo, but was not yet included in the model: e.g. trees, wells, statusses, swimming pools, sports halls, terrain functions, playground equipment, publiekrechtelijke beperkingen. 
+- A number of use cases needed data that was out of scope of IMX-Geo, such as risk objects, CBS kerncijfers, floor height. 
+
+As a result of this, Neighbourhood (buurt/wijk) was added as well as Publiekrechtelijke beperking were added. 
+
+Details of this analysis are in [this spreadsheet](https://github.com/Geonovum/WaU-imx-geo/blob/main/usecases/usecasedekkingsanalyse.xlsx). 
+
+## Discussions with stakeholders
+
+We had meetings with the owners of information models that are in scope of IMX-Geo in order to gather additional use cases they were aware of. 
+
+As a result of this ... [todo aanvullen] was added
+
+Details of this analysis are in [this spreadsheet](https://github.com/Geonovum/WaU-imx-geo/blob/main/usecases/opgehaaldeusecases.xlsx). 
+
+## Comparison with source models
+
+Finally, we compared the IMX-Geo model to the source models that are within scope, to find any other classes we wanted to support. 
+
+As a result of this ... [todo aanvullen] was added
