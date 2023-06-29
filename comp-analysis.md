@@ -184,14 +184,13 @@ When developing the IMX-Geo, we chose to only add those objects to the model
 that are relevant to a certain use case. The IMX-Geo therefore only contains
 those objects that are mentioned in a use case.
 
-As a result of this, the IMX-Geo now contains **42%** of all objects/concepts
+As a result of this, the IMX-Geo now contains **60%** of all objects/concepts
 that appear in the source models. See table below.
 
-![](media/53e795d86567478d40a1ac8d5efa4bd6.emf)
+![](media/fe42eca1a9e8bb06db7be2b291811f1c.emf)
 
-BAG and BGT are almost fully supported. Because IMKL is recognized as a consumer
-of data by means of the IMX-Geo, only the entry class 'GraafgebiedKLICmelding'
-is included as an access from IMKL to the IMX-Geo.
+BAG and BGT are almost fully supported. Because KLIC is recognized as a consumer
+of data by means of the IMX-Geo, IMKL is not part of IMX-Geo anymore.
 
 The IMX-Geo can grow over time and support more objects/concepts from source
 models as the IMX-Geo is expanded based on new use cases, hitting new objects.
