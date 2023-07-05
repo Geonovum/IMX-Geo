@@ -60,11 +60,11 @@ var respecConfig =
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
   //publishDate: "2022-07-11",  	    // Format is "YYYY-MM-DD"
   //-- Repositorynaam op GitHub -------------------------------------------------------
-  github: "https://github.com/geonovum/imx-geo",
+  github: "https://github.com/geonovum/IMX-Geo",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
-  issueBase: "https://github.com/geonovum/imx-geo/issues",
+  issueBase: "https://github.com/geonovum/IMX-Geo/issues",
   //-- edDraftURI: de URI van de werkversie van het document
-  edDraftURI: "https://geonovum.github.io/imx-geo",
+  edDraftURI: "https://geonovum.github.io/IMX-Geo",
   //-- de namen van de Editor(s) ------------------------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
   
@@ -98,9 +98,9 @@ var respecConfig =
     }
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
-  shortName: "imx-geo",  	              // Wordt gebruikt in de document URL
+  shortName: "IMX-Geo",  	              // Wordt gebruikt in de document URL
   //-- pubDomain is verplicht! (komt in de URL: Activeer 1 van de volgende) ------------
-  pubDomain: "imx-geo", 	              // Werk aan Uitvoering
+  pubDomain: "IMX-Geo", 	              // Werk aan Uitvoering
   //pubDomain: "mim", 	            // Metamodel Informatie Modellering
   //pubDomain: "bor", 	            // Beheer Openbare Ruimte
   //pubDomain: "bro", 	            // Basisregistratie Ondergrond
