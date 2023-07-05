@@ -107,7 +107,7 @@ As a result of this, Neighbourhood (buurt/wijk) was added as well as
 Publiekrechtelijke beperking were added.
 
 Details of this analysis are in [this
-spreadsheet](https://github.com/Geonovum/WaU-imx-geo/blob/main/usecases/usecasedekkingsanalyse.xlsx).
+spreadsheet](https://github.com/Geonovum/IMX-Geo/blob/main/usecases/usecasedekkingsanalyse.xlsx).
 
 ## Discussions with stakeholders
 
@@ -173,7 +173,7 @@ As a result of these conversations, we collected 21 use cases:
 21. Drone locations
 
 Details of this analysis are in [this
-spreadsheet](https://github.com/Geonovum/WaU-imx-geo/blob/main/usecases/opgehaaldeusecases.xlsx).
+spreadsheet](https://github.com/Geonovum/IMX-Geo/blob/main/usecases/opgehaaldeusecases.xlsx).
 
 ## Comparison with source models
 
@@ -196,4 +196,4 @@ The IMX-Geo can grow over time and support more objects/concepts from source
 models as the IMX-Geo is expanded based on new use cases, hitting new objects.
 
 Details of this analysis are in [this
-spreadsheet](https://github.com/Geonovum/WaU-imx-geo/blob/main/usecases/completenessimxgeo.xlsx).
+spreadsheet](https://github.com/Geonovum/IMX-Geo/blob/main/usecases/completenessimxgeo.xlsx).
