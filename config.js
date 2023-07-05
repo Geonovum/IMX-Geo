@@ -38,6 +38,8 @@ function custGHPG(respecConfig)
 //-------------------------------------------------------------------------------------
 var respecConfig = 
 {
+  title: "IMX-Geo",
+  subtitle: "Informatiemodel voor cross-domein databevragingen – Geo-informatie",
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
   //specStatus: "GN-BASIS",             // Basis Document
   //specStatus: "GN-WV",              // Werk Versie
