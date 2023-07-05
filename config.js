@@ -45,7 +45,7 @@ var respecConfig =
   //specStatus: "GN-WV",              // Werk Versie
   //specStatus: "GN-CV",              // Consultatie Versie
   //specStatus: "GN-VV",              // Vaststellings Versie
-  specStatus: "GN-CV",             // Definitieve Versie
+  specStatus: "GN-WV",             // Definitieve Versie
   //-- specType is verplicht bij alle andere dan BASIS ---------------------------------
   //specType: "NO",                   // Norm
   //specType: "ST",                   // Standaard
@@ -168,8 +168,8 @@ var respecConfig =
   postProcess:[custGHPG],   //-- Optioneel voor een multi document repository
 
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
- //previousPublishDate: "2022-06-28",  	    // Format is "YYY-MM-DD"
-  //previousMaturity: "VV",                   // kies 1 van deze 2 regels  	  
+ previousPublishDate: "2023-07-05",  	    // Format is "YYY-MM-DD"
+  previousMaturity: "CV",                   // kies 1 van deze 2 regels  	  
   //previousMaturity: "VV",  	                // kies 1 van deze 2 regels
 
   //-- Optionele parameters:
