@@ -39,13 +39,13 @@ function custGHPG(respecConfig)
 var respecConfig = 
 {
   title: "IMX-Geo",
-  subtitle: "Informatiemodel voor cross-domein databevragingen – Geo-informatie",
+  subtitle: "Information model for cross-domain data queries – Geospatial",
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
-  //specStatus: "GN-BASIS",             // Basis Document
-  //specStatus: "GN-WV",              // Werk Versie
-  //specStatus: "GN-CV",              // Consultatie Versie
-  //specStatus: "GN-VV",              // Vaststellings Versie
-  specStatus: "GN-WV",             // Definitieve Versie
+  //specStatus: "BASIS",             // Basis Document
+  //specStatus: "WV",              // Werk Versie
+  //specStatus: "CV",              // Consultatie Versie
+  //specStatus: "VV",              // Vaststellings Versie
+  specStatus: "WV",             // Definitieve Versie
   //-- specType is verplicht bij alle andere dan BASIS ---------------------------------
   //specType: "NO",                   // Norm
   //specType: "ST",                   // Standaard

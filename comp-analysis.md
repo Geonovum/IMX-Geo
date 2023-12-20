@@ -104,7 +104,7 @@ Some highlights of this analysis:
     risk objects, CBS kerncijfers, floor height.
 
 As a result of this, Neighbourhood (buurt/wijk) was added as well as
-Publiekrechtelijke beperking were added.
+Publiekrechtelijke beperking.
 
 Details of this analysis are in [this
 spreadsheet](https://github.com/Geonovum/IMX-Geo/blob/main/usecases/usecasedekkingsanalyse.xlsx).
@@ -187,7 +187,7 @@ those objects that are mentioned in a use case.
 As a result of this, the IMX-Geo now contains **60%** of all objects/concepts
 that appear in the source models. See table below.
 
-![](media/fe42eca1a9e8bb06db7be2b291811f1c.emf)
+![](media/fe42eca1a9e8bb06db7be2b291811f1c.png)
 
 BAG and BGT are almost fully supported. Because KLIC is recognized as a consumer
 of data by means of the IMX-Geo, IMKL is not part of IMX-Geo anymore.

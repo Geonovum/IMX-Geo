@@ -22,23 +22,27 @@ The most important one is the logical model, which sits between the source regis
 
 The concept scheme is a MIM level 1 model and introduces user-friendly concepts to talk about the universe of discourse. 
 
+URI: `https://begrippen.geostandaarden.nl/sm/nl/`. 
+
+`sm` stands for 'samenhangende begrippen' which is 'coherent concepts' in English.
+
 Design principles: 
 - The concept scheme is created in SKOS [[skos-reference]]. 
-- The SAM concept scheme contains only those concepts that play a role in the SAM universe of discourse but have not been coined elsewhere in the context of the Dutch base registries. I.e.: we only coin those concepts that do NOT have an exact match with an existing concept (again, in the context of the Dutch base registries). This saves work and maintenance. We will find out if this is workable.
+- The concept scheme contains only those concepts that play a role in the IMX-Geo universe of discourse but have not been coined elsewhere in the context of the Dutch base registries. I.e.: we only coin those concepts that do NOT have an exact match with an existing concept (again, in the context of the Dutch base registries). This saves work and maintenance. We will find out if this is workable.
 - We create the concept scheme manually, we do not generate it from a UML model. The reason is that we want to be able to link related concepts in ways not supported in UML (see next point). 
 - Concepts will have matching relationships (`broadMatch`, `narrowMatch`, `closeMatch`, `relatedMatch`) with existing concepts from the Dutch base registries where appropriate. Note: `exactMatch` is excluded (see point 2).
-- Both the conceptual and the logical model have annotations containing the uris of concepts from a Dutch base registry or from the SAM concept scheme. These are entered in the MIM metaproperty `begrip`. Every class and property has this metadata. 
+- Both the conceptual and the logical model have annotations containing the uris of concepts from a Dutch base registry or from the IMX-Geo `sm` concept scheme. These are entered in the MIM metaproperty `begrip`. Every class and property has this metadata. 
 
-<aside class="issue">A separate concept scheme, with terms in Dutch and English, must be created for the <a href="https://geonovum.github.io/IMX-LineageModel/">Lineage model</a>. The W3C PROV-ontology [[prov-o]] will be used as a starting point (although this is an ontology, not a concept scheme). </aside>
+<aside class="note">The concept scheme does not contain concepts for the <a href="https://geonovum.github.io/IMX-LineageModel/">Lineage model</a>. The W3C PROV-ontology [[prov-o]] can be used as a starting point.</aside>
 
-The work-in-progress version of the concept scheme can be viewed [[here]](https://begrippen.geostandaarden.nl/)(https://begrippen.geostandaarden.nl/sm/nl/). 
+The work-in-progress version of the concept scheme can be viewed [here](https://begrippen.geostandaarden.nl/sm/nl/). 
 
 <aside class="example" id="ex-demolition">
-The concept "sloopjaar" (@EN: demolition year) is coined in the SAM concept scheme, because it does not exist as such in the BAG base registry although buildings do get demolished. The BAG does, however, have a building status "demolished" which, using the change history of the BAG, makes it possible to derive the demolition year of the building. This is indicated with the <code>relatedMatch</code> property.
+The concept "sloopjaar" (@EN: demolition year) is coined in the `sm` concept scheme, because it does not exist as such in the BAG base registry although buildings do get demolished. The BAG does, however, have a building status "demolished" which, using the change history of the BAG, makes it possible to derive the demolition year of the building. This is indicated with the <code>relatedMatch</code> property.
 
 <pre>
-@prefix bk: &lt;https://begrippen.geostandaarden.nl/sam/id/begrippenkader/> .
-@prefix : &lt;https://begrippen.geostandaarden.nl/sam/id/begrip/> .
+@prefix bk: &lt;https://begrippen.geostandaarden.nl/sm/id/begrippenkader/> .
+@prefix : &lt;https://begrippen.geostandaarden.nl/sm/id/begrip/> .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#>.
 @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#>.
 
@@ -47,14 +51,14 @@ The concept "sloopjaar" (@EN: demolition year) is coined in the SAM concept sche
    skos:definition "Het jaar dat de sloop van een gebouw is voltooid."@nl ;
    skos:prefLabel "sloopjaar"@nl ;
    rdfs:label "sloopjaar" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:WaU-SM ;
    skos:relatedMatch &lt;http://bag.basisregistraties.overheid.nl/id/begrip/PandGesloopt> ;
 .
 </pre>
 </aside>
 
 <aside class="example" id="ex-concept">
-The concept "bouwjaar" is already defined in the BAG concept scheme and is referenced from the conceptual SAM model. 
+The concept "bouwjaar" is already defined in the BAG concept scheme and is referenced from the conceptual IMX-Geo model. 
 
 <figure>
 <img src="./media/ex-concept.png">
@@ -64,11 +68,7 @@ The concept "bouwjaar" is already defined in the BAG concept scheme and is refer
 
 ## Conceptual model
 
-<aside class="issue">
-TBD: rewrite this section. 
-
-In this section, we list a set of design principles, and describe a first modeling attempt, but these may still change profoundly. We decided to focus on the logical level first, in order to see how it can play a role in the orchestration engine. Once we understand that, and create a first logical model that works, we will return to the conceptual model. We retain the old design principles and modeling attempt for now - they may or may not still be valid. 
-</aside>
+In this section, we list a set of design principles, and describe a first modeling attempt. After creating a first attempt at a conceptual model, we decided to focus on the logical level first, in order to see how it can play a role in the orchestration engine. We retain the old design principles and modeling attempt for now - they may or may not still be valid. 
 
 Conceptual modeling principles:
 <ol>
@@ -77,7 +77,6 @@ Conceptual modeling principles:
    <li>The conceptual model describes how the classes in our universe of discourse relate to each other. These relationships can cross the boundaries of individual base registries.</li>
    <li>We relate all object types and properties to corresponding SKOS concepts as described in the previous section. </li>
    <li>In this conceptual model we will define relationships between objects if they are relevant for users, even though they may not be present in the source datasets (which were designed as silos).</li>
-   <li>We re-use object types from source registries by making copies of them. </li>
    <li>We model the relationships between object types in different source registries by adding these to the copied classes. More on these last two points below.</li>
 </ol>
 
@@ -87,19 +86,14 @@ This preliminary, partial sketch of the conceptual model contains a few object t
 
 An assumption is that we have access to the information models for all source datasets. These are created using modeling language UML. 
 
-**Question**: How do we model the relationships between object types in source registries? We considered two options:  
+### Modeling the relationships between object types in source registries
+We considered two options:  
 - Create subclasses (UML specialisations) of the source classes and add the relationships between these subclasses. 
 - Don't use the source models directly, but make copies of all object types that we need in the overarching model. We then add the relationships between these copy classes. 
 
 We decided to go for the second option, at least in the conceptual model. In the case of subclasses, in the MIM paradigm we would 'inherit' all properties of the superclasses, while we want only a selection of relevant properties. Also, conceptually we are not creating subclasses. What we actually want is to derive data from source data. We will model the dependency of our object types from source object types on the logical level, because there we are considering data. On the conceptual level we are only considering objects. 
 
-The conceptual model will be a 'product model' defining the objects in user friendly terms (satisfying requirements <a href="#user-friendliness"></a>, <a href="#coherence-between-objects-from-different-source-models"></a> and <a href="#cherry-picking"></a> ). 
-
-<aside class="issue">
-"The conceptual model will be a 'product model'"
-
-This is questionable. 
-</aside>
+The conceptual model will define the objects in user friendly terms (satisfying requirements <a href="#user-friendliness"></a>, <a href="#coherence-between-objects-from-different-source-models"></a> and <a href="#cherry-picking"></a> ). 
 
 ## Logical model
 The logical model defines the shapes of the data. On this level we add data-registration concepts like history and provenance. The logical model also specifies how orchestrated data is related to source data, at least on the class level. 
@@ -112,13 +106,13 @@ This is the current attempt at creating the cross-domain model on the logical le
 
 ![IMX-Geo cross-domain model, logical (MIM level 3)](./media/lm-semanticmodel-overview.png)
 
-**Cluster classes** are classes we add in the model. In the example above, `Gebouw` and `Perceel` are cluster classes. Cluster classes represent a logical unit of information about a real-world object, in which data from different source models can be integrated. They are not present in a source model, but are related to one or more classes in source models. They always have a MIM `Begrip` metadata field containing the URI of either a concept in a source model, or a concept coined in the context of SAM. 
+**Cluster classes** are classes we add in the model. In the example above, `Gebouw` and `Perceel` are cluster classes. Cluster classes represent a logical unit of information about a real-world object, in which data from different source models can be integrated. They are not present in a source model, but are related to one or more classes in source models. They always have a MIM `Begrip` metadata field containing the URI of either a concept in a source model, or a concept coined in the context of IMX-Geo. 
 
 **Trace links**: Links between cluster classes and source classes are expressed using UML `<<trace>>` relationships. They indicate that the cluster class is *derived* from these source classes - one at minimun, but since we are integrating data from different sources there will often be several trace links originating from one cluster class. Every `<<trace>>` relationship indicates that data is retrieved from a certain source class, and that a mapping is needed to specify how this is done. The mapping is maintained outside of the model. 
 
 **Generalization**: In an earlier stage of our thinking, we wanted to use `<<generalization>>` relationships between a cluster class and a source class in cases where the cluster class only has one related source class, and the wanted behaviour is to copy all properties from the source object, and to add one or more properties. 
 
-However, during the second High 5 we discussed this and concluded that these cases would probably be few, and this approach also had the disadvantage of linking the cluster classes more tightly to the source classes. When using generalsation, SAM effectively becomes an extension of the source models, while we want to specify SAM as a separate layer which is only loosely coupled. Therefore, we decided to use only trace relationships. 
+However, during the second High 5 we discussed this and concluded that these cases would probably be few, and this approach also had the disadvantage of linking the cluster classes more tightly to the source classes. When using generalisation, IMX-Geo effectively becomes an extension of the source models, while we want to specify IMX-Geo as a separate layer which is only loosely coupled. Therefore, we decided to use only trace relationships. 
 
 **Associations**: Whenever we want to introduce a relationship to cross-link two classes from different source models, we add this relationship between the corresponding cluster classes.
 
