@@ -10,7 +10,6 @@
 //-- Log . . . :  20181015 - JvG - Initiele versie 
 //-- Log . . . :  20191022 - GRK - Handreiking Archiveren ruimtelijke plannen v2.0      
 //-------------------------------------------------------------------------------------
-
 //-- Postprocessors -------------------------------------------------------------------
 
 //-- haalt gh-pages weg aan het eind van een URL
@@ -100,7 +99,7 @@ var respecConfig =
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
   shortName: "IMX-Geo",  	              // Wordt gebruikt in de document URL
   //-- pubDomain is verplicht! (komt in de URL: Activeer 1 van de volgende) ------------
-  pubDomain: "IMX-Geo", 	              // Werk aan Uitvoering
+  pubDomain: "IMX", 	              // Werk aan Uitvoering
   //pubDomain: "mim", 	            // Metamodel Informatie Modellering
   //pubDomain: "bor", 	            // Beheer Openbare Ruimte
   //pubDomain: "bro", 	            // Basisregistratie Ondergrond
@@ -166,7 +165,6 @@ var respecConfig =
     },
   },
   postProcess:[custGHPG],   //-- Optioneel voor een multi document repository
-
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
  //previousPublishDate: "2023-07-05",  	    // Format is "YYY-MM-DD"
 //  previousMaturity: "CV",                   // kies 1 van deze 2 regels  	  
