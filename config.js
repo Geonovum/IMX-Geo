@@ -10,7 +10,6 @@
 //-- Log . . . :  20181015 - JvG - Initiele versie 
 //-- Log . . . :  20191022 - GRK - Handreiking Archiveren ruimtelijke plannen v2.0      
 //-------------------------------------------------------------------------------------
-
 //-- Postprocessors -------------------------------------------------------------------
 
 //-- haalt gh-pages weg aan het eind van een URL
