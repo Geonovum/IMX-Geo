@@ -2,7 +2,7 @@
 
 **Question**: How do we model, in the **SAM logical information model**, the missing relationships that we want to add between object types in source registries? 
 
-Arnoud and Linda each created a first attempt at modeling this. 
+Arnoud, Linda and Jesse each created a first attempt at modeling this. 
 
 ## Linda's model
 
