@@ -28,7 +28,7 @@ It seems to be doable to script a translation from this model, which is strictly
 
 ## Jesse's model
 
-The IMX-Geo model is a product model requiring flexibility in terms of vocabulary and schema. It is a model tailored to specific user requirements but it is nonetheless based on the models (MIM-1 to 3) as defined in the source models. IMX-Geo does not change the meaning of source data but instead introduces a new projection of the data, where data might be transformed or inferred. We want to exchange data about e.g. Woonplaats; but not redefine woonplaats.
+The IMX-Geo model is a product model requiring flexibility in terms of vocabulary and schema. It is a model tailored to specific user requirements but it is nonetheless based on the models (MIM-1 to 3) as defined in the source models. IMX-Geo does not change the meaning of source data but instead introduces a new view of the data, where data might be transformed or inferred. We want to exchange data about e.g. Woonplaats; but not redefine woonplaats.
 In order to stay true to the original semantics the IMX-Geo product model links to the concepts defined in the respective contexts where possible. In some cases there might not be available concepts in the source context. Here new concepts must be defined. These should be matched to concepts in the respective contexts. 
 
 ![logical model with dependencies to source models](./media/lm-jb.png)
