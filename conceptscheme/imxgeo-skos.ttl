@@ -1,8 +1,8 @@
 # Maintained manually
 
-@prefix bk: < https://staging-definities.geostandaarden.nl/imx-geo/> .
-@prefix col: < https://staging-definities.geostandaarden.nl/imx-geo/id/collectie/> .
-@prefix : < https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/> .
+@prefix bk: <https://staging-definities.geostandaarden.nl/imx-geo/> .
+@prefix col: <https://staging-definities.geostandaarden.nl/imx-geo/id/collectie/> .
+@prefix : <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dct: <http://purl.org/dc/terms/> .
