@@ -5,4 +5,4 @@ Repository for the development of IMX-Geo: Information Model for Cross-domain Da
 
 This work is part of a larger project. The mother repository is [WaU](https://github.com/Geonovum/WaU).
 
-Preview: https://geonovum.github.io/WaU-imx-geo
+Preview: https://geonovum.github.io/IMX-Geo
