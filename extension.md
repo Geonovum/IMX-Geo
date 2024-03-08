@@ -1,4 +1,7 @@
-# IMX-Geo uitbreiden
+# IMX-Geo uitbreiden (extending IMX-Geo)
+
+<aside class="note">This section is written in Dutch. It may be translated at a later stage.</aside>
+
 Het IMX-Geo is uitbreidbaar. Maar hoe werkt dat eigenlijk? 
 
 Eerst moet je bepalen, welke gegevens je wilt toevoegen. In een eigen kopie van het IMX-Geo kun je ze vervolgens toevoegen aan het IMX-Geo informatiemodel. Ook het bronmodel laad je in zodat je het IMX-Geo hieraan kunt koppelen. Vervolgens maak je een mapping en beschrijf je voor de orchestratie-engine waar en hoe de gegevens geautomatiseerd te verkrijgen zijn. Hieronder leggen we al deze stappen in iets meer detail uit. 
