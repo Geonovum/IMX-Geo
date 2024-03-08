@@ -22,16 +22,14 @@ The most important one is the logical model, which sits between the source regis
 
 The concept scheme is a MIM level 1 model and introduces user-friendly concepts to talk about the universe of discourse. 
 
-URI: `https://begrippen.geostandaarden.nl/sm/nl/`. 
-
-`sm` stands for 'samenhangende begrippen' which is 'coherent concepts' in English.
+URI: `https://staging-definities.geostandaarden.nl/imx-geo/nl/`. 
 
 Design principles: 
 - The concept scheme is created in SKOS [[skos-reference]]. 
 - The concept scheme contains only those concepts that play a role in the IMX-Geo universe of discourse but have not been coined elsewhere in the context of the Dutch base registries. I.e.: we only coin those concepts that do NOT have an exact match with an existing concept (again, in the context of the Dutch base registries). This saves work and maintenance. We will find out if this is workable.
 - We create the concept scheme manually, we do not generate it from a UML model. The reason is that we want to be able to link related concepts in ways not supported in UML (see next point). 
 - Concepts will have matching relationships (`broadMatch`, `narrowMatch`, `closeMatch`, `relatedMatch`) with existing concepts from the Dutch base registries where appropriate. Note: `exactMatch` is excluded (see point 2).
-- Both the conceptual and the logical model have annotations containing the uris of concepts from a Dutch base registry or from the IMX-Geo `sm` concept scheme. These are entered in the MIM metaproperty `begrip`. Every class and property has this metadata. 
+- Both the conceptual and the logical model have annotations containing the uris of concepts from a Dutch base registry or from the IMX-Geo concept scheme. These are entered in the MIM metaproperty `begrip`. Every class and property has this metadata. 
 
 <aside class="note">
 In some cases, definitions of existing concepts were copied instead of only referred to. This copied information is redundant. In a future version of the model, the redundant definitions will be removed.
@@ -39,14 +37,14 @@ In some cases, definitions of existing concepts were copied instead of only refe
 
 <aside class="note">The concept scheme does not contain concepts for the <a href="https://geonovum.github.io/IMX-LineageModel/">Lineage model</a>. The W3C PROV-ontology [[prov-o]] can be used as a starting point.</aside>
 
-The work-in-progress version of the concept scheme can be viewed [here](https://begrippen.geostandaarden.nl/sm/nl/). 
+The work-in-progress version of the concept scheme can be viewed [here](https://staging-definities.geostandaarden.nl/imx-geo/nl/). 
 
 <aside class="example" id="ex-demolition">
-The concept "sloopjaar" (@EN: demolition year) is coined in the `sm` concept scheme, because it does not exist as such in the BAG base registry although buildings do get demolished. The BAG does, however, have a building status "demolished" which, using the change history of the BAG, makes it possible to derive the demolition year of the building. This is indicated with the <code>relatedMatch</code> property.
+The concept "sloopjaar" (@EN: demolition year) is coined in the `imx-geo` concept scheme, because it does not exist as such in the BAG base registry although buildings do get demolished. The BAG does, however, have a building status "demolished" which, using the change history of the BAG, makes it possible to derive the demolition year of the building. This is indicated with the <code>relatedMatch</code> property.
 
 <pre>
-@prefix bk: &lt;https://begrippen.geostandaarden.nl/sm/id/begrippenkader/> .
-@prefix : &lt;https://begrippen.geostandaarden.nl/sm/id/begrip/> .
+@prefix bk: &lt;https://staging-definities.geostandaarden.nl/imx-geo/> .
+@prefix : &lt;https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/> .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#>.
 @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#>.
 
