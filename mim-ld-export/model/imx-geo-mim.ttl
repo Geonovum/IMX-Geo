@@ -57,7 +57,7 @@
 
 <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/bouwwerktype> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerktype> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -154,7 +154,7 @@
 <urn:uuid:82AD2BB1-391F-48c8-880D-44FC9992B7B8>
         a                            mim:Objecttype ;
         mim:attribuut                <urn:uuid:A6AD3DDC-7FF5-4a28-B33F-FD6F6EA8350F> , <urn:uuid:42E76400-F960-4204-9042-9691B6D18D7E> , <urn:uuid:DF9F1F12-2F37-489e-A49B-07390D435E5E> , <urn:uuid:55883A46-4458-41cf-9405-B9CD880B5C7B> , <urn:uuid:117268DB-54F0-4fea-895B-508F594711B4> ;
-        mim:begrip                   <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/bouwwerk> ;
+        mim:begrip                   <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerk> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Bouwwerk" .
 
@@ -204,7 +204,7 @@
 
 <urn:uuid:597D7E79-9FA9-4c1a-9807-EA07588219C0>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/heeft_infiltratiefunctie> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/heeft_infiltratiefunctie> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
@@ -358,7 +358,7 @@
 <urn:uuid:39AB4DF3-CC3E-4177-B53D-A46435B9BBCA>
         a                            mim:Objecttype ;
         mim:attribuut                <urn:uuid:DE302A46-989C-4b54-A52A-4E69E6D6F152> , <urn:uuid:807705A0-8B54-41f6-8F22-2EE792D2B6FD> , <urn:uuid:CF8EC51D-B46B-42ac-9CFB-F9F37067B0D3> , <urn:uuid:833C1ADA-3549-42ac-B66A-C97E63A54C7D> , <urn:uuid:B3B6D06A-58E7-4666-8B01-9FB3A7E33706> ;
-        mim:begrip                   <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/beperking> ;
+        mim:begrip                   <https://begrippen.geostandaarden.nl/sam/id/begrip/beperking> ;
         mim:definitie                "Beperking in het gebruik van een perceel met als grondslag de Wet ruimtelijke ordening (Wro) of Wet kenbaarheid publiekrechtelijke beperkingen (Wkpb)." ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Beperking" .
@@ -415,7 +415,7 @@
 
 <urn:uuid:51FB1AD6-4693-419f-8C15-E4C89984F6E3>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/maaiveldgeometrie> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/maaiveldgeometrie> ;
         mim:definitie                   "Vlakgeometrie op maaiveldniveau." ;
         mim:herkomst                    "BGT" ;
         mim:indicatieFormeleHistorie    false ;
@@ -438,7 +438,7 @@
 
 <urn:uuid:807705A0-8B54-41f6-8F22-2EE792D2B6FD>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/type> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/type> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -457,7 +457,7 @@
 
 <urn:uuid:C93EB248-2F60-4615-98AE-96A0EA7556F9>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/sloopjaar> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/sloopjaar> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "0..1" ;
@@ -490,7 +490,7 @@
 
 <urn:uuid:9F1244E4-A613-4efd-914A-F569431C7287>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/geometrie> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         mim:definitie                   "2D of 3D geometrie van ondergrondinformatie." ;
         mim:herkomst                    "BGT" ;
         mim:indicatieFormeleHistorie    false ;
@@ -532,7 +532,7 @@
 <urn:uuid:473F2A9B-DE27-4b38-B177-88B6DF218A80>
         a                            mim:Objecttype ;
         mim:attribuut                <urn:uuid:1424216F-CD23-41e3-A8F5-C020401B6AEE> , <urn:uuid:ED87DAF8-E51C-4e8d-AF11-ECAEF2D909D6> , <urn:uuid:FC40A8E3-90EB-482d-8500-03FA6C655F05> , <urn:uuid:E0A46403-5DB0-4e88-8D6D-93189ED76587> ;
-        mim:begrip                   <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/landschapselement> ;
+        mim:begrip                   <https://begrippen.geostandaarden.nl/sam/id/begrip/landschapselement> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Landschapselement" .
 
@@ -550,7 +550,7 @@
 <urn:uuid:FAC00B42-B22A-4a07-9646-E350FA1F660D>
         a                               mim:Attribuutsoort ;
         mim:authentiek                  mim:Authentiek ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/omschrijving> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/omschrijving> ;
         mim:datumOpname                 "Oktober 2002" ;
         mim:definitie                   "De unieke aanduiding van een nummeraanduiding." ;
         mim:herkomst                    "BAG" ;
@@ -584,7 +584,7 @@
 <urn:uuid:BD8813B7-3C50-4b42-9952-439A6DF4EE8C>
         a                               mim:Attribuutsoort ;
         mim:authentiek                  mim:Authentiek ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/plaatsnaam> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/plaatsnaam> ;
         mim:datumOpname                 "Augustus 2004" ;
         mim:definitie                   "De benaming van een door het gemeentebestuur\r\naangewezen woonplaats." ;
         mim:herkomst                    "BAG" ;
@@ -599,7 +599,7 @@
 
 <urn:uuid:91DC882D-7DC1-4e31-9ED9-F60E699EAE7D>
         a                            mim:Objecttype ;
-        mim:begrip                   <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/spoorweg> ;
+        mim:begrip                   <https://begrippen.geostandaarden.nl/sam/id/begrip/spoorweg> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Spoorweg" .
 
@@ -742,7 +742,7 @@
 
 <urn:uuid:B3B6D06A-58E7-4666-8B01-9FB3A7E33706>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/grondslag> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/grondslag> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -755,7 +755,7 @@
 
 <urn:uuid:A6AD3DDC-7FF5-4a28-B33F-FD6F6EA8350F>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/maaiveldgeometrie> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/maaiveldgeometrie> ;
         mim:herkomst                    "BGT" ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
@@ -782,7 +782,7 @@
 
 <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/geometrie> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -856,7 +856,7 @@
 <urn:uuid:A6C3AFFA-D9C6-481c-BF78-4EBC4E35C5BD>
         a                               mim:Attribuutsoort ;
         mim:authentiek                  mim:Authentiek ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/straatnaam> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/straatnaam> ;
         mim:datumOpname                 "Oktober 2002" ;
         mim:definitie                   "Een naam die aan een openbare ruimte is toegekend in een daartoe strekkend formeel gemeentelijk besluit." ;
         mim:herkomst                    "BAG" ;
@@ -871,7 +871,7 @@
 
 <urn:uuid:E0A46403-5DB0-4e88-8D6D-93189ED76587>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/geometrie> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         mim:definitie                   "Geometrie op maaiveldniveau." ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
@@ -944,7 +944,7 @@
 
 <urn:uuid:556E7089-7DFC-4867-BE08-647F6309CF97>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/koopjaar> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/koopjaar> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -960,7 +960,7 @@
 
 <urn:uuid:FBE84AAB-C48E-41d5-A039-DD1047681A69>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/3d_geometrie> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/3d_geometrie> ;
         mim:herkomst                    "3D basisbestand" ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
@@ -1027,7 +1027,7 @@
 
 <urn:uuid:5F5F1D43-6647-4f77-8930-2682D739EE45>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/type> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/type> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
@@ -1047,7 +1047,7 @@
 
 <urn:uuid:0897F8EE-4B9D-42a2-9F27-4D3251AC904F>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/geometrie> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         mim:herkomst                    "BAG" ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
@@ -1073,7 +1073,7 @@
 
 <urn:uuid:1424216F-CD23-41e3-A8F5-C020401B6AEE>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/type> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/type> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..-1" ;
@@ -1190,13 +1190,13 @@
 <urn:uuid:97F9443F-326B-4e76-86CD-C515688BBE91>
         a                            mim:Objecttype ;
         mim:attribuut                <urn:uuid:74F7259D-8225-439d-886D-59932E05127D> , <urn:uuid:0BF48E52-A720-4873-8F8F-366FD6454FF0> , <urn:uuid:D77A7A32-723B-4d75-B039-EEB6A288C69A> , <urn:uuid:EE759F65-C3F6-4d37-B4E3-C7D19A3F941E> , <urn:uuid:4F144394-44A1-495a-87F4-A874188C47F9> ;
-        mim:begrip                   <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/bestemming> ;
+        mim:begrip                   <https://begrippen.geostandaarden.nl/sam/id/begrip/bestemming> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Bestemming" .
 
 <urn:uuid:61E196DD-5B64-45fd-B424-C2FACB7D3277>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/geometrie> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -1278,7 +1278,7 @@
 
 <urn:uuid:DE302A46-989C-4b54-A52A-4E69E6D6F152>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/geometrie> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -1331,7 +1331,7 @@
 
 <urn:uuid:7F2BC6C4-158D-46c9-A28B-BDD621BC7F11>
         a                      mim:Attribuutsoort ;
-        mim:begrip             <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/geometrie> ;
+        mim:begrip             <https://begrippen.geostandaarden.nl/sam/id/begrip/geometrie> ;
         mim:datumOpname        "31-05-2022" ;
         mim:definitie          "-- Definitie --\r\nGeometrische representatie van een gebied op land dat door een openbaar lichaam wordt bestuurd." ;
         mim:herkomst           "BAG" ;
@@ -1352,7 +1352,7 @@
 
 <urn:uuid:0B0E8C4B-BD74-4f1b-B69E-A26BB7335628>
         a                            mim:Objecttype ;
-        mim:begrip                   <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/bodemsamenstelling> ;
+        mim:begrip                   <https://begrippen.geostandaarden.nl/sam/id/begrip/bodemsamenstelling> ;
         mim:indicatieAbstractObject  false ;
         mim:naam                     "Bodemsamenstelling" .
 
@@ -1378,7 +1378,7 @@
 
 <urn:uuid:E7B7B489-4040-4e28-B10E-D0F6A7BAED77>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/ligt_in_bebouwde_kom> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/ligt_in_bebouwde_kom> ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
         mim:kardinaliteit               "1..1" ;
@@ -1441,7 +1441,7 @@
 
 <urn:uuid:C345AB18-9480-46fc-A44E-D528FD4687D5>
         a                               mim:Attribuutsoort ;
-        mim:begrip                      <https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/bouwwerktype> ;
+        mim:begrip                      <https://begrippen.geostandaarden.nl/sam/id/begrip/bouwwerktype> ;
         mim:definitie                   "Fysieke voorkomen van een terrein." ;
         mim:indicatieFormeleHistorie    false ;
         mim:indicatieMaterieleHistorie  false ;
