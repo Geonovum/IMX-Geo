@@ -11,19 +11,19 @@ To understand the topological relationships we looked at [DE-9DIM on wikipedia](
 - `Touches`: two geometries have at least one point in common, but the interiors do not intersect.
 
 The IMX-Geo currently has these spatial relationships:
-- `ligtInGemeentegebied`: Perceel objects `within` a Gemeentegebied. They never overlap.
-- `gebouwBinnenKlicMelding`: Gebouw objects `within` a Klicmelding area, or having `overlap` with it. 
-- `adresBinnenKlicMelding` Adres objects `within` a Klicmelding area, or having `overlap` with it.
+- `ligtInGemeentegebied`: Perceel objects are `contained within` a Gemeentegebied. Perceel objects never `overlap` a Gemeentegebied.
+- `gebouwBinnenKlicMelding`: Gebouw objects `contained within` a Klicmelding area, or have `overlap` with it. 
+- `adresBinnenKlicMelding` Adres objects `contained within` a Klicmelding area, or have `overlap` with it.
 - `bevatBouwwerk`: Perceel objects or Terrein objects that `contain` a Bouwwerk or have Bouwwerk objects that `overlap` with it.
-- `ligtInWaterschap`: Perceel objects that are `within` a Waterschapsgebied.
-- `heeftBestemming`: Perceel objects that are `within` a Bestemming or `overlap` with it.
+- `ligtInWaterschap`: Perceel objects that are `contained within` a Waterschapsgebied.
+- `heeftBestemming`: Perceel objects that are `contained within` a Bestemming or `overlap` with it.
 - Terrein `bevat`: Terrein objects that `contain` Landschapselement objects.
 - `heeftAlsOndergrondOnderTerrein`: Terrein objects that `contain` or have `overlap` with Ondergrond objects. 
 - `heeftAlsNabijWater`: Terrein objects that are nearby Water objects. However, there is no GeoSPARQL relation that has this meaning. As far as I know only http://www.geonames.org/ontology#nearby expresses this.
 - `heeftBestemming`: Perceel objects that `contain` or have `overlap` with Bestemming objects. 
-- `heeftBeperking`: Probably not a spatial relationship. Todo check.
+- `heeftBeperking`: Probably not a spatial relationship. 
 - RegistratieveRuimte `bevat`: Registratieve ruimte objects (subclasses) that `contain` Perceel objects.
-- `ligtAan`: Adres objects that `touch` a Weg object? I am not sure this is what is meant.
+- `ligtAan`: Adres objects that `touch` a Weg object? It is not certain that this is what is meant.
 
 ## Property mapping
 This section lists the properties contained in IMX-Geo that are mapped to external, standardized properties. This mapping is present in the IMX-Geo model. A tagged value `uri` is used for this. 
