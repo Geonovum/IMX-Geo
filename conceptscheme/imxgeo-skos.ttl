@@ -1,19 +1,19 @@
 # Maintained manually
 
-@prefix bk: <https://begrippen.geostandaarden.nl/sam/id/begrippenkader/> .
-@prefix col: <https://begrippen.geostandaarden.nl/sam/id/collectie/> .
-@prefix : <https://begrippen.geostandaarden.nl/sam/id/begrip/> .
+@prefix bk: < https://staging-definities.geostandaarden.nl/imx-geo/> .
+@prefix col: < https://staging-definities.geostandaarden.nl/imx-geo/id/collectie/> .
+@prefix : < https://staging-definities.geostandaarden.nl/imx-geo/id/begrip/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix skosthes: <http://purl.org/iso25964/skos-thes#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-bk:WaU-SAM
+bk:IMX-Geo
    a skos:ConceptScheme ;
-   rdfs:label "SAM" ;
-   rdfs:label "IMX-Geo begrippenkader"@nl ;
-   skos:prefLabel "IMX-Geo begrippenkader"@nl ;
+   rdfs:label "IMX-Geo" ;
+   rdfs:label "Crossdomain-model Geo (IMX-Geo) thesaurus"@nl ;
+   skos:prefLabel "Crossdomain-model Geo (IMX-Geo) thesaurus"@nl ;
 .
 
 :omschrijving
@@ -21,7 +21,7 @@ bk:WaU-SAM
    skos:definition "De aggregatie van alle adresonderdelen, i.e. straatnaam, huisnummer, huisletter, huisnummertoevoeging, postcode en plaatsnaam."@nl ;
    skos:prefLabel "omschrijving"@nl ;
    rdfs:label "omschrijving" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
 .
 
 :straatnaam
@@ -29,7 +29,7 @@ bk:WaU-SAM
    skos:definition "De benaming van een openbare ruimte van het type weg zoals door het gemeentebestuur aangewezen."@nl ;
    skos:prefLabel "straatnaam"@nl ;
    rdfs:label "straatnaam" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
    skos:closeMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Naam> ;
 .
 
@@ -38,7 +38,7 @@ bk:WaU-SAM
    skos:definition "De benaming van een woonplaats zoals door het gemeentebestuur aangewezen."@nl ;
    skos:prefLabel "plaatsnaam"@nl ;
    rdfs:label "plaatsnaam" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
    skos:closeMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Naam> ;
 .
 
@@ -47,7 +47,7 @@ bk:WaU-SAM
    skos:definition "Een geometrische representatie van een object ."@nl ;
    skos:prefLabel "geometrie"@nl ;
    rdfs:label "geometrie" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
    skos:closeMatch <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/georeferentie> ;
    skos:narrowMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Geometrie> ;
 .
@@ -57,7 +57,7 @@ bk:WaU-SAM
    skos:definition "Een geometrische representatie van een object in drie dimensies."@nl ;
    skos:prefLabel "3D-geometrie"@nl ;
    rdfs:label "3D-geometrie" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
    skos:broader :geometrie ;
 .
 
@@ -66,7 +66,7 @@ bk:WaU-SAM
    skos:definition "Een geometrische representatie van de plek waar een fysiek object de ondergrond raakt (i.e. de 'footprint')."@nl ;
    skos:prefLabel "maaiveldgeometrie"@nl ;
    rdfs:label "maaiveldgeometrie" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
    skos:broader :geometrie ;
 .
 
@@ -75,7 +75,7 @@ bk:WaU-SAM
    skos:definition "Het oorspronkelijke gebruiksdoel van een bouwwerk."@nl ;
    skos:prefLabel "bouwwerktype"@nl ;
    rdfs:label "bouwwerktype" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
    skos:narrowMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Gebruiksdoel> ;
    skos:narrowMatch <http://definities.geostandaarden.nl/imgeo/id/begrip/Bgt-type_overigBouwwerk> ;
    skos:narrowMatch <http://definities.geostandaarden.nl/imgeo/id/begrip/Plus-type_overigBouwwerk> ;
@@ -88,7 +88,7 @@ bk:WaU-SAM
    skos:definition "Het jaar dat de sloop van een gebouw is voltooid."@nl ;
    skos:prefLabel "sloopjaar"@nl ;
    rdfs:label "sloopjaar" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
    skos:relatedMatch <http://bag.basisregistraties.overheid.nl/id/begrip/PandGesloopt> ;
 .
 
@@ -97,7 +97,7 @@ bk:WaU-SAM
    skos:definition "Een identificeerbaar kenmerk in het landschap, dat bijdraagt aan de diversiteit en herkenbaarheid van een gebied."@nl ;
    skos:prefLabel "Landschapselement"@nl ;
    rdfs:label "Landschapselement" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
 .   
 
 :bestemming
@@ -105,7 +105,7 @@ bk:WaU-SAM
    skos:definition "Een geplande functie van een gebied."@nl ;
    skos:prefLabel "Bestemming"@nl ;
    rdfs:label "Bestemming" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
    skos:relatedMatch <http://definities.geostandaarden.nl/imro/id/begrip/Enkelbestemming> ;
    skos:relatedMatch <http://definities.geostandaarden.nl/imro/id/begrip/Dubbelbestemming> ; 
 .   
@@ -115,7 +115,7 @@ bk:WaU-SAM
    skos:definition "Beperking rustend op het perceel met als grondslag de publiekrechtelijke beperkingen van de Wet kenbaarheid publiekerechtelijke beperkingen (Wkpb) onroerende zaken." ;
    skos:prefLabel "Beperking"@nl ; 
    rdfs:label "Beperking" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
    skos:narrowMatch <http://brk.basisregistraties.overheid.nl/id/begrip/Beperkt_recht> ;
    skos:narrowMatch <http://definities.geostandaarden.nl/imro/id/begrip/Bouwaanduiding> ;
    skos:narrowMatch <http://definities.geostandaarden.nl/imro/id/begrip/Gebiedsaanduiding> ;
@@ -128,7 +128,7 @@ bk:WaU-SAM
    skos:definition "De grondslag is een verwijzing naar de wet waar de publiekrechtelijke beperking op gebaseerd is."@nl ;
    skos:prefLabel "Grondslag"@nl ;
    rdfs:label "Grondslag" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
 .   
 
 :bodemsamenstelling
@@ -136,7 +136,7 @@ bk:WaU-SAM
    skos:definition "Materiaal waaruit een bodem is gevormd."@nl ;
    skos:prefLabel "Bodemsamenstelling"@nl ;
    rdfs:label "Bodemsamenstelling" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
    skos:closeMatch <http://definities.geostandaarden.nl/id/begrippenkader/BHR-P/Bodemclassificatie/bodemklasse> ;
 .   
 
@@ -145,7 +145,7 @@ bk:WaU-SAM
    skos:definition "De weergave door een grondroerder van het gebied, waarbinnen de graaflocatie zich bevindt."@nl ;
    skos:prefLabel "Graafgebied"@nl ;
    rdfs:label "Graafgebied" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
    skos:closeMatch <http://definities.geostandaarden.nl/imkl/id/begrip/Graafpolygoon_IMKL> ;
 .
 
@@ -154,7 +154,7 @@ bk:WaU-SAM
    skos:definition "Indien true/ja: het waterobject heeft als functie het in de bodem brengen van water met het oog op latere onttrekking."@nl ;
    skos:prefLabel "heeft infiltratiefunctie"@nl ;
    rdfs:label "heeft infiltratiefunctie" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
    dct:source <https://docs.geostandaarden.nl/bro/guf/#inleiding-grondwatergebruik> ;
 .   
 
@@ -163,7 +163,7 @@ bk:WaU-SAM
    skos:definition ""@nl ;
    skos:prefLabel "ligt in bebouwde kom"@nl ;
    rdfs:label "ligt in bebouwde kom" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
 .   
 
 :koopjaar
@@ -171,7 +171,7 @@ bk:WaU-SAM
    skos:definition "Het jaar waarin het belangrijkste recht van het kadastraal object is verkregen."@nl ;
    skos:prefLabel "Koopjaar"@nl ;
    rdfs:label "Koopjaar" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
    dct:source <https://developer.kadaster.nl/schemas/brk-levering-2-0/Documentatie/20220112/20211119%20BRK%20Levering%202.0.9/uml/index.htm> ;
 .   
 
@@ -180,5 +180,5 @@ bk:WaU-SAM
    skos:definition "Nadere classificatie van een ding."@nl ;
    skos:prefLabel "type"@nl ;
    rdfs:label "type" ;
-   skos:inScheme bk:WaU-SAM ;
+   skos:inScheme bk:IMX-Geo ;
 .   
