@@ -33,6 +33,10 @@ Design principles:
 - Concepts will have matching relationships (`broadMatch`, `narrowMatch`, `closeMatch`, `relatedMatch`) with existing concepts from the Dutch base registries where appropriate. Note: `exactMatch` is excluded (see point 2).
 - Both the conceptual and the logical model have annotations containing the uris of concepts from a Dutch base registry or from the IMX-Geo `sm` concept scheme. These are entered in the MIM metaproperty `begrip`. Every class and property has this metadata. 
 
+<aside class="note">
+In some cases, definitions of existing concepts were copied instead of only referred to. This copied information is redundant. In a future version of the model, the redundant definitions will be removed.
+</aside>
+
 <aside class="note">The concept scheme does not contain concepts for the <a href="https://geonovum.github.io/IMX-LineageModel/">Lineage model</a>. The W3C PROV-ontology [[prov-o]] can be used as a starting point.</aside>
 
 The work-in-progress version of the concept scheme can be viewed [here](https://begrippen.geostandaarden.nl/sm/nl/). 
