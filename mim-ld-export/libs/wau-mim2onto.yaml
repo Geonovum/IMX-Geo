@@ -796,6 +796,24 @@ queries:
         GRAPH <urn:output> {
           ?element rdfs:seeAlso ?item
         }
+      }  
+  - title: convert mim:toelichting
+    query: >
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX mim: <http://bp4mc2.org/def/mim#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      INSERT {
+        GRAPH <urn:output> {
+          ?element mim:toelichting ?toelichting
+        }
+      }
+      WHERE {
+        GRAPH <urn:input> {
+          ?item mim:toelichting ?toelichting
+        }
+        GRAPH <urn:output> {
+          ?element rdfs:seeAlso ?item
+        }
       }
   - title: convert mim:formeelPatroon
     query: >
