@@ -43,8 +43,8 @@ var respecConfig =
   //specStatus: "BASIS",             // Basis Document
   //specStatus: "WV",              // Werk Versie
   //specStatus: "CV",              // Consultatie Versie
-  specStatus: "VV",              // Vaststellings Versie
- // specStatus: "WV",             // Definitieve Versie
+  //specStatus: "VV",              // Vaststellings Versie
+  specStatus: "WV",             // Definitieve Versie
   //-- specType is verplicht bij alle andere dan BASIS ---------------------------------
   //specType: "NO",                   // Norm
   //specType: "ST",                   // Standaard
@@ -57,7 +57,7 @@ var respecConfig =
   // format: "markdown",                 // altijd "markdown" - JvG W3C aangepast, op 1 plek markdown aangeven    
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  publishDate: "2024-05-01",  	    // Format is "YYYY-MM-DD"
+  //publishDate: "2024-05-01",  	    // Format is "YYYY-MM-DD"
   //-- Repositorynaam op GitHub -------------------------------------------------------
   github: "https://github.com/geonovum/IMX-Geo",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
@@ -166,9 +166,9 @@ var respecConfig =
   },
   postProcess:[custGHPG],   //-- Optioneel voor een multi document repository
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
-  previousPublishDate: "2024-01-08",  	    // Format is "YYY-MM-DD"
-  previousMaturity: "CV",                   // kies 1 van deze 2 regels  	  
-  //previousMaturity: "VV",  	                // kies 1 van deze 2 regels
+  previousPublishDate: "2024-05-01",  	    // Format is "YYY-MM-DD"
+  //previousMaturity: "CV",                   // kies 1 van deze 2 regels  	  
+  previousMaturity: "VV",  	                // kies 1 van deze 2 regels
 
   //-- Optionele parameters:
   //emailComments: "mim@geonovum.nl",         // reactie mailadres, alleen bij CV!
