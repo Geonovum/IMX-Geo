@@ -57,7 +57,7 @@ var respecConfig =
   // format: "markdown",                 // altijd "markdown" - JvG W3C aangepast, op 1 plek markdown aangeven    
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  //publishDate: "2024-01-08",  	    // Format is "YYYY-MM-DD"
+  publishDate: "2024-05-01",  	    // Format is "YYYY-MM-DD"
   //-- Repositorynaam op GitHub -------------------------------------------------------
   github: "https://github.com/geonovum/IMX-Geo",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
@@ -122,13 +122,13 @@ var respecConfig =
   //-- NB: kijk eesrt naar de beschikbare www.specref.org voor verwijziging 
   localBiblio: 
   {
-     "CITAAT": {
-        title:      "Titel van het Citaat",
-        href:       "http://url van de publicatie",
-        status:     "versie van de publicatie",
-        publisher:  "naam van de publiceerder",
-        company:    "eventueel naam van bedrijf",
-    },
+     //"CITAAT": {
+    ////    title:      "Titel van het Citaat",
+    //    href:       "http://url van de publicatie",
+    //    status:     "versie van de publicatie",
+   //     publisher:  "naam van de publiceerder",
+  //      company:    "eventueel naam van bedrijf",
+  //  },
     NEN3610: {
       id: "NEN 3610:2011 nl",
       title: "NEN 3610:2011 nl - Basismodel geo-informatie - Termen, definities, relaties en algemene regels voor de uitwisseling van informatie over aan de aarde gerelateerde ruimtelijke objecten",
