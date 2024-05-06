@@ -43,8 +43,8 @@ var respecConfig =
   //specStatus: "BASIS",             // Basis Document
   //specStatus: "WV",              // Werk Versie
   //specStatus: "CV",              // Consultatie Versie
-  //specStatus: "VV",              // Vaststellings Versie
-  specStatus: "WV",             // Definitieve Versie
+  specStatus: "VV",              // Vaststellings Versie
+ // specStatus: "WV",             // Definitieve Versie
   //-- specType is verplicht bij alle andere dan BASIS ---------------------------------
   //specType: "NO",                   // Norm
   //specType: "ST",                   // Standaard
